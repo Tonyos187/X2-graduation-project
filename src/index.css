@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Default theme: Dark Mode */
+
+@theme {
+    /* Colors */
+    --color-bg: #141414;
+    --color-darkGray: #1A1A1A;
+    --color-mainText: #ffffff;
+    --color-secText: #999999;
+    --color-mainPurple: #703BF7;
+    --color-secPurple: #A685FA;
+    /* Spacing */
+    --spacing-pc: 8.4375%;
+    --spacing-laptop: 5.5555%;
+    --spacing-mobile: 20px;
+    /* Screens */
+    --breakpoint-tablet: 768px;
+    --breakpoint-laptop: 1440px;
+    --breakpoint-pc: 1920px;
+}
+
+
+/* Light mode overrides (if you use .light class or media query) */
+
+.light {
+    --color-bg: #ffffff;
+    --color-darkGray: #f5f5f5;
+    --color-mainText: #000000;
+    --color-secText: #666666;
+}
+
+
+/* Base styles */
+
+@layer base {
+    body {
+        background-color: var(--color-bg);
+        color: var(--color-mainText);
+        font-family: 'Urbanist', sans-serif;
+    }
+}
+
+
+/* Utility class */
+
+@layer utilities {
+    .font-urbanist {
+        font-family: 'Urbanist', sans-serif;
+    }
+}
