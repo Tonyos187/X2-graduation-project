@@ -1,7 +1,7 @@
 
 
 //Home Section
-export interface HeroButton {
+export interface HeroButtonTypes {
   text: string;
   link: string;
   primary?: boolean;
@@ -15,7 +15,7 @@ export interface HeroStat {
 export interface HeroSectionData {
   headline: string;
   description: string;
-  buttons: HeroButton[];
+  buttons: HeroButtonTypes[];
   stats: HeroStat[];
 }
 
