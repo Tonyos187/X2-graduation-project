@@ -15,7 +15,7 @@ export const heroSectionData: HeroSectionData = {
     { value: "10k+", label: "Properties For Clients" },
     { value: "16+", label: "Years of Experience" },
   ],
-};
+}; 
 
 export const featuresSectionData: FeatureItem[] = [
   {
