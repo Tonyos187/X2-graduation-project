@@ -1,0 +1,189 @@
+
+
+//Home Section
+export interface HeroButton {
+  text: string;
+  link: string;
+  primary?: boolean;
+}
+
+export interface HeroStat {
+  value: string;
+  label: string;
+}
+
+export interface HeroSectionData {
+  headline: string;
+  description: string;
+  buttons: HeroButton[];
+  stats: HeroStat[];
+}
+
+export interface FeatureItem {
+  arrow: string;
+  icon: string;
+  title: string;
+}
+
+export interface NavItem {
+  name: string;
+  link: string;
+}
+
+export interface TopBannerData {
+    text: string,
+    linkText: string,
+    link: string,
+}
+
+export interface SiteInfoData {
+    siteTitle: string,
+    logo: string
+}
+
+
+// Featured Properties Section
+export interface FeaturedPropertyDetail {
+  icon: string;
+  label: string;
+}
+
+export interface FeaturedPropertyButton {
+  text: string;
+  link: string;
+}
+
+export interface FeaturedProperty {
+  id: string;
+  image: string;
+  title: string;
+  description: string;
+  readMoreLink: string;
+  details: FeaturedPropertyDetail[];
+  price: string;
+  button: FeaturedPropertyButton;
+}
+
+export interface FeaturedPropertiesSectionData {
+  headline: string;
+  description: string;
+  button: FeaturedPropertyButton;
+  properties: FeaturedProperty[];
+  pagination: string;
+}
+
+// Author of testimonial
+export interface TestimonialAuthor {
+  name: string;
+  location: string;
+  avatar: string;
+}
+
+// فرد من التقييمات
+export interface Testimonial {
+  id: string;
+  rating: number;
+  title: string;
+  text: string;
+  author: TestimonialAuthor;
+}
+
+// بيانات التنقل للسكريبت (الأسهم)
+export interface TestimonialNavigation {
+  prevLink: string;
+  nextLink: string;
+}
+
+// البيانات الكاملة لقسم التقييمات
+export interface TestimonialsSectionData {
+  headline: string;
+  description: string;
+  button: {
+    text: string;
+    link: string;
+  };
+  testimonials: Testimonial[];
+  pagination: string;
+  navigation: TestimonialNavigation;
+}
+
+
+// عنصر فردي في قائمة الأسئلة
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+  readMoreLink: string;
+}
+
+
+export interface FaqNavigation {
+  prevLink: string;
+  nextLink: string;
+}
+
+
+
+export interface FaqSectionData {
+  headline: string;
+  description: string;
+  button: {
+    text: string;
+    link: string;
+  };
+  faqs: FaqItem[];
+  pagination: string;
+  navigation: FaqNavigation;
+}
+
+
+// Start Your Real Estate Journey Today Types 
+// القسم يلي فوق الفوتر
+
+export interface CtaSectionData {
+  headline: string;
+  description: string;
+  button: {
+    text: string;
+    link: string;
+  };
+}
+
+
+
+//footer
+
+export interface FooterData {
+  logo: {
+    text: string;
+    logo: string;
+  };
+  newsletter: {
+    placeholder: string;
+    buttonIcon: string;
+  };
+  navigationColumns: FooterNavColumn[];
+  copyright: string;
+  termsAndConditionsLink: {
+    text: string;
+    link: string;
+  };
+  socialLinks: SocialLink[];
+}
+
+export interface FooterNavColumn {
+  title: string;
+  links: {
+    name: string;
+    link: string;
+  }[];
+}
+
+export interface SocialLink {
+  name: string;
+  icon: string;
+  link: string;
+}
+
+
+
