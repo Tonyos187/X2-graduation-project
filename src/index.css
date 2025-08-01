@@ -31,17 +31,6 @@
 }
 
 
-/* Base styles */
-
-@layer base {
-    body {
-        background-color: var(--color-bg);
-        color: var(--color-mainText);
-        font-family: 'Urbanist', sans-serif;
-    }
-}
-
-
 /* Utility class */
 
 @layer utilities {
