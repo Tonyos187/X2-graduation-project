@@ -102,6 +102,4 @@ export interface OurValuedClientsSectionType {
   headline: string;
   description: string;
   properties: OurValuedClientsCard[];
-  pagination: string;
-  navigation: navigation;
 }
