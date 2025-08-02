@@ -228,9 +228,4 @@ export const OurValuedClientsSectionData: OurValuedClientsSectionType = {
       say: "Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.",
     },
   ],
-  pagination: "01 of 10",
-  navigation: {
-    prevLink: "#",
-    nextLink: "#",
-  },
 };

@@ -23,7 +23,7 @@ export interface HeroSectionType {
 export interface FeatureItem {
   arrow: ReactNode;
   icon: ReactNode;
-  title: string;
+  title: string|string[];
 }
 
 export interface NavItem {
