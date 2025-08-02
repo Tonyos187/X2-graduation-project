@@ -22,7 +22,7 @@ export interface HeroSectionData {
 export interface FeatureItem {
   arrow: string;
   icon: string;
-  title: string;
+  title: string | string[];
 }
 
 export interface NavItem {
