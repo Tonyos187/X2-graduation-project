@@ -85,7 +85,10 @@ export interface Button {
   text: string;
   link: string;
 }
-
+export interface navigation {
+  prevLink: string;
+  nextLink: string;
+}
 export interface OurValuedClientsCard {
   id: string;
   date: string;
@@ -99,4 +102,6 @@ export interface OurValuedClientsSectionType {
   headline: string;
   description: string;
   properties: OurValuedClientsCard[];
+  pagination: string;
+  navigation: navigation;
 }
