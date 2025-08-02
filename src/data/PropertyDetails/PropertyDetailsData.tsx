@@ -1,6 +1,6 @@
 import Area from "../../svg/Area";
 import Bathroom from "../../svg/Bathroom";
-import Bed from "../../svg/bed";
+import Bed from "../../svg/Bedroom";
 import Lightning from "../../svg/Lightning";
 import type { PropertyDetailsType } from "../../types/PropertyDetails/PropertyDetailsTypes";
 
