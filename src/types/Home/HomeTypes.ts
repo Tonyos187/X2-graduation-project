@@ -70,7 +70,6 @@ export interface FeaturedPropertiesSectionType {
   description: string;
   button: FeaturedPropertyButton;
   properties: FeaturedProperty[];
-  pagination: string;
 }
 
 // Author of testimonial
@@ -90,12 +89,6 @@ export interface Testimonial {
   author: TestimonialAuthor;
 }
 
-// بيانات التنقل للسكريبت (الأسهم)
-export interface TestimonialNavigation {
-  prevLink: string;
-  nextLink: string;
-}
-
 // البيانات الكاملة لقسم التقييمات
 export interface TestimonialsSectionType {
   headline: string;
@@ -105,8 +98,6 @@ export interface TestimonialsSectionType {
     link: string;
   };
   testimonials: Testimonial[];
-  pagination: string;
-  navigation: TestimonialNavigation;
 }
 
 
@@ -117,15 +108,6 @@ export interface FaqItem {
   answer: string;
   readMoreLink: string;
 }
-
-
-export interface FaqNavigation {
-  prevLink: string;
-  nextLink: string;
-}
-
-
-
 export interface FaqSectionType {
   headline: string;
   description: string;
@@ -134,14 +116,9 @@ export interface FaqSectionType {
     link: string;
   };
   faqs: FaqItem[];
-  pagination: string;
-  navigation: FaqNavigation;
 }
 
-
 // Start Your Real Estate Journey Today Types 
-// القسم يلي فوق الفوتر
-
 export interface CtaSectionType {
   background: string;
   headline: string;
@@ -152,10 +129,7 @@ export interface CtaSectionType {
   };
 }
 
-
-
 //footer
-
 export interface FooterType {
   logo: {
     text: string;

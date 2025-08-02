@@ -71,8 +71,6 @@ export const siteInfo: SiteInfoType = {
   logo: "/assets/icons/estateinLogo.svg"
 };
 
-
-
 // Featured Properties Data
 
 export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
@@ -136,13 +134,9 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
       },
     },
   ],
-  pagination: "01 of 60",
 };
 
-
-
 // What Our Clients Say Data
-
 
 export const testimonialsSectionData: TestimonialsSectionType = {
   headline: "What Our Clients Say",
@@ -189,11 +183,6 @@ export const testimonialsSectionData: TestimonialsSectionType = {
       },
     },
   ],
-  pagination: "01 of 10",
-  navigation: {
-    prevLink: "#",
-    nextLink: "#",
-  }
 };
 
 
@@ -227,11 +216,6 @@ export const faqSectionData: FaqSectionType = {
       readMoreLink: "#",
     },
   ],
-  pagination: "01 of 10",
-  navigation: {
-    prevLink: "#",
-    nextLink: "#",
-  }
 };
 
 
