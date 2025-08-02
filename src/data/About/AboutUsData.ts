@@ -173,7 +173,6 @@ export const MeetEstateinTeamCardSectionData: MeetEstateinTeamCardSectionType =
       },
     ],
   };
-
 // Our Valued Clients section Data
 
 export const OurValuedClientsSectionData: OurValuedClientsSectionType = {
