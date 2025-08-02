@@ -21,15 +21,9 @@ export interface HeroSectionType {
 }
 
 export interface FeatureItem {
-<<<<<<< HEAD
-  arrow: string;
-  icon: string;
-  title: string | string[];
-=======
   arrow: ReactNode;
   icon: ReactNode;
   title: string;
->>>>>>> d487c24de961aad2712714c7bcd7254f3135fa26
 }
 
 export interface NavItem {
