@@ -1,9 +1,21 @@
-import type { CtaSectionData, FaqSectionData, FeaturedPropertiesSectionData, FeatureItem, FooterData, HeroSectionData, NavItem, SiteInfoData, TestimonialsSectionData, TopBannerData } from "../../types/Home/HomeTypes";
-
-
+import TopRightArrow from "../../svg/TopRightArrow";
+import Market from "../../svg/Market";
+import Camera from "../../svg/Camera";
+import BuildingIcon from "../../svg/Building";
+import Sun from "../../svg/Sun";
+import Bedroom from "../../svg/Bedroom";
+import Bathroom from "../../svg/Bathroom";
+import Villa from "../../svg/Villa";
+import Facebook from "../../svg/FaceBook";
+import LinkedIn from "../../svg/LinkedIn";
+import TwitterIcon from "../../svg/Twitter";
+import YouTube from "../../svg/YouTube";
+import SendBtn from "../../svg/SendBtn";
 // Hero Data 
 
-export const heroSectionData: HeroSectionData = {
+import type { CtaSectionType, FaqSectionType, FeaturedPropertiesSectionType, FeatureItem, FooterType, HeroSectionType, NavItem, SiteInfoType, TestimonialsSectionType, TopBannerType } from "../../types/Home/HomeTypes";
+
+export const heroSectionData: HeroSectionType = {
   headline: "Discover Your Dream Property with Estatein",
   description: "Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.",
   buttons: [
@@ -15,27 +27,27 @@ export const heroSectionData: HeroSectionData = {
     { value: "10k+", label: "Properties For Clients" },
     { value: "16+", label: "Years of Experience" },
   ],
-}; 
+};
 
 export const featuresSectionData: FeatureItem[] = [
   {
-    arrow: "/assets/Home/TopRightArrow.svg",
-    icon: "/assets/Home/marketIconHero.svg",
+    arrow: <TopRightArrow />,
+    icon: <Market />,
     title: "Find Your Dream Home",
   },
   {
-    arrow: "/assets/Home/TopRightArrow.svg",
-    icon: "/assets/Home/tecketIconHero.svg",
+    arrow: <TopRightArrow />,
+    icon: <Camera />,
     title: "Unlock Property Value",
   },
   {
-    arrow: "/assets/Home/TopRightArrow.svg",
-    icon: "/assets/Home/buildingIconHero.svg",
+    arrow: <TopRightArrow />,
+    icon: <BuildingIcon />,
     title: "Effortless Property Management",
   },
   {
-    arrow: "/assets/Home/TopRightArrow.svg",
-    icon: "/assets/Home/sunIconHero.svg",
+    arrow: <TopRightArrow />,
+    icon: <Sun />,
     title: "Smart Investments, Informed Decisions",
   },
 ];
@@ -48,22 +60,22 @@ export const navigationData: NavItem[] = [
   { name: "Contact Us", link: "#" },
 ];
 
-export const topBannerData: TopBannerData = {
+export const topBannerData: TopBannerType = {
   text: "Discover Your Dream Property with Estatein",
   linkText: "Learn More",
   link: "#"
 };
 
-export const siteInfo: SiteInfoData = {
+export const siteInfo: SiteInfoType = {
   siteTitle: "Estatein",
-  logo: "/assets/Home/estateinLogo.svg"
+  logo: "/assets/icons/estateinLogo.svg"
 };
 
 
 
 // Featured Properties Data
 
-export const featuredPropertiesSectionData: FeaturedPropertiesSectionData = {
+export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
   headline: "Featured Properties",
   description:
     "Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click 'View Details' for more information.",
@@ -74,14 +86,14 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionData = {
   properties: [
     {
       id: "property-1",
-      image: "/assets/Home/villaSliderCard1.webp",
+      image: "/assets/images/Home/villaSliderCard1.webp",
       title: "Seaside Serenity Villa",
       description: "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood.",
       readMoreLink: "#",
       details: [
-        { icon: "/assets/Home/bedroom.svg", label: "4-Bedroom" },
-        { icon: "/assets/Home/bathroom.svg", label: "3-Bathroom" },
-        { icon: "/assets/Home/villa.svg", label: "Villa" },
+        { icon: <Bedroom />, label: "4-Bedroom" },
+        { icon: <Bathroom />, label: "3-Bathroom" },
+        { icon: <Villa />, label: "Villa" },
       ],
       price: "$550,000",
       button: {
@@ -91,14 +103,14 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionData = {
     },
     {
       id: "property-2",
-      image: "/assets/Home/buildingSliderCard2.webp",
+      image: "/assets/images/Home/buildingSliderCard2.webp",
       title: "Metropolitan Haven",
       description: "A chic and fully-furnished 2-bedroom apartment with panoramic city views.",
       readMoreLink: "#",
       details: [
-        { icon: "/assets/Home/bedroom.svg", label: "4-Bedroom" },
-        { icon: "/assets/Home/bathroom.svg", label: "3-Bathroom" },
-        { icon: "/assets/Home/villa.svg", label: "Villa" },
+        { icon: <Bedroom />, label: "4-Bedroom" },
+        { icon: <Bathroom />, label: "3-Bathroom" },
+        { icon: <Villa />, label: "Villa" },
       ],
       price: "$550,000",
       button: {
@@ -108,14 +120,14 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionData = {
     },
     {
       id: "property-3",
-      image: "/assets/Home/modernCitySliderCard3.webp",
+      image: "/assets/images/Home/modernCitySliderCard3.webp",
       title: "Rustic Retreat Cottage",
       description: "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.",
       readMoreLink: "#",
-      details: [
-        { icon: "/assets/Home/bedroom.svg", label: "4-Bedroom" },
-        { icon: "/assets/Home/bathroom.svg", label: "3-Bathroom" },
-        { icon: "/assets/Home/villa.svg", label: "Villa" },
+        details: [
+        { icon: <Bedroom />, label: "4-Bedroom" },
+        { icon: <Bathroom />, label: "3-Bathroom" },
+        { icon: <Villa />, label: "Villa" },
       ],
       price: "$550,000",
       button: {
@@ -132,7 +144,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionData = {
 // What Our Clients Say Data
 
 
-export const testimonialsSectionData: TestimonialsSectionData = {
+export const testimonialsSectionData: TestimonialsSectionType = {
   headline: "What Our Clients Say",
   description: "Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs.",
   button: {
@@ -143,34 +155,37 @@ export const testimonialsSectionData: TestimonialsSectionData = {
     {
       id: "testimonial-1",
       rating: 5,
+      icon: "/assets/icons/star.svg",
       title: "Exceptional Service!",
       text: "Our experience with Estatein was outstanding. Their teams dedication and professionalism made finding our dream home a breeze. Highly recommended!",
       author: {
         name: "Wade Warren",
         location: "USA, California",
-        avatar: "/assets/Home/person1.webp",
+        avatar: "/assets/images/Home/person1.webp",
       },
     },
     {
       id: "testimonial-2",
       rating: 5,
+                  icon: "/assets/icons/star.svg",
       title: "Efficient and Reliable",
       text: "Estatein provided us with top-notch service. They helped us sell our property quickly and at a great price. We couldn't be happier with the results.",
       author: {
         name: "Emelie Thomson",
         location: "USA, Florida",
-        avatar: "/assets/Home/person2.webp",
+        avatar: "/assets/images/Home/person2.webp",
       },
     },
     {
       id: "testimonial-3",
       rating: 5,
+                  icon: "/assets/icons/star.svg",
       title: "Trusted Advisors",
       text: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!",
       author: {
         name: "John Mans",
         location: "USA, Nevada",
-        avatar: "/assets/Home/person3.webp",
+        avatar: "/assets/images/Home/person3.webp",
       },
     },
   ],
@@ -185,7 +200,7 @@ export const testimonialsSectionData: TestimonialsSectionData = {
 
 // Frequently Asked Questions Data
 
-export const faqSectionData: FaqSectionData = {
+export const faqSectionData: FaqSectionType = {
   headline: "Frequently Asked Questions",
   description: "Find answers to common questions about Estatein's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way.",
   button: {
@@ -221,7 +236,8 @@ export const faqSectionData: FaqSectionData = {
 
 
 
-export const ctaSectionData: CtaSectionData = {
+export const ctaSectionData: CtaSectionType = {
+  background: '/assets/images/Home/backgroundSection.webp',
   headline: "Start Your Real Estate Journey Today",
   description: "Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice. Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.",
   button: {
@@ -231,14 +247,14 @@ export const ctaSectionData: CtaSectionData = {
 };
 
 
-export const footerData: FooterData = {
+export const footerData: FooterType = {
   logo: {
     text: "Estatein",
-    logo: "/assets/Home/estateinLogo.svg",
+    logo: "/assets/icons/estateinLogo.svg",
   },
   newsletter: {
     placeholder: "Enter Your Email",
-    buttonIcon: "send-arrow",
+    buttonIcon: <SendBtn />,
   },
   navigationColumns: [
     {
@@ -292,9 +308,9 @@ export const footerData: FooterData = {
     link: "#terms",
   },
   socialLinks: [
-    { name: "Facebook", icon: "/assets/Home/facebookIcon.svg", link: "#" },
-    { name: "LinkedIn", icon: "/assets/Home/linkedinIcon.svg", link: "#" },
-    { name: "Twitter", icon: "/assets/Home/twitterIcon.svg", link: "#" },
-    { name: "YouTube", icon: "/assets/Home/youtubeIcon.svg.svg", link: "#" },
+    { name: "Facebook", icon: <Facebook />, link: "#" },
+    { name: "LinkedIn", icon: <LinkedIn />, link: "#" },
+    { name: "Twitter", icon: <TwitterIcon />, link: "#" },
+    { name: "YouTube", icon: <YouTube />, link: "#" },
   ],
 };
