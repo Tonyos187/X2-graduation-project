@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 
 
 //Home Section
@@ -12,7 +13,7 @@ export interface HeroStat {
   label: string;
 }
 
-export interface HeroSectionData {
+export interface HeroSectionType {
   headline: string;
   description: string;
   buttons: HeroButtonTypes[];
@@ -20,9 +21,9 @@ export interface HeroSectionData {
 }
 
 export interface FeatureItem {
-  arrow: string;
-  icon: string;
-  title: string | string[];
+  arrow: ReactNode;
+  icon: ReactNode;
+  title: string;
 }
 
 export interface NavItem {
@@ -30,13 +31,13 @@ export interface NavItem {
   link: string;
 }
 
-export interface TopBannerData {
+export interface TopBannerType {
     text: string,
     linkText: string,
     link: string,
 }
 
-export interface SiteInfoData {
+export interface SiteInfoType {
     siteTitle: string,
     logo: string
 }
@@ -44,7 +45,7 @@ export interface SiteInfoData {
 
 // Featured Properties Section
 export interface FeaturedPropertyDetail {
-  icon: string;
+  icon: ReactNode;
   label: string;
 }
 
@@ -64,7 +65,7 @@ export interface FeaturedProperty {
   button: FeaturedPropertyButton;
 }
 
-export interface FeaturedPropertiesSectionData {
+export interface FeaturedPropertiesSectionType {
   headline: string;
   description: string;
   button: FeaturedPropertyButton;
@@ -82,6 +83,7 @@ export interface TestimonialAuthor {
 // فرد من التقييمات
 export interface Testimonial {
   id: string;
+  icon: string;
   rating: number;
   title: string;
   text: string;
@@ -95,7 +97,7 @@ export interface TestimonialNavigation {
 }
 
 // البيانات الكاملة لقسم التقييمات
-export interface TestimonialsSectionData {
+export interface TestimonialsSectionType {
   headline: string;
   description: string;
   button: {
@@ -124,7 +126,7 @@ export interface FaqNavigation {
 
 
 
-export interface FaqSectionData {
+export interface FaqSectionType {
   headline: string;
   description: string;
   button: {
@@ -140,7 +142,8 @@ export interface FaqSectionData {
 // Start Your Real Estate Journey Today Types 
 // القسم يلي فوق الفوتر
 
-export interface CtaSectionData {
+export interface CtaSectionType {
+  background: string;
   headline: string;
   description: string;
   button: {
@@ -153,14 +156,14 @@ export interface CtaSectionData {
 
 //footer
 
-export interface FooterData {
+export interface FooterType {
   logo: {
     text: string;
     logo: string;
   };
   newsletter: {
     placeholder: string;
-    buttonIcon: string;
+    buttonIcon: ReactNode;
   };
   navigationColumns: FooterNavColumn[];
   copyright: string;
@@ -181,9 +184,6 @@ export interface FooterNavColumn {
 
 export interface SocialLink {
   name: string;
-  icon: string;
+  icon: ReactNode;
   link: string;
 }
-
-
-
