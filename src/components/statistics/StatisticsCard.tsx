@@ -4,7 +4,7 @@ const StatsCard = ({ value, label }: HeroStat) => {
   return (
     <div
       className="flex flex-col items-center justify-center h-[121px] gap-2 rounded-[12px] bg-darkGray
-      w-full sm:w-[224px] 
+      w-full md:w-[32%] 
       px-4 py-4 md:px-[14px] md:py-5 lg:px-4 lg:py-6
       border border-borderColor"
     >
