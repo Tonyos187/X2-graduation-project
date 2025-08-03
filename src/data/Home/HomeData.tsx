@@ -18,6 +18,9 @@ import type { CtaSectionType, FaqSectionType, FeaturedPropertiesSectionType, Fea
 export const heroSectionData: HeroSectionType = {
   headline: "Discover Your Dream Property with Estatein",
   description: "Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.",
+  heroImage: '/assets/images/Home/heroBuilding.webp',
+  centerCircle: '/assets/images/Home/centerCicleHero.webp',
+  bgImage: '/assets/images/Home/backgroundHeroImage.png',
   buttons: [
     { text: "Learn More", link: "#" },
     { text: "Browse Properties", link: "#", primary: true },
