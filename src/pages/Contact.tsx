@@ -8,10 +8,13 @@ import {
 const Contact = () => {
   return (
     <>
+      {/* put hero title and description through props */}
       <ContactHeroContent
         title={contactHeroData.title}
         description={contactHeroData.description}
       />
+
+      {/* put your featurs data here but first check the type in src/types/contact/contactTypes */}
       <ContactHeroFeatures data={contactHeroCard} />
     </>
   );
