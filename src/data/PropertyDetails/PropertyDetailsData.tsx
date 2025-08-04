@@ -18,6 +18,10 @@ export const PropertyDetailsData : PropertyDetailsType={
         {image: "/assets/images/PropertyDetails/SeasideSerenityVilla7.webp",},
         {image: "/assets/images/PropertyDetails/SeasideSerenityVilla8.webp",},
         {image: "/assets/images/PropertyDetails/SeasideSerenityVilla9.webp",},
+        // 
+        {image: "/assets/images/PropertyDetails/SeasideSerenityVilla1.webp",},
+        {image: "/assets/images/PropertyDetails/SeasideSerenityVilla2.webp",},
+        {image: "/assets/images/PropertyDetails/SeasideSerenityVilla3.webp",},
     ],
     description :{
         description : "Discover your own piece of paradise with the Seaside Serenity Villa. T With an open floor plan, breathtaking ocean views from every room, and direct access to a pristine sandy beach, this property is the epitome of coastal living.",
