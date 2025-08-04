@@ -1,9 +1,13 @@
-import PropertyDetailsSlider from "../components/PropertyDetailsSlider/PropertyDetailsSlider"
+import Hero from "../sections/Hero";
+import PropertyDetailsSlider from "../components/PropertyDetailsSlider/PropertyDetailsSlider";
+
 const Home = () => {
   return (
+    <>
+    <Hero />
     <PropertyDetailsSlider/>
-    // <div>Home</div>
-  )
-}
+    </>
+  );
+};
 
-export default Home
+export default Home;
