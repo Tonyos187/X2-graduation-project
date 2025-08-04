@@ -57,7 +57,7 @@ const Hero = () => {
           <img
             src={heroSectionData?.heroImage}
             alt="heroImageBuilding"
-            className="absolute inset-0 w-full h-full  object-cover md:object-fill xl:object-cover z-20"
+            className="absolute inset-0 w-full h-full  object-cover sm:object-fill lg:object-cover z-20"
           />
         </div>
       </div>
