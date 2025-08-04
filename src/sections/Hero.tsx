@@ -36,7 +36,7 @@ const Hero = () => {
         </div>
 
         {/* Right Image */}
-        <div className="w-[90%] rounded-2xl m-auto md:m-0 md:rounded-none md:w-[48%] relative min-h-[400px] overflow-hidden bg-darkGray">
+        <div className="w-[90%] rounded-[12px] m-auto md:m-0 md:rounded-none md:w-[48%] relative min-h-[400px] overflow-hidden bg-darkGray">
           {/* Background Image */}
           <img
             src={heroSectionData?.bgImage}
