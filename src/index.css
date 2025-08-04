@@ -10,6 +10,10 @@
     --color-secText: #999999;
     --color-mainPurple: #703BF7;
     --color-secPurple: #A685FA;
+    --color-borderColor: #262626;
+    --color-overlay: #0A0A0A80;
+    --color-grayMedium: #4D4D4D;
+    --color-iconDisaled: #808080;
     /* Spacing */
     --spacing-pc: 8.4375%;
     --spacing-laptop: 5.5555%;
@@ -37,4 +41,15 @@
     .font-urbanist {
         font-family: 'Urbanist', sans-serif;
     }
+}
+@keyframes scroll {
+    0%{
+        transform :translateX(0%);
+    }
+    100%{
+        transform :translateX(-100%);
+    }
+}
+.scroll{
+    animation: scroll 15s linear infinite;
 }

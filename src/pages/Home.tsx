@@ -1,7 +1,8 @@
-
+import PropertyDetailsSlider from "../components/PropertyDetailsSlider/PropertyDetailsSlider"
 const Home = () => {
   return (
-    <div>Home</div>
+    <PropertyDetailsSlider/>
+    // <div>Home</div>
   )
 }
 
