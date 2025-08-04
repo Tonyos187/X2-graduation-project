@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Default theme: Dark Mode */
+/* Default theme: Dark Mode */ 
 
 @theme {
     /* Colors */
@@ -10,7 +10,6 @@
     --color-secText: #999999;
     --color-mainPurple: #703BF7;
     --color-secPurple: #A685FA;
-    --color-borderColor: #262626;
     /* Spacing */
     --spacing-pc: 8.4375%;
     --spacing-laptop: 5.5555%;
@@ -19,10 +18,11 @@
     --breakpoint-tablet: 768px;
     --breakpoint-laptop: 1440px;
     --breakpoint-pc: 1920px;
-}
-
-
-/* Light mode overrides (if you use .light class or media query) */
+    }
+    
+    
+    
+    /* Light mode overrides (if you use .light class or media query) */
 
 .light {
     --color-bg: #ffffff;
