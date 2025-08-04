@@ -1,5 +1,5 @@
-import StatsCard from "../../components/statistics/StatisticsCard";
-import { heroSectionData } from "../../data/Home/HomeData";
+import StatsCard from "../../sharedComponents/statistics/StatisticsCard";
+import { heroSectionData } from "../../../data/Home/HomeData";
 
 const Statistics = () => {
   return (
@@ -12,4 +12,3 @@ const Statistics = () => {
 };
 
 export default Statistics;
-

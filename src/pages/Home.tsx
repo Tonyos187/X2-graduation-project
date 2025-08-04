@@ -1,10 +1,12 @@
-import Hero from "../sections/Hero"
+import IconTitleDescription from "../components/sharedComponents/IconTitleDescription";
+import Hero from "../sections/HomePageSections/Hero";
 const Home = () => {
   return (
     <>
-    <Hero />
+      <Hero />
+      {/* <IconTitleDescription /> */}
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
