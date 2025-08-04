@@ -14,11 +14,11 @@
     /* Spacing */
     --spacing-pc: 8.4375%;
     --spacing-laptop: 5.5555%;
-    --spacing-mobile: 20px;
+    --spacing-mobile: 16px;
     /* Screens */
     --breakpoint-tablet: 768px;
-    --breakpoint-laptop: 1440px;
-    --breakpoint-pc: 1920px;
+    --breakpoint-laptop: 1441px;
+    --breakpoint-pc: 1921px;
 }
 
 
@@ -38,4 +38,43 @@
     .font-urbanist {
         font-family: 'Urbanist', sans-serif;
     }
+}
+
+
+/* Scrollbar (WebKit browsers only) */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+/* Track (background of the scrollbar) */
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+
+/* Thumb (draggable part of the scrollbar) */
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-mainPurple);
+    border-radius: 10px;
+    border: 2px solid var(--color-mainPurple);
+    /* space around the thumb */
+}
+
+
+/* Thumb hover effect */
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-secPurple);
+}
+
+
+/* Firefox support */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-mainPurple) var(--color-bg);
 }
