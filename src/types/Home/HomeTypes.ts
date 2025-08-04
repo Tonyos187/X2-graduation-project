@@ -16,6 +16,9 @@ export interface HeroStat {
 export interface HeroSectionType {
   headline: string;
   description: string;
+  heroImage: string;
+  centerCircle: string;
+  bgImage: string;
   buttons: HeroButtonTypes[];
   stats: HeroStat[];
 }
@@ -160,4 +163,8 @@ export interface SocialLink {
   name: string;
   icon: ReactNode;
   link: string;
+}
+
+export interface BtnType {
+  desc: string;
 }
