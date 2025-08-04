@@ -1,7 +1,10 @@
 
+
 const Properties = () => {
   return (
-    <div>Properties</div>
+    <div >
+      Properties
+    </div>
   )
 }
 
