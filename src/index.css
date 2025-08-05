@@ -23,7 +23,6 @@
   --spacing-mobile: 16px;
   /* Screens */
   --breakpoint-xs: 389px;
-  --breakpoint-tablet: 768px;
   --breakpoint-laptop: 1441px;
   --breakpoint-pc: 1921px;
 }

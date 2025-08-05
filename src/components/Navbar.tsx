@@ -28,8 +28,8 @@ const Navbar = (): JSX.Element => {
 
   const navLinkStyles = ({ isActive }: { isActive: boolean }) =>
     isActive
-      ? "text-mainText bg-bg border laptop:py-3.5 tablet:py-3 tablet:px-5 laptop:px-6 rounded-lg border-borderColor"
-      : " text-mainText laptop:py-3.5 tablet:py-3 border border-darkGray";
+      ? "text-mainText bg-bg border laptop:py-3.5 md:py-3 md:px-5 laptop:px-6 rounded-lg border-borderColor"
+      : " text-mainText laptop:py-3.5 md:py-3 border border-darkGray";
 
   return (
     <>
@@ -41,11 +41,11 @@ const Navbar = (): JSX.Element => {
         />
       )}
 
-      <nav className="fixed top-0 left-0 w-full laptop:h-[99px] tablet:h-[77px] z-50 flex justify-between items-center laptop:px-pc tablet:px-laptop px-mobile laptop:py-0 tablet:py-0 py-5  bg-darkGray shadow">
+      <nav className="fixed top-0 left-0 w-full laptop:h-[99px] md:h-[77px] z-50 flex justify-between items-center laptop:px-pc md:px-laptop px-mobile laptop:py-0 md:py-0 py-5  bg-darkGray shadow">
         {/* Logo */}
         <div className="flex gap-2.5 items-center">
-          <img src="/assets/Symbol.png" alt="Logo" className="laptop:w-12 tablet:w-8 w-7" />
-          <h1 className="font-semibold laptop:text-[28px] tablet:text-2xl text-xl text-white">Estatein</h1>
+          <img src="/assets/Symbol.png" alt="Logo" className="laptop:w-12 md:w-8 w-7" />
+          <h1 className="font-semibold laptop:text-[28px] md:text-2xl text-xl text-white">Estatein</h1>
         </div>
 
         {/* Center Links (Desktop) */}
@@ -63,8 +63,8 @@ const Navbar = (): JSX.Element => {
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
               isActive
-                ? "text-mainText bg-mainPurple laptop:py-4 laptop:px-6 tablet:py-3.5 tablet:px-5  rounded-lg border border-darkGray laptop:text-lg"
-                : "laptop:text-lg text-mainText laptop:py-4 laptop:px-6 tablet:py-3.5 tablet:px-5 rounded-lg border border-borderColor"
+                ? "text-mainText bg-mainPurple laptop:py-4 laptop:px-6 md:py-3.5 md:px-5  rounded-lg border border-darkGray laptop:text-lg"
+                : "laptop:text-lg text-mainText laptop:py-4 laptop:px-6 md:py-3.5 md:px-5 rounded-lg border border-borderColor"
             }
           >
             Contact Us

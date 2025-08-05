@@ -1,4 +1,4 @@
-import IconTitleDescription from "../../components/sharedComponents/IconTitleDescription";
+import SectionHeader from "../../components/SectionHeader";
 import Statistics from "../../components/sharedComponents/statistics/Statistics";
 import { type HeroSectionType } from "../../types/About/AboutType";
 
@@ -12,7 +12,7 @@ const Hero = ({
     <section className="px-4 xl:px-20 pt-49 flex flex-col-reverse items-center justify-end lg:flex-row lg:justify-between lg:items-start gap-10 lg:gap-15 xl:gap-20 min-h-screen">
       {/* Left Side of Hero */}
       <div className="w-full md:min-w-1/2 40 50 80 flex flex-col gap-10 md:gap-12.5 2xl:gap-20">
-        <IconTitleDescription title={headline} description={description} withIcon withBtn />
+        <SectionHeader title={headline} description={description} withIcon />
         {/* Stats */}
         <Statistics />
       </div>
