@@ -6,7 +6,7 @@ const TextInput: React.FC<{ field: FormField }> = ({ field }) => {
 
     return (
         <div className="flex flex-col gap-3.5 font-medium w-full">
-            {field.label && <label htmlFor={field.id} className="text-white text-sm">{field.label}</label>}
+            {field.label && <label htmlFor={field.id} className="text-white font-semibold text-base ">{field.label}</label>}
             <div className="flex items-center gap-2">
                 {Icon && typeof Icon === "function" ? (
                     <Icon className="w-5 h-5 text-white " />

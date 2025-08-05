@@ -6,7 +6,7 @@ import { propertiesData } from "../data/Properties/PropertisData"
 
 const Properties = () => {
   return (
-    <div >
+    <div className="py-24 px-10" >
        <SearchFild data={propertiesData.searchSection} />
       <SearchDropDownComponent data={propertiesData.searchFilterSection} />
       <ContactFormFieldsComponent data={propertiesData.contactFormSection}/>
