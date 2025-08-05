@@ -21,4 +21,5 @@ const SearchDropDownComponent: React.FC<Props> = ({ data }) => {
   );
 };
 
+
 export default SearchDropDownComponent;
