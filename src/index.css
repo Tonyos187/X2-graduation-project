@@ -155,5 +155,7 @@
   animation: fade-slide-up 1s ease forwards;
 }
 .scroll {
+    animation: scroll 15s linear infinite;
   animation: scroll 15s linear infinite;
+
 }
