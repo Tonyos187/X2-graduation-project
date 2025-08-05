@@ -9,25 +9,17 @@ const Hero = ({
   bgImage,
 }: HeroSectionType) => {
   return (
-    <section className="px-4 pt-[50px] lg:px-20 lg:pt-[70px] 2xl:px-[162px] 2xl:pt-[100px] flex flex-col-reverse items-center justify-end lg:flex-row lg:justify-between lg:items-start gap-10 lg:gap-[60px] 2xl:gap-20 min-h-screen">
+    <section className="px-4 xl:px-20 pt-49 flex flex-col-reverse items-center justify-end lg:flex-row lg:justify-between lg:items-start gap-10 lg:gap-15 xl:gap-20 min-h-screen">
       {/* Left Side of Hero */}
-      <div>
-        <IconTitleDescription
-          title={headline}
-          description={description}
-          descriptionClassName="mb-10 lg:mb[50px] 2xl:mb-20 max-w-[358px] lg:max-w-[610px] 2xl:max-w-[755px]"
-          showIcon={true}
-          icon="/assets/icons/stars-of-title.svg"
-        />
-
+      <div className="w-full md:min-w-1/2 40 50 80 flex flex-col gap-10 md:gap-12.5 2xl:gap-20">
+        <IconTitleDescription title={headline} description={description} withIcon withBtn />
         {/* Stats */}
-
         <Statistics />
       </div>
 
       {/* Right Side Hero*/}
       <div
-        className="w-full sm:max-w-[570px] lg:max-w-[610px] 2xl:max-w-[755px] max-h-[310px] lg:max-h-[435px] 2xl:max-h-[546px]  relative min-h-[400px] overflow-hidden border border-borderColor rounded-[12px] \"
+        className="w-full sm:max-w-[570px] lg:max-w-[610px] 2xl:max-w-[755px] min-h-[310px] lg:min-h-[435px] 2xl:min-h-[546px] relative overflow-hidden border border-borderColor rounded-[12px] \"
         style={{ backgroundColor: "#1A1A1A" }}
       >
         {/* Background Image */}

@@ -1,7 +1,6 @@
 import { heroSectionData } from "../../data/Home/HomeData";
 import Statistics from "../../components/sharedComponents/statistics/Statistics";
-import PurpleMainButton from "../../components/PurpleMainButton";
-import DarkButton from "../../components/DarkButton";
+import Button from "../../components/Button";
 
 const Hero = () => {
   const { headline, description, buttons } = heroSectionData;
@@ -32,8 +31,8 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row gap-4 my-[60px]">
-            <DarkButton desc={buttons[0]?.text} />
-            <PurpleMainButton desc={buttons[1]?.text} />
+            <Button content={buttons[0]?.text} withBorder/>
+            <Button content={buttons[1]?.text} className="bg-mainPurple" />
           </div>
 
           {/* Stats */}

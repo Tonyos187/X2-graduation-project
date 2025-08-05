@@ -1,34 +1,39 @@
-import { type IconTitleDescriptionType } from "../../types/SharedComponents/IconTitleDescriptionType";
+import Button from "../Button";
+import ThreeStars from "./ThreeStars";
 
 const IconTitleDescription = ({
   title,
-  titleClassName,
   description,
-  descriptionClassName,
-  showIcon,
-  icon,
-  className,
-}: IconTitleDescriptionType) => {
+  withIcon,
+  withBtn
+}: {
+  title?:string,
+  description?:string,
+  withIcon?:boolean,
+  withBtn?:boolean
+}) => {
   return (
-    <div className={`${className} `}>
+    <div className={`relative flex flex-col gap-2 md:gap-2.5 lg:gap-3.5`}>
       {/* stars icon*/}
-
-      {showIcon && <img src={icon} alt="stars-of-title" />}
+      {withIcon && (
+        <div className="absolute top-[-20px] md:top-[-30px] left-[-8px] md:left-[-16px]">
+          <ThreeStars />
+        </div>
+      )}
 
       {/* title */}
-
-      <h3
-        className={`text-mainText font-semibold text-[28px] lg:text-[38px] 2xl:text-5xl my-2  lg:mt-1.5 lg:mb-2.5 2xl:mt-2.5 2xl:mb-3.5 ${titleClassName}`}
-      >
+      <h2 className={`text-mainText font-semibold text-[28px] lg:text-[38px] 2xl:text-5xl leading-[150%]`}>
         {title}
-      </h3>
+      </h2>
 
       {/* description */}
-      <p
-        className={`text-secText font-medium text-[14px] lg:text-[16px] 2xl:text-[18px]  ${descriptionClassName}`}
-      >
+      <div className="flex items-center justify-between gap-37.5 2xl:gap-50">
+        <p className={`text-secText font-medium text-[14px] lg:text-[16px] 2xl:text-[18px]`}>
         {description}
       </p>
+      {withBtn && <Button content="view all property" className="bg-darkGray hidden md:block" withBorder />}
+      </div>
+      
     </div>
   );
 };
