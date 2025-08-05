@@ -164,7 +164,3 @@ export interface SocialLink {
   icon: ReactNode;
   link: string;
 }
-
-export interface BtnType {
-  desc: string;
-}

@@ -15,6 +15,8 @@
   --color-overlay: #0a0a0a80;
   --color-grayMedium: #4d4d4d;
   --color-iconDisaled: #808080;
+  --color-star: #666;
+  --color-seconderyStar: #333;
   /* Spacing */
   --spacing-pc: 8.4375%;
   --spacing-laptop: 5.5555%;
