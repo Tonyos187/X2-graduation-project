@@ -1,7 +1,7 @@
-import { heroSectionData } from "../data/Home/HomeData";
-import Statistics from "../components/statistics/Statistics";
-import PurpleMainButton from "../components/PurpleMainButton";
-import DarkButton from "../components/DarkButton";
+import { heroSectionData } from "../../data/Home/HomeData";
+import Statistics from "../../components/sharedComponents/statistics/Statistics";
+import PurpleMainButton from "../../components/PurpleMainButton";
+import DarkButton from "../../components/DarkButton";
 
 const Hero = () => {
   const { headline, description, buttons } = heroSectionData;

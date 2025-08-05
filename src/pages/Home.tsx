@@ -1,11 +1,9 @@
-import Hero from "../sections/Hero";
-import PropertyDetailsSlider from "../components/PropertyDetailsSlider/PropertyDetailsSlider";
+import Hero from "../sections/HomePageSections/Hero";
 
 const Home = () => {
   return (
     <>
-    <Hero />
-    <PropertyDetailsSlider/>
+      <Hero />
     </>
   );
 };
