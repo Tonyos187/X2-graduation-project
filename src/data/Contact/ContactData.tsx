@@ -1,15 +1,16 @@
-import type { FeatureItem } from "../../types/Home/HomeTypes";
 
 import type {
   ContactDiscoverLocationsFilterDataType,
   ContactExplorePhotosDataType,
   ContactHeroDataType,
+  ContactHeroFeaturesType,
   ContactLetsConnectFormDataType,
 } from "../../types/Contact/ContactType";
 import DownArrow from "../../svg/DownArrow";
 import Email from "../../svg/Email";
 import Phone from "../../svg/Phone";
 import Location from "../../svg/Location";
+import TopRightArrow from "../../svg/TopRightArrow";
 
 // ContactHero Data
 
@@ -19,24 +20,24 @@ export const contactHeroData: ContactHeroDataType = {
     "Welcome to Estatein's Contact Us page. We're here to assist you with any inquiries, requests, or feedback you may have. Whether you're looking to buy or sell a property, explore investment opportunities, or simply want to connect, we're just a message away. Reach out to us, and let's start a conversation.",
 };
 
-export const contactHeroCard: FeatureItem[] = [
+export const contactHeroCard: ContactHeroFeaturesType[] = [
   {
-    arrow: "/assets/icons/TopRightArrow.svg",
+    arrow: <TopRightArrow />,
     icon: "/assets/icons/emailIcon.svg",
     title: "info@estatein.com",
   },
   {
-    arrow: "/assets/icons/TopRightArrow.svg",
+    arrow:<TopRightArrow />,
     icon: "/assets/icons/phoneIcon.svg",
     title: "+1 (123) 456-7890",
   },
   {
-    arrow: "/assets/icons/TopRightArrow.svg",
+    arrow: <TopRightArrow />,
     icon: "/assets/icons/locationIcon.svg",
     title: "Main Headquarters",
   },
   {
-    arrow: "/assets/icons/TopRightArrow.svg",
+    arrow: <TopRightArrow />,
     icon: "/assets/icons/roseIcon.svg",
     title: ["Instagram", "LinkedIn", "Facebook"],
   },
