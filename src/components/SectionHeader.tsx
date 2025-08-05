@@ -1,7 +1,7 @@
-import Button from "../Button";
-import ThreeStars from "./ThreeStars";
+import Button from "./Button";
+import ThreeStars from "./sharedComponents/ThreeStars";
 
-const IconTitleDescription = ({
+const SectionHeader = ({
   title,
   description,
   withIcon,
@@ -38,4 +38,4 @@ const IconTitleDescription = ({
   );
 };
 
-export default IconTitleDescription;
+export default SectionHeader;
