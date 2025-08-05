@@ -7,6 +7,12 @@ export interface ContactHeroDataType {
   description: string;
 }
 
+export interface ContactHeroFeaturesType {
+  arrow: ReactNode,
+    icon: string,
+    title: string | string[],
+}
+
 // let's connect section
 
 interface ConactFormType {

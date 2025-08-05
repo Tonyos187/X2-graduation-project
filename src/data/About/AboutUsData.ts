@@ -13,11 +13,8 @@ export const heroSectionData: HeroSectionType = {
   headline: "Our Journey",
   description:
     "Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary. Over the years, we've expanded our reach, forged valuable partnerships, and gained the trust of countless clients.",
-  stats: [
-    { value: "200+", label: "Happy Customers" },
-    { value: "10k+", label: "Properties For Clients" },
-    { value: "16+", label: "Years of Experience" },
-  ],
+  heroImage: "/assets/images/About/Hero-img.webp",
+  bgImage: "/assets/images/About/bgImgHero.png",
 };
 
 // Our Values section Data
