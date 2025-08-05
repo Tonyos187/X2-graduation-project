@@ -83,44 +83,11 @@ export interface PropertyCard {
 
 export interface SearchFilterSection {
     sectionTitle?: string;
-    filters: {
-         Location: {
-            label: string;
-            options: CustomSelectOption[];
-            placeholder: string;
-            icon?: string | ReactElement | ComponentType<{ className?: string }>;
-
-        };
-        propertyType: {
-            label: string;
-            options: CustomSelectOption[];
-            placeholder: string;
-            icon?: string | ReactElement | ComponentType<{ className?: string }>;
-
-        };
-        priceRange: {
-            label: string;
-            options: CustomSelectOption[];
-            placeholder: string;
-            icon?: string | ReactElement | ComponentType<{ className?: string }>;
-
-        };
-        propertySize: {
-            label: string;
-            options: CustomSelectOption[];
-            placeholder: string;
-            icon?: string | ReactElement | ComponentType<{ className?: string }>;
-
-        };
-        buildYear: {
-            label: string;
-            options: CustomSelectOption[];
-            placeholder: string;
-            icon?: string | ReactElement | ComponentType<{ className?: string }>;
-
-        };
-    };
+    formFields: FormField[];
+    submitButton?: CTAButton; 
 }
+
+
 
 
 

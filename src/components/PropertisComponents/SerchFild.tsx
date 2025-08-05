@@ -1,4 +1,3 @@
-// components/SearchFieldComponent.tsx
 import React from "react";
 import type { CTAButton, SearchSection } from "../../types/Properties/PropertiesTypes";
 
@@ -29,7 +28,7 @@ const SearchFild: React.FC<Props> = ({ data }) => {
         placeholder={searchField.placeholder}
         className="w-full h-full px-[24px] py-[20px] rounded-tl-[12px] rounded-tr-[12px] rounded-bl-[12px] rounded-br-[12px] md:rounded-tl-[12px] md:rounded-tr-[12px] md:rounded-bl-[0px] md:rounded-br-[0px] border border-[#262626] shadow-[0px_0px_0px_10px_#191919] bg-[#0E0E0E] text-white placeholder:text-gray-400 focus:outline-none "
       />
-      <div className="absolute top-1/2 right-[10px] transform -translate-y-1/2">
+      <div className="absolute top-1/2 right-[20px] transform -translate-y-1/2">
         {renderButton(searchButton)}
       </div>
     </div>
