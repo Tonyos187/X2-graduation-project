@@ -1,3 +1,4 @@
+// components/FormFieldsComponents/SelectField.tsx
 import React, { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import type { FormField } from "../../types/Properties/PropertiesTypes";
@@ -6,8 +7,10 @@ import DownArrow from "../../svg/DownArrow";
 const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
   const [selected, setSelected] = useState<string | null>("");
 
+  const Icon = typeof field.icon === "function" ? field.icon : undefined;
+
   return (
-    <div className="flex flex-col gap-1 w-full">
+    <div className="flex flex-col gap-1 w-full relative">
       {field.label && (
         <label htmlFor={field.id} className="text-white text-sm">
           {field.label}
@@ -17,14 +20,27 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
           <Listbox.Button
-            className="relative w-full cursor-pointer rounded-lg bg-darkGray py-4 pl-5 pr-10 text-left text-secText border border-borderColor focus:outline-none focus-visible:ring-2 focus-visible:ring-mainPurple transition-all duration-200"
+            className={`relative w-full cursor-pointer rounded-lg bg-bg py-4 ${
+              Icon ? "pl-12" : "pl-5"
+            } pr-10 text-left text-secText border border-borderColor focus:outline-none focus-visible:ring-2 focus-visible:ring-mainPurple transition-all duration-200`}
           >
+            {Icon && (
+              <span className="absolute inset-y-0 left-3 flex items-center">
+                <Icon className="w-5 h-5 text-white" />
+              </span>
+            )}
+
+            
+
             <span className="block truncate">
               {selected || field.placeholder}
             </span>
-            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-              <DownArrow/>
 
+            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+              <div className="w-6 h-6 flex items-center justify-center rounded-[50%] bg-darkGray">
+              <DownArrow />
+
+              </div>
             </span>
           </Listbox.Button>
 
@@ -42,7 +58,9 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
                   key={option}
                   className={({ active }) =>
                     `relative cursor-pointer select-none py-3 pl-10 pr-4 ${
-                      active ? "bg-mainPurple transition-all duration-400 text-white" : "text-secText"
+                      active
+                        ? "bg-mainPurple transition-all duration-400 text-white"
+                        : "text-secText"
                     }`
                   }
                   value={option}
@@ -57,9 +75,7 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
                         {option}
                       </span>
                       {selected && (
-                        <span className="absolute inset-y-0 left-2 flex items-center text-white">
-                          
-                        </span>
+                        <span className="absolute inset-y-0 left-2 flex items-center text-white" />
                       )}
                     </>
                   )}

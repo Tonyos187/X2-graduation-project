@@ -178,66 +178,56 @@ export const propertiesData: PropertiesData = {
         }
     },
     searchFilterSection: {
-        filters: {
-            Location: {
-                label: "Location",
-                placeholder: "Location",
-                options: [
-                    { value: "villa", label: "Villa" },
-                    { value: "apartment", label: "Apartment" },
-                    { value: "office", label: "Office" },
-                    { value: "land", label: "Land" }
-                ],
-                icon: Location,
+        sectionTitle: "Search Filters",
+        formFields: [
+            {
+                id: "location",
+                placeholder: "Select Location",
+                type: "select",
+                name: "location",
+                options: ["Villa", "Apartment", "Office", "Land"],
+                icon: Location
             },
-            propertyType: {
-                label: "Property Type",
-                placeholder: "Select Type",
-                options: [
-                    { value: "villa", label: "Villa" },
-                    { value: "apartment", label: "Apartment" },
-                    { value: "office", label: "Office" },
-                    { value: "land", label: "Land" }
-                ],
-                icon: AirplaneIcon,
+            {
+                id: "property-type",
+                placeholder: "Select Property Type",
+                type: "select",
+                name: "propertyType",
+                options: ["Villa", "Apartment", "Office", "Land"],
+                icon: AirplaneIcon
             },
-            priceRange: {
-                label: "Price Range",
-                placeholder: "Select Range",
-                options: [
-                    { value: "100-300", label: "$100K - $300K" },
-                    { value: "300-500", label: "$300K - $500K" },
-                    { value: "500-1M", label: "$500K - $1M" },
-                    { value: "1M+", label: "$1M+" }
-                ],
-                icon: Camera,
+            {
+                id: "price-range",
+                placeholder: "Select Price Range",
+                type: "select",
+                name: "priceRange",
+                options: ["$100K - $300K", "$300K - $500K", "$500K - $1M", "$1M+"],
+                icon: Camera
             },
-            propertySize: {
-                label: "Property Size",
+            {
+                id: "property-size",
                 placeholder: "Select Size",
-                options: [
-                    { value: "500-1000", label: "500 - 1000 sqft" },
-                    { value: "1000-2000", label: "1000 - 2000 sqft" },
-                    { value: "2000-3000", label: "2000 - 3000 sqft" },
-                    { value: "3000+", label: "3000+ sqft" }
-
-                ],
-                icon: Cube,
+                type: "select",
+                name: "propertySize",
+                options: ["500 - 1000 sqft", "1000 - 2000 sqft", "2000 - 3000 sqft", "3000+ sqft"],
+                icon: Cube
             },
-            buildYear: {
-                label: "Build Year",
+            {
+                id: "build-year",
                 placeholder: "Select Year",
-                options: [
-                    { value: "2020+", label: "2020 - Present" },
-                    { value: "2010-2020", label: "2010 - 2020" },
-                    { value: "2000-2010", label: "2000 - 2010" },
-                    { value: "1990-2000", label: "1990 - 2000" }
-                ],
+                type: "select",
+                name: "buildYear",
+                options: ["2020 - Present", "2010 - 2020", "2000 - 2010", "1990 - 2000"],
                 icon: Calendar
             }
-
+        ],
+        submitButton: {
+            text: "Apply Filters",
+            link: "#",
+            variant: "primary"
         }
     }
+
 
 
 
