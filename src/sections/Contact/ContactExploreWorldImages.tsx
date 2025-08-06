@@ -1,14 +1,24 @@
-import CardImage from "../../components/CardImage"
-import type { ContactExplorePhotosType } from "../../types/Contact/ContactType"
+import CardImage from "../../components/CardImage";
+import type { ContactExplorePhotosType } from "../../types/Contact/ContactType";
 
-const ContactExploreWorldImages = ({photos} : {photos: ContactExplorePhotosType[]}) => {
+const ContactExploreWorldImages = ({
+  photos,
+}: {
+  photos: ContactExplorePhotosType[];
+}) => {
   return (
     <section className="grid grid-cols-4 gap-2.5 lg:gap-5">
       {photos.map((photo, index) => (
-        <CardImage key={photo.id} src={photo.image} alt={photo.id} className={index >= photos.length - 2 ? "col-span-1" : "col-span-2"} height="h-[18.3334vw] lg:h-[13.298612vw] 2xl:h-[12.29167vw]" />
+        <CardImage
+          key={photo.id}
+          src={photo.image}
+          alt={photo.id}
+          className={index >= photos.length - 2 ? "col-span-1" : "col-span-2"}
+          height="h-[18.3334vw] lg:h-[13.298612vw] 2xl:h-[12.29167vw]"
+        />
       ))}
     </section>
-  )
-}
+  );
+};
 
-export default ContactExploreWorldImages
+export default ContactExploreWorldImages;

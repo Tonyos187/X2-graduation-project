@@ -9,7 +9,7 @@ import ContactExploreWorld from "../components/ContactExploreWorld.tsx";
 const Contact = () => {
   return (
     <>
-      <div className="hero">
+      <div className="hero mt-[68.58px] tablet:mt-[77px] laptop:mt-[99px]">
         {/* put hero title and description through props */}
         <ContactHeroContent
           title={contactHeroData.title}

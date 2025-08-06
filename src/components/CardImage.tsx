@@ -4,13 +4,19 @@ interface CardImageProps {
   src: string;
   alt: string;
   height?: string;
-  width?: string;
   className?: string;
 }
 
-const CardImage: React.FC<CardImageProps> = ({ src, alt,className, height }) => {
+const CardImage: React.FC<CardImageProps> = ({
+  src,
+  alt,
+  className,
+  height,
+}) => {
   return (
-    <div className={`w-full ${height} overflow-hidden rounded-[10px] ${className}`}>
+    <div
+      className={`w-full ${height} overflow-hidden rounded-[10px] ${className}`}
+    >
       <img
         src={src}
         alt={alt}
@@ -20,4 +26,4 @@ const CardImage: React.FC<CardImageProps> = ({ src, alt,className, height }) => 
   );
 };
 
-export default CardImage; 
+export default CardImage;
