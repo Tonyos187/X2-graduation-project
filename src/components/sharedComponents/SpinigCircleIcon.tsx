@@ -16,7 +16,7 @@
 function SpinigCircleIcon({iconURL}:{iconURL:string}) {
 
   return (
-     <div className="relative mt-8 xs:mt-0 w-12 h-12 lg:w-15 lg:h-15 2xl:w-20.5 2xl:h-20.5 z-40">
+     <div className="relative mt-8 xs:mt-0 w-12 h-12 lg:w-15 lg:h-15 2xl:w-20.5 2xl:h-20.5 z-10">
         <div className="relative rounded-full bg-darkGray w-12 h-12 lg:w-15 lg:h-15 2xl:w-20.5 2xl:h-20.5 flex justify-center items-center
                         before:content-[''] before:absolute before:w-[calc(100%+3px)] before:h-[calc(100%+3px)] inset-0 before:rounded-full
                         before:bg-[linear-gradient(40.65deg,#A685FA_0.85%,rgba(166,133,250,0)_34.8%),linear-gradient(219.04deg,#A685FA_-6.93%,rgba(166,133,250,0)_52.6%)]

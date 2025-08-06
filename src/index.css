@@ -3,124 +3,144 @@
 /* Default theme: Dark Mode */
 
 @theme {
-  /* Colors */
-  --color-bg: #141414;
-  --color-darkGray: #1a1a1a;
-  --color-mainText: #ffffff;
-  --color-secText: #999999;
-  --color-mainPurple: #703bf7;
-  --color-secPurple: #a685fa;
-  --color-borderColor: #262626;
-  --color-topRightArrow: #4d4d4d;
-  --color-overlay: #0a0a0a80;
-  --color-grayMedium: #4d4d4d;
-  --color-iconDisaled: #808080;
-  /* Spacing */
-  --spacing-pc: 8.4375%;
-  --spacing-laptop: 5.5555%;
-  --spacing-mobile: 16px;
-  /* Screens */
-  --breakpoint-xs: 389px;
-  --breakpoint-tablet: 768px;
-  --breakpoint-laptop: 1441px;
-  --breakpoint-pc: 1921px;
+    /* Colors */
+    --color-bg: #141414;
+    --color-darkGray: #1a1a1a;
+    --color-mainText: #ffffff;
+    --color-secText: #999999;
+    --color-mainPurple: #703bf7;
+    --color-secPurple: #a685fa;
+    --color-borderColor: #262626;
+    --color-topRightArrow: #4d4d4d;
+    --color-overlay: #0a0a0a80;
+    --color-grayMedium: #4d4d4d;
+    --color-iconDisaled: #808080;
+    --color-star: #666;
+    --color-seconderyStar: #333;
+    /* Spacing */
+    --spacing-pc: 8.4375%;
+    --spacing-laptop: 5.5555%;
+    --spacing-mobile: 16px;
+    /* Screens */
+    --breakpoint-xs: 389px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-laptop: 1441px;
+    --breakpoint-pc: 1921px;
 }
+
 
 /* Light mode overrides (if you use .light class or media query) */
 
 .light {
-  --color-bg: #ffffff;
-  --color-darkGray: #f5f5f5;
-  --color-mainText: #000000;
-  --color-secText: #666666;
+    --color-bg: #ffffff;
+    --color-darkGray: #f5f5f5;
+    --color-mainText: #000000;
+    --color-secText: #666666;
 }
+
 
 /* Utility class */
 
 @layer utilities {
-  .font-urbanist {
-    font-family: "Urbanist", sans-serif;
-  }
+    .font-urbanist {
+        font-family: "Urbanist", sans-serif;
+    }
 }
+
 
 /* Scrollbar (WebKit browsers only) */
 
 ::-webkit-scrollbar {
-  width: 12px;
+    width: 12px;
 }
+
 
 /* Track (background of the scrollbar) */
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg);
+    background: var(--color-bg);
 }
+
 
 /* Thumb (draggable part of the scrollbar) */
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-mainPurple);
-  border-radius: 10px;
-  border: 2px solid var(--color-mainPurple);
+    background-color: var(--color-mainPurple);
+    border-radius: 10px;
+    border: 2px solid var(--color-mainPurple);
 }
+
 
 /* Thumb hover effect */
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-secPurple);
+    background-color: var(--color-secPurple);
 }
+
 
 /* Firefox support */
 
 * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-mainPurple) var(--color-bg);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-mainPurple) var(--color-bg);
 }
 
+
 /* Custom Animations*/
+
 
 /* spin-slow:
  *    - Rotates the element 360 degrees continuously.
  *    - Used for slow, infinite spinning effects.
  *    - Duration: 20s, linear timing, infinite loop.
  */
+
 @keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
+
+
 /* zoom-slow:
  *    - Smoothly scales the element up to 105% and back.
  *    - Creates a gentle pulsing/zooming effect.
  *    - Duration: 15s, ease-in-out timing, infinite loop.
  *
  */
+
 @keyframes zoom-slow {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
+
+
 /* fade-slide-up:
  *    - Fades the element in while moving it upward slightly.
  *    - Used for entry animations like revealing content on load or scroll.
  *    - Duration: 1s, ease timing, runs once (forwards).
  */
+
 @keyframes fade-slide-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+
 /*
  * scroll animation:
  * - Creates a continuous horizontal scrolling effect from right to left.
@@ -129,13 +149,14 @@
  */
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
+
 
 /*
  * Utility Classes:
@@ -144,15 +165,20 @@
  *  - .animate-fade-slide-up: applies the fade-slide-up animation.
  *  - .scroll: applies the scroll animation.
  */
+
 .animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
+    animation: spin-slow 20s linear infinite;
 }
+
 .animate-zoom-slow {
-  animation: zoom-slow 15s ease-in-out infinite;
+    animation: zoom-slow 15s ease-in-out infinite;
 }
+
 .animate-fade-slide-up {
-  animation: fade-slide-up 1s ease forwards;
+    animation: fade-slide-up 1s ease forwards;
 }
+
 .scroll {
-  animation: scroll 15s linear infinite;
+    animation: scroll 15s linear infinite;
+    -webkit-animation: scroll 15s linear infinite;
 }
