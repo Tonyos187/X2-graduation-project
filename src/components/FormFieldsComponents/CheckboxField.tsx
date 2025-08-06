@@ -17,7 +17,7 @@ const CheckboxField: React.FC<{ field: FormField }> = ({ field }) => {
         <>
             <div className="flex flex-col gap-2 w-full">
                 {field.label && (
-                    <label htmlFor={field.id} className="text-white text-sm">
+                    <label htmlFor={field.id} className="text-white font-semibold text-base ">
                         {field.label}
                     </label>
                 )}

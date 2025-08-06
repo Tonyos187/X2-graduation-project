@@ -1,18 +1,17 @@
 import { heroSectionData } from "../../data/Home/HomeData";
 import Statistics from "../../components/sharedComponents/statistics/Statistics";
-import PurpleMainButton from "../../components/PurpleMainButton";
-import DarkButton from "../../components/DarkButton";
+import Button from "../../components/Button";
 
 const Hero = () => {
   const { headline, description, buttons } = heroSectionData;
 
   return (
-    <section className="w-full relative min-h-screen overflow-hidden">
+    <section className="w-full relative min-h-screen laptop:pt-[99px] pt-[77px]  overflow-hidden">
       {/* Center Circle in middle of the section - rotate animation */}
       <img
         src={heroSectionData?.centerCircle}
         alt="centerCircle"
-        className="absolute top-[370px] left-[60px] md:top-[32.5%] md:left-[51.5%] w-[117px] h-[117px] md:w-[143.76px] md:h-[143.66px] z-30 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none
+        className="absolute top-[440px] left-[60px] md:top-[32.5%] md:left-[51.5%] w-[117px] h-[117px] md:w-[143.76px] md:h-[143.66px] z-30 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none
           animate-spin-slow
         "
       />
@@ -32,8 +31,8 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row gap-4 my-[60px]">
-            <DarkButton desc={buttons[0]?.text} />
-            <PurpleMainButton desc={buttons[1]?.text} />
+            <Button content={buttons[0]?.text} withBorder/>
+            <Button content={buttons[1]?.text} className="bg-mainPurple" />
           </div>
 
           {/* Stats */}
@@ -64,7 +63,7 @@ const Hero = () => {
           <img
             src={heroSectionData?.heroImage}
             alt="heroImageBuilding"
-            className="absolute inset-0 w-full h-full object-cover sm:object-fill lg:object-cover z-20"
+            className="absolute inset-0 w-full h-full  object-cover z-20"
           />
         </div>
       </div>

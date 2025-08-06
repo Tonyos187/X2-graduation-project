@@ -79,8 +79,6 @@ export interface PropertyCard {
     price: string;
     button: CTAButton;
 }
-
-
 export interface SearchFilterSection {
     sectionTitle?: string;
     formFields: FormField[];
