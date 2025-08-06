@@ -42,6 +42,7 @@ const ContactFormFieldsComponent: React.FC<Props> = ({ data }) => {
           {formFields.slice(4, 8).map(renderInput)}
         </div>
 
+
         <div className="flex flex-col md:flex-row gap-7 items-stretch md:items-center justify-between">
           <div className="w-full md:w-1/2">{renderInput(formFields[8])}</div>
           <div className="w-full lg:w-1/2 flex flex-col  sm:flex-row items-end gap-5">
