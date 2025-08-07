@@ -186,26 +186,25 @@ export const contactDiscoverLocationsFilterData: ContactDiscoverLocationsFilterD
 
 
 export const contactExplorePhotosData: ContactExplorePhotosDataType = {
-  backgroundImage: "/public/assets/images/Contact/ExploreBackground.webp",
   photos: [
     {
-      id: 1,
+      id: "exploreOffice",
       image: "/assets/images/Contact/exploreOffice.webp",
     },
     {
-      id: 2,
+      id: "explorePeople",
       image: "/assets/images/Contact/explorePeople.webp",
     },
     {
-      id: 3,
+      id: "exploreOfficeLaptops",
       image: "/assets/images/Contact/exploreOfficeLaptops.webp",
     },
     {
-      id: 4,
+      id: "explorePeopleInSuits",
       image: "/assets/images/Contact/explorePeopleInSuits.webp",
     },
     {
-      id: 5,
+      id: "exploreWomanInSuit",
       image: "/assets/images/Contact/exploreWomanInSuit.webp",
     },
   ],
@@ -214,5 +213,5 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     description:
       "Discover the world of Estatein and its impact on the real estate industry. From our team of experts to our commitment to excellence, we're here to guide you on your real estate journey.",
   },
-  titlePhoto: "/public/assets/images/Contact/ExploreShakingHands.webp",
+  titlePhoto: "/public/assets/images/Contact/exploreShakingHands.webp",
 };
