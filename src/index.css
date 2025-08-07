@@ -45,7 +45,45 @@
     .font-urbanist {
         font-family: "Urbanist", sans-serif;
     }
+  .animate-rotate {
+    animation: rotate 10s linear infinite;
+  }
+
+  .animate-pulse-once {
+    animation: pulse-once 0.6s ease-in-out;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .text-animate {
+    animation: color-shift 6s linear infinite;
+    color: white;
+  }
 }
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-once {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@keyframes color-shift {
+  0% { color: #ffffff; }
+  25% { color: #FFD93D; }
+  50% { color: #6BCB77; }
+  75% { color: #4D96FF; }
+  100% { color: #ffffff; }
+}
+
+
 
 
 /* Scrollbar (WebKit browsers only) */
