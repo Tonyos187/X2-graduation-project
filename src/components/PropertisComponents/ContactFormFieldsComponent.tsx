@@ -30,7 +30,7 @@ const ContactFormFieldsComponent: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <div className="w-full max-w-[1597px] mx-auto lg:px-6 py-10 flex flex-col gap-20 bg-bg transition-colors duration-300">
+    <div className="w-full max-w-[1597px] mx-auto  py-10 flex flex-col gap-20 bg-bg transition-colors duration-300">
    
 
       <form className="flex flex-col gap-10 p-5 md:p-10 lg:p-25 border border-borderColor rounded-xl">
