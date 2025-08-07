@@ -1,7 +1,10 @@
+import Images from "../sections/Images"
 
 const PropertyDetails = () => {
   return (
-    <div>PropertyDetails</div>
+    <>
+      <Images/>
+    </>
   )
 }
 
