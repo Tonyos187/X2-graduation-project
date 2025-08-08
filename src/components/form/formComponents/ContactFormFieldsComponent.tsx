@@ -1,5 +1,5 @@
 import React from "react";
-import type { FieldSection, FormField } from "../../types/Properties/PropertiesTypes";
+import type { FieldSection, FormField } from "../../../types/Properties/PropertiesTypes";
 import TextInput from "../FormFieldsComponents/TextInput";
 import TextareaField from "../FormFieldsComponents/TextareaField";
 import SelectField from "../FormFieldsComponents/SelectField";
@@ -30,10 +30,10 @@ const ContactFormFieldsComponent: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <div className="w-full max-w-[1597px] mx-auto  py-10 flex flex-col gap-20 bg-bg transition-colors duration-300">
+    <div className="w-full max-w-[1597px] mx-auto  py-10 flex flex-col gap-20 bg-Grey-08 transition-colors duration-300">
    
 
-      <form className="flex flex-col gap-10 p-5 md:p-10 lg:p-25 border border-borderColor rounded-xl">
+      <form className="flex flex-col gap-10 p-5 md:p-10 lg:p-25 border border-Grey-15 rounded-xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 lg:gap-7">
           {formFields.slice(0, 4).map(renderInput)}
         </div>
@@ -56,7 +56,7 @@ const ContactFormFieldsComponent: React.FC<Props> = ({ data }) => {
         <div className="flex justify-end">
           <button
             type="submit"
-            className="bg-mainPurple hover:bg-secPurple transition-colors text-white px-6 py-3 rounded-xl font-medium"
+            className="bg-Purple-60 hover:bg-Purple-75 transition-colors text-white px-6 py-3 rounded-xl font-medium"
           >
             {submitButton.text}
           </button>

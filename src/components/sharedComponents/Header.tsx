@@ -1,5 +1,5 @@
 import Button from "./Button";
-import ThreeStars from "./sharedComponents/ThreeStars";
+import ThreeStars from "./ThreeStars";
 
 const SectionHeader = ({
   title,
@@ -22,16 +22,16 @@ const SectionHeader = ({
       )}
 
       {/* title */}
-      <h2 className={`text-mainText font-semibold text-[7.17948vw] lg:text-[2.63889vw] 2xl:text-5xl leading-[150%]`}>
+      <h2 className={`text-White font-semibold text-[7.17948vw] lg:text-[2.63889vw] 2xl:text-5xl leading-[150%]`}>
         {title}
       </h2>
 
       {/* description */}
       <div className="flex items-center justify-between gap-37.5 2xl:gap-50">
-        <p className={`text-secText font-medium text-[3.5897vw] lg:text-[1.1112vw] 2xl:text-[18px]`}>
+        <p className={`text-Grey-60 font-medium text-[3.5897vw] lg:text-[1.1112vw] 2xl:text-[18px]`}>
         {description}
       </p>
-      {withBtn && <Button content="view all property" className="bg-darkGray hidden md:block" withBorder />}
+      {withBtn && <Button content="view all property" className="bg-Grey-10 hidden md:block" withBorder />}
       </div>
       
     </div>

@@ -1,4 +1,4 @@
-import PropertyDetailsSlider from "../components/PropertyDetailsSlider/PropertyDetailsSlider";
+import PropertyDetailsSlider from "../sections/propertiesDetails/PropertyDetailsSlider";
 
 const PropertyDetails = () => {
   return (
