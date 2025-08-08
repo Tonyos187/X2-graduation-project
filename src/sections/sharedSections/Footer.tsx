@@ -1,7 +1,10 @@
+import TopFooter from "../../components/sharedComponents/footerComponents/TopFooter";
+import { ctaSectionData } from "../../data/Home/HomeData";
+
 const Footer = () => {
   return (
-    <footer className="hidden">
-      Footer
+    <footer className="">
+      <TopFooter data={ctaSectionData}/>
     </footer>
   );
 };
