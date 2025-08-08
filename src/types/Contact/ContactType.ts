@@ -7,6 +7,12 @@ export interface ContactHeroDataType {
   description: string;
 }
 
+export interface ContactHeroFeaturesType {
+  arrow: ReactNode,
+    icon: string,
+    title: string | string[],
+}
+
 // let's connect section
 
 interface ConactFormType {
@@ -57,13 +63,12 @@ export interface ContactDiscoverLocationsFilterDataType {
 
 // Explore Estatein's World
 
-interface ContactExplorePhotosType {
-  id: number;
+export interface ContactExplorePhotosType {
+  id: string;
   image: string;
 }
 
 export interface ContactExplorePhotosDataType {
-  backgroundImage: string;
   photos: ContactExplorePhotosType[];
   contactExploreEstateinData: ContactHeroDataType;
   titlePhoto: string;

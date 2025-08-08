@@ -6,7 +6,6 @@ function Images() {
         <section>
             <PropertyDetailsHeder/>
             <PropertyDetailsSlider/>
-            
         </section>
     )
 }

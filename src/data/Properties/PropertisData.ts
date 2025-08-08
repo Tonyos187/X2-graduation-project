@@ -1,4 +1,9 @@
+import AirplaneIcon from "../../svg/Airplane";
+import Calendar from "../../svg/Calendar";
+import Camera from "../../svg/Camera";
+import Cube from "../../svg/Cube";
 import Email from "../../svg/Email";
+import Location from "../../svg/Location";
 import Phone from "../../svg/Phone";
 import type { PropertiesData } from "../../types/Properties/PropertiesTypes";
 export const propertiesData: PropertiesData = {
@@ -131,15 +136,14 @@ export const propertiesData: PropertiesData = {
             },
             {
                 id: "contact-method-phone",
-                label: "Phone",
+                label: "Preferred Contact Method",
                 placeholder: "Enter Your Number",
                 type: "checkbox",
                 name: "contactByPhone",
-                icon: Phone 
+                icon: Phone
             },
             {
                 id: "contact-method-email",
-                label: "Email",
                 placeholder: "Enter Your Email",
                 type: "checkbox",
                 name: "contactByEmail",
@@ -164,7 +168,7 @@ export const propertiesData: PropertiesData = {
             id: "property-search",
             placeholder: "Search For A Property",
             type: "text",
-            
+
         },
         searchButton: {
             text: "Find Property",
@@ -173,6 +177,57 @@ export const propertiesData: PropertiesData = {
             link: "#"
         }
     },
+    searchFilterSection: {
+        sectionTitle: "Search Filters",
+        formFields: [
+            {
+                id: "location",
+                placeholder: "Select Location",
+                type: "select",
+                name: "location",
+                options: ["Villa", "Apartment", "Office", "Land"],
+                icon: Location
+            },
+            {
+                id: "property-type",
+                placeholder: "Select Property Type",
+                type: "select",
+                name: "propertyType",
+                options: ["Villa", "Apartment", "Office", "Land"],
+                icon: AirplaneIcon
+            },
+            {
+                id: "price-range",
+                placeholder: "Select Price Range",
+                type: "select",
+                name: "priceRange",
+                options: ["$100K - $300K", "$300K - $500K", "$500K - $1M", "$1M+"],
+                icon: Camera
+            },
+            {
+                id: "property-size",
+                placeholder: "Select Size",
+                type: "select",
+                name: "propertySize",
+                options: ["500 - 1000 sqft", "1000 - 2000 sqft", "2000 - 3000 sqft", "3000+ sqft"],
+                icon: Cube
+            },
+            {
+                id: "build-year",
+                placeholder: "Select Year",
+                type: "select",
+                name: "buildYear",
+                options: ["2020 - Present", "2010 - 2020", "2000 - 2010", "1990 - 2000"],
+                icon: Calendar
+            }
+        ],
+        submitButton: {
+            text: "Apply Filters",
+            link: "#",
+            variant: "primary"
+        }
+    }
+
 
 
 
