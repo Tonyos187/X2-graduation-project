@@ -1,10 +1,11 @@
-import IconTitleDescription from "../components/sharedComponents/IconTitleDescription";
 import Hero from "../sections/HomePageSections/Hero";
+import PropertyDetailsSlider from "../components/PropertyDetailsSlider/PropertyDetailsSlider";
+
 const Home = () => {
   return (
     <>
       <Hero />
-      {/* <IconTitleDescription /> */}
+      <PropertyDetailsSlider />
     </>
   );
 };
