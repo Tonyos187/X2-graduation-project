@@ -1,5 +1,5 @@
 import React from "react";
-import type { FormField } from "../../types/Properties/PropertiesTypes";
+import type { FormField } from "../../../types/Properties/PropertiesTypes";
 
 const TextInput: React.FC<{ field: FormField }> = ({ field }) => {
     const Icon = field.icon && typeof field.icon !== "string" ? field.icon : null;
@@ -17,7 +17,7 @@ const TextInput: React.FC<{ field: FormField }> = ({ field }) => {
                     id={field.id}
                     name={field.name}
                     placeholder={field.placeholder}
-                    className="w-full bg-darkGray text-white placeholder-secText border border-borderColor rounded-lg px-5 py-4 text-sm outline-none focus:border-mainPurple transition-all duration-200"
+                    className="w-full bg-Grey-10 text-white placeholder-secText border border-Grey-15 rounded-lg px-5 py-4 text-sm outline-none focus:border-Purple-60 transition-all duration-200"
                     required={field.required}
                 />
             </div>

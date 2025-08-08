@@ -1,15 +1,15 @@
-import type { ContactHeroFeaturesType } from "../types/Contact/ContactType";
-import SpinigCircleIcon from "./sharedComponents/SpinigCircleIcon";
+import type { ContactHeroFeaturesType } from "../../types/Contact/ContactType";
+import SpinigCircleIcon from "../sharedComponents/SpinigCircleIcon";
 
-const ContactHeroFeaturesCard = ({
+const FeaturesCard = ({
   item,
 }: {
   item: ContactHeroFeaturesType;
 }) => {
   return (
-    <div className="relative group flex flex-col items-center xs:justify-center gap-3.5 lg:gap-4 2xl:gap-5 py-[5.1282vw] px-[3.5897vw] lg:py-[2.0834vw] lg:px-[1.1112vw] 2xl:py-[2.08334vw] 2xl:px-[1.04167vw] border border-borderColor rounded-[10px] bg-darkGray z-10 cursor-pointer">
+    <div className="relative group flex flex-col items-center xs:justify-center gap-3.5 lg:gap-4 2xl:gap-5 py-[5.1282vw] px-[3.5897vw] lg:py-[2.0834vw] lg:px-[1.1112vw] 2xl:py-[2.08334vw] 2xl:px-[1.04167vw] border border-Grey-15 rounded-[10px] bg-Grey-10 z-10 cursor-pointer">
       {/* top right arrow icon component */}
-      <div className="absolute top-5 right-5 w-6.5 h-6.5 2xl:w-8.5 2xl:h-8.5 text-topRightArrow">
+      <div className="absolute top-5 right-5 w-6.5 h-6.5 2xl:w-8.5 2xl:h-8.5 text-Grey-30">
         {item.arrow}
       </div>
 
@@ -32,4 +32,4 @@ const ContactHeroFeaturesCard = ({
   );
 };
 
-export default ContactHeroFeaturesCard;
+export default FeaturesCard;

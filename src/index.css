@@ -4,38 +4,78 @@
 
 @theme {
     /* Colors */
-    --color-bg: #141414;
-    --color-darkGray: #1a1a1a;
-    --color-mainText: #ffffff;
-    --color-secText: #999999;
-    --color-mainPurple: #703bf7;
-    --color-secPurple: #a685fa;
-    --color-borderColor: #262626;
-    --color-topRightArrow: #4d4d4d;
-    --color-overlay: #0a0a0a80;
-    --color-grayMedium: #4d4d4d;
-    --color-iconDisaled: #808080;
-    --color-star: #666;
-    --color-seconderyStar: #333;
+    /* Absolute Colors */
+    --color-White: #ffffff;
+    /* Purple Shades */
+    --color-Purple-60: #703BF7;
+    --color-Purple-65: #8254F8;
+    --color-Purple-70: #946CF9;
+    --color-Purple-75: #A685FA;
+    --color-Purple-90: #DBCEFD;
+    --color-Purple-95: #EDE7FE;
+    --color-Purple-97: #F4F0FE;
+    --color-Purple-99: #FBFAFF;
+    /* Grey Shades */
+    --color-Grey-08: #141414;
+    --color-Grey-10: #1A1A1A;
+    --color-Grey-15: #262626;
+    --color-Grey-20: #333333;
+    --color-Grey-30: #4D4D4D;
+    --color-Grey-40: #666666;
+    --color-Grey-50: #808080;
+    --color-Grey-60: #999999;
+    /* ____________________ */
+    /* White Shades */
+    --color-White-90: #E4E4E7;
+    --color-White-95: #F1F1F3;
+    --color-White-97: #F7F7F8;
+    --color-White-99: #FCFCFD;
     /* Spacing */
     --spacing-pc: 8.4375%;
     --spacing-laptop: 5.5555%;
     --spacing-mobile: 16px;
     /* Screens */
     --breakpoint-xs: 389px;
-    --breakpoint-tablet: 768px;
+    /* --breakpoint-tablet: 768px; which is md */
+    /* --breakpoint-tablet: 1024px; which is lg */
     --breakpoint-laptop: 1441px;
     --breakpoint-pc: 1921px;
 }
 
 
-/* Light mode overrides (if you use .light class or media query) */
+/* Light mode overrides */
 
 .light {
-    --color-bg: #ffffff;
-    --color-darkGray: #f5f5f5;
-    --color-mainText: #000000;
-    --color-secText: #666666;
+    /* Absolute Colors */
+    --color-White: #000000;
+    /* Purple Shades — keep unchanged */
+    /* no override needed */
+    /* Grey Shades → flipped to light greys */
+    --color-Grey-08: #FCFCFD;
+    /* Was #141414 */
+    --color-Grey-10: #F7F7F8;
+    /* Was #1A1A1A */
+    --color-Grey-15: #F1F1F3;
+    /* Was #262626 */
+    --color-Grey-20: #E4E4E7;
+    /* Was #333333 */
+    --color-Grey-30: #CCCCCC;
+    /* Was #4D4D4D */
+    --color-Grey-40: #999999;
+    /* Was #666666 */
+    --color-Grey-50: #808080;
+    /* Same (neutral) */
+    --color-Grey-60: #666666;
+    /* Was #999999 */
+    /* White Shades → flipped to darks for text/bg */
+    --color-White-90: #333333;
+    /* Was #E4E4E7 */
+    --color-White-95: #262626;
+    /* Was #F1F1F3 */
+    --color-White-97: #1A1A1A;
+    /* Was #F7F7F8 */
+    --color-White-99: #141414;
+    /* Was #FCFCFD */
 }
 
 
@@ -45,45 +85,60 @@
     .font-urbanist {
         font-family: "Urbanist", sans-serif;
     }
-  .animate-rotate {
-    animation: rotate 10s linear infinite;
-  }
-
-  .animate-pulse-once {
-    animation: pulse-once 0.6s ease-in-out;
-  }
-
-  .hover-glow:hover {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-    transition: box-shadow 0.3s ease;
-  }
-
-  .text-animate {
-    animation: color-shift 6s linear infinite;
-    color: white;
-  }
+    .animate-rotate {
+        animation: rotate 10s linear infinite;
+    }
+    .animate-pulse-once {
+        animation: pulse-once 0.6s ease-in-out;
+    }
+    .hover-glow:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        transition: box-shadow 0.3s ease;
+    }
+    .text-animate {
+        animation: color-shift 6s linear infinite;
+        color: white;
+    }
 }
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes pulse-once {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
-  100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes color-shift {
-  0% { color: #ffffff; }
-  25% { color: #FFD93D; }
-  50% { color: #6BCB77; }
-  75% { color: #4D96FF; }
-  100% { color: #ffffff; }
+    0% {
+        color: #ffffff;
+    }
+    25% {
+        color: #FFD93D;
+    }
+    50% {
+        color: #6BCB77;
+    }
+    75% {
+        color: #4D96FF;
+    }
+    100% {
+        color: #ffffff;
+    }
 }
-
-
 
 
 /* Scrollbar (WebKit browsers only) */
@@ -103,16 +158,16 @@
 /* Thumb (draggable part of the scrollbar) */
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color-mainPurple);
+    background-color: var(--color-Purple-60);
     border-radius: 10px;
-    border: 2px solid var(--color-mainPurple);
+    border: 2px solid var(--color-Purple-60);
 }
 
 
 /* Thumb hover effect */
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color-secPurple);
+    background-color: var(--color-Purple-75);
 }
 
 
@@ -120,7 +175,7 @@
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--color-mainPurple) var(--color-bg);
+    scrollbar-color: var(--color-Purple-60) var(--color-bg);
 }
 
 
@@ -219,4 +274,8 @@
 .scroll {
     animation: scroll 15s linear infinite;
     -webkit-animation: scroll 15s linear infinite;
+}
+
+.clip {
+    clip-path: path("M0,0 H100 V100 H0 Z M50,50 m-25,0 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0");
 }

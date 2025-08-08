@@ -1,4 +1,4 @@
-import SectionHeader from "../../components/SectionHeader";
+import SectionHeader from "../../components/sharedComponents/Header";
 import Statistics from "../../components/sharedComponents/statistics/Statistics";
 import { type HeroSectionType } from "../../types/About/AboutType";
 
@@ -19,7 +19,7 @@ const Hero = ({
 
       {/* Right Side Hero*/}
       <div
-        className="w-full sm:max-w-[570px] lg:max-w-[610px] 2xl:max-w-[755px] min-h-[310px] lg:min-h-[435px] 2xl:min-h-[546px] relative overflow-hidden border border-borderColor rounded-[12px] \"
+        className="w-full sm:max-w-[570px] lg:max-w-[610px] 2xl:max-w-[755px] min-h-[310px] lg:min-h-[435px] 2xl:min-h-[546px] relative overflow-hidden border border-Grey-15 rounded-[12px] \"
         style={{ backgroundColor: "#1A1A1A" }}
       >
         {/* Background Image */}
