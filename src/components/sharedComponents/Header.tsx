@@ -1,19 +1,21 @@
 import Button from "./Button";
 import ThreeStars from "./ThreeStars";
 
-const SectionHeader = ({
+const Header = ({
   title,
   description,
   withIcon,
-  withBtn
+  withBtn,
+  gap = "gap-2"
 }: {
   title?:string,
   description?:string,
   withIcon?:boolean,
-  withBtn?:boolean
+  withBtn?:boolean,
+  gap ?: string
 }) => {
   return (
-    <div className={`relative flex flex-col gap-2 md:gap-2.5 lg:gap-3.5`}>
+    <div className={`relative flex flex-col ${gap} md:gap-2.5 lg:gap-3.5`}>
       {/* stars icon*/}
       {withIcon && (
         <div className="absolute top-[-20px] md:top-[-30px] left-[-8px] md:left-[-16px]">
@@ -22,13 +24,13 @@ const SectionHeader = ({
       )}
 
       {/* title */}
-      <h2 className={`text-White font-semibold text-[7.17948vw] lg:text-[2.63889vw] 2xl:text-5xl leading-[150%]`}>
+      <h2 className={`text-White font-semibold text-[28px] md:text-[38px] xl:text-5xl leading-[150%]`}>
         {title}
       </h2>
 
       {/* description */}
       <div className="flex items-center justify-between gap-37.5 2xl:gap-50">
-        <p className={`text-Grey-60 font-medium text-[3.5897vw] lg:text-[1.1112vw] 2xl:text-[18px]`}>
+        <p className={`text-Grey-60 font-medium text-sm md:text-base xl:text-[18px]`}>
         {description}
       </p>
       {withBtn && <Button content="view all property" className="bg-Grey-10 hidden md:block" withBorder />}
@@ -38,4 +40,4 @@ const SectionHeader = ({
   );
 };
 
-export default SectionHeader;
+export default Header;

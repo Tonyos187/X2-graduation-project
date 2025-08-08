@@ -36,10 +36,10 @@
     --spacing-mobile: 16px;
     /* Screens */
     --breakpoint-xs: 389px;
-    /* --breakpoint-tablet: 768px; which is md */
-    /* --breakpoint-tablet: 1024px; which is lg */
-    --breakpoint-laptop: 1441px;
-    --breakpoint-pc: 1921px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1441px;
+    --breakpoint-2xl: 1921px;
 }
 
 
