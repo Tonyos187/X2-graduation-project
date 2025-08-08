@@ -1,4 +1,4 @@
-import CardImage from "../../components/CardImage";
+import CardImage from "../../components/sharedComponents/CardImage";
 import type { ContactExplorePhotosType } from "../../types/Contact/ContactType";
 
 const ContactExploreWorldImages = ({

@@ -1,27 +1,27 @@
-import CardImage from "../../components/CardImage";
-import SectionHeader from "../../components/SectionHeader";
+import CardImage from "../../components/sharedComponents/CardImage";
+import SectionHeader from "../../components/sharedComponents/Header";
 
 import type { ContactHeroDataType } from "../../types/Contact/ContactType";
 
 const ContactExploreWorldContent = ({
-  mainText,
+  White,
   mainImage,
 }: {
-  mainText: ContactHeroDataType;
+  White: ContactHeroDataType;
   mainImage: string;
 }) => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-5">
 
       <div className="my-auto">
-        <SectionHeader title={mainText.title}
-        description={mainText.description}
+        <SectionHeader title={White.title}
+        description={White.description}
         withIcon />
       </div>
 
       {/* <IconTitleDescription
-        title={mainText.title}
-        description={mainText.description}
+        title={White.title}
+        description={White.description}
         showIcon={true}
         icon="/assets/icons/stars-of-title.svg"
         className="my-auto"
