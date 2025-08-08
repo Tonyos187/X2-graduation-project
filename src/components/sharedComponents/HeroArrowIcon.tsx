@@ -3,14 +3,14 @@ import TopRightArrow from "../../svg/TopRightArrow";
 
 export default function HeroArrowIcon() {
   const text = "✨  D i s c o v e r  Y o u r  D r e a m  P r o p e r t y   ";
-  const circleRef = useRef<HTMLDivElement>(null);
+  const circle = useRef<HTMLDivElement>(null);
   const [radius, setRadius] = useState(85);
   const [isPulsing, setIsPulsing] = useState(false);
 
   useEffect(() => {
     const updateRadius = () => {
-      if (circleRef.current) {
-        const { width } = circleRef.current.getBoundingClientRect();
+      if (circle.current) {
+        const { width } = circle.current.getBoundingClientRect();
         setRadius(width/2);
       }
     };
@@ -29,9 +29,9 @@ export default function HeroArrowIcon() {
 
   return (
       <div
-        ref={circleRef}
-        className={`relative border border-Grey-15 w-29.5 h-29.5 md:w-32 md:h-32 laptop:w-44 laptop:h-44 
-          flex items-center justify-center rounded-full bg-Grey-08 overflow-hidden hover-glow ${
+        ref={circle}
+        className={`relative border border-borderColor w-29.5 h-29.5 tablet:w-32 tablet:h-32 laptop:w-44 laptop:h-44 
+          flex items-center justify-center rounded-full bg-bg overflow-hidden hover-glow ${
           isPulsing ? "animate-pulse-once" : ""
         }`}
         onClick={() => setIsPulsing(true)}
