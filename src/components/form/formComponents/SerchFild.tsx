@@ -1,5 +1,5 @@
 import React from "react";
-import type { CTAButton, SearchSection } from "../../types/Properties/PropertiesTypes";
+import type { CTAButton, SearchSection } from "../../../types/Properties/PropertiesTypes";
 
 interface Props {
   data: SearchSection;
@@ -10,7 +10,7 @@ const SearchFild: React.FC<Props> = ({ data }) => {
 
   const renderButton = (btn: CTAButton) => (
     <button
-      className="flex items-center text-sm lg:text-lg font-medium justify-center gap-2 w-fit lg:w-46 h-[63px] px-[24px] py-[18px] rounded-[10px] bg-mainPurple text-white hover:bg-secPurple transition"
+      className="flex items-center text-sm lg:text-lg font-medium justify-center gap-2 w-fit lg:w-46 h-[63px] px-[24px] py-[18px] rounded-[10px] bg-Purple-60 text-white hover:bg-Purple-75 transition"
     >
       {btn.icon && (
         <img src={btn.icon.toString()} alt="search icon" className="w-5 h-5 lg:w-6 lg:h-6" />

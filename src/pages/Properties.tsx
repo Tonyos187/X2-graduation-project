@@ -1,6 +1,6 @@
-import ContactFormFieldsComponent from "../components/PropertisComponents/ContactFormFieldsComponent"
-import SearchDropDownComponent from "../components/PropertisComponents/SearchDropDown"
-import SearchFild from "../components/PropertisComponents/SerchFild"
+import ContactFormFieldsComponent from "../components/form/formComponents/ContactFormFieldsComponent"
+import SearchDropDownComponent from "../components/form/formComponents/SearchDropDown"
+import SearchFild from "../components/form/formComponents/SerchFild"
 import { propertiesData } from "../data/Properties/PropertisData"
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import type { FormField } from "../../types/Properties/PropertiesTypes";
+import type { FormField } from "../../../types/Properties/PropertiesTypes";
 
 const CheckboxField: React.FC<{ field: FormField }> = ({ field }) => {
     const Icon = field.icon && typeof field.icon !== "string" ? field.icon : null;
@@ -22,7 +22,7 @@ const CheckboxField: React.FC<{ field: FormField }> = ({ field }) => {
                     </label>
                 )}
 
-                <div className="flex flex-col w-full py-4 bg-darkGray border-borderColor rounded-[8px] px-2 text-white border">
+                <div className="flex flex-col w-full py-4 bg-Grey-10 border-Grey-15 rounded-[8px] px-2 text-white border">
                     <div className="flex  items-center justify-between gap-2">
                         <div className="flex  items-center gap-2">
                             {Icon && typeof Icon === "function" ? (
@@ -49,7 +49,7 @@ const CheckboxField: React.FC<{ field: FormField }> = ({ field }) => {
                             type="checkbox"
                             id={field.id}
                             name={field.name}
-                            className="w-3 h-3 appearance-none border rounded-full bg-transparent border-mainPurple checked:bg-mainPurple checked:border-mainPurple focus:outline-none transition duration-200 cursor-pointer"
+                            className="w-3 h-3 appearance-none border rounded-full bg-transparent border-Purple-60 checked:bg-Purple-60 checked:border-Purple-60 focus:outline-none transition duration-200 cursor-pointer"
                             checked={checked}
                             onChange={handleCheckboxChange}
                         />

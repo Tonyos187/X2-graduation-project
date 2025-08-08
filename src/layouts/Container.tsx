@@ -15,7 +15,7 @@ import type { ReactNode } from "react"
 
 function Container({children,className}:{children:ReactNode,className:string}) {
   return (
-    <section className={`px-4 md:px-20 2xl:px-40.5 ${className}`}>
+    <section className={`px-4 md:px-20 laptop:px-40.5 ${className}`}>
         {children}
     </section>
   )

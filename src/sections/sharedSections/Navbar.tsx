@@ -28,24 +28,24 @@ const Navbar = (): JSX.Element => {
 
   const navLinkStyles = ({ isActive }: { isActive: boolean }) =>
     isActive
-      ? "text-mainText bg-bg border laptop:py-3.5 md:py-3 md:px-5 laptop:px-6 rounded-lg border-borderColor"
-      : " text-mainText laptop:py-3.5 md:py-3 border border-darkGray";
+      ? "text-White bg-Grey-08 border laptop:py-3.5 md:py-3 md:px-5 laptop:px-6 rounded-lg border-Grey-15"
+      : " text-White laptop:py-3.5 md:py-3 border border-Grey-10";
 
   return (
     <>
       {/* Overlay */}
       {isMenuOpen && (
         <div
-          className="fixed top-0 left-0 w-screen h-screen bg-darkGray opacity-60 z-40"
+          className="fixed top-0 left-0 w-screen h-screen bg-Grey-10 opacity-60 z-40"
           onClick={handleOverlayClick}
         />
       )}
 
-      <nav className="fixed top-0 left-0 w-full laptop:h-[99px] md:h-[77px] z-50 flex justify-between items-center laptop:px-pc md:px-laptop px-mobile laptop:py-0 md:py-0 py-5  bg-darkGray shadow">
+      <nav className="fixed top-0 left-0 w-full laptop:h-[99px] md:h-[77px] z-50 flex justify-between items-center laptop:px-pc md:px-laptop px-mobile laptop:py-0 md:py-0 py-5  bg-Grey-10 shadow">
         {/* Logo */}
         <div className="flex gap-2.5 items-center">
           <img src="/assets/Symbol.png" alt="Logo" className="laptop:w-12 md:w-8 w-7" />
-          <h1 className="font-semibold laptop:text-[28px] md:text-2xl text-xl text-white">Estatein</h1>
+          <h1 className="font-semibold laptop:text-[28px] md:text-2xl text-xl text-White">Estatein</h1>
         </div>
 
         {/* Center Links (Desktop) */}
@@ -63,8 +63,8 @@ const Navbar = (): JSX.Element => {
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
               isActive
-                ? "text-mainText bg-mainPurple laptop:py-4 laptop:px-6 md:py-3.5 md:px-5  rounded-lg border border-darkGray laptop:text-lg"
-                : "laptop:text-lg text-mainText laptop:py-4 laptop:px-6 md:py-3.5 md:px-5 rounded-lg border border-borderColor"
+                ? "text-White bg-Purple-60 laptop:py-4 laptop:px-6 md:py-3.5 md:px-5  rounded-lg border border-Grey-10 laptop:text-lg"
+                : "laptop:text-lg text-White laptop:py-4 laptop:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15"
             }
           >
             Contact Us
@@ -80,20 +80,20 @@ const Navbar = (): JSX.Element => {
             <span
               className={`block w-full h-[2px] rounded-full transition-all duration-300 ${
                 isMenuOpen
-                  ? "rotate-45 translate-y-[6px] bg-mainText"
-                  : "bg-mainText"
+                  ? "rotate-45 translate-y-[6px] bg-White"
+                  : "bg-White"
               }`}
             />
             <span
               className={`block w-full h-[2px] rounded-full transition-all duration-300 ${
-                isMenuOpen ? "opacity-0" : "bg-mainText"
+                isMenuOpen ? "opacity-0" : "bg-White"
               }`}
             />
             <span
               className={`block h-[2px] rounded-full transition-all duration-300 ${
                 isMenuOpen
-                  ? "rotate-[-45deg] -translate-y-[6px] w-full bg-mainText"
-                  : "w-[54%] self-end bg-mainText"
+                  ? "rotate-[-45deg] -translate-y-[6px] w-full bg-White"
+                  : "w-[54%] self-end bg-White"
               }`}
             />
           </div>
@@ -102,7 +102,7 @@ const Navbar = (): JSX.Element => {
 
       {/* Mobile Slide-in Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-1/2 bg-darkGray z-40 transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 right-0 h-full w-1/2 bg-Grey-10 z-40 transform transition-transform duration-300 md:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -113,8 +113,8 @@ const Navbar = (): JSX.Element => {
               to={path}
               onClick={toggleMenu}
               className={({ isActive }) =>
-                `w-full p-5 text-mainText ${
-                  isActive ? "border-l-2 border-secPurple font-semibold" : ""
+                `w-full p-5 text-White ${
+                  isActive ? "border-l-2 border-Purple-75 font-semibold" : ""
                 }`
               }
             >

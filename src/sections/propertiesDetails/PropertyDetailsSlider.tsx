@@ -40,11 +40,11 @@ function PropertyDetailsSlider() {
     }
 
     return (
-            <div className="w-full bg-darkGray p-[20px] md:p-[40px] laptop:p-[50px] flex flex-col gap-5 laptop:gap-7.5 rounded-xl border border-borderColor">
+            <div className="w-full bg-Grey-10 p-[20px] md:p-[40px] laptop:p-[50px] flex flex-col gap-5 laptop:gap-7.5 rounded-xl border border-Grey-15">
                 
                 <div className="flex flex-col-reverse md:flex-col gap-5 laptop:gap-7.5">
                     {/* Thumbnails */}
-                    <div className="overflow-hidden w-full bg-bg py-2.5 md:py-5 relative rounded-xl" >
+                    <div className="overflow-hidden w-full bg-Grey-08 py-2.5 md:py-5 relative rounded-xl" >
                         <div className="absolute left-0 top-0 w-28 h-full z-10 bg-gradient-to-r from-bg  to-transparent" />
                         <div className="absolute right-0 top-0 w-28 h-full z-10 bg-gradient-to-l from-bg to-transparent" />
                         <div className="flex w-full scroll  md:gap-5 gap-2.5">
@@ -70,10 +70,10 @@ function PropertyDetailsSlider() {
                     </div>
                 </div>
                 {/* Slider controls */}
-                <div className="flex justify-between items-center gap-[10px] bg-bg sm:mx-auto p-[10px] rounded-full">
-                    <button onClick={prev} className={`w-11 h-11 md:w-14.5 md:h-14.5 md:p-3.5 p-2.5 border border-borderColor
+                <div className="flex justify-between items-center gap-[10px] bg-Grey-08 sm:mx-auto p-[10px] rounded-full">
+                    <button onClick={prev} className={`w-11 h-11 md:w-14.5 md:h-14.5 md:p-3.5 p-2.5 border border-Grey-15
                     rounded-full flex  justify-center items-center cursor-pointer
-                    ${currentIndex === 0 ? 'bg-bg text-iconDisaled': 'bg-darkGray '}`}>
+                    ${currentIndex === 0 ? 'bg-Grey-08 text-Grey-50': 'bg-Grey-10 '}`}>
                         <Previous/>
                     </button>
         
@@ -86,17 +86,17 @@ function PropertyDetailsSlider() {
                                     key={i}
                                     className={`w-[11.7px] h-[3px] md:w-[20px] md:h-[5px] rounded ${
                                     active
-                                        ? 'bg-mainPurple'
-                                        : 'bg-grayMedium'
+                                        ? 'bg-Purple-60'
+                                        : 'bg-Grey-30'
                                     }`}
                                 ></span>
                         )})}
                     </div>
                     
                     <button onClick={next} 
-                        className={`w-11 h-11 md:w-14.5 md:h-14.5 md:p-3.5 p-2.5 border border-borderColor
+                        className={`w-11 h-11 md:w-14.5 md:h-14.5 md:p-3.5 p-2.5 border border-Grey-15
                         rounded-full flex  justify-center items-center cursor-pointer
-                        ${currentIndex + imagesPerSlide >= images.length ? 'bg-bg text-iconDisaled': 'bg-darkGray '}`}>
+                        ${currentIndex + imagesPerSlide >= images.length ? 'bg-Grey-08 text-Grey-50': 'bg-Grey-10 '}`}>
                         <Next/>
                     </button>
                 </div>
