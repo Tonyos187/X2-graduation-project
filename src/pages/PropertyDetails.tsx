@@ -1,4 +1,4 @@
-import Images from "../sections/Images"
+import PropertyDetailsSlider from "../sections/propertiesDetails/PropertyDetailsSlider";
 
 const PropertyDetails = () => {
   return (
