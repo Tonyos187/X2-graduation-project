@@ -13,17 +13,15 @@ const FooterImg: React.FC<FooterImgProps> = ({
    width = 633,
   height = 331,
   glowSize = 3,
-  transitionMs = 180,
+  transitionMs = 300,
   primaryColor = "currentColor",
-  hoverColor = "#dacbff",
+  hoverColor = "#dfcbff",
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 const neonShadow = `
-  drop-shadow(0 0 ${glowSize / 2}px #DBCEFD)
-  drop-shadow(0 0 ${glowSize}px #EDE7FE)
-  drop-shadow(0 0 ${glowSize * 1.5}px #A685FA)
-  drop-shadow(0 0 ${glowSize * 2}px #A685FA)
-  drop-shadow(0 0 ${glowSize * 2.5}px #DBCEFD)
+  drop-shadow(0 0 ${glowSize /2}px #A685FA)
+  drop-shadow(0 0 ${glowSize }px #EDE7FE)
+  drop-shadow(0 0 ${glowSize *1.5}px #e6aaff)
 `;
 
   const paths: {
@@ -152,7 +150,7 @@ const neonShadow = `
           fillRule={pathObj.fillRule}
           clipRule={pathObj.clipRule}
           style={{
-            transition: `fill ${transitionMs}ms ease`,
+            transition: `fill ${transitionMs}s linear`,
             cursor: "pointer",
           }}
           onMouseEnter={() => setHoveredIndex(pathObj.index)}
@@ -168,10 +166,12 @@ const neonShadow = `
             key={"hovered"}
             d={pathObj.d}
             fill={hoverColor}
+            stroke={"#FBFAFF"}
+            strokeWidth={1}
             fillRule={pathObj.fillRule}
             clipRule={pathObj.clipRule}
             style={{
-              transition: `fill ${transitionMs}ms ease`,
+              transition: `fill ${transitionMs}s linear`,
               filter: neonShadow,
               cursor: "pointer",
             }}
