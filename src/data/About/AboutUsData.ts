@@ -152,19 +152,19 @@ export const MeetEstateinTeamCardSectionData: MeetEstateinTeamCardSectionType =
       },
       {
         id: "property-2",
-        image: "/assets/images/About/Image(2).webp",
+        image: "/assets/images/About/Image(4).webp",
         name: "Sarah Johnson",
         job: "Chief Real Estate Officer",
       },
       {
         id: "property-3",
-        image: "/assets/images/About/Image(3).webp",
+        image: "/assets/images/About/Image(2).webp",
         name: "David Brown",
         job: "Head of Property Management",
       },
       {
         id: "property-4",
-        image: "/assets/images/About/Image(4).webp",
+        image: "/assets/images/About/Image(3).webp",
         name: "Michael Turner",
         job: "Legal Counsel",
       },
