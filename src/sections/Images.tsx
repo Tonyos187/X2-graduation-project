@@ -1,5 +1,5 @@
 import PropertyDetailsHeder from "../components/PropertyDetailsHeder";
-import PropertyDetailsSlider from "../components/PropertyDetailsSlider/PropertyDetailsSlider";
+import PropertyDetailsSlider from "./propertiesDetails/PropertyDetailsSlider";
 
 function Images() {
     return (
