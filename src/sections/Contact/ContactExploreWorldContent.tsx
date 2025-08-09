@@ -12,7 +12,7 @@ const ContactExploreWorldContent = ({
 }) => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-      <div className="my-auto">
+      <div className="mt-0 lg:mt-3">
         <Header title={White.title} description={White.description} withIcon />
       </div>
 

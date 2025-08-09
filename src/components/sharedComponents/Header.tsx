@@ -26,13 +26,13 @@ const Header = ({
       )}
 
       {/* title */}
-      <h2 className={`text-White font-semibold text-[7.17948vw] md:text-[2.63889vw] xl:text-[2.5vw] leading-[150%]`}>
+      <h2 className={`text-White font-semibold text-[28px] md:text-[38px] xl:text-5xl leading-[150%]`}>
         {title}
       </h2>
 
       {/* description */}
       <div className="flex items-center justify-between gap-37.5 2xl:gap-50">
-        <p className={`text-Grey-60 font-medium text-[3.5897vw] md:text-[1.11112vw] xl:text-[0.9375vw] leading-[150%]`}>
+        <p className={`text-Grey-60 font-medium text-sm md:text-base xl:text-lg leading-[150%]`}>
         {description}
       </p>
       {withBtn && <Button content="view all property" className="bg-Grey-10 hidden md:block" withBorder />}
