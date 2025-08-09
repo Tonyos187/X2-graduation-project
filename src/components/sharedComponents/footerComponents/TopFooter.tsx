@@ -5,7 +5,7 @@ import SectionHeader from "../Header"
 
 function TopFooter({data}:{data:CtaSectionType}) {
   return (
-    <div className="relative w-full flex flex-col px-4 py-12.5 border-t border-b border-t-Grey-15 border-b-Grey-15 gap-7.5 overflow-hidden">
+    <div className="relative w-full flex flex-col md:flex-row md:items-center px-4 py-12.5 md:px-20 md:py-15 xl:px-40.5 xl:py-25 border-t border-b border-t-Grey-15 border-b-Grey-15 gap-7.5 md:gap-37.5 xl:gap-50 overflow-hidden">
       <div className="absolute z-0 right-0 bottom-0 text-Grey-10"><FooterImg/></div>
       <SectionHeader title={data.headline} description={data.description} gap="gap-1.5" className="z-1"/>
       <Button content="Explore Properties" className="bg-Purple-60 z-1" link="/properties"/>
