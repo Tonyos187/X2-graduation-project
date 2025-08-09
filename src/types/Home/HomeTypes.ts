@@ -1,5 +1,4 @@
-import type { ReactNode } from "react";
-
+import type { JSX, ReactNode } from "react";
 
 //Home Section
 export interface HeroButtonTypes {
@@ -26,7 +25,7 @@ export interface HeroSectionType {
 export interface FeatureItem {
   arrow: ReactNode;
   icon: ReactNode;
-  title: string|string[];
+  title: string | string[];
 }
 
 export interface NavItem {
@@ -35,16 +34,15 @@ export interface NavItem {
 }
 
 export interface TopBannerType {
-    text: string,
-    linkText: string,
-    link: string,
+  text: string;
+  linkText: string;
+  link: string;
 }
 
 export interface SiteInfoType {
-    siteTitle: string,
-    logo: string
+  siteTitle: string;
+  logo: string;
 }
-
 
 // Featured Properties Section
 export interface FeaturedPropertyDetail {
@@ -103,7 +101,6 @@ export interface TestimonialsSectionType {
   testimonials: Testimonial[];
 }
 
-
 // عنصر فردي في قائمة الأسئلة
 export interface FaqItem {
   id: string;
@@ -121,7 +118,7 @@ export interface FaqSectionType {
   faqs: FaqItem[];
 }
 
-// Start Your Real Estate Journey Today Types 
+// Start Your Real Estate Journey Today Types
 export interface CtaSectionType {
   background: string;
   headline: string;
@@ -143,14 +140,19 @@ export interface FooterType {
     buttonIcon: ReactNode;
   };
   navigationColumns: FooterNavColumn[];
+}
+export interface EndFooterType {
   copyright: string;
   termsAndConditionsLink: {
     text: string;
     link: string;
   };
-  socialLinks: SocialLink[];
+  socialLinks: {
+    name: string;
+    icon: JSX.Element;
+    link: string;
+  }[];
 }
-
 export interface FooterNavColumn {
   title: string;
   links: {

@@ -13,7 +13,7 @@ import YouTube from "../../svg/YouTube";
 import SendBtn from "../../svg/SendBtn";
 // Hero Data 
 
-import type { CtaSectionType, FaqSectionType, FeaturedPropertiesSectionType, FeatureItem, FooterType, HeroSectionType, NavItem, SiteInfoType, TestimonialsSectionType, TopBannerType } from "../../types/Home/HomeTypes";
+import type { CtaSectionType, EndFooterType, FaqSectionType, FeaturedPropertiesSectionType, FeatureItem, FooterType, HeroSectionType, NavItem, SiteInfoType, TestimonialsSectionType, TopBannerType } from "../../types/Home/HomeTypes";
 
 export const heroSectionData: HeroSectionType = {
   headline: "Discover Your Dream Property with Estatein",
@@ -289,6 +289,10 @@ export const footerData: FooterType = {
       ],
     },
   ],
+};
+
+export const endFooterData: EndFooterType = 
+  {
   copyright: "©2023 Estatein. All Rights Reserved.",
   termsAndConditionsLink: {
     text: "Terms & Conditions",
@@ -299,5 +303,4 @@ export const footerData: FooterType = {
     { name: "LinkedIn", icon: <LinkedIn />, link: "#" },
     { name: "Twitter", icon: <TwitterIcon />, link: "#" },
     { name: "YouTube", icon: <YouTube />, link: "#" },
-  ],
-};
+  ]}

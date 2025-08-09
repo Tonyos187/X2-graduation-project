@@ -1,5 +1,5 @@
 import CardImage from "../../components/sharedComponents/CardImage";
-import SectionHeader from "../../components/sharedComponents/Header";
+import Header from "../../components/sharedComponents/Header";
 
 import type { ContactHeroDataType } from "../../types/Contact/ContactType";
 
@@ -12,20 +12,9 @@ const ContactExploreWorldContent = ({
 }) => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-
-      <div className="my-auto">
-        <SectionHeader title={White.title}
-        description={White.description}
-        withIcon />
+      <div className="mt-0 lg:mt-3">
+        <Header title={White.title} description={White.description} withIcon />
       </div>
-
-      {/* <IconTitleDescription
-        title={White.title}
-        description={White.description}
-        showIcon={true}
-        icon="/assets/icons/stars-of-title.svg"
-        className="my-auto"
-      /> */}
 
       <CardImage
         src={mainImage}
