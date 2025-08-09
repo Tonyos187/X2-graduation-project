@@ -3,7 +3,7 @@ import { ctaSectionData } from "../../data/Home/HomeData";
 
 const Footer = () => {
   return (
-    <footer className="">
+    <footer className="mt-20 md:mt-30 xl:mt-37.5">
       <TopFooter data={ctaSectionData}/>
     </footer>
   );
