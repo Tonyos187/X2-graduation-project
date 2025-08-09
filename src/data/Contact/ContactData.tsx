@@ -201,11 +201,11 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     },
     {
       id: "explorePeopleInSuits",
-      image: "/assets/images/Contact/explorePeopleInSuits.webp",
+      image: "/public/assets/images/Contact/explorePeopleInSuits.webp",
     },
     {
       id: "exploreWomanInSuit",
-      image: "/assets/images/Contact/exploreWomanInSuit.webp",
+      image: "/public/assets/images/Contact/exploreWomanInSuit.webp",
     },
   ],
   contactExploreEstateinData: {

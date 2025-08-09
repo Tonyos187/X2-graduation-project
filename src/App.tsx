@@ -12,7 +12,6 @@ import PropertyDetails from "./pages/PropertyDetails";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound"; // 404 page
-
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/about", element: <About /> },
