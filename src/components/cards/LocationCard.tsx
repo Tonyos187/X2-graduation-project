@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom"
+import InfoComponent from "../sharedComponents/InfoComponent";
 // Contact Detail Data type
 interface ContactDetails {
         icon: ReactNode;
@@ -23,9 +24,7 @@ function LocationCard({title,address,description,contactDetails}:LocationCardDat
             <div className="flex gap-2 xl:gap-2.5 flex-wrap">
                 {contactDetails.map((cont,index) => {
                     return(
-                        <div key={index} className="flex items-center gap-1 xl:gap-1.5 py-2.5 px-4 xl:py-3.5 xl:px-5 bg-Grey-10 w-fit rounded-[28px] border border-Grey-15 urbanist text-sm xl:text-lg font-medium">
-                            {cont.icon}<p>{cont.title}</p>
-                        </div>
+                        <InfoComponent key={index} icon={cont.icon} desc={cont.title} padding={"py-2.5 px-4 xl:py-3.5 xl:px-5"}/>
                     )
                 })}
             </div>
