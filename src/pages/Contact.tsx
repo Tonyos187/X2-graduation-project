@@ -8,7 +8,7 @@ import Header from "../components/sharedComponents/Header.tsx";
 
 const Contact = () => {
   return (
-    <>
+    <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
       <div className="hero mt-[68.58px] md:mt-[77px] laptop:mt-[99px]">
         {/* put hero title and description through props */}
         <Header 
@@ -24,7 +24,7 @@ const Contact = () => {
       </div>
 
       <ContactExploreWorld />
-    </>
+    </div>
   );
 };
 
