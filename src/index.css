@@ -51,17 +51,17 @@
     /* Purple Shades — keep unchanged */
     /* no override needed */
     /* Grey Shades → flipped to light greys */
-    --color-Grey-08: #FCFCFD;
+    --color-Grey-08: #EDE7FE;
     /* Was #141414 */
     --color-Grey-10: #F7F7F8;
     /* Was #1A1A1A */
     --color-Grey-15: #F1F1F3;
     /* Was #262626 */
-    --color-Grey-20: #E4E4E7;
+    --color-Grey-20: #DBCEFD;
     /* Was #333333 */
     --color-Grey-30: #CCCCCC;
     /* Was #4D4D4D */
-    --color-Grey-40: #999999;
+    --color-Grey-40: #A685FA;
     /* Was #666666 */
     --color-Grey-50: #808080;
     /* Same (neutral) */
