@@ -3,43 +3,44 @@
 /* Default theme: Dark Mode */
 
 @theme {
-  /* Colors */
-  /* Absolute Colors */
-  --color-White: #ffffff;
-  /* Purple Shades */
-  --color-Purple-60: #703bf7;
-  --color-Purple-65: #8254f8;
-  --color-Purple-70: #946cf9;
-  --color-Purple-75: #a685fa;
-  --color-Purple-90: #dbcefd;
-  --color-Purple-95: #ede7fe;
-  --color-Purple-97: #f4f0fe;
-  --color-Purple-99: #fbfaff;
-  /* Grey Shades */
-  --color-Grey-08: #141414;
-  --color-Grey-10: #1a1a1a;
-  --color-Grey-15: #262626;
-  --color-Grey-20: #333333;
-  --color-Grey-30: #4d4d4d;
-  --color-Grey-40: #666666;
-  --color-Grey-50: #808080;
-  --color-Grey-60: #999999;
-  /* ____________________ */
-  /* White Shades */
-  --color-White-90: #e4e4e7;
-  --color-White-95: #f1f1f3;
-  --color-White-97: #f7f7f8;
-  --color-White-99: #fcfcfd;
-  /* Spacing */
-  --spacing-pc: 8.4375%;
-  --spacing-laptop: 5.5555%;
-  --spacing-mobile: 16px;
-  /* Screens */
-  --breakpoint-xs: 389px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1441px;
-  --breakpoint-2xl: 1921px;
+    /* Colors */
+    /* Absolute Colors */
+    --color-White: #ffffff;
+    /* Purple Shades */
+    --color-Purple-60: #703BF7;
+    --color-Purple-65: #8254F8;
+    --color-Purple-70: #946CF9;
+    --color-Purple-75: #A685FA;
+    --color-Purple-90: #DBCEFD;
+    --color-Purple-95: #EDE7FE;
+    --color-Purple-97: #F4F0FE;
+    --color-Purple-99: #FBFAFF;
+    /* Grey Shades */
+    --color-Grey-08: #141414;
+    --color-Grey-10: #1A1A1A;
+    --color-Grey-15: #262626;
+    --color-Grey-20: #333333;
+    --color-Grey-30: #4D4D4D;
+    --color-Grey-40: #666666;
+    --color-Grey-50: #808080;
+    --color-Grey-60: #999999;
+    --color-Grey-70: #0A0A0A80;
+    /* ____________________ */
+    /* White Shades */
+    --color-White-90: #E4E4E7;
+    --color-White-95: #F1F1F3;
+    --color-White-97: #F7F7F8;
+    --color-White-99: #FCFCFD;
+    /* Spacing */
+    --spacing-pc: 8.4375%;
+    --spacing-laptop: 5.5555%;
+    --spacing-mobile: 16px;
+    /* Screens */
+    --breakpoint-xs: 389px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1441px;
+    --breakpoint-2xl: 1921px;
 }
 
 /* Light mode overrides */
