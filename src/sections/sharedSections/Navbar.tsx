@@ -1,5 +1,6 @@
 import { useState, type JSX, type MouseEvent } from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "../../components/sharedComponents/Logo";
 
 type NavItem = {
   name: string;
@@ -43,10 +44,7 @@ const Navbar = (): JSX.Element => {
 
       <nav className="fixed top-0 left-0 w-full laptop:h-[99px] md:h-[77px] z-50 flex justify-between items-center laptop:px-pc md:px-laptop px-mobile laptop:py-0 md:py-0 py-5  bg-Grey-10 shadow">
         {/* Logo */}
-        <div className="flex gap-2.5 items-center">
-          <img src="/assets/Symbol.png" alt="Logo" className="laptop:w-12 md:w-8 w-7" />
-          <h1 className="font-semibold laptop:text-[28px] md:text-2xl text-xl text-White">Estatein</h1>
-        </div>
+        <Logo />
 
         {/* Center Links (Desktop) */}
         <div className="hidden md:flex gap-6 laptop:text-lg items-center absolute left-1/2 transform -translate-x-1/2">
@@ -79,9 +77,7 @@ const Navbar = (): JSX.Element => {
           <div className="w-[21px] h-[14px] flex flex-col justify-between items-center">
             <span
               className={`block w-full h-[2px] rounded-full transition-all duration-300 ${
-                isMenuOpen
-                  ? "rotate-45 translate-y-[6px] bg-White"
-                  : "bg-White"
+                isMenuOpen ? "rotate-45 translate-y-[6px] bg-White" : "bg-White"
               }`}
             />
             <span

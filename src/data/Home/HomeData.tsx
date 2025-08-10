@@ -10,10 +10,9 @@ import Facebook from "../../svg/FaceBook";
 import LinkedIn from "../../svg/LinkedIn";
 import TwitterIcon from "../../svg/Twitter";
 import YouTube from "../../svg/YouTube";
-import SendBtn from "../../svg/SendBtn";
 // Hero Data 
 
-import type { CtaSectionType, EndFooterType, FaqSectionType, FeaturedPropertiesSectionType, FeatureItem, FooterType, HeroSectionType, NavItem, SiteInfoType, TestimonialsSectionType, TopBannerType } from "../../types/Home/HomeTypes";
+import type { CtaSectionType, EndFooterType, FaqSectionType, FeaturedPropertiesSectionType, FeatureItem, FooterNavColumn, HeroSectionType, NavItem, SiteInfoType, TestimonialsSectionType, TopBannerType } from "../../types/Home/HomeTypes";
 
 export const heroSectionData: HeroSectionType = {
   headline: "Discover Your Dream Property with Estatein",
@@ -233,17 +232,8 @@ export const ctaSectionData: CtaSectionType = {
   },
 };
 
-
-export const footerData: FooterType = {
-  logo: {
-    text: "Estatein",
-    logo: "/assets/icons/estateinLogo.svg",
-  },
-  newsletter: {
-    placeholder: "Enter Your Email",
-    buttonIcon: <SendBtn />,
-  },
-  navigationColumns: [
+export const footerLayout: { left: FooterNavColumn[], right: FooterNavColumn[] } = {
+  left: [
     {
       title: "Home",
       links: [
@@ -255,6 +245,22 @@ export const footerData: FooterType = {
       ],
     },
     {
+      title: "Properties",
+      links: [
+        { name: "Portfolio", link: "#properties-portfolio" },
+        { name: "Categories", link: "#properties-categories" },
+      ],
+    },
+    {
+      title: "Contact Us",
+      links: [
+        { name: "Contact Form", link: "#contact-form" },
+        { name: "Our Offices", link: "#contact-offices" },
+      ],
+    },
+  ],
+  right: [
+    {
       title: "About Us",
       links: [
         { name: "Our Story", link: "#about-story" },
@@ -265,13 +271,6 @@ export const footerData: FooterType = {
       ],
     },
     {
-      title: "Properties",
-      links: [
-        { name: "Portfolio", link: "#properties-portfolio" },
-        { name: "Categories", link: "#properties-categories" },
-      ],
-    },
-    {
       title: "Services",
       links: [
         { name: "Valuation Mastery", link: "#services-valuation" },
@@ -279,13 +278,6 @@ export const footerData: FooterType = {
         { name: "Negotiation Wizardry", link: "#services-negotiation" },
         { name: "Closing Success", link: "#services-closing" },
         { name: "Property Management", link: "#services-management" },
-      ],
-    },
-    {
-      title: "Contact Us",
-      links: [
-        { name: "Contact Form", link: "#contact-form" },
-        { name: "Our Offices", link: "#contact-offices" },
       ],
     },
   ],
