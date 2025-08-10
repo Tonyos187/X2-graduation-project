@@ -1,10 +1,9 @@
 import Hero from "../sections/HomePageSections/Hero";
 
-
 const Home = () => {
   return (
     <>
-    <Hero/>
+      <Hero />
     </>
   );
 };
