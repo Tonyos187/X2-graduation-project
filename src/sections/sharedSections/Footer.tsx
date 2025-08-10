@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="mt-20 md:mt-30 xl:mt-37.5">
       <TopFooter data={ctaSectionData}/>
-      {/* <MainFooter  navigationColumn = {footerLayout}/> */}
+      <MainFooter  navigationColumn={footerLayout}/>
       <EndFooter endFooterData={endFooterData}/>
     </footer>
   );

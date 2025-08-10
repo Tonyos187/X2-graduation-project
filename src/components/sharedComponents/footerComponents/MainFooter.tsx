@@ -13,12 +13,15 @@ function FooterColumn({
 }) {
   if (!title || !links) return null;
   return (
-    <div className="flex flex-col justify-items-start gap-4 w-full h-fit pb-5 border-b border-b-Grey-15">
-      <h3 className="text-base font-medium text-Grey-60">{title}</h3>
-      <ul className="space-y-2">
+    <div className="flex flex-col justify-items-start gap-4 md:gap-6 xl:gap-7.5 w-full h-fit pb-5 border-b border-b-Grey-15 md:border-0">
+      <h3 className="text-base md:text-lg xl:text-xl leading-6 font-medium text-Grey-60">{title}</h3>
+      <ul className="space-y-2 md:space-y-4 xl:space-y-5">
         {links.map((item, idx) => (
           <li key={idx}>
-            <Link to={item.link} className="text-sm text-White font-medium transition ">
+            <Link
+              to={item.link}
+              className="text-sm md:text-base xl:text-lg leading-6 text-White font-medium transition "
+            >
               {item.name}
             </Link>
           </li>
@@ -31,73 +34,43 @@ function FooterColumn({
 function MainFooter({
   navigationColumn,
 }: {
-  navigationColumn: FooterNavColumn[];
+  navigationColumn: { left: FooterNavColumn[]; right: FooterNavColumn[] };
 }) {
-  const home = navigationColumn.find((col) => col.title === "Home");
-  const about = navigationColumn.find((col) => col.title === "About Us");
-  const services = navigationColumn.find((col) => col.title === "Services");
-  const properties = navigationColumn.find((col) => col.title === "Properties");
-  const contact = navigationColumn.find((col) => col.title === "Contact Us");
+  const home = navigationColumn.left.find((col) => col.title === "Home");
+  const about = navigationColumn.right.find((col) => col.title === "About Us");
+  const services = navigationColumn.right.find(
+    (col) => col.title === "Services"
+  );
+  const properties = navigationColumn.left.find(
+    (col) => col.title === "Properties"
+  );
+  const contact = navigationColumn.left.find(
+    (col) => col.title === "Contact Us"
+  );
   return (
-    <div className="flex flex-col md:flex-row px-4 py-12.5 gap-12.5">
+    <div className="flex flex-col lg:flex-row px-4 py-12.5 md:px-20 md:py-20 xl:px-40.5 xl:py-25 gap-12.5 md:gap-20">
       {/* logo and form */}
-      <div className="flex flex-col gap-5 w-full">
+      <div className="flex flex-col gap-5 md:gap-6 xl:gap-7.5 w-full lg:w-[26%]">
         <Logo type="footer" />
-        <form className="px-5 py-3.5 border border-Grey-15 bg-Grey-08 rounded-lg flex items-center justify-between">
-          <div className="flex items-center gap-1.5">
-            <PlusEmail />
+        <form className="px-5 py-3.5 border border-Grey-15 bg-Grey-08 rounded-lg flex items-center justify-between gap-1.5 xl:gap-2.5">
+          <div className="w-[90%] flex items-center gap-1.5 xl:gap-2.5">
+            <div className="min-w-5 xl:min-w-6 aspect-square">
+              <PlusEmail />
+            </div>
             <input
               type="text"
               placeholder="Enter Your Email"
-              className="placeholder:text-sm placeholder:text-Grey-60 placeholder:font-medium leading-6 focus:outline-0"
+              className="w-full placeholder:text-sm xl:placeholder:text-lg placeholder:text-Grey-60 placeholder:font-medium leading-6 focus:outline-0"
             />
           </div>
-          <SendBtn />
+          <div className="max-w-6 xl:max-w-7.5 max-h-6 xl:max-h-7.5 aspect-square">
+            <SendBtn />
+          </div>
         </form>
       </div>
       {/* content */}
-      <div className=" flex-col gap-5 hidden">
-        {/* home and about us */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-          {navigationColumn.map((col, i) => (
-            <div key={i} className="space-y-3">
-              {/* العنوان */}
-              <label
-                className="
-          block text-lg font-bold 
-          bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 
-          bg-clip-text text-transparent 
-          drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]
-        "
-              >
-                {col.title}
-              </label>
 
-              {/* قائمة الروابط */}
-              <ul className="flex flex-col gap-2">
-                {col.links.map((link, j) => (
-                  <li key={j}>
-                    <Link
-                      to={link.link}
-                      className="
-                relative text-gray-300 hover:text-white transition duration-300 
-                before:content-[''] before:absolute before:-bottom-1 before:left-0 
-                before:w-0 before:h-[2px] 
-                before:bg-gradient-to-r before:from-pink-500 before:via-purple-500 before:to-blue-500 
-                hover:before:w-full before:transition-all before:duration-500
-              "
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/*  small screen */}
+      {/*  small screens */}
       <div className="flex flex-col gap-5 md:hidden">
         {/* First Row */}
         <div className="w-full flex justify-between gap-5">
@@ -108,7 +81,7 @@ function MainFooter({
 
         {/* Second Row */}
         <div className="w-full flex justify-between gap-5">
-         <div className="w-full flex flex-col gap-5">
+          <div className="w-full flex flex-col gap-5">
             <FooterColumn title={properties?.title} links={properties?.links} />
             <div className="mt-6">
               <FooterColumn title={contact?.title} links={contact?.links} />
@@ -119,8 +92,8 @@ function MainFooter({
         </div>
       </div>
 
-      {/* الشاشات المتوسطة والكبيرة */}
-      <div className="hidden md:grid md:grid-cols-5 md:gap-8">
+      {/* medium and larg screens */}
+      <div className="hidden md:grid md:grid-cols-5 md:gap-8 lg:w-[72%]">
         <FooterColumn title={home?.title} links={home?.links} />
         <FooterColumn title={about?.title} links={about?.links} />
         <FooterColumn title={properties?.title} links={properties?.links} />
