@@ -1,8 +1,11 @@
+import PropertyDetailsSlider from "../sections/propertiesDetails/PropertyDetailsSlider";
 
 const PropertyDetails = () => {
   return (
-    <div>PropertyDetails</div>
-  )
-}
+    <>
+      <PropertyDetailsSlider />
+    </>
+  );
+};
 
-export default PropertyDetails
+export default PropertyDetails;

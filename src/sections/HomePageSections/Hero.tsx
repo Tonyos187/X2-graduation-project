@@ -1,39 +1,30 @@
 import { heroSectionData } from "../../data/Home/HomeData";
 import Statistics from "../../components/sharedComponents/statistics/Statistics";
-import PurpleMainButton from "../../components/PurpleMainButton";
-import DarkButton from "../../components/DarkButton";
+import Button from "../../components/sharedComponents/Button";
+import HeroArrowIcon from "../../components/sharedComponents/HeroArrowIcon";
 
 const Hero = () => {
   const { headline, description, buttons } = heroSectionData;
 
   return (
-    <section className="w-full relative min-h-screen overflow-hidden">
-      {/* Center Circle in middle of the section - rotate animation */}
-      <img
-        src={heroSectionData?.centerCircle}
-        alt="centerCircle"
-        className="absolute top-[370px] left-[60px] md:top-[32.5%] md:left-[51.5%] w-[117px] h-[117px] md:w-[143.76px] md:h-[143.66px] z-30 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none
-          animate-spin-slow
-        "
-      />
+    <section className="w-full relative h-screen px-4 md:px-0 md:pt-18 pt-27 md:overflow-hidden">
 
-      <div className="mx-auto flex flex-col-reverse md:flex-row items-stretch justify-between gap-10 min-h-screen">
+      <div className="mx-auto flex flex-col-reverse md:flex-row md:justify-between gap-0 md:gap-15 laptop:gap-20 h-screen">
         {/* Left Content */}
-        <div
-          className="w-full md:w-[48%] flex flex-col justify-center px-4 md:pl-12
-            animate-fade-slide-up"
-        >
-          <h1 className="text-2xl md:text-[46px] xl:text-[60px] text-[var(--color-mainText)] my-3 lg:my-6 font-semibold leading-[120%] tracking-[0]">
+        <div className="w-full md:w-[48%] flex flex-col justify-center gap-10 md:gap-15 px-4 md:pl-20 laptop:pl-40.5">
+          <div className="flex flex-col gap-4 md:gap-6">
+            <h1 className="text-2xl md:text-[46px] laptop:text-[60px] text-White font-semibold leading-[120%] tracking-[0]">
             {headline}
           </h1>
-          <p className="font-medium text-[18px] text-secText leading-[150%] tracking-[0] md:text-lg">
+          <p className="font-medium text-[18px] text-Grey-60 leading-[150%] tracking-[0] md:text-lg">
             {description}
           </p>
+          </div>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-4 my-[60px]">
-            <DarkButton desc={buttons[0]?.text} />
-            <PurpleMainButton desc={buttons[1]?.text} />
+          <div className="flex flex-col md:flex-row gap-4">
+            <Button content={buttons[0]?.text} withBorder />
+            <Button content={buttons[1]?.text} className="bg-Purple-60" />
           </div>
 
           {/* Stats */}
@@ -41,19 +32,17 @@ const Hero = () => {
         </div>
 
         {/* Right Image */}
-        <div className="w-[90%] rounded-[12px] m-auto md:m-0 md:rounded-none md:w-[48%] relative min-h-[400px] overflow-hidden bg-darkGray">
+        <div className="w-full md:w-[48%] min-h-50 px-4 md:px-0 m-auto md:m-0 rounded-[12px] md:rounded-none  relative text-Grey-60">
           {/* Background Image - zoom animation */}
           <img
             src={heroSectionData?.bgImage}
             alt="heroImageBuilding"
-            className="absolute inset-0 w-full h-full max-w-full max-h-full object-cover z-20
-              animate-zoom-slow
-            "
+            className="absolute inset-0 w-full h-full max-w-full max-h-full object-cover z-20 overflow-hidden"
           />
 
           {/* Gradient Overlay */}
           <div
-            className="absolute inset-0 z-10 pointer-events-none"
+            className="absolute inset-0 z-10 rounded-[12px] md:rounded-0"
             style={{
               background:
                 "linear-gradient(238.21deg, #2A213F 8.76%, rgba(25, 25, 25, 0) 50.09%)",
@@ -64,8 +53,13 @@ const Hero = () => {
           <img
             src={heroSectionData?.heroImage}
             alt="heroImageBuilding"
-            className="absolute inset-0 w-full h-full object-cover sm:object-fill lg:object-cover z-20"
+            className="absolute inset-0 w-full h-full object-cover z-20"
           />
+          {/* Center Circle in middle of the section - rotate animation */}
+
+          <div className="absolute z-20 -bottom-[25%] left-0 md:top-[15%] md:-left-[60px] laptop:top-[17%] laptop:-left-[85px]">
+            <HeroArrowIcon />
+          </div>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import type { ComponentType, ReactElement } from "react";
 export interface PropertiesData {
     heroSection: HeroSection;
     searchSection: SearchSection;
+    searchFilterSection: SearchFilterSection;
     propertySliderSection: PropertySliderSection;
     contactFormSection: FieldSection;
 
@@ -14,6 +15,10 @@ export interface CTAButton {
     link: string;
     variant?: 'primary' | 'secondary' | 'outline' | 'text';
     icon?: string | ReactElement | ComponentType<{ className?: string }>;
+}
+export interface CustomSelectOption {
+    value: string;
+    label: string;
 }
 
 export type InputType =
@@ -74,6 +79,12 @@ export interface PropertyCard {
     price: string;
     button: CTAButton;
 }
+export interface SearchFilterSection {
+    sectionTitle?: string;
+    formFields: FormField[];
+    submitButton?: CTAButton; 
+}
+
 
 
 
