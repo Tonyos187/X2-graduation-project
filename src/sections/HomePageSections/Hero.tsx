@@ -9,11 +9,11 @@ const Hero = () => {
   return (
     <section className="w-full relative h-screen px-4 md:px-0 md:pt-18 pt-27 md:overflow-hidden">
 
-      <div className="mx-auto flex flex-col-reverse md:flex-row md:justify-between gap-0 md:gap-15 laptop:gap-20 h-screen">
+      <div className="mx-auto flex flex-col-reverse md:flex-row md:justify-between gap-0 md:gap-15 xl:gap-20 h-screen">
         {/* Left Content */}
-        <div className="w-full md:w-[48%] flex flex-col justify-center gap-10 md:gap-15 px-4 md:pl-20 laptop:pl-40.5">
+        <div className="w-full md:w-[48%] flex flex-col justify-center gap-10 md:gap-15 px-4 md:pl-20 xl:pl-40.5">
           <div className="flex flex-col gap-4 md:gap-6">
-            <h1 className="text-2xl md:text-[46px] laptop:text-[60px] text-White font-semibold leading-[120%] tracking-[0]">
+            <h1 className="text-2xl md:text-[46px] xl:text-[60px] text-White font-semibold leading-[120%] tracking-[0]">
             {headline}
           </h1>
           <p className="font-medium text-[18px] text-Grey-60 leading-[150%] tracking-[0] md:text-lg">
@@ -57,7 +57,7 @@ const Hero = () => {
           />
           {/* Center Circle in middle of the section - rotate animation */}
 
-          <div className="absolute z-20 -bottom-[25%] left-0 md:top-[15%] md:-left-[60px] laptop:top-[17%] laptop:-left-[85px]">
+          <div className="absolute z-20 -bottom-[25%] left-0 md:top-[15%] md:-left-[60px] xl:top-[17%] xl:-left-[85px]">
             <HeroArrowIcon />
           </div>
         </div>
