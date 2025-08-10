@@ -7,14 +7,16 @@ const Header = ({
   withIcon,
   withBtn,
   gap = "gap-2",
-  className = ""
+  className = "",
+  type = ""
 }: {
   title?:string,
   description?:string,
   withIcon?:boolean,
   withBtn?:boolean,
   gap ?: string,
-  className ?: string
+  className ?: string,
+  type ?: string
 }) => {
   return (
     <div className={`relative flex flex-col ${gap} md:gap-2.5 lg:gap-3.5 ${className}`}>
@@ -26,7 +28,7 @@ const Header = ({
       )}
 
       {/* title */}
-      <h2 className={`text-White font-semibold text-[28px] md:text-[38px] xl:text-5xl leading-[150%]`}>
+      <h2 className={`${type=="footer"? "text-white" : "text-White"} font-semibold text-[28px] md:text-[38px] xl:text-5xl leading-[150%]`}>
         {title}
       </h2>
 

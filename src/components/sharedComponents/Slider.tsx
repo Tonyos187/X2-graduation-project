@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-const Slider = ({ array, CardComponent }) => {
+const Slider = ({
+  array,
+  CardComponent,
+}: {
+  array: any[];
+  CardComponent: any;
+}) => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const [display, setDisplay] = useState(window.innerWidth >= 992);
@@ -81,10 +87,7 @@ const Slider = ({ array, CardComponent }) => {
           onTransitionEnd={handleTransitionEnd}
         >
           {fullSlides.map((group, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-full"
-            >
+            <div key={index} className="flex-shrink-0 w-full">
               {Array.isArray(group) ? (
                 group.map((item, subIndex) => (
                   <CardComponent key={subIndex} {...item} />
@@ -113,10 +116,7 @@ const Slider = ({ array, CardComponent }) => {
           onClick={nextSlide}
           disabled={buttonsDisabled}
         >
-          <img
-            src="/assets/icons/Slider/Vector (Stroke).svg"
-            alt="Next"
-          />
+          <img src="/assets/icons/Slider/Vector (Stroke).svg" alt="Next" />
         </button>
       </div>
     </div>

@@ -213,5 +213,5 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     description:
       "Discover the world of Estatein and its impact on the real estate industry. From our team of experts to our commitment to excellence, we're here to guide you on your real estate journey.",
   },
-  titlePhoto: "/assets/images/Contact/ExploreShakingHands.webp",
+  titlePhoto: "/public/assets/images/Contact/ExploreShakingHands.webp",
 };
