@@ -9,7 +9,7 @@ import Header from "../components/sharedComponents/Header.tsx";
 const Contact = () => {
   return (
     <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
-      <div className="hero mt-[68.58px] md:mt-[77px] laptop:mt-[99px]">
+      <div className="hero mt-[68.58px] md:mt-[77px] xl:mt-[99px]">
         {/* put hero title and description through props */}
         <Header 
           className="bg-[linear-gradient(95.93deg,#262626_-26.82%,rgba(38,38,38,0)_40.46%)] 
