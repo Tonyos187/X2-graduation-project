@@ -22,7 +22,7 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
     // State to check if the card is flipped or not
     const [flipped, setFlipped] = useState<boolean>(false);
     return (
-            <div className="lg:w-[32.0802%]  w-full bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl" style={{perspective:"800px"}}>
+            <div className=" w-full bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl" style={{perspective:"800px"}}>
                     <div className="grid w-[100%] transition-transform duration-700 ease-in-out"
                             style={{
                             transformStyle: "preserve-3d",

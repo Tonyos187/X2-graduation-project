@@ -7,7 +7,7 @@ export interface ContactHeroDataType {
   description: string;
 }
 
-export interface ContactHeroFeaturesType {
+export interface FeaturesType {
   arrow: ReactNode,
     icon: string,
     title: string | string[],
