@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ComponentType, ReactElement, ReactNode } from "react";
 
 // ContactHero Type
 
@@ -15,26 +15,25 @@ export interface ContactHeroFeaturesType {
 
 // let's connect section
 
-interface ConactFormType {
+export interface ConactFormType {
   id: string;
   name: string;
   label: string;
-  type: string;
+  type: | 'text'
+    | 'email'
+    | 'tel'
+    | 'select'
+    | 'checkbox'
+    | 'textarea';
   placeholder: string;
-  icon?: ReactNode;
+  icon?: string | ReactElement | ComponentType<{ className?: string }>;
   options?: string[];
+  location?: ReactNode;
 }
 
 export interface ContactLetsConnectFormDataType {
   conactForm: ConactFormType[];
-  checkBox: {
-    id: string;
-    name: string;
-    label: string;
-  };
-  button: {
-    text: string;
-  };
+  areaText: ConactFormType;
 }
 
 // Discover Our Office Locations

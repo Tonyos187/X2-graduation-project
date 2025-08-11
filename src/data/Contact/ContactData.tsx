@@ -99,22 +99,14 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       icon: <DownArrow />,
       options: ["Google", "Facebook", "Instagram", "Linkedin", "Other"],
     },
-    {
+  ],
+  areaText: {
       id: "message",
       name: "message",
       label: "Message",
       type: "text",
       placeholder: "Enter your Message here..",
     },
-  ],
-  checkBox: {
-    id: "terms",
-    name: "terms",
-    label: "I agree with Terms of Use and Privacy Policy",
-  },
-  button: {
-    text: "Send Your Message",
-  },
 };
 
 // Discover Our Office Locations

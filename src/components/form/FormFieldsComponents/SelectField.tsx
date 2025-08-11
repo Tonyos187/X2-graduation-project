@@ -9,19 +9,19 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
   const Icon = typeof field.icon === "function" ? field.icon : undefined;
 
   return (
-    <div className="flex flex-col gap-1 w-full relative">
+    <div className="flex flex-col gap-2.5 md:gap-3.5 xl:gap-4 w-full relative">
       {field.label && (
-        <label htmlFor={field.id} className="text-white font-semibold text-base ">
+        <label htmlFor={field.id} className="text-white font-semibold text-base/[150%] xl:text-xl/[150%]">
           {field.label}
         </label>
       )}
 
 
       <Listbox value={selected} onChange={setSelected}>
-        <div className="relative mt-1">
+        <div className="relative">
           <Listbox.Button
-            className={`relative w-full cursor-pointer rounded-lg text-sm lg:text-lg ${Icon ? "bg-Grey-08" : "bg-Grey-10"
-              } py-4 ${Icon ? "pl-12" : "pl-5"} pr-10 text-left text-Grey-60 border border-Grey-15 focus:outline-none focus-visible:ring-2 focus-visible:ring-Purple-60 transition-all duration-200`}
+            className={`relative w-full cursor-pointer rounded-md xl:rounded-lg text-sm/[20px] xl:text-lg/[20px] font-medium ${Icon ? "bg-Grey-08" : "bg-Grey-10"
+              } py-4 xl:py-6 ${Icon ? "pl-12" : "pl-5"} pr-10 text-left text-Grey-40 border border-Grey-15 focus:outline-none focus-visible:ring-2 focus-visible:ring-Purple-60 transition-all duration-200`}
           >{Icon && (
             <>
               <span className="absolute inset-y-0 left-3 flex items-center">
