@@ -1,8 +1,5 @@
 import TopRightArrow from "../../svg/TopRightArrow";
-import Market from "../../svg/Market";
-import Camera from "../../svg/Camera";
-import BuildingIcon from "../../svg/Building";
-import Sun from "../../svg/Sun";
+
 import Bedroom from "../../svg/Bedroom";
 import Bathroom from "../../svg/Bathroom";
 import Villa from "../../svg/Villa";
@@ -13,6 +10,7 @@ import YouTube from "../../svg/YouTube";
 // Hero Data 
 
 import type { CtaSectionType, EndFooterType, FaqSectionType, FeaturedPropertiesSectionType, FeatureItem, FooterNavColumn, HeroSectionType, NavItem, SiteInfoType, TestimonialsSectionType, TopBannerType } from "../../types/Home/HomeTypes";
+import type { FeaturesType } from "../../types/Contact/ContactType";
 
 export const heroSectionData: HeroSectionType = {
   headline: "Discover Your Dream Property with Estatein",
@@ -30,26 +28,30 @@ export const heroSectionData: HeroSectionType = {
     { value: "16+", label: "Years of Experience" },
   ],
 };
-
-export const featuresSectionData: FeatureItem[] = [
+/* yazan */
+export const featuresSectionData: FeaturesType[] = [
   {
     arrow: <TopRightArrow />,
-    icon: <Market />,
+    // icon: <Market />,
+    icon: "/assets/icons/emailIcon.svg",
     title: "Find Your Dream Home",
   },
   {
     arrow: <TopRightArrow />,
-    icon: <Camera />,
+    // icon: <Camera />,
+    icon: "/assets/icons/phoneIcon.svg",
     title: "Unlock Property Value",
   },
   {
     arrow: <TopRightArrow />,
-    icon: <BuildingIcon />,
+    // icon: <BuildingIcon />,
+    icon: "/assets/icons/locationIcon.svg",
     title: "Effortless Property Management",
   },
   {
     arrow: <TopRightArrow />,
-    icon: <Sun />,
+    // icon: <Sun />,
+     icon: "/assets/icons/roseIcon.svg",
     title: "Smart Investments, Informed Decisions",
   },
 ];
@@ -84,6 +86,57 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
     link: "#",
   },
   properties: [
+    {
+      id: "property-1",
+      image: "/assets/images/Home/villaSliderCard1.webp",
+      title: "Seaside Serenity Villa",
+      description: "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood.",
+      readMoreLink: "#",
+      details: [
+        { icon: <Bedroom />, label: "4-Bedroom" },
+        { icon: <Bathroom />, label: "3-Bathroom" },
+        { icon: <Villa />, label: "Villa" },
+      ],
+      price: "$550,000",
+      button: {
+        text: "View Property Details",
+        link: "#",
+      },
+    },
+    {
+      id: "property-2",
+      image: "/assets/images/Home/buildingSliderCard2.webp",
+      title: "Metropolitan Haven",
+      description: "A chic and fully-furnished 2-bedroom apartment with panoramic city views.",
+      readMoreLink: "#",
+      details: [
+        { icon: <Bedroom />, label: "4-Bedroom" },
+        { icon: <Bathroom />, label: "3-Bathroom" },
+        { icon: <Villa />, label: "Villa" },
+      ],
+      price: "$550,000",
+      button: {
+        text: "View Property Details",
+        link: "#",
+      },
+    },
+    {
+      id: "property-3",
+      image: "/assets/images/Home/modernCitySliderCard3.webp",
+      title: "Rustic Retreat Cottage",
+      description: "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.",
+      readMoreLink: "#",
+        details: [
+        { icon: <Bedroom />, label: "4-Bedroom" },
+        { icon: <Bathroom />, label: "3-Bathroom" },
+        { icon: <Villa />, label: "Villa" },
+      ],
+      price: "$550,000",
+      button: {
+        text: "View Property Details",
+        link: "#",
+      },
+    },
     {
       id: "property-1",
       image: "/assets/images/Home/villaSliderCard1.webp",

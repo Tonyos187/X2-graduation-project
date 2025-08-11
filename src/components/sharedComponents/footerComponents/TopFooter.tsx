@@ -1,7 +1,7 @@
 import FooterImg from "../../../svg/FooterImg";
 import type { CtaSectionType } from "../../../types/Home/HomeTypes";
 import Button from "../Button";
-import SectionHeader from "../Header";
+import Header from "../Header";
 
 function TopFooter({ data }: { data: CtaSectionType }) {
   return (
@@ -9,13 +9,13 @@ function TopFooter({ data }: { data: CtaSectionType }) {
       <div className="absolute z-0 right-0 bottom-0 text-[#1a1a1a]">
         <FooterImg />
       </div>
-      <SectionHeader
+      <Header
         title={data.headline}
         description={data.description}
         gap="gap-1.5"
         className="z-1"
         type="footer"
-      />
+        />
       <Button
         content="Explore Properties"
         className="bg-Purple-60 z-1"
