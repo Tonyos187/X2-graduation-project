@@ -11,9 +11,9 @@ const Hero = () => {
   const bgImage = "/assets/images/Home/backgroundHeroImage.png";
 
   return (
-    <Container className="min-h-screen pt-[108px] md:pt-[77px] lg:pt-[77px] xl:pt-[99px] flex justify-between items-center max-md:flex-col-reverse md:pr-0 lg:pr-0 xl:pr-0">
+    <Container className="min-h-screen max-lg:gap-14 pt-[108px] lg:pt-[77px] xl:pt-[99px] flex justify-between items-center max-lg:flex-col-reverse lg:pr-0 xl:pr-0">
       {/* Left Content */}
-      <div className="h-full w-full max-md:mb-10 md:w-[43.1171%] flex flex-col gap-10 lg:gap-12.5 xl:gap-15">
+      <div className="h-full w-full max-lg:mb-10 lg:w-[43.1171%] flex flex-col gap-10 lg:gap-12.5 xl:gap-15">
         <div className="flex flex-col gap-4 lg:gap-6">
           <h2 className="text-2xl lg:text-[46px] xl:text-[60px] text-White font-semibold leading-[120%] tracking-[0]">
             {headline}
@@ -34,7 +34,7 @@ const Hero = () => {
       </div>
 
       {/* Right Image */}
-      <div className="relative md:w-[52.3321%] w-full max-md:h-[44.3618vh] max-md:border max-md:mb-14 border-Grey-15 max-md:rounded-xl self-stretch bg-Grey-10">
+      <div className="relative lg:w-[52.3321%] w-full max-lg:h-[44.3618vh] max-lg:border border-Grey-15 max-lg:rounded-xl self-stretch bg-Grey-10">
         {/* Clipping wrapper for images */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Background Image - cover */}
@@ -42,7 +42,7 @@ const Hero = () => {
 
           {/* Gradient Overlay */}
           <div
-            className="absolute inset-0 z-20 pointer-events-none max-md:rounded-tr-xl"
+            className="absolute inset-0 z-20 pointer-events-none max-lg:rounded-tr-xl"
             style={{
               background: "linear-gradient(238.21deg, #2A213F 8.76%, rgba(25, 25, 25, 0) 50.09%)",
             }}
@@ -57,7 +57,7 @@ const Hero = () => {
         </div>
 
         {/* Center Circle in middle of the section - rotate animation */}
-        <div className="absolute z-50 left-0 bottom-[-40px] md:translate-x-[-50%] md:top-[95px] xl:top-[144px]">
+        <div className="absolute z-40 left-0 bottom-[-40px] lg:translate-x-[-50%] lg:top-[95px] xl:top-[144px]">
           <HeroArrowIcon />
         </div>
       </div>

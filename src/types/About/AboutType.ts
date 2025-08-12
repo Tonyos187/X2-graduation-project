@@ -1,13 +1,5 @@
 // import type { HeroStat } from "../../types/Home/HomeTypes";
 
-//// Hero type ////
-
-export interface HeroSectionType {
-  headline: string;
-  description: string;
-  heroImage: string;
-  bgImage: string;
-}
 
 //// Our Value sction type ////
 
