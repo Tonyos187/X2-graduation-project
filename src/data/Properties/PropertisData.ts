@@ -6,6 +6,7 @@ import Email from "../../svg/Email";
 import Location from "../../svg/Location";
 import Phone from "../../svg/Phone";
 import type { PropertiesData } from "../../types/Properties/PropertiesTypes";
+
 export const propertiesData: PropertiesData = {
     heroSection: {
         mainTitle: "Find Your Dream Property",

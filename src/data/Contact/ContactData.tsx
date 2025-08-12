@@ -3,7 +3,7 @@ import type {
   ContactDiscoverLocationsFilterDataType,
   ContactExplorePhotosDataType,
   ContactHeroDataType,
-  ContactHeroFeaturesType,
+  FeaturesType,
   ContactLetsConnectFormDataType,
 } from "../../types/Contact/ContactType";
 import DownArrow from "../../svg/DownArrow";
@@ -13,7 +13,7 @@ import Location from "../../svg/Location";
 import TopRightArrow from "../../svg/TopRightArrow";
 
 
-export const contactHeroCard: ContactHeroFeaturesType[] = [
+export const contactHeroCard: FeaturesType[] = [
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/emailIcon.svg",
@@ -92,22 +92,14 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       icon: <DownArrow />,
       options: ["Google", "Facebook", "Instagram", "Linkedin", "Other"],
     },
-    {
+  ],
+  areaText: {
       id: "message",
       name: "message",
       label: "Message",
       type: "text",
       placeholder: "Enter your Message here..",
     },
-  ],
-  checkBox: {
-    id: "terms",
-    name: "terms",
-    label: "I agree with Terms of Use and Privacy Policy",
-  },
-  button: {
-    text: "Send Your Message",
-  },
 };
 
 // Discover Our Office Locations
@@ -194,6 +186,7 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     },
     {
       id: "explorePeopleInSuits",
+
       image: "/assets/images/Contact/ExplorePeopleInSuits.webp",
     },
     {

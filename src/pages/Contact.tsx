@@ -1,8 +1,12 @@
-import { contactHeroCard } from "../data/Contact/ContactData.tsx";
+import {
+  contactHeroCard,
+  contactLetsConnectData,
+  contactLetsConnectFormData,
+} from "../data/Contact/ContactData.tsx";
 import ContactExploreWorld from "../sections/Contact/ContactExploreWorld.tsx";
 import Features from "../sections/sharedSections/Features.tsx";
 import HeaderHero from "../sections/sharedSections/HeaderHero.tsx";
-
+import ContactForm from "../sections/Contact/ContactForm.tsx";
 const Contact = () => {
   return (
     <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
@@ -16,6 +20,8 @@ const Contact = () => {
         {/* put your featurs data here but first check the type in src/types/contact/contactTypes */}
         <Features data={contactHeroCard} />
       </div>
+
+      <ContactForm title={contactLetsConnectData.title} description={contactLetsConnectData.description} data={contactLetsConnectFormData.conactForm} areaText={contactLetsConnectFormData.areaText} />
 
       <ContactExploreWorld />
     </div>
