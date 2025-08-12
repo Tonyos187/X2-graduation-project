@@ -280,3 +280,11 @@
 .clip {
     clip-path: path("M0,0 H100 V100 H0 Z M50,50 m-25,0 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0");
 }
+.cursor-custom-default{
+    cursor: url('/assets/icons/cursor.svg'), auto;
+}
+.cursor-custom-default a,
+.cursor-custom-default button,
+.cursor-custom-default .cursor-pointer{
+    cursor: url('/assets/icons/cursor-pointer.svg'), pointer !important;
+}
