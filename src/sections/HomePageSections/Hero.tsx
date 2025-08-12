@@ -1,68 +1,67 @@
-import { heroSectionData } from "../../data/Home/HomeData";
 import Statistics from "../../components/sharedComponents/statistics/Statistics";
 import Button from "../../components/sharedComponents/Button";
 import HeroArrowIcon from "../../components/sharedComponents/HeroArrowIcon";
+import Container from "../../layouts/Container";
 
 const Hero = () => {
-  const { headline, description, buttons } = heroSectionData;
+  const description =
+    "Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.";
+  const headline = "Discover Your Dream Property with Estatein";
+  const heroImage = "/assets/images/Home/heroBuilding.webp";
+  const bgImage = "/assets/images/Home/backgroundHeroImage.png";
 
   return (
-    <section className="w-full relative h-screen px-4 md:px-0 md:pt-18 pt-27 md:overflow-hidden">
-
-      <div className="mx-auto flex flex-col-reverse md:flex-row md:justify-between gap-0 md:gap-15 laptop:gap-20 h-screen">
-        {/* Left Content */}
-        <div className="w-full md:w-[48%] flex flex-col justify-center gap-10 md:gap-15 px-4 md:pl-20 laptop:pl-40.5">
-          <div className="flex flex-col gap-4 md:gap-6">
-            <h1 className="text-2xl md:text-[46px] laptop:text-[60px] text-White font-semibold leading-[120%] tracking-[0]">
+    <Container className="min-h-screen max-lg:gap-14 pt-[108px] lg:pt-[77px] xl:pt-[99px] flex justify-between items-center max-lg:flex-col-reverse lg:pr-0 xl:pr-0">
+      {/* Left Content */}
+      <div className="h-full w-full max-lg:mb-10 lg:w-[43.1171%] flex flex-col gap-10 lg:gap-12.5 xl:gap-15">
+        <div className="flex flex-col gap-4 lg:gap-6">
+          <h2 className="text-2xl lg:text-[46px] xl:text-[60px] text-White font-semibold leading-[120%] tracking-[0]">
             {headline}
-          </h1>
-          <p className="font-medium text-[18px] text-Grey-60 leading-[150%] tracking-[0] md:text-lg">
+          </h2>
+          <p className="font-medium text-[18px] text-Grey-60 leading-[150%] tracking-[0] lg:text-lg">
             {description}
           </p>
-          </div>
-
-          {/* Buttons */}
-          <div className="flex flex-col md:flex-row gap-4">
-            <Button content={buttons[0]?.text} withBorder />
-            <Button content={buttons[1]?.text} className="bg-Purple-60" />
-          </div>
-
-          {/* Stats */}
-          <Statistics />
         </div>
 
-        {/* Right Image */}
-        <div className="w-full md:w-[48%] min-h-50 px-4 md:px-0 m-auto md:m-0 rounded-[12px] md:rounded-none  relative text-Grey-60">
-          {/* Background Image - zoom animation */}
-          <img
-            src={heroSectionData?.bgImage}
-            alt="heroImageBuilding"
-            className="absolute inset-0 w-full h-full max-w-full max-h-full object-cover z-20 overflow-hidden"
-          />
+        {/* Buttons */}
+        <div className="flex flex-col lg:flex-row gap-4">
+          <Button content="Learn More" withBorder />
+          <Button content="Browse Properties" className="bg-Purple-60" />
+        </div>
+
+        {/* Stats */}
+        <Statistics />
+      </div>
+
+      {/* Right Image */}
+      <div className="relative lg:w-[52.3321%] w-full max-lg:h-[44.3618vh] max-lg:border border-Grey-15 max-lg:rounded-xl self-stretch bg-Grey-10">
+        {/* Clipping wrapper for images */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Background Image - cover */}
+          <img src={bgImage} alt="background" className="absolute inset-0 w-full h-full object-cover z-10" />
 
           {/* Gradient Overlay */}
           <div
-            className="absolute inset-0 z-10 rounded-[12px] md:rounded-0"
+            className="absolute inset-0 z-20 pointer-events-none max-lg:rounded-tr-xl"
             style={{
-              background:
-                "linear-gradient(238.21deg, #2A213F 8.76%, rgba(25, 25, 25, 0) 50.09%)",
+              background: "linear-gradient(238.21deg, #2A213F 8.76%, rgba(25, 25, 25, 0) 50.09%)",
             }}
-          />
+          ></div>
 
-          {/* Foreground Image */}
+          {/* Foreground Image - contain */}
           <img
-            src={heroSectionData?.heroImage}
-            alt="heroImageBuilding"
-            className="absolute inset-0 w-full h-full object-cover z-20"
+            src={heroImage}
+            alt="hero"
+            className="absolute left-1/2 bottom-0 translate-x-[-50%] object-bottom inset-0 w-full h-full object-contain z-30"
           />
-          {/* Center Circle in middle of the section - rotate animation */}
+        </div>
 
-          <div className="absolute z-20 -bottom-[25%] left-0 md:top-[15%] md:-left-[60px] laptop:top-[17%] laptop:-left-[85px]">
-            <HeroArrowIcon />
-          </div>
+        {/* Center Circle in middle of the section - rotate animation */}
+        <div className="absolute z-40 left-0 bottom-[-40px] lg:translate-x-[-50%] lg:top-[95px] xl:top-[144px]">
+          <HeroArrowIcon />
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

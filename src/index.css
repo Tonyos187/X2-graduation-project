@@ -24,6 +24,7 @@
     --color-Grey-40: #666666;
     --color-Grey-50: #808080;
     --color-Grey-60: #999999;
+    --color-Grey-70: #0A0A0A80;
     /* ____________________ */
     /* White Shades */
     --color-White-90: #E4E4E7;
@@ -32,12 +33,12 @@
     --color-White-99: #FCFCFD;
     /* Spacing */
     --spacing-pc: 8.4375%;
-    --spacing-laptop: 5.5555%;
+    --spacing-xl: 5.5555%;
     --spacing-mobile: 16px;
     /* Screens */
     --breakpoint-xs: 389px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 1024px;
+    --breakpoint-md: 769px;
+    --breakpoint-lg: 1025px;
     --breakpoint-xl: 1441px;
     --breakpoint-2xl: 1921px;
 }
@@ -51,17 +52,17 @@
     /* Purple Shades — keep unchanged */
     /* no override needed */
     /* Grey Shades → flipped to light greys */
-    --color-Grey-08: #FCFCFD;
+    --color-Grey-08: #EDE7FE;
     /* Was #141414 */
     --color-Grey-10: #F7F7F8;
     /* Was #1A1A1A */
-    --color-Grey-15: #F1F1F3;
+    --color-Grey-15: #DBCEFD;
     /* Was #262626 */
-    --color-Grey-20: #E4E4E7;
+    --color-Grey-20: #DBCEFD;
     /* Was #333333 */
     --color-Grey-30: #CCCCCC;
     /* Was #4D4D4D */
-    --color-Grey-40: #999999;
+    --color-Grey-40: #A685FA;
     /* Was #666666 */
     --color-Grey-50: #808080;
     /* Same (neutral) */
@@ -99,6 +100,11 @@
         animation: color-shift 6s linear infinite;
         color: white;
     }
+    .custom-border {
+        border: 1px solid;
+        border-image-source: linear-gradient(0deg, #262626, #262626), linear-gradient(117.89deg, #703bf7 0%, rgba(112, 59, 247, 0) 24%);
+        border-image-slice: 1;
+    }
 }
 
 @keyframes rotate {
@@ -127,13 +133,13 @@
         color: #ffffff;
     }
     25% {
-        color: #FFD93D;
+        color: #ffd93d;
     }
     50% {
-        color: #6BCB77;
+        color: #6bcb77;
     }
     75% {
-        color: #4D96FF;
+        color: #4d96ff;
     }
     100% {
         color: #ffffff;
@@ -151,7 +157,7 @@
 /* Track (background of the scrollbar) */
 
 ::-webkit-scrollbar-track {
-    background: var(--color-bg);
+    background: var(--color-Grey-08);
 }
 
 
@@ -175,7 +181,7 @@
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--color-Purple-60) var(--color-bg);
+    scrollbar-color: var(--color-Purple-60) var(--color-Grey-08);
 }
 
 
@@ -277,5 +283,5 @@
 }
 
 .clip {
-    clip-path: path("M0,0 H100 V100 H0 Z M50,50 m-25,0 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0");
+    clip-path: path( "M0,0 H100 V100 H0 Z M50,50 m-25,0 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0");
 }

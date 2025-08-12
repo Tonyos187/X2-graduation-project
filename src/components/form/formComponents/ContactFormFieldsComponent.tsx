@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import type { FieldSection, FormField } from "../../../types/Properties/PropertiesTypes";
 import TextInput from "../FormFieldsComponents/TextInput";
 import TextareaField from "../FormFieldsComponents/TextareaField";
 import SelectField from "../FormFieldsComponents/SelectField";
 import CheckboxField from "../FormFieldsComponents/CheckboxField";
+import FormButton from "../FormButton";
+import { Link } from "react-router-dom";
 
 interface Props {
   data: FieldSection;
 }
 
 const ContactFormFieldsComponent: React.FC<Props> = ({ data }) => {
-  const { formFields, submitButton } = data;
+  const { formFields } = data;
+  const [checked, setChecked] = useState(false);
 
   const renderInput = (field: FormField) => {
     switch (field.type) {
@@ -53,14 +56,16 @@ const ContactFormFieldsComponent: React.FC<Props> = ({ data }) => {
 
         <div className="w-full">{renderInput(formFields[11])}</div>
 
-        <div className="flex justify-end">
-          <button
-            type="submit"
-            className="bg-Purple-60 hover:bg-Purple-75 transition-colors text-white px-6 py-3 rounded-xl font-medium"
-          >
-            {submitButton.text}
-          </button>
+        <div className="flex flex-col lg:flex-row justify-between gap-5 lg:gap-12.5 w-full mt-2.5 md:mt-0">
+        <div className="flex gap-1.5 xl:gap-2.5 items-center flex-1">
+            <div className="relative w-6 h-6 xl:w-7 xl:h-7">
+                {checked && <input id="check-here" type="checkbox" checked={checked} onChange={() => setChecked(!checked)} className="w-6 h-6 xl:w-7 xl:h-7 border border-Grey-15 accent-Grey-15 rounded-sm cursor-pointer" />}
+                {checked === false && <span onClick={() => setChecked(!checked)} className="absolute top-0 left-0 w-6 h-6 xl:w-7 xl:h-7 border border-Grey-15 bg-Grey-10 rounded-sm cursor-pointer"></span>}
+            </div>
+            <label onClick={() => setChecked(!checked)} className="text-sm/[150%] md:text-base/[150%] xl:text-lg/[150%] font-medium text-Grey-60">I agree with <Link to="/" className="underline">Terms of Use</Link> and <Link to="/" className="underline">Privacy Policy</Link></label>
         </div>
+        <FormButton content="Send Your Message" />
+      </div>
       </form>
     </div>
   );

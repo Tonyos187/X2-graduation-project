@@ -13,9 +13,9 @@ import type { ReactNode } from "react"
  * Use this component to wrap sections of your page content with consistent padding.
  */
 
-function Container({children,className}:{children:ReactNode,className:string}) {
+function Container({children,className}:{children:ReactNode,className?:string}) {
   return (
-    <section className={`px-4 md:px-20 laptop:px-40.5 ${className}`}>
+    <section className={`px-4 md:px-20 xl:px-40.5 ${className}`}>
         {children}
     </section>
   )

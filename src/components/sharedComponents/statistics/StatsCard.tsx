@@ -11,7 +11,9 @@ const StatsCard = ({ value, label, className }: Props) => {
 
   return (
     <div
-      className={`flex flex-col gap-2 rounded-xl bg-Grey-10 p-3 md:px-[14px] md:py-5 lg:px-4 lg:py-6 border border-Grey-15 text-center md:text-start ${className ?? ""}`}
+      className={`flex flex-col gap-2 rounded-xl bg-Grey-10 p-3 md:px-[14px] md:py-5 lg:px-4 lg:py-6 border border-Grey-15 text-center md:text-start ${
+        className ?? ""
+      }`}
       aria-label={`${value} ${label}`}
     >
       <div className="text-White font-bold text-2xl md:text-3xl xl:text-[40px]">

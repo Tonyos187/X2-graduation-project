@@ -20,7 +20,7 @@ const SearchFild: React.FC<Props> = ({ data }) => {
   );
 
  return (
-  <div className=" px-4 sm:px-6 md:px-20 lg::px-[148px] mx-auto py-4 w-full max-w-[1596px] h-[103px]">
+  <div className=" px-4 sm:px-6 md:px-20 lg:px-[148px] mx-auto py-4 w-full max-w-[1596px] h-[103px]">
     <div className="relative w-full h-[103px]">
       <input
         type={searchField.type}

@@ -1,19 +1,7 @@
-// import type { HeroStat } from "../../types/Home/HomeTypes";
-
-//// Hero type ////
-
-export interface HeroSectionType {
-  headline: string;
-  description: string;
-  heroImage: string;
-  bgImage: string;
-}
-
-//// Our Value sction type ////
 
 // our value card type
 
-export interface OurValueCard {
+export interface valueCard {
   id: string;
   icon: string;
   title: string;
@@ -22,9 +10,8 @@ export interface OurValueCard {
 export interface OurValueSectionType {
   headline: string;
   description: string;
-  properties: OurValueCard[];
+  values: valueCard[];
 }
-//// Our Achievements sction type ////
 
 // Our Achievements card type
 
@@ -40,8 +27,6 @@ export interface OurAchievementsSectionType {
   properties: OurAchievementsCard[];
 }
 
-//// Navigating the Estatein Experience sction type ////
-
 // Navigating the Estatein Experience card type
 
 export interface NavigatingEstateinExperienceCard {
@@ -53,10 +38,8 @@ export interface NavigatingEstateinExperienceCard {
 export interface NavigatingEstateinExperienceSectionType {
   headline: string;
   description: string;
-  properties: NavigatingEstateinExperienceCard[];
+  steps: NavigatingEstateinExperienceCard[];
 }
-
-////Meet the Estatein Team sction type ////
 
 // Meet the Estatein Team card type
 
@@ -71,8 +54,6 @@ export interface MeetEstateinTeamCardSectionType {
   description: string;
   properties: MeetEstateinTeamCard[];
 }
-
-////Our Valued Clients section type ////
 
 // Our Valued Clients card type
 
