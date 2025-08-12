@@ -4,7 +4,6 @@ import type {
   ContactExplorePhotosDataType,
   ContactHeroDataType,
   FeaturesType,
-  FeaturesType,
   ContactLetsConnectFormDataType,
 } from "../../types/Contact/ContactType";
 import DownArrow from "../../svg/DownArrow";
