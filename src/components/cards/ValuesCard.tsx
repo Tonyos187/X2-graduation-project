@@ -14,7 +14,9 @@ interface ValuesCardProps {
 
 const ValuesCard = ({iconURL, withIcon, title, description, withButton, smartSection, link , className}: ValuesCardProps) => {
   return (
-    <div className={`rounded-[10px] xl:rounded-xl bg-Grey-08 border border-Grey-15 p-6 lg:p-[2.7778vw] xl:p-[2.604167vw] flex flex-col gap-4 lg:gap-5 xl:gap-7.5 ${withButton ? "bg-[url('/assets/images/Contact/ExploreBackground.webp')] bg-center bg-Grey-10 gap-5 xl:gap-7.5" : "gap-4 lg:gap-5 xl:gap-7.5"} ${className}`}>
+    <div className={`rounded-[10px] xl:rounded-xl bg-Grey-08 border border-Grey-15 
+    ${smartSection ? "p-6 lg:p-[7%] xl:py-[7%] xl:px-[8%]" : "p-6 lg:p-[2.7778vw] xl:p-[2.604167vw] xl:gap- 7.5" }
+    flex flex-col  ${withButton ? "bg-[url('/assets/images/Contact/ExploreBackground.webp')] bg-center bg-Grey-10 gap-5 xl:gap-7.5" : "gap-4 lg:gap-5 xl:gap-7.5"} ${className}`}>
       <div className={`flex justify-center items-center ${withButton ? "flex-col gap-5 lg:flex-row lg:gap-3.5 xl:gap-5" : "flex-row gap-2.5 lg:gap-4 xl:gap-5"}`}>
         {withIcon && iconURL && <SpinigCircleIcon iconURL={iconURL} />}
         <h3 className={`flex-1 mr-auto ${withButton && !smartSection ? "text-xl/[150%] lg:text-2xl/[150%] xl:text-3xl/[150%] font-bold" : "text-lg/[150%] lg:text-xl/[150%] xl:text-2xl/[150%] font-semibold"}`}>{title}</h3>
