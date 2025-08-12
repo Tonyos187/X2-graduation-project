@@ -1,10 +1,13 @@
 import {
   contactHeroCard,
   contactHeroData,
+  contactLetsConnectData,
+  contactLetsConnectFormData,
 } from "../data/Contact/ContactData.tsx";
 import ContactExploreWorld from "../sections/Contact/ContactExploreWorld.tsx";
 import Features from "../sections/sharedSections/Features.tsx";
 import Header from "../components/sharedComponents/Header.tsx";
+import ContactForm from "../sections/Contact/ContactForm.tsx";
 
 const Contact = () => {
   return (
@@ -22,6 +25,8 @@ const Contact = () => {
         {/* put your featurs data here but first check the type in src/types/contact/contactTypes */}
         <Features data={contactHeroCard} />
       </div>
+
+      <ContactForm title={contactLetsConnectData.title} description={contactLetsConnectData.description} data={contactLetsConnectFormData.conactForm} areaText={contactLetsConnectFormData.areaText} />
 
       <ContactExploreWorld />
     </div>

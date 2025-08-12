@@ -3,7 +3,7 @@ import type {
   ContactDiscoverLocationsFilterDataType,
   ContactExplorePhotosDataType,
   ContactHeroDataType,
-  ContactHeroFeaturesType,
+  FeaturesType,
   ContactLetsConnectFormDataType,
 } from "../../types/Contact/ContactType";
 import DownArrow from "../../svg/DownArrow";
@@ -20,7 +20,7 @@ export const contactHeroData: ContactHeroDataType = {
     "Welcome to Estatein's Contact Us page. We're here to assist you with any inquiries, requests, or feedback you may have. Whether you're looking to buy or sell a property, explore investment opportunities, or simply want to connect, we're just a message away. Reach out to us, and let's start a conversation.",
 };
 
-export const contactHeroCard: ContactHeroFeaturesType[] = [
+export const contactHeroCard: FeaturesType[] = [
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/emailIcon.svg",
@@ -99,22 +99,14 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       icon: <DownArrow />,
       options: ["Google", "Facebook", "Instagram", "Linkedin", "Other"],
     },
-    {
+  ],
+  areaText: {
       id: "message",
       name: "message",
       label: "Message",
       type: "text",
       placeholder: "Enter your Message here..",
     },
-  ],
-  checkBox: {
-    id: "terms",
-    name: "terms",
-    label: "I agree with Terms of Use and Privacy Policy",
-  },
-  button: {
-    text: "Send Your Message",
-  },
 };
 
 // Discover Our Office Locations
@@ -201,11 +193,19 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     },
     {
       id: "explorePeopleInSuits",
+<<<<<<< HEAD
+      image: "/assets/images/Contact/explorePeopleInSuits.webp",
+    },
+    {
+      id: "exploreWomanInSuit",
+      image: "/assets/images/Contact/exploreWomanInSuit.webp",
+=======
       image: "/assets/images/Contact/ExplorePeopleInSuits.webp",
     },
     {
       id: "exploreWomanInSuit",
       image: "/assets/images/Contact/ExploreWomanInSuit.webp",
+>>>>>>> ce561e86c158f4ebcbb5e82448867c3ac875dbc0
     },
   ],
   contactExploreEstateinData: {

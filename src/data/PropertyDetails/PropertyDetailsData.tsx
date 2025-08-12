@@ -2,6 +2,8 @@ import Area from "../../svg/Area";
 import Bathroom from "../../svg/Bathroom";
 import Bed from "../../svg/Bedroom";
 import Lightning from "../../svg/Lightning";
+import Location from "../../svg/Location";
+import type { ContactHeroDataType, ContactLetsConnectFormDataType } from "../../types/Contact/ContactType";
 import type { PropertyDetailsType } from "../../types/PropertyDetails/PropertyDetailsTypes";
 
 export const PropertyDetailsData : PropertyDetailsType={
@@ -66,4 +68,60 @@ export const PropertyDetailsData : PropertyDetailsType={
         ],
     },
 }
+
+// Contact Form
+
+export const detailsFormHeaderData: ContactHeroDataType = {
+  title: "Inquire About Seaside Serenity Villa",
+  description:
+    "Interested in this property? Fill out the form below, and our real estate experts will get back to you with more details, including scheduling a viewing and answering any questions you may have.",
+};
+
+export const detailsFormData: ContactLetsConnectFormDataType = {
+  conactForm: [
+    {
+      id: "firstName",
+      name: "firstName",
+      label: "First Name",
+      type: "text",
+      placeholder: "Enter First Name",
+    },
+    {
+      id: "lastName",
+      name: "lastName",
+      label: "Last Name",
+      type: "text",
+      placeholder: "Enter Last Name",
+    },
+    {
+      id: "email",
+      name: "email",
+      label: "Email",
+      type: "email",
+      placeholder: "Enter your Email",
+    },
+    {
+      id: "phone",
+      name: "phone",
+      label: "Phone",
+      type: "text",
+      placeholder: "Enter Phone Number",
+    },
+    {
+      id: "selected_property",
+      name: "selected_property",
+      label: "Selected Property",
+      type: "text",
+      placeholder: "Empty",
+      location: <Location />,
+    },
+  ],
+  areaText: {
+      id: "message",
+      name: "message",
+      label: "Message",
+      type: "text",
+      placeholder: "Enter your Message here..",
+    },
+};
 
