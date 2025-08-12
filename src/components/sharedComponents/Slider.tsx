@@ -11,7 +11,7 @@ export default function Slider({
   num_Of_Cards_in_sm_screen = 1,
   num_Of_Cards_in_md_screen = 2,
   num_Of_Cards_in_xl_screen = 3,
-  gap_cards = "md:gap-5 xl:gap-7.5",
+  gap_cards = "md:gap-[1.56%] 5 xl:gap-[1.88%] 7.5",
 }: {
   cards: any[];
   num_Of_Cards_in_sm_screen?: number;
@@ -35,7 +35,7 @@ export default function Slider({
     setCardsPerView(
       window.innerWidth <= 768
         ? num_Of_Cards_in_sm_screen
-        : window.innerWidth <= 1440
+        : window.innerWidth <= 1024
         ? num_Of_Cards_in_md_screen
         : num_Of_Cards_in_xl_screen
     );
@@ -127,7 +127,7 @@ export default function Slider({
         <div className="flex items-center justify-between ">
           <div className="flex items-center gap-2.5">
             <button
-              className={`flex items-center justify-center p-2.5 w-11 h-11 border border-Grey-15 rounded-full transition ${
+              className={`flex items-center justify-center p-2 w-8 h-8 xs:p-2.5 xs:w-11 xs:h-11 border border-Grey-15 rounded-full transition ${
                 isAtStart
                   ? "bg-Grey-15 text-Grey-50 cursor-not-allowed"
                   : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15"
@@ -138,7 +138,7 @@ export default function Slider({
               <Previous />
             </button>
             {/* pagination */}
-            <div className="text-sm font-medium leading-[150%]">
+            <div className="text-[12px] xs:text-sm font-medium leading-[150%]">
               <span className="text-White ">
                 {String(currentPage).padStart(2, "0")}
               </span>{" "}
@@ -146,7 +146,7 @@ export default function Slider({
             </div>
 
             <button
-              className={`flex items-center justify-center p-2.5 w-11 h-11 border border-Grey-15 rounded-full transition ${
+              className={`flex items-center justify-center p-2 w-8 h-8 xs:p-2.5 xs:w-11 xs:h-11 border border-Grey-15 rounded-full transition ${
                 isAtEnd
                   ? "bg-Grey-15 text-Grey-50 cursor-not-allowed"
                   : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15]"
