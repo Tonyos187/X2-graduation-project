@@ -4,6 +4,7 @@ import type {
   ContactExplorePhotosDataType,
   ContactHeroDataType,
   FeaturesType,
+  FeaturesType,
   ContactLetsConnectFormDataType,
 } from "../../types/Contact/ContactType";
 import DownArrow from "../../svg/DownArrow";
@@ -12,13 +13,6 @@ import Phone from "../../svg/Phone";
 import Location from "../../svg/Location";
 import TopRightArrow from "../../svg/TopRightArrow";
 
-// ContactHero Data
-
-export const contactHeroData: ContactHeroDataType = {
-  title: "Get in Touch with Estatein",
-  description:
-    "Welcome to Estatein's Contact Us page. We're here to assist you with any inquiries, requests, or feedback you may have. Whether you're looking to buy or sell a property, explore investment opportunities, or simply want to connect, we're just a message away. Reach out to us, and let's start a conversation.",
-};
 
 export const contactHeroCard: FeaturesType[] = [
   {
@@ -99,22 +93,14 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       icon: <DownArrow />,
       options: ["Google", "Facebook", "Instagram", "Linkedin", "Other"],
     },
-    {
+  ],
+  areaText: {
       id: "message",
       name: "message",
       label: "Message",
       type: "text",
       placeholder: "Enter your Message here..",
     },
-  ],
-  checkBox: {
-    id: "terms",
-    name: "terms",
-    label: "I agree with Terms of Use and Privacy Policy",
-  },
-  button: {
-    text: "Send Your Message",
-  },
 };
 
 // Discover Our Office Locations
@@ -201,6 +187,7 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     },
     {
       id: "explorePeopleInSuits",
+
       image: "/assets/images/Contact/ExplorePeopleInSuits.webp",
     },
     {
@@ -213,5 +200,5 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     description:
       "Discover the world of Estatein and its impact on the real estate industry. From our team of experts to our commitment to excellence, we're here to guide you on your real estate journey.",
   },
-  titlePhoto: "/public/assets/images/Contact/ExploreShakingHands.webp",
+  titlePhoto: "/assets/images/Contact/ExploreShakingHands.webp",
 };
