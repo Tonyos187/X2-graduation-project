@@ -42,7 +42,7 @@ const Navbar = (): JSX.Element => {
         />
       )}
 
-      <nav className="fixed top-0 left-0 w-full xl:h-[99px] md:h-[77px] z-50 flex justify-between items-center xl:px-pc md:px-laptop px-mobile xl:py-0 md:py-0 py-5  bg-Grey-10 shadow">
+      <nav className="fixed top-0 left-0 w-full xl:h-[99px] md:h-[77px] z-50 flex justify-between items-center px-4 md:px-20 xl:px-40.5 xl:py-0 md:py-0 py-5  bg-Grey-10 shadow">
         {/* Logo */}
         <Logo />
 

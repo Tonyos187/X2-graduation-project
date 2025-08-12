@@ -1,5 +1,5 @@
 import StatsCard from "./StatsCard";
-import { heroSectionData } from "../../../data/Home/HomeData";
+import { Stats } from "../../../data/Home/HomeData";
 
 const Statistics = () => {
   // you can define unique styles per card
@@ -11,7 +11,7 @@ const Statistics = () => {
 
   return (
     <div className="w-full flex flex-wrap justify-between gap-y-3">
-      {heroSectionData.stats.map((stat, index) => (
+      {Stats.map((stat, index) => (
         <StatsCard
           key={index}
           value={stat.value}
