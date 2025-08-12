@@ -85,12 +85,7 @@ export const OurAchievementsSectionData: OurAchievementsSectionType = {
 
 // Navigating the Estatein Experience section Data
 
-export const NavigatingEstateinExperienceData: NavigatingEstateinExperienceSectionType =
-  {
-    headline: "Navigating the Estatein Experience",
-    description:
-      "At Estatein, we've designed a straightforward process to help you find and purchase your dream property with ease. Here's a step-by-step guide to how it all works.",
-    properties: [
+export const  steps= [
       {
         id: "property-1",
         stepId: "Step 01",
@@ -133,8 +128,7 @@ export const NavigatingEstateinExperienceData: NavigatingEstateinExperienceSecti
         description:
           "We'll help you negotiate the best terms and prepare your offer. Our goal is to secure the property at the right price and on favorable terms.",
       },
-    ],
-  };
+    ];
 
 // Meet the Estatein Team section Data
 
