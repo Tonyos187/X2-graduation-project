@@ -157,7 +157,7 @@
 /* Track (background of the scrollbar) */
 
 ::-webkit-scrollbar-track {
-    background: var(--color-bg);
+    background: var(--color-Grey-08);
 }
 
 
@@ -181,7 +181,7 @@
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--color-Purple-60) var(--color-bg);
+    scrollbar-color: var(--color-Purple-60) var(--color-Grey-08);
 }
 
 
