@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { PropertyDetailsData } from "../../data/PropertyDetails/PropertyDetailsData";
 import Next from "../../svg/Next";
-import Previous from "../../svg/Previous";
+import Previous from "../../svg/previous";
 
 interface Image{
     image: string
