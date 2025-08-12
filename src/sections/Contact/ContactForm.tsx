@@ -20,7 +20,7 @@ const ContactForm = ({title, description, data, areaText, detailsPage} : Props) 
       </div>
 
      <div className="flex-1">
-       <SharedForm data={data} areaText={areaText} detailsForm={detailsPage ? true : false} />
+       <SharedForm data={data} areaText={areaText} detailsForm={detailsPage} />
      </div>
     </Container>
   )

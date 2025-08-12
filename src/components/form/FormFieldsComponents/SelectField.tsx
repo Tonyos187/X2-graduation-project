@@ -11,7 +11,7 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
   return (
     <div className="flex flex-col gap-2.5 md:gap-3.5 xl:gap-4 w-full relative">
       {field.label && (
-        <label htmlFor={field.id} className="text-white font-semibold text-base/[150%] xl:text-xl/[150%]">
+        <label htmlFor={field.id} className="text-White font-semibold text-base/[150%] xl:text-xl/[150%]">
           {field.label}
         </label>
       )}
@@ -25,7 +25,7 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
           >{Icon && (
             <>
               <span className="absolute inset-y-0 left-3 flex items-center">
-                <Icon className="w-5 h-5 text-white" />
+                <Icon className="w-5 h-5 text-White" />
               </span>
               <span className="absolute inset-y-4 mx-1 left-10 w-[1px] bg-Grey-15" />
             </>
@@ -54,14 +54,14 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
           >
             
             <Listbox.Options
-              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-lg bg-Grey-10 text-white shadow-lg ring-1 ring-Purple-60 ring-opacity-5 focus:outline-none z-50"
+              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-lg bg-Grey-10 text-White shadow-lg ring-1 ring-Purple-60 ring-opacity-5 focus:outline-none z-50"
             >
               {field.options?.map((option) => (
                 <Listbox.Option
                   key={option}
                   className={({ active }) =>
                     `relative cursor-pointer select-none py-3 pl-10 pr-4 ${active
-                      ? "bg-Purple-60transition-all duration-400 text-white"
+                      ? "bg-Purple-60transition-all duration-400 text-White"
                       : "text-Grey-60"
                     }`
                   }
@@ -76,7 +76,7 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
                         {option}
                       </span>
                       {selected && (
-                        <span className="absolute inset-y-0 left-2 flex items-center text-white" />
+                        <span className="absolute inset-y-0 left-2 flex items-center text-White" />
                       )}
                     </>
                   )}
