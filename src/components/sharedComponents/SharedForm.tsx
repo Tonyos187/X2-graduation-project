@@ -18,7 +18,7 @@ const SharedForm = ({data, areaText, detailsForm} : {data: ConactFormType[] , ar
                     {item.location ? (
                         <div className="relative md:col-span-2">
                             <TextInput field={item} />
-                            <div className="absolute bottom-4.5 xl:bottom-6 right-4.5 md:right-5 xl:right-6 w-4.5 h-4.5 md:w-5 md:h-5 xl:w-6 xl:h-6 text-White-90">{item.location}</div>
+                            <div className="absolute bottom-4.5 xl:bottom-6 right-4.5 md:right-5 xl:right-6 w-4.5 h-4.5 md:w-5 md:h-5 xl:w-6 xl:h-6 text-White-90 pointer-events-none">{item.location}</div>
                         </div>
                     ) : <TextInput field={item} />}
                 </>
