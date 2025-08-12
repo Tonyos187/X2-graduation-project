@@ -12,15 +12,6 @@ export interface HeroStat {
   label: string;
 }
 
-export interface HeroSectionType {
-  headline: string;
-  description: string;
-  heroImage: string;
-  centerCircle: string;
-  bgImage: string;
-  buttons: HeroButtonTypes[];
-  stats: HeroStat[];
-}
 
 export interface FeatureItem {
   arrow: ReactNode;
