@@ -5,7 +5,7 @@
 
 // our value card type
 
-export interface OurValueCard {
+export interface valueCard {
   id: string;
   icon: string;
   title: string;
@@ -14,7 +14,7 @@ export interface OurValueCard {
 export interface OurValueSectionType {
   headline: string;
   description: string;
-  properties: OurValueCard[];
+  values: valueCard[];
 }
 //// Our Achievements sction type ////
 
@@ -45,7 +45,7 @@ export interface NavigatingEstateinExperienceCard {
 export interface NavigatingEstateinExperienceSectionType {
   headline: string;
   description: string;
-  properties: NavigatingEstateinExperienceCard[];
+  steps: NavigatingEstateinExperienceCard[];
 }
 
 ////Meet the Estatein Team sction type ////

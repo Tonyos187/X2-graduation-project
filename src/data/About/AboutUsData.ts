@@ -12,30 +12,30 @@ export const OurValueSectionData: OurValueSectionType = {
   headline: "Our Values",
   description:
     "Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary.",
-  properties: [
+  values: [
     {
-      id: "property-1",
+      id: "1",
       icon: "/assets/images/About/icons/star.svg",
       title: "Trust",
       description:
         "Trust is the cornerstone of every successful real estate transaction.",
     },
     {
-      id: "property-2",
+      id: "2",
       icon: "/assets/images/About/icons/gradution.svg",
       title: "Excellence",
       description:
         "We set the bar high for ourselves. From the properties we list to the services we provide.",
     },
     {
-      id: "property-3",
+      id: "3",
       icon: "/assets/images/About/icons/pepole.svg",
       title: "Client-Centric",
       description:
         "Your dreams and needs are at the center of our universe. We listen, understand..",
     },
     {
-      id: "property-4",
+      id: "4",
       icon: "/assets/images/About/icons/star.svg",
       title: "Our Commitment",
       description:
@@ -74,7 +74,12 @@ export const OurAchievementsSectionData: OurAchievementsSectionType = {
 
 // Navigating the Estatein Experience section Data
 
-export const  steps= [
+export const NavigatingEstateinExperienceData: NavigatingEstateinExperienceSectionType =
+  {
+    headline: "Navigating the Estatein Experience",
+    description:
+      "At Estatein, we've designed a straightforward process to help you find and purchase your dream property with ease. Here's a step-by-step guide to how it all works.",
+    steps: [
       {
         id: "property-1",
         stepId: "Step 01",
@@ -117,7 +122,8 @@ export const  steps= [
         description:
           "We'll help you negotiate the best terms and prepare your offer. Our goal is to secure the property at the right price and on favorable terms.",
       },
-    ];
+    ],
+  };
 
 // Meet the Estatein Team section Data
 
