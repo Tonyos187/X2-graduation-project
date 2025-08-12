@@ -1,6 +1,5 @@
 import Header from "../../components/sharedComponents/Header"
 import SharedForm from "../../components/sharedComponents/SharedForm"
-// import { contactLetsConnectData, contactLetsConnectFormData } from "../../data/Contact/ContactData"
 import Container from "../../layouts/Container"
 import type { ConactFormType } from "../../types/Contact/ContactType"
 
