@@ -1,7 +1,3 @@
-// import type { HeroStat } from "../../types/Home/HomeTypes";
-
-
-//// Our Value sction type ////
 
 // our value card type
 
@@ -16,7 +12,6 @@ export interface OurValueSectionType {
   description: string;
   values: valueCard[];
 }
-//// Our Achievements sction type ////
 
 // Our Achievements card type
 
@@ -32,8 +27,6 @@ export interface OurAchievementsSectionType {
   properties: OurAchievementsCard[];
 }
 
-//// Navigating the Estatein Experience sction type ////
-
 // Navigating the Estatein Experience card type
 
 export interface NavigatingEstateinExperienceCard {
@@ -48,8 +41,6 @@ export interface NavigatingEstateinExperienceSectionType {
   steps: NavigatingEstateinExperienceCard[];
 }
 
-////Meet the Estatein Team sction type ////
-
 // Meet the Estatein Team card type
 
 export interface MeetEstateinTeamCard {
@@ -63,8 +54,6 @@ export interface MeetEstateinTeamCardSectionType {
   description: string;
   properties: MeetEstateinTeamCard[];
 }
-
-////Our Valued Clients section type ////
 
 // Our Valued Clients card type
 
