@@ -1,4 +1,5 @@
-import Header from "../components/sharedComponents/Header";
+import HeaderHero from "../sections/sharedSections/HeaderHero";
+
 import { servicesData } from "../data/Services/ServicesData";
 import Values from "../sections/Services/Values";
 import Features from "../sections/sharedSections/Features";
@@ -6,17 +7,11 @@ import Features from "../sections/sharedSections/Features";
 const Services = () => {
   return (
     <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
-      <div className="hero mt-[68.58px] md:mt-[77px] xl:mt-[99px]">
-        {/* put hero title and description through props */}
-        <Header
-          className="bg-[linear-gradient(95.93deg,#262626_-26.82%,rgba(38,38,38,0)_40.46%)] 
-          py-12.5 px-4 md:py-[6.9445vw] md:pl-[5.5556vw] md:pr-[13.8889vw] 
-          xl:pt-[7.8125vw] xl:pb-[5.20834vw] xl:pl-[8.4375vw] xl:pr-[20.8334vw]"
-          title={servicesData.heroSection.mainTitle}
-          description={servicesData.heroSection.description}
+      <div>
+        <HeaderHero
+          title="Elevate Your Real Estate Experience"
+          description="Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams."
         />
-
-        {/* put your featurs data here but first check the type in src/types/contact/contactTypes */}
         {servicesData.servicesSection.featuresCards && (
           <Features data={servicesData.servicesSection.featuresCards} />
         )}
@@ -61,5 +56,4 @@ const Services = () => {
     </div>
   );
 };
-
 export default Services;
