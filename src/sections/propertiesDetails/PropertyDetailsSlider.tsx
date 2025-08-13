@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { PropertyDetailsData } from "../../data/PropertyDetails/PropertyDetailsData";
 import Next from "../../svg/Next";
-import Previous from "../../svg/Previous";
+import Previous from "../../svg/previous";
 
 interface Image{
     image: string
@@ -21,11 +21,13 @@ function PropertyDetailsSlider() {
     const ImageScroll = [...ImagesData,...ImagesData]
     //set images and update on window resize
     useEffect(() => {
-        setImages(ImagesData)
         const handleResize = () => setIsMobile(window.innerWidth <= 1024);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    },[])
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    useEffect(() => {
+        setImages(ImagesData);
+    }, [ImagesData]);
     // Go to previous slide
     const prev =() => {
         if(currentIndex - imagesPerSlide >= 0){

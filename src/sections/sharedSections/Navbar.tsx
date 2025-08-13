@@ -42,7 +42,7 @@ const Navbar = (): JSX.Element => {
         />
       )}
 
-      <nav className="fixed top-0 left-0 w-full xl:h-[99px] md:h-[77px] z-50 flex justify-between items-center px-4 md:px-20 xl:px-40.5 xl:py-0 md:py-0 py-5  bg-Grey-10 shadow">
+      <nav className="fixed top-0 left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5  bg-Grey-10 shadow">
         {/* Logo */}
         <Logo />
 
@@ -61,7 +61,7 @@ const Navbar = (): JSX.Element => {
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
               isActive
-                ? "text-White bg-Purple-60 xl:py-4 xl:px-6 md:py-3.5 md:px-5  rounded-lg border border-Grey-10 xl:text-lg"
+                ? "text-white bg-Purple-60 xl:py-4 xl:px-6 md:py-3.5 md:px-5  rounded-lg border border-Grey-10 xl:text-lg"
                 : "xl:text-lg text-White xl:py-4 xl:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15"
             }
           >
@@ -98,7 +98,7 @@ const Navbar = (): JSX.Element => {
 
       {/* Mobile Slide-in Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-1/2 bg-Grey-10 z-40 transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 right-0 h-full w-1/2 bg-Grey-10 z-50 transform transition-transform duration-300 md:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
