@@ -19,7 +19,7 @@ const path_2 = [
   "M-587.312 -181.583C-538.625 -214.858 -486.578 -243.627 -425.771 -228.189C-373.933 -215.046 -332.755 -175.846 -297.459 -137.898C-243.807 -80.2146 -190.008 26.9326 -100.372 22.9479C-32.555 19.9438 2.01053 -31.5436 37.4312 -82.2174C80.9249 -144.47 133.43 -202.841 213.075 -214.149C357.699 -234.698 459.017 -136.375 571.537 -66.2371C623.521 -33.8176 689.481 4.63113 749.371 20.1316C846.454 45.2494 920.383 -45.7298 977.206 -109.985",
   "M-587.312 -185.171C-539.96 -217.946 -489.019 -247.34 -429.213 -235.178C-379.419 -225.039 -338.95 -190.157 -304.26 -155.13C-249.856 -100.221 -199.208 -1.60663 -112.366 -5.4661C-46.4897 -8.38678 -6.87603 -51.738 33.426 -98.4481C81.7175 -154.4 137.456 -207.556 214.034 -218.697C352.546 -238.849 458.683 -160.241 572.517 -97.697C629.007 -66.6544 688.417 -28.7064 747.723 -3.58853C843.2 36.8629 918.255 -50.6741 977.185 -114.533",
 ];
-const my_paths: string[] = [
+const ABOUT_HERO: string[] = [
   "M-401.314 669.452C-243.571 637.073 -88.8407 656.235 66.5754 691.294C134.943 706.715 203.497 715.152 272.467 698.09C308.271 689.237 342.102 674.793 374.768 657.835C423.665 632.46 466.929 590.064 515.992 567.391C647.864 506.436 741.957 660.142 859.262 685.662C912.646 697.279 948.16 671.759 997.389 659.227C1055.91 644.347 1106.92 668.351 1157.21 696.76",
   "M-401.314 640.918C-246.688 604.196 -104.862 634.85 44.9638 675.645C114.536 694.578 184.067 706.029 254.908 686.39C292.395 675.998 327.285 658.874 360.783 639.359C413.274 608.789 458.555 560.054 511.399 532.331C650.191 459.531 732.502 638.029 852.446 666.459C908.823 679.822 941.843 649.189 992.048 633.374C1052.81 614.234 1106.82 646.03 1157.19 677.516",
   "M-401.314 612.072C-253.649 571.381 -128.24 611.574 11.6946 657.585C81.1008 680.404 150.32 697.487 222.656 678.783C332.709 650.332 404.443 563.754 496.936 505.418C647.136 410.713 714.07 621.611 845.11 648.462C901.841 660.1 933.925 623.918 984.068 606.44C1047.57 584.307 1106.19 624.168 1157.21 658.23",
@@ -65,45 +65,29 @@ import { useEffect, useRef, useState } from "react";
 
 type WavyBackdropProps = {
   paths?: string[];
-  colorVars?: string[];
-  animationSpeed?: number;
+  colors?: string[];
+  colorAnimationSpeed?: number;
+  waveMoveSpeed?: number;
+  hoverStrokeWidth?: number;
+  hoverGlow?: boolean;
+  glowIntensity?: number; 
+  glowColor?: string;     
+  delayBetweenPaths?: number;
 };
 
 export default function WavyBackdrop({
-  paths = my_paths,
-  colorVars = [
-    "--color-Purple-80",
-    "--color-Grey-08",
-    "--color-Purple-60",
-    "--color-Grey-10",
-    "--color-Purple-70",
-    "--color-Grey-15",
-    "--color-Purple-70",
-    "--color-Grey-20",
-    "--color-Purple-75",
-    "--color-Grey-30",
-    "--color-Purple-90",
-    "--color-Grey-40",
-    "--color-Purple-95",
-    "--color-Grey-50",
-    "--color-Purple-97",
-    "--color-Grey-60",
-    "--color-Purple-99",
-    "--color-Grey-70",
-  ],
-  animationSpeed = 50,
+  paths = ABOUT_HERO,
+  colors = ["#1A1A1A", "#A685FA4d", "#333333", "#262626"],
+  colorAnimationSpeed = 10,
+  waveMoveSpeed = 5,
+  hoverStrokeWidth = 2,
+  hoverGlow = true,
+  glowIntensity = 10, 
+  glowColor = "#ff00ff",
+  delayBetweenPaths = 0.5,
 }: WavyBackdropProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [viewBox, setViewBox] = useState("0 0 0 0");
-  const [colors, setColors] = useState<string[]>([]);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    const vals = colorVars.map(
-      (v) => getComputedStyle(root).getPropertyValue(v).trim() || "#000000"
-    );
-    setColors(vals);
-  }, [colorVars]);
 
   useEffect(() => {
     if (!svgRef.current || paths.length === 0) return;
@@ -122,14 +106,10 @@ export default function WavyBackdrop({
       maxY = Math.max(maxY, box.y + box.height);
     });
 
-    const width = maxX - minX;
-    const height = maxY - minY;
-    setViewBox(`${minX} ${minY} ${width} ${height}`);
+    setViewBox(`${minX} ${minY} ${maxX - minX} ${maxY - minY}`);
   }, [paths]);
 
-  const gradientValues = colors.length
-    ? [...colors, colors[0]].join(";")
-    : "#703BF7;#F4F0FE;#141414;#703BF7";
+  const gradientValues = colors.concat(colors[0]).join(";");
 
   return (
     <div style={{ width: "100%", height: "100%" }}>
@@ -142,32 +122,60 @@ export default function WavyBackdrop({
         style={{ overflow: "visible" }}
       >
         <defs>
-          <linearGradient id="gradAnimated" x1="0%" y1="0%" x2="100%" y2="0%">
-            {(colors.length ? colors : ["#703BF7", "#F4F0FE", "#141414"]).map(
-              (color, idx) => (
+          {paths.map((_, i) => (
+            <linearGradient
+              key={`grad-${i}`}
+              id={`gradAnimated-${i}`}
+              x1="100%"
+              y1="0%"
+              x2="0%"
+              y2="0%"
+            >
+              {colors.map((color, idx) => (
                 <stop
                   key={idx}
-                  offset={`${(idx / (colors.length - 1 || 1)) * 100}%`}
+                  offset={`${(idx / (colors.length - 1)) * 100}%`}
                   stopColor={color}
                 >
                   <animate
                     attributeName="stop-color"
                     values={gradientValues}
-                    dur={`${animationSpeed}s`}
+                    dur={`${colorAnimationSpeed}s`}
+                    begin={`${i * delayBetweenPaths}s`}
                     repeatCount="indefinite"
                   />
                 </stop>
-              )
-            )}
-          </linearGradient>
+              ))}
+              <animateTransform
+                attributeName="gradientTransform"
+                type="translate"
+                from="1 0"
+                to="-1 0"
+                dur={`${waveMoveSpeed}s`}
+                begin={`${i * delayBetweenPaths}s`}
+                repeatCount="indefinite"
+              />
+            </linearGradient>
+          ))}
 
-          <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
+          {hoverGlow && (
+            <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+             
+              <feFlood floodColor={glowColor} result="glowColor" />
+              <feComposite in="glowColor" in2="SourceAlpha" operator="in" result="coloredGlow" />
+              <feGaussianBlur in="coloredGlow" stdDeviation={glowIntensity} result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" /> 
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          )}
+
+          <linearGradient id="hoverGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#ff00ff" />
+            <stop offset="50%" stopColor="#703BF7" />
+            <stop offset="100%" stopColor="#A685FA" />
+          </linearGradient>
         </defs>
 
         <style>
@@ -177,19 +185,20 @@ export default function WavyBackdrop({
               cursor: pointer;
             }
             path:hover {
-              stroke-width: 2;
-              filter: url(#neonGlow);
+              stroke-width: ${hoverStrokeWidth};
+              ${hoverGlow ? "filter: url(#neonGlow);" : ""}
+              stroke: url(#hoverGradient);
             }
           `}
         </style>
 
-        {paths.map((d, index) => (
+        {paths.map((d, i) => (
           <path
-            key={index}
+            key={i}
             d={d}
             fill="none"
-            stroke="url(#gradAnimated)"
-            strokeWidth={1}
+            stroke={`url(#gradAnimated-${i})`}
+            strokeWidth={1.5}
           />
         ))}
       </svg>

@@ -2,6 +2,8 @@ import Statistics from "../../components/sharedComponents/statistics/Statistics"
 import Button from "../../components/sharedComponents/Button";
 import HeroArrowIcon from "../../components/sharedComponents/HeroArrowIcon";
 import Container from "../../layouts/Container";
+import WavyBackdrop from "../../svg/WavyBackdrop";
+import { HERO_PATH } from "../../svg/Paths";
 
 const Hero = () => {
   const description =
@@ -38,13 +40,16 @@ const Hero = () => {
         {/* Clipping wrapper for images */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Background Image - cover */}
-          <img src={bgImage} alt="background" className="absolute inset-0 w-full h-full object-cover z-10" />
-
+          {/* <img src={bgImage} alt="background" className="absolute inset-0 w-full h-full object-cover z-10" /> */}
+          <div className="absolute inset-0 w-[200%] h-[200%] -top-[25%] -left-[50%] object-cover z-10">
+            <WavyBackdrop paths={HERO_PATH} />
+          </div>
           {/* Gradient Overlay */}
           <div
             className="absolute inset-0 z-20 pointer-events-none max-lg:rounded-tr-xl"
             style={{
-              background: "linear-gradient(238.21deg, #2A213F 8.76%, rgba(25, 25, 25, 0) 50.09%)",
+              background:
+                "linear-gradient(238.21deg, #2A213F 8.76%, rgba(25, 25, 25, 0) 50.09%)",
             }}
           ></div>
 
