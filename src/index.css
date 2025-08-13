@@ -14,7 +14,7 @@
     --color-Purple-90: #DBCEFD;
     --color-Purple-95: #EDE7FE;
     --color-Purple-97: #F4F0FE;
-    --color-Purple-99: #FBFAFF;
+    --color-Purple-99: #FCFCFD;
     /* Grey Shades */
     --color-Grey-08: #141414;
     --color-Grey-10: #1A1A1A;
@@ -93,7 +93,7 @@
         animation: pulse-once 0.6s ease-in-out;
     }
     .hover-glow:hover {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 12px #8354f880;
         transition: box-shadow 0.3s ease;
     }
     .text-animate {
@@ -133,19 +133,19 @@
 
 @keyframes color-shift {
     0% {
-        color: #ffffff;
+        color: #fff;
     }
     25% {
-        color: #ffd93d;
+        color: #EDE7FE;
     }
     50% {
-        color: #6bcb77;
+        color: #9c77f8;
     }
     75% {
-        color: #4d96ff;
+        color: #DBCEFD;
     }
     100% {
-        color: #ffffff;
+        color: #ffff;
     }
 }
 
