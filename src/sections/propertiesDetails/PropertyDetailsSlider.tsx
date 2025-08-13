@@ -25,7 +25,7 @@ function PropertyDetailsSlider() {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
-      useEffect(() => {
+    useEffect(() => {
         setImages(ImagesData);
     }, [ImagesData]);
     // Go to previous slide

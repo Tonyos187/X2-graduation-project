@@ -3,7 +3,7 @@ import Navbar from "../sections/sharedSections/Navbar";
 import Footer from "../sections/sharedSections/Footer";
 const MainLayout = () => {
   return (
-    <div className="">
+    <div className="cursor-custom-default">
       <Navbar />
       <main className="">
         <Outlet />
