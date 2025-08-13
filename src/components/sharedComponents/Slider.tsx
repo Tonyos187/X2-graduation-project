@@ -66,7 +66,7 @@ export default function Slider({
 
   return (
     <>
-      <div className={`flex items-start justify-center ${gap_cards}`}>
+      <div className={`flex items-stretch justify-center  ${gap_cards}`}>
         {visibleCards.map((card, index) => (
           <div
             key={index}

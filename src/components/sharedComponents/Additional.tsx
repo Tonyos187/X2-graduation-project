@@ -2,7 +2,7 @@
 interface prop{
     title:string,
     price:string,
-    desc:string | undefined,
+    desc:string ,
     className:string,
 }
 

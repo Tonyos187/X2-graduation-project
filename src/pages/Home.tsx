@@ -1,4 +1,3 @@
- 
 import {
   featuredPropertiesSectionData,
   featuresSectionData,
