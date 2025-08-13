@@ -1,6 +1,7 @@
 import Header from "../../components/sharedComponents/Header";
 import Statistics from "../../components/sharedComponents/statistics/Statistics";
 import Container from "../../layouts/Container";
+import WavyBackdrop from "../../svg/WavyBackdrop";
 
 const Hero = () => {
   const headline = "Our Journey";
@@ -20,12 +21,14 @@ const Hero = () => {
       {/* Right Side Hero*/}
       <div className="w-full lg:w-[47.3057%] relative overflow-hidden border border-Grey-15 bg-Grey-10 rounded-[12px] xl:min-h-[50.555vh] 2xl:h-[546px] 2xl:w-[755px] max-md:h-[44.3618vh] md:min-h-[68.9381vh]">
         {/* Background Image */}
-        <img
+        {/* <img
           src={bgImage}
           alt="background"
           className="absolute inset-0 w-full h-full object-cover z-10"
-        />
-
+        /> */}
+        <div className="absolute inset-0 -top-[30%] -left-[35%] w-[155%] h-[155%] object-co object-center z-10">
+          <WavyBackdrop />
+        </div>
         {/*  Overlay */}
         <div className="absolute inset-0 pointer-events-none bg-Grey-08/14 z-20" />
 

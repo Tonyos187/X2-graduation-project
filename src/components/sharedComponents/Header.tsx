@@ -11,6 +11,7 @@ const Header = ({
   gap = "gap-2",
   className = "",
   type = "",
+  textVW,
 }: {
   title?: string;
   description?: string;
@@ -21,6 +22,7 @@ const Header = ({
   gap?: string;
   className?: string;
   type?: string;
+  textVW ?: boolean
 }) => {
   return (
     <div
@@ -35,9 +37,9 @@ const Header = ({
 
       {/* title */}
       <h2
-        className={`${
-          type == "footer" ? "text-white" : "text-White"
-        } font-semibold text-[28px] md:text-[38px] xl:text-5xl leading-[150%]`}
+        className={`${type == "footer" ? "text-white" : "text-White"}
+         ${textVW ? "text-[28px] md:text-[38px] lg:text-[2.5vw]" : "text-[28px] md:text-[38px] xl:text-5xl" }
+         font-semibold leading-[150%]`}
       >
         {title}
       </h2>

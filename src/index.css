@@ -105,6 +105,9 @@
         border-image-source: linear-gradient(0deg, #262626, #262626), linear-gradient(117.89deg, #703bf7 0%, rgba(112, 59, 247, 0) 24%);
         border-image-slice: 1;
     }
+    .animate-neon {
+        animation: neon-pulse 2.8s ease-in-out infinite;
+    }
 }
 
 @keyframes rotate {
@@ -292,4 +295,14 @@
 .cursor-custom-default button,
 .cursor-custom-default .cursor-pointer{
     cursor: url('/assets/icons/cursor-pointer.svg'), pointer !important;
+}
+
+@keyframes neon-pulse {
+    0%,
+    100% {
+        text-shadow: 0 0 10px var(--color-Purple-75), 0 0 13px var(--color-Purple-60), 0 0 40px var(--color-Purple-60);
+    }
+    50% {
+        text-shadow: 0 0 4px var(--color-Purple-60), 0 0 8px var(--color-Purple-60), 0 0 16px var(--color-Purple-60);
+    }
 }

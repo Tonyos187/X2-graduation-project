@@ -1,27 +1,45 @@
 import React from 'react';
 
 type LoaderProps = {
-  size?: string;      // e.g., 'w-8 h-8'
-  color?: string;     // e.g., 'border-blue-500'
+  size?: string;      // Tailwind size classes like 'w-12 h-12'
   center?: boolean;   // center in the parent container
 };
 
 const Loader: React.FC<LoaderProps> = ({
-  size = 'w-10 h-10',
-  color = 'border-blue-500',
+  size = 'w-12 h-12',
   center = true,
 }) => {
-  const loader = (
-    <div
-      className={`border-4 border-t-transparent rounded-full animate-spin ${size} ${color}`}
-    />
+  const spinner = (
+    <div className={`relative ${size}`}>
+      {/* Outer neon ring */}
+      <div
+        className="absolute inset-0 rounded-full border-4 border-Purple-60/30"
+        style={{
+          boxShadow:
+            '0 0 14px var(--color-Purple-60), 0 0 28px var(--color-Purple-60), inset 0 0 12px rgba(112,59,247,0.35)'
+        }}
+      />
+      {/* Rotating arc */}
+      <div
+        className="absolute inset-0 rounded-full border-4 border-transparent border-t-Purple-60 animate-spin"
+        style={{
+          boxShadow:
+            '0 0 10px var(--color-Purple-60), 0 0 18px var(--color-Purple-60)'
+        }}
+      />
+      {/* Inner pulsing dot */}
+      <div
+        className="absolute inset-0 m-auto w-2.5 h-2.5 rounded-full bg-Purple-60 animate-ping"
+        style={{ boxShadow: '0 0 12px var(--color-Purple-60), 0 0 24px var(--color-Purple-60)' }}
+      />
+    </div>
   );
 
-  if (!center) return loader;
+  if (!center) return spinner;
 
   return (
     <div className="flex items-center justify-center w-full h-full">
-      {loader}
+      {spinner}
     </div>
   );
 };

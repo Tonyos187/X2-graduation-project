@@ -19,7 +19,6 @@ const ContactExploreWorldContent = ({
       <CardImage
         src={mainImage}
         alt="main-image"
-        height="h-[34.61538vw] lg:h-[15.2778vw] 2xl:h-[14.58334vw]"
       />
     </section>
   );
