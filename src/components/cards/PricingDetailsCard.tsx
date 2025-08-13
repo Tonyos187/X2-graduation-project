@@ -18,7 +18,7 @@ function PricingDetailsCard({PricingItem,title}:PricingDetailsCardPopps) {
                 <h3 className="text-lg md:text-xl xl:text-2xl font-semibold urbanist">{title}</h3>
                 <Button content={"Learn More"} className={"border border-Grey-15"}/>
             </div>
-            <div className="flex flex-wrap gap-x-2.5">
+            <div className="flex flex-wrap">
                 {PricingItem.map((data, index) => {
                 // number of cards in each row (1 or 2)
                 const cardPerRow = PricingItem.length > 2 ? 2 : 1;
