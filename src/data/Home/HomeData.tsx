@@ -14,7 +14,6 @@ import type {
   EndFooterType,
   FaqSectionType,
   FeaturedPropertiesSectionType,
-  FeatureItem,
   FooterNavColumn,
   HeroStat,
   NavItem,
