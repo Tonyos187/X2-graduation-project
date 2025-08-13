@@ -1,23 +1,13 @@
-import PropertiesCard from "../components/cards/PropertiesCard";
-import { featuredPropertiesSectionData } from "../data/Home/HomeData";
-import ComprehensiveDetails from "../sections/propertiesDetails/ComprehensiveDetails";
-
-
-
+import { detailsFormData, detailsFormHeaderData } from "../data/PropertyDetails/PropertyDetailsData";
+import ContactForm from "../sections/Contact/ContactForm";
+import ComprehensivePricing from "../sections/propertiesDetails/ComprehensivePricing";
+import PropertyDetailsSlider from "../sections/propertiesDetails/PropertyDetailsSlider";
 const PropertyDetails = () => {
-  const data =featuredPropertiesSectionData.properties
   return (
-    <div className="space-y-20 md:space-y-30 xl:space-y-37.5 ">
-      <ComprehensiveDetails/>
-      
-            {/* <div className="flex justify-between flex-wrap">
-              {data.map((dat,index) => {
-                return(
-                    <PropertiesCard showInfo={true} key={dat.id} details={dat.details} image={dat.image} price={dat.price} title={dat.title} lessDescription={dat.description}/>
-                )
-            })} 
-            </div> */}
-      
+    <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
+      <PropertyDetailsSlider />
+      <ContactForm title={detailsFormHeaderData.title} description={detailsFormHeaderData.description} data={detailsFormData.conactForm} areaText={detailsFormData.areaText} detailsPage />
+      <ComprehensivePricing/>
     </div>
   );
 };

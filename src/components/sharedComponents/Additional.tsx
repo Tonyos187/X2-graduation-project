@@ -1,3 +1,4 @@
+// data type for the additional component
 interface prop{
     title:string,
     price:string,
@@ -6,7 +7,7 @@ interface prop{
 }
 
 function Additional({title,price,desc,className}:prop) {
-    const hasDesc = Boolean(desc);
+    const hasDesc = desc ? true :false;
     return (
         <div className={`flex flex-col gap-2.5 md:gap-3 xl:gap-4 ${className}`}>
             <p className="text-Grey-60 text-sm xl:text-lg font-medium urbanist">{title}</p>

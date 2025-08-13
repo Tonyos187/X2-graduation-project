@@ -1,27 +1,27 @@
 import {
   contactHeroCard,
-  contactHeroData,
+  contactLetsConnectData,
+  contactLetsConnectFormData,
 } from "../data/Contact/ContactData.tsx";
 import ContactExploreWorld from "../sections/Contact/ContactExploreWorld.tsx";
 import Features from "../sections/sharedSections/Features.tsx";
-import Header from "../components/sharedComponents/Header.tsx";
-
+import HeaderHero from "../sections/sharedSections/HeaderHero.tsx";
+import ContactForm from "../sections/Contact/ContactForm.tsx";
 const Contact = () => {
   return (
     <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
-      <div className="hero mt-[68.58px] md:mt-[77px] laptop:mt-[99px]">
-        {/* put hero title and description through props */}
-        <Header 
-          className="bg-[linear-gradient(95.93deg,#262626_-26.82%,rgba(38,38,38,0)_40.46%)] 
-          py-12.5 px-4 md:py-[6.9445vw] md:pl-[5.5556vw] md:pr-[13.8889vw] 
-          xl:pt-[7.8125vw] xl:pb-[5.20834vw] xl:pl-[8.4375vw] xl:pr-[20.8334vw]"
-          title={contactHeroData.title}
-          description={contactHeroData.description}
+      {/* put hero title and description through props */}
+      <div>
+        <HeaderHero
+          title="Get in Touch with Estatein"
+          description="Welcome to Estatein's Contact Us page. We're here to assist you with any inquiries, requests, or feedback you may have. Whether you're looking to buy or sell a property, explore investment opportunities, or simply want to connect, we're just a message away. Reach out to us, and let's start a conversation."
         />
 
         {/* put your featurs data here but first check the type in src/types/contact/contactTypes */}
         <Features data={contactHeroCard} />
       </div>
+
+      <ContactForm title={contactLetsConnectData.title} description={contactLetsConnectData.description} data={contactLetsConnectFormData.conactForm} areaText={contactLetsConnectFormData.areaText} />
 
       <ContactExploreWorld />
     </div>

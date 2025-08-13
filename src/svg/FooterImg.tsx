@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 interface FooterImgProps {
   width?: number | string;
   height?: number | string;
@@ -10,19 +9,20 @@ interface FooterImgProps {
 }
 
 const FooterImg: React.FC<FooterImgProps> = ({
-   width = 633,
+  width = 633,
   height = 331,
   glowSize = 3,
   transitionMs = 300,
   primaryColor = "currentColor",
-  hoverColor = "#dfcbff",
+  hoverColor = "#DBCEFD",
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-const neonShadow = `
-  drop-shadow(0 0 ${glowSize /2}px #A685FA)
-  drop-shadow(0 0 ${glowSize }px #EDE7FE)
-  drop-shadow(0 0 ${glowSize *1.5}px #e6aaff)
-`;
+
+  const neonShadow = `
+    drop-shadow(0 0 ${glowSize / 2}px #A685FA)
+    drop-shadow(0 0 ${glowSize}px #703BF7)
+    drop-shadow(0 0 ${glowSize * 1.5}px #DBCEFD)
+  `;
 
   const paths: {
     d: string;
@@ -129,9 +129,6 @@ const neonShadow = `
     { d: "M324.932 206.848C327.789 205.068 330.615 203.296 333.458 201.754C337.438 203.28 341.496 205.074 345.582 206.804C342.937 208.561 340.309 210.275 337.653 212.274C333.224 210.269 329.029 208.589 324.932 206.845V206.848Z", fill: primaryColor, fillRule: "evenodd", clipRule: "evenodd" },
     { d: "M394.107 136.026C396.683 134.558 399.057 133.249 401.262 131.973C404.651 133.847 408.182 135.837 411.711 137.864C409.492 139.223 407.511 140.856 405.038 142.26C401.287 140.159 397.705 138.069 394.107 136.026Z", fill: primaryColor, fillRule: "evenodd", clipRule: "evenodd" },
   ];
-  const nonHovered = paths
-    .map((path, i) => ({ ...path, index: i }))
-    .filter(p => p.index !== hoveredIndex);
 
   return (
     <svg
@@ -141,45 +138,28 @@ const neonShadow = `
       xmlns="http://www.w3.org/2000/svg"
       style={{ overflow: "visible" }}
     >
-      {/* Render all non-hovered elements first */}
-      {nonHovered.map((pathObj) => (
-        <path
-          key={pathObj.index}
-          d={pathObj.d}
-          fill={pathObj.fill}
-          fillRule={pathObj.fillRule}
-          clipRule={pathObj.clipRule}
-          style={{
-            transition: `fill ${transitionMs}s linear`,
-            cursor: "pointer",
-          }}
-          onMouseEnter={() => setHoveredIndex(pathObj.index)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        />
-      ))}
+      {paths.map((pathObj, i) => {
+        const isHovered = hoveredIndex === i;
 
-      {/* Then render the hovered element last to appear on top */}
-      {hoveredIndex !== null && (() => {
-        const pathObj = paths[hoveredIndex]!;
         return (
           <path
-            key={"hovered"}
+            key={i}
             d={pathObj.d}
-            fill={hoverColor}
-            stroke={"#FBFAFF"}
-            strokeWidth={1}
+            fill={isHovered ? hoverColor : primaryColor}
+            stroke={isHovered ? "#FBFAFF" : undefined}
+            strokeWidth={isHovered ? 1 : undefined}
             fillRule={pathObj.fillRule}
             clipRule={pathObj.clipRule}
             style={{
-              transition: `fill ${transitionMs}s linear`,
-              filter: neonShadow,
+              transition: `fill ${transitionMs}ms ease`,
+              filter: isHovered ? neonShadow : undefined,
               cursor: "pointer",
             }}
-            onMouseEnter={() => setHoveredIndex(hoveredIndex)}
+            onMouseEnter={() => setHoveredIndex(i)}
             onMouseLeave={() => setHoveredIndex(null)}
           />
         );
-      })()}
+      })}
     </svg>
   );
 };

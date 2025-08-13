@@ -12,15 +12,6 @@ export interface HeroStat {
   label: string;
 }
 
-export interface HeroSectionType {
-  headline: string;
-  description: string;
-  heroImage: string;
-  centerCircle: string;
-  bgImage: string;
-  buttons: HeroButtonTypes[];
-  stats: HeroStat[];
-}
 
 export interface FeatureItem {
   arrow: ReactNode;
@@ -130,17 +121,6 @@ export interface CtaSectionType {
 }
 
 //footer
-export interface FooterType {
-  logo: {
-    text: string;
-    logo: string;
-  };
-  newsletter: {
-    placeholder: string;
-    buttonIcon: ReactNode;
-  };
-  navigationColumns: FooterNavColumn[];
-}
 export interface EndFooterType {
   copyright: string;
   termsAndConditionsLink: {
@@ -153,12 +133,12 @@ export interface EndFooterType {
     link: string;
   }[];
 }
-export interface FooterNavColumn {
-  title: string;
-  links: {
-    name: string;
-    link: string;
-  }[];
+export interface FooterNavColumn  {
+    title: string;
+    links: {
+        name: string;
+        link: string;
+    }[];
 }
 
 export interface SocialLink {

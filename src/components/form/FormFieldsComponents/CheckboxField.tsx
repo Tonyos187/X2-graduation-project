@@ -15,23 +15,23 @@ const CheckboxField: React.FC<{ field: FormField }> = ({ field }) => {
 
     return (
         <>
-            <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-col gap-2.5 md:gap-3.5 xl:gap-4 w-full">
                 {field.label && (
-                    <label htmlFor={field.id} className="text-white font-semibold text-base ">
+                    <label htmlFor={field.id} className="text-White font-semibold text-base/[150%] xl:text-xl/[150%]">
                         {field.label}
                     </label>
                 )}
 
-                <div className="flex flex-col w-full py-4 bg-Grey-10 border-Grey-15 rounded-[8px] px-2 text-white border">
+                <div className="flex flex-col w-full py-4 xl:py-6 bg-Grey-10 border-Grey-15 rounded-md xl:rounded-lg px-5 text-White border">
                     <div className="flex  items-center justify-between gap-2">
                         <div className="flex  items-center gap-2">
                             {Icon && typeof Icon === "function" ? (
-                                <Icon className="w-5 h-5 text-white" />
+                                <Icon className="w-5 h-5 text-White" />
                             ) : React.isValidElement(Icon) ? (
                                 React.cloneElement(Icon)
                             ) : null}
                             {!checked && (
-                                <label htmlFor={field.id} className="text-sm cursor-pointer">
+                                <label htmlFor={field.id} className="text-sm/[20px] xl:text-lg/[20px] cursor-pointer text-Grey-40">
                                     {field.placeholder}
                                 </label>
                             )}
@@ -41,7 +41,7 @@ const CheckboxField: React.FC<{ field: FormField }> = ({ field }) => {
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
                                     placeholder={field.placeholder}
-                                    className="text-sm bg-transparent outline-none border-none focus:outline-none focus:ring-0"
+                                    className="text-sm/[20px] xl:text-lg/[20px] bg-transparent outline-none border-none focus:outline-none focus:ring-0"
                                 />
                             )}
                         </div>
