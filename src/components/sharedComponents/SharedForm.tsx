@@ -13,16 +13,16 @@ const SharedForm = ({data, areaText, detailsForm} : {data: ConactFormType[] , ar
     <form className={`rounded-xl p-5 md:p-10 border border-Grey-15 flex flex-col gap-5 ${detailsForm ? 'lg:p-[2.77778vw] xl:p-12.5 md:gap-5 xl:gap-7.5' : 'lg:p-20 xl:p-25 md:gap-7.5 xl:gap-12.5 '}`}>
       <div className={`grid grid-cols-1 md:grid-cols-2 ${detailsForm ? 'lg:grid-cols-2' : 'lg:grid-cols-3'} gap-5 ${detailsForm ? 'md:gap-5 xl:gap-7.5' : 'md:gap-7.5 xl:gap-12.5'}`}>
         {data.map((item: ConactFormType) => { 
-            return item.icon ? <SelectField field={item} /> : detailsForm ? (
+            return item.icon ? <SelectField key={item.id} field={item} /> : detailsForm ? (
                 <>
                     {item.location ? (
                         <div className="relative md:col-span-2">
-                            <TextInput field={item} />
+                            <TextInput key={item.id} field={item} />
                             <div className="absolute bottom-4.5 xl:bottom-6 right-4.5 md:right-5 xl:right-6 w-4.5 h-4.5 md:w-5 md:h-5 xl:w-6 xl:h-6 text-White-90 pointer-events-none">{item.location}</div>
                         </div>
-                    ) : <TextInput field={item} />}
+                    ) : <TextInput key={item.id} field={item} />}
                 </>
-            ) : (<TextInput field={item} />)
+            ) : (<TextInput key={item.id} field={item} />)
         })}
       </div>
       <TextareaField field={areaText} />
