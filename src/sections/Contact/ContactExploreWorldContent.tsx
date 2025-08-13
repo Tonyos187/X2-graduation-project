@@ -11,7 +11,7 @@ const ContactExploreWorldContent = ({
   mainImage: string;
 }) => {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-5 z-10">
       <div className="lg:my-auto pt-0 lg:pt-3">
         <Header title={White.title} description={White.description} withIcon />
       </div>
