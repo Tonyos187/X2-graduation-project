@@ -21,7 +21,7 @@ const FeaturesCard = ({
         {typeof item.title === "string" ? (
           <p>{item.title}</p>
         ) : (
-          item.title.map((title: string, index) => (
+          item.title.map((title: string, index: number) => (
             <p key={index} className="text-center">
               {title}
             </p>
