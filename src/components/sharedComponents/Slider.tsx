@@ -11,7 +11,7 @@ export default function Slider({
   num_Of_Cards_in_sm_screen = 1,
   num_Of_Cards_in_md_screen = 2,
   num_Of_Cards_in_xl_screen = 3,
-  gap_cards = "md:gap-[1.56%] 5 xl:gap-[1.88%] 7.5",
+  gap_cards = "md:gap-[1.56%] xl:gap-[1.88%] gap-7.5",
 }: {
   cards: any[];
   num_Of_Cards_in_sm_screen?: number;
@@ -66,7 +66,7 @@ export default function Slider({
 
   return (
     <>
-      <div className={`flex items-start justify-center ${gap_cards}`}>
+      <div className={`flex items-start justify-between ${gap_cards}`}>
         {visibleCards.map((card, index) => (
           <div
             key={index}
