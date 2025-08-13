@@ -1,17 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import "./App.css";
 
 // Layout
 import MainLayout from "./layouts/MainLayout";
 
-// Page components
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Properties from "./pages/Properties";
-import PropertyDetails from "./pages/PropertyDetails";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound"; // 404 page
+// Lazy-loaded Page components
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Properties = lazy(() => import("./pages/Properties"));
+const PropertyDetails = lazy(() => import("./pages/PropertyDetails"));
+const Services = lazy(() => import("./pages/Services"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+import Loader from "./components/kit/Loader";
+
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/about", element: <About /> },
@@ -24,17 +27,25 @@ const routes = [
 function App() {
   return (
     <Router>
-      <Routes>
-        {/* Main layout wrapper */}
-        <Route element={<MainLayout />}>
-          {routes.map(({ path, element }, index) => (
-            <Route key={index} path={path} element={element} />
-          ))}
-        </Route>
+      <Suspense
+        fallback={
+          <div className="fixed inset-0 z-[1000] grid place-items-center bg-Grey-08/60 backdrop-blur-sm">
+            <Loader />
+          </div>
+        }
+      >
+        <Routes>
+          {/* Main layout wrapper */}
+          <Route element={<MainLayout />}>
+            {routes.map(({ path, element }, index) => (
+              <Route key={index} path={path} element={element} />
+            ))}
+          </Route>
 
-        {/* 404 route (outside layout) */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          {/* 404 route (outside layout) */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }
