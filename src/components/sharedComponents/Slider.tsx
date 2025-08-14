@@ -73,6 +73,7 @@ export default function Slider({
             data-aos="fade-down"
             data-aos-duration="800"
             data-aos-delay={index * 100}
+            className="h-full w-full"
           >
             {card}
           </div>
