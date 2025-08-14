@@ -299,3 +299,41 @@
   }
 }
 
+/* ********** */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin_border {
+  from {
+    --angle: 180deg;
+  }
+  to {
+    --angle: 540deg;
+  }
+}
+
+.rotate-conic:hover::before,
+.rotate-conic:hover::after {
+  content: "";
+  --angle: 180deg;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  padding: 6px;
+  background: conic-gradient(from var(--angle), transparent 75%, #703bf7);
+  animation: 3s spin_border linear infinite;
+  z-index: -10;
+}
+
+.rotate-conic::before {
+  filter: blur(.3rem);
+  opacity: 0.8;
+}
+
