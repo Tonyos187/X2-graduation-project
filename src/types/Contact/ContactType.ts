@@ -7,10 +7,10 @@ export interface ContactHeroDataType {
   description: string;
 }
 
-export interface FeaturesType {
-  arrow: ReactNode,
-    icon: string,
-    title: string | string[],
+export interface ContactHeroFeaturesType {
+  arrow: ReactNode;
+  icon: string;
+  title: string | string[];
 }
 
 // let's connect section
@@ -19,12 +19,7 @@ export interface ConactFormType {
   id: string;
   name: string;
   label: string;
-  type: | 'text'
-    | 'email'
-    | 'tel'
-    | 'select'
-    | 'checkbox'
-    | 'textarea';
+  type: string;
   placeholder: string;
   icon?: string | ReactElement | ComponentType<{ className?: string }>;
   options?: string[];
@@ -36,14 +31,12 @@ export interface ContactLetsConnectFormDataType {
   areaText: ConactFormType;
 }
 
-// Discover Our Office Locations
-
-interface ContactDetailesType {
+export interface ContactDetailesType {
   icon: ReactNode;
-  title: string;
+  title: string[];
 }
 
-interface CategoriesCardType {
+export interface CategoriesCardType {
   id: string;
   title: string;
   address: string;
@@ -53,6 +46,11 @@ interface CategoriesCardType {
     text: string;
     link: string;
   };
+}
+
+export interface ContactDiscoverLocationsFilterDataType {
+  FilterOptions: string[];
+  categoriesCard: CategoriesCardType[];
 }
 
 export interface ContactDiscoverLocationsFilterDataType {
