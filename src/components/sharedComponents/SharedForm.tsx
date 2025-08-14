@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-// import { contactLetsConnectFormData } from "../../data/Contact/ContactData"
 import SelectField from "../form/FormFieldsComponents/SelectField"
 import TextareaField from "../form/FormFieldsComponents/TextareaField"
 import TextInput from "../form/FormFieldsComponents/TextInput"
@@ -11,7 +10,7 @@ const SharedForm = ({data, areaText, detailsForm} : {data: ConactFormType[] , ar
     const [checked, setChecked] = useState(false);
   return (
     <form className={`rounded-xl p-5 md:p-10 border border-Grey-15 flex flex-col gap-5 ${detailsForm ? 'lg:p-[2.77778vw] xl:p-12.5 md:gap-5 xl:gap-7.5' : 'lg:p-20 xl:p-25 md:gap-7.5 xl:gap-12.5 '}`}>
-      <div className={`grid grid-cols-1 md:grid-cols-2 ${detailsForm ? 'lg:grid-cols-2' : 'lg:grid-cols-3'} gap-5 ${detailsForm ? 'md:gap-5 xl:gap-7.5' : 'md:gap-7.5 xl:gap-12.5'}`}>
+      <div className={`grid grid-cols-1 md:grid-cols-2 ${detailsForm ? 'lg:grid-cols-2 md:gap-5 xl:gap-7.5' : 'lg:grid-cols-3 md:gap-7.5 xl:gap-12.5'} gap-5`}>
         {data.map((item: ConactFormType) => { 
             return item.icon ? <SelectField key={item.id} field={item} /> : detailsForm ? (
                 <>

@@ -25,7 +25,7 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
           >{Icon && (
             <>
               <span className="absolute inset-y-0 left-3 flex items-center">
-                <Icon className="w-5 h-5 text-White" />
+                <Icon className="w-5 h-5 xl:w-6 xl:h-6 text-White" />
               </span>
               <span className="absolute inset-y-4 mx-1 left-10 w-[1px] bg-Grey-15" />
             </>
@@ -39,7 +39,7 @@ const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
             </span>
 
             <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-              <div className="w-6 h-6 flex items-center justify-center rounded-[50%] bg-Grey-10">
+              <div className="w-5 h-5 xl:w-6 xl:h-6 flex items-center justify-center rounded-[50%] bg-Grey-10 text-White">
                 <DownArrow />
 
               </div>
