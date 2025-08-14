@@ -80,7 +80,6 @@ export default function Slider({
         ))}
       </div>
 
-      {/* Pagination + Buttons at md and xl screen */}
       <div className="hidden md:flex items-center justify-between border-t border-t-Grey-15 md:pt-4 xl:pt-5">
         <div className="xl:text-xl md:text-base font-medium leading-[150%]">
           <span className="text-White ">
@@ -124,7 +123,6 @@ export default function Slider({
           />
         )}
 
-        {/* Pagination + Buttons at sm screen */}
         <div className="flex items-center justify-between ">
           <div className="flex items-center gap-2.5">
             <button
@@ -138,7 +136,6 @@ export default function Slider({
             >
               <Previous />
             </button>
-            {/* pagination */}
             <div className="text-[12px] xs:text-sm font-medium leading-[150%]">
               <span className="text-White ">
                 {String(currentPage).padStart(2, "0")}

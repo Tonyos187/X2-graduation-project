@@ -5,7 +5,7 @@ type Props = {
   showButton?: boolean;
   withShadow?: boolean;
   className?: string;
-  fixedHeight?: string; // نضيف خاصية لتحديد ارتفاع ثابت
+  fixedHeight?: string; 
 };
 
 function FAQCard({ faq, showButton = true, withShadow = false, className = '' }: Props) {
