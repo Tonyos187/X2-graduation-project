@@ -22,7 +22,7 @@ const CardImage: React.FC<CardImageProps> = ({
       <img
         src={src}
         alt={alt}
-        className={`w-full h-full ${className1 ? "object-contain" : "object-cover"} transition-transform duration-300 hover:scale-103 hover:brightness-103`}
+        className={`w-full h-full ${className1 ? "object-cover xl:object-contain" : "object-cover"} transition-transform duration-300 hover:scale-103 hover:brightness-103`}
       />
     </div>
   );

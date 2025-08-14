@@ -11,15 +11,14 @@ const ContactExploreWorldContent = ({
   mainImage: string;
 }) => {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-      <div className="mt-0 lg:mt-3">
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-5 z-10">
+      <div className="lg:my-auto pt-0 lg:pt-3">
         <Header title={White.title} description={White.description} withIcon />
       </div>
 
       <CardImage
         src={mainImage}
         alt="main-image"
-        height="h-[34.61538vw] lg:h-[15.2778vw] 2xl:h-[14.58334vw]"
       />
     </section>
   );

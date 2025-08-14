@@ -22,19 +22,19 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
     // State to check if the card is flipped or not
     const [flipped, setFlipped] = useState<boolean>(false);
     return (
-            <div className="lg:w-[32.0802%]  w-full bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl" style={{perspective:"800px"}}>
-                    <div className="grid w-[100%] transition-transform duration-700 ease-in-out"
+            <div className="w-full bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl" style={{perspective:"800px"}}>
+                    <div className="grid w-full transition-transform duration-700 ease-in-out "
                             style={{
                             transformStyle: "preserve-3d",
                             transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
                             gridTemplateAreas: "front",
                             }}>
-                        <div className="flex flex-col gap-[30px]" style={{
+                        <div className="flex flex-col gap-7.5 justify-between " style={{
                                 gridArea: "front",
                                 backfaceVisibility: "hidden",
                                 zIndex: flipped ? 1 : 2,
                             }}>
-                            <img src={image} alt="" className="w-full max-h-[318px] object-cover rounded-[10px]"/>
+                            <img src={image} alt="" className="w-full h-[210px] md:h-[255px] xl:h-[318px] object-cover rounded-[10px]"/>
                             {!showInfo && (
                                 <div className="py-1.5 px-3 xl:py-2 xl:px-3 bg-Grey-10 rounded-[28px] border border-Grey-15 w-fit">
                                     <p className="text-sm xl:text-lg text-White">{discoverDescription}</p>
@@ -67,7 +67,7 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                                 <Button content={"View Property Details"} className="bg-Purple-60"/>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-between"
+                        <div className="flex flex-col justify-between h-full"
                             style={{
                                 gridArea: "front",
                                 backfaceVisibility: "hidden",

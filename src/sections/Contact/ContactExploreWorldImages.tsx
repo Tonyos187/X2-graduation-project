@@ -7,7 +7,7 @@ const ContactExploreWorldImages = ({
   photos: ContactExplorePhotosType[];
 }) => {
   return (
-    <section className="grid grid-cols-4 gap-2.5 lg:gap-5">
+    <section className="grid grid-cols-4 gap-2.5 lg:gap-5 z-10">
       {photos.map((photo, index) => (
         <CardImage
           key={photo.id}

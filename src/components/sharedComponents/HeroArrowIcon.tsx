@@ -30,8 +30,8 @@ export default function HeroArrowIcon() {
   return (
       <div
         ref={circle}
-        className={`relative border border-borderColor w-29.5 h-29.5 tablet:w-32 tablet:h-32 laptop:w-44 laptop:h-44 
-          flex items-center justify-center rounded-full bg-bg overflow-hidden hover-glow ${
+        className={`relative border border-[#262626] w-29.5 h-29.5 md:w-32 md:h-32 xl:w-44 xl:h-44 
+          flex items-center justify-center rounded-full bg-[#141414] overflow-hidden hover-glow ${
           isPulsing ? "animate-pulse-once" : ""
         }`}
         onClick={() => setIsPulsing(true)}
@@ -40,8 +40,8 @@ export default function HeroArrowIcon() {
           {text.split("").map((char, i) => (
             <span
               key={i}
-              className="absolute left-1/2 text-[10.03px] md:text-[11.06px] laptop:text-[15px] font-semibold 
-              z-10 p-1.5 md:py-2 laptop:py-3 text-animate"
+              className="absolute left-1/2 text-[10.03px] md:text-[11.06px] xl:text-[15px] font-semibold 
+              z-10 p-1.5 md:py-2 xl:py-3 text-animate"
               style={{
                 transform: `rotate(${(360 / text.length) * i}deg)`,
                 transformOrigin: `0 ${radius}px`,
@@ -52,7 +52,7 @@ export default function HeroArrowIcon() {
           ))}
         </div>
 
-        <div className="text-white flex items-center justify-center bg-Grey-15 w-[45%] h-[45%] rounded-full border border-Grey-15 
+        <div className="text-white flex items-center justify-center bg-[#1a1a1a] w-[45%] h-[45%] rounded-full border border-[#262626] 
                           absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer">
           <div className="w-[42%] h-[42%]">
             <TopRightArrow />

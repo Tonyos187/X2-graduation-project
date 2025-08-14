@@ -1,5 +1,6 @@
 import { useState, type JSX, type MouseEvent } from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "../../components/sharedComponents/Logo";
 
 type NavItem = {
   name: string;
@@ -28,8 +29,8 @@ const Navbar = (): JSX.Element => {
 
   const navLinkStyles = ({ isActive }: { isActive: boolean }) =>
     isActive
-      ? "text-White bg-Grey-08 border laptop:py-3.5 md:py-3 md:px-5 laptop:px-6 rounded-lg border-Grey-15"
-      : " text-White laptop:py-3.5 md:py-3 border border-Grey-10";
+      ? "text-White bg-Grey-08 border xl:py-3.5 md:py-3 md:px-5 xl:px-6 rounded-lg border-Grey-15"
+      : " text-White xl:py-3.5 md:py-3 border border-Grey-10";
 
   return (
     <>
@@ -41,15 +42,12 @@ const Navbar = (): JSX.Element => {
         />
       )}
 
-      <nav className="fixed top-0 left-0 w-full laptop:h-[99px] md:h-[77px] z-50 flex justify-between items-center laptop:px-pc md:px-laptop px-mobile laptop:py-0 md:py-0 py-5  bg-Grey-10 shadow">
+      <nav className="fixed top-0 left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5  bg-Grey-10 shadow">
         {/* Logo */}
-        <div className="flex gap-2.5 items-center">
-          <img src="/assets/Symbol.png" alt="Logo" className="laptop:w-12 md:w-8 w-7" />
-          <h1 className="font-semibold laptop:text-[28px] md:text-2xl text-xl text-White">Estatein</h1>
-        </div>
+        <Logo />
 
         {/* Center Links (Desktop) */}
-        <div className="hidden md:flex gap-6 laptop:text-lg items-center absolute left-1/2 transform -translate-x-1/2">
+        <div className="hidden md:flex gap-6 xl:text-lg items-center absolute left-1/2 transform -translate-x-1/2">
           {navLinks.slice(0, 4).map((link) => (
             <NavLink key={link.path} to={link.path} className={navLinkStyles}>
               {link.name}
@@ -63,8 +61,8 @@ const Navbar = (): JSX.Element => {
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
               isActive
-                ? "text-White bg-Purple-60 laptop:py-4 laptop:px-6 md:py-3.5 md:px-5  rounded-lg border border-Grey-10 laptop:text-lg"
-                : "laptop:text-lg text-White laptop:py-4 laptop:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15"
+                ? "text-white bg-Purple-60 xl:py-4 xl:px-6 md:py-3.5 md:px-5  rounded-lg border border-Grey-10 xl:text-lg"
+                : "xl:text-lg text-White xl:py-4 xl:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15"
             }
           >
             Contact Us
@@ -79,9 +77,7 @@ const Navbar = (): JSX.Element => {
           <div className="w-[21px] h-[14px] flex flex-col justify-between items-center">
             <span
               className={`block w-full h-[2px] rounded-full transition-all duration-300 ${
-                isMenuOpen
-                  ? "rotate-45 translate-y-[6px] bg-White"
-                  : "bg-White"
+                isMenuOpen ? "rotate-45 translate-y-[6px] bg-White" : "bg-White"
               }`}
             />
             <span
@@ -102,7 +98,7 @@ const Navbar = (): JSX.Element => {
 
       {/* Mobile Slide-in Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-1/2 bg-Grey-10 z-40 transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 right-0 h-full w-1/2 bg-Grey-10 z-50 transform transition-transform duration-300 md:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

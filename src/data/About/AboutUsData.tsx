@@ -1,53 +1,44 @@
+import Gradution from "../../svg/Gradution";
+import Peopole from "../../svg/Peopole";
+import Star from "../../svg/Star";
 import type {
-  HeroSectionType,
   OurValueSectionType,
   OurAchievementsSectionType,
   NavigatingEstateinExperienceSectionType,
   MeetEstateinTeamCardSectionType,
   OurValuedClientsSectionType,
 } from "../../types/About/AboutType";
-
-//  Hero Data
-
-export const heroSectionData: HeroSectionType = {
-  headline: "Our Journey",
-  description:
-    "Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary. Over the years, we've expanded our reach, forged valuable partnerships, and gained the trust of countless clients.",
-  heroImage: "/assets/images/About/Hero-img.webp",
-  bgImage: "/assets/images/About/bgImgHero.png",
-};
-
 // Our Values section Data
 
 export const OurValueSectionData: OurValueSectionType = {
   headline: "Our Values",
   description:
     "Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary.",
-  properties: [
+  values: [
     {
-      id: "property-1",
-      icon: "/assets/images/About/icons/star.svg",
+      id: "1",
+      icon: <Star/>,
       title: "Trust",
       description:
         "Trust is the cornerstone of every successful real estate transaction.",
     },
     {
-      id: "property-2",
-      icon: "/assets/images/About/icons/gradution.svg",
+      id: "2",
+      icon: <Gradution/>,
       title: "Excellence",
       description:
         "We set the bar high for ourselves. From the properties we list to the services we provide.",
     },
     {
-      id: "property-3",
-      icon: "/assets/images/About/icons/pepole.svg",
+      id: "3",
+      icon: <Peopole/>,
       title: "Client-Centric",
       description:
         "Your dreams and needs are at the center of our universe. We listen, understand..",
     },
     {
-      id: "property-4",
-      icon: "/assets/images/About/icons/star.svg",
+      id: "4",
+      icon: <Star/>,
       title: "Our Commitment",
       description:
         "We are dedicated to providing you with the highest level of service, professionalism, and support.",
@@ -90,7 +81,7 @@ export const NavigatingEstateinExperienceData: NavigatingEstateinExperienceSecti
     headline: "Navigating the Estatein Experience",
     description:
       "At Estatein, we've designed a straightforward process to help you find and purchase your dream property with ease. Here's a step-by-step guide to how it all works.",
-    properties: [
+    steps: [
       {
         id: "property-1",
         stepId: "Step 01",

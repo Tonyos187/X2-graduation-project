@@ -1,10 +1,10 @@
-import type { ContactHeroFeaturesType } from "../../types/Contact/ContactType";
+import type { FeaturesType } from "../../types/Contact/ContactType";
 import SpinigCircleIcon from "../sharedComponents/SpinigCircleIcon";
 
 const FeaturesCard = ({
   item,
 }: {
-  item: ContactHeroFeaturesType;
+  item: FeaturesType;
 }) => {
   return (
     <div className="relative group flex flex-col items-center xs:justify-center gap-3.5 lg:gap-4 2xl:gap-5 py-[5.1282vw] px-[3.5897vw] lg:py-[2.0834vw] lg:px-[1.1112vw] 2xl:py-[2.08334vw] 2xl:px-[1.04167vw] border border-Grey-15 rounded-[10px] bg-Grey-10 z-10 cursor-pointer">
@@ -21,7 +21,7 @@ const FeaturesCard = ({
         {typeof item.title === "string" ? (
           <p>{item.title}</p>
         ) : (
-          item.title.map((title: string, index) => (
+          item.title.map((title: string, index: number) => (
             <p key={index} className="text-center">
               {title}
             </p>

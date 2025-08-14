@@ -2,7 +2,7 @@ import type {
   ContactDiscoverLocationsFilterDataType,
   ContactExplorePhotosDataType,
   ContactHeroDataType,
-  ContactHeroFeaturesType,
+  FeaturesType,
   ContactLetsConnectFormDataType,
 } from "../../types/Contact/ContactType";
 import DownArrow from "../../svg/DownArrow";
@@ -19,7 +19,7 @@ export const contactHeroData: ContactHeroDataType = {
     "Welcome to Estatein's Contact Us page. We're here to assist you with any inquiries, requests, or feedback you may have. Whether you're looking to buy or sell a property, explore investment opportunities, or simply want to connect, we're just a message away. Reach out to us, and let's start a conversation.",
 };
 
-export const contactHeroCard: ContactHeroFeaturesType[] = [
+export const contactHeroCard: FeaturesType[] = [
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/emailIcon.svg",
@@ -98,22 +98,14 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       icon: <DownArrow />,
       options: ["Google", "Facebook", "Instagram", "Linkedin", "Other"],
     },
-    {
+  ],
+  areaText: {
       id: "message",
       name: "message",
       label: "Message",
       type: "text",
       placeholder: "Enter your Message here..",
     },
-  ],
-  checkBox: {
-    id: "terms",
-    name: "terms",
-    label: "I agree with Terms of Use and Privacy Policy",
-  },
-  button: {
-    text: "Send Your Message",
-  },
 };
 
 // Discover Our Office Locations
@@ -181,11 +173,11 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     },
     {
       id: "explorePeopleInSuits",
-      image: "/public/assets/images/Contact/explorePeopleInSuits.webp",
+      image: "/assets/images/Contact/explorePeopleInSuits.webp",
     },
     {
       id: "exploreWomanInSuit",
-      image: "/public/assets/images/Contact/exploreWomanInSuit.webp",
+      image: "/assets/images/Contact/exploreWomanInSuit.webp",
     },
   ],
   contactExploreEstateinData: {
@@ -193,5 +185,5 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     description:
       "Discover the world of Estatein and its impact on the real estate industry. From our team of experts to our commitment to excellence, we're here to guide you on your real estate journey.",
   },
-  titlePhoto: "/public/assets/images/Contact/exploreShakingHands.webp",
+  titlePhoto: "/assets/images/Contact/exploreShakingHands.webp",
 };
