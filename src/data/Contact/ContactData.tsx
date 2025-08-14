@@ -24,21 +24,25 @@ export const contactHeroCard: FeaturesType[] = [
     arrow: <TopRightArrow />,
     icon: "/assets/icons/emailIcon.svg",
     title: "info@estatein.com",
+    link: "/contact"
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/phoneIcon.svg",
     title: "+1 (123) 456-7890",
+    link: "/contact"
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/locationIcon.svg",
     title: "Main Headquarters",
+    link: "/contact"
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/roseIcon.svg",
     title: ["Instagram", "LinkedIn", "Facebook"],
+    link: "/contact"
   },
 ];
 
@@ -173,11 +177,11 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     },
     {
       id: "explorePeopleInSuits",
-      image: "/assets/images/Contact/explorePeopleInSuits.webp",
+      image: "/assets/images/Contact/ExplorePeopleInSuits.webp",
     },
     {
       id: "exploreWomanInSuit",
-      image: "/assets/images/Contact/exploreWomanInSuit.webp",
+      image: "/assets/images/Contact/ExploreWomanInSuit.webp",
     },
   ],
   contactExploreEstateinData: {
@@ -185,5 +189,5 @@ export const contactExplorePhotosData: ContactExplorePhotosDataType = {
     description:
       "Discover the world of Estatein and its impact on the real estate industry. From our team of experts to our commitment to excellence, we're here to guide you on your real estate journey.",
   },
-  titlePhoto: "/assets/images/Contact/exploreShakingHands.webp",
+  titlePhoto: "/assets/images/Contact/ExploreShakingHands.webp",
 };

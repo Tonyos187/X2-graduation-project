@@ -1,7 +1,5 @@
-import TopRightArrow from "../../svg/TopRightArrow";
 import type {
   ContactHeroDataType,
-  FeaturesType,
 } from "../../types/Contact/ContactType";
 import type { ServiceCards } from "../../types/Services/ServicesTypes";
 
@@ -12,29 +10,6 @@ export const servicesHeroData: ContactHeroDataType = {
   description:
     "Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams.",
 };
-
-export const featuresCards: FeaturesType[] = [
-  {
-    arrow: <TopRightArrow />,
-    icon: "/assets/icons/servicesHomeIcon.svg",
-    title: "Find Your Dream Home",
-  },
-  {
-    arrow: <TopRightArrow />,
-    icon: "/assets/icons/servicesCameraIcon.svg",
-    title: "Unlock Property Value",
-  },
-  {
-    arrow: <TopRightArrow />,
-    icon: "/assets/icons/servicesBuildingIcon.svg",
-    title: "Effortless Property Management",
-  },
-  {
-    arrow: <TopRightArrow />,
-    icon: "/assets/icons/servicesSunIcon.svg",
-    title: "Smart Investments, Informed Decisions",
-  },
-];
 
 // unlock property section
 
