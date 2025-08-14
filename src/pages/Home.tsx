@@ -6,7 +6,7 @@ import {
 import Hero from "../sections/HomePageSections/Hero";
 import PropertiesSection from "../sections/HomePageSections/PropertiesSection";
 import Features from "../sections/sharedSections/Features";
-import FAQSlider from "../sections/HomePageSections/FAQSlider";
+import FAQSlider from "../sections/HomePageSections/FAQSliderSection";
 
 const Home = () => {
   return (

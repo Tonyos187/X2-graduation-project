@@ -6,7 +6,6 @@ import FAQCard from '../../components/cards/FAQCard'
 
 const FAQSlider = () => {
   return (
-    <section className='my-[60px] lg:my-[90px] xl:my-[120px]'>
       <Container>
         <Header
           title={faqSectionData.headline}
@@ -17,7 +16,7 @@ const FAQSlider = () => {
           link={faqSectionData.button.link}
         />
 
-        <div className="mt-10">
+        <div className="pt-10">
           <Slider
             withBtn
             btnContent={faqSectionData.button.text}
@@ -25,9 +24,9 @@ const FAQSlider = () => {
             cards={faqSectionData.faqs.map((faq) => (
               <div
                 key={faq.id}
-                className="h-[400px] flex mb-[30px] lg:mb-10 xl:mb-[50px]"
+                className="flex  mb-[30px] lg:mb-10 xl:mb-[50px]"
               >
-                <FAQCard faq={faq} showButton={true} />
+                  <FAQCard faq={faq} showButton={true} className='min-h-[346px]'/>
               </div>
             ))}
             num_Of_Cards_in_sm_screen={1}
@@ -37,7 +36,6 @@ const FAQSlider = () => {
           />
         </div>
       </Container>
-    </section>
   )
 }
 
