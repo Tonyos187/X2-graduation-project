@@ -1,9 +1,11 @@
 
 // our value card type
 
+import type { ReactNode } from "react";
+
 export interface valueCard {
   id: string;
-  icon: string;
+  icon: ReactNode;
   title: string;
   description: string;
 }
