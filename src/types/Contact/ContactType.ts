@@ -8,9 +8,9 @@ export interface ContactHeroDataType {
 }
 
 export interface ContactHeroFeaturesType {
-  arrow: ReactNode,
-    icon: string,
-    title: string | string[],
+  arrow: ReactNode;
+  icon: string;
+  title: string | string[];
 }
 
 // let's connect section
@@ -37,14 +37,12 @@ export interface ContactLetsConnectFormDataType {
   };
 }
 
-// Discover Our Office Locations
-
-interface ContactDetailesType {
+export interface ContactDetailesType {
   icon: ReactNode;
-  title: string;
+  title: string[];
 }
 
-interface CategoriesCardType {
+export interface CategoriesCardType {
   id: string;
   title: string;
   address: string;
@@ -54,6 +52,11 @@ interface CategoriesCardType {
     text: string;
     link: string;
   };
+}
+
+export interface ContactDiscoverLocationsFilterDataType {
+  FilterOptions: string[];
+  categoriesCard: CategoriesCardType[];
 }
 
 export interface ContactDiscoverLocationsFilterDataType {
