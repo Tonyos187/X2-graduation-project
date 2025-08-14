@@ -3,7 +3,6 @@ import HeaderHero from "../sections/sharedSections/HeaderHero";
 import {
   effortlessProperty,
   effortlessPropertyHeader,
-  featuresCards,
   servicesHeroData,
   smartInvestments,
   smartInvestmentsHeader,
@@ -12,6 +11,7 @@ import {
 } from "../data/Services/ServicesData";
 import Features from "../sections/sharedSections/Features";
 import ServiceSection from "../sections/Services/ServiceSection";
+import { featuresSectionData } from "../data/Home/HomeData";
 
 const Services = () => {
   return (
@@ -22,7 +22,7 @@ const Services = () => {
           description={servicesHeroData.description}
         />
 
-        <Features data={featuresCards} />
+        <Features data={featuresSectionData} />
       </div>
 
       <ServiceSection

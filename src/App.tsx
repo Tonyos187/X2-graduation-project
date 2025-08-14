@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Suspense, lazy, useEffect } from "react";
 import "./App.css";
 
 // Layout
@@ -27,6 +27,7 @@ const routes = [
 function App() {
   return (
     <Router>
+      <ScrollToHash /> 
       <Suspense
         fallback={
           <div className="fixed inset-0 z-[1000] grid place-items-center bg-Grey-08/60 backdrop-blur-sm">
@@ -51,3 +52,18 @@ function App() {
 }
 
 export default App;
+
+const ScrollToHash = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
+  return null;
+};
