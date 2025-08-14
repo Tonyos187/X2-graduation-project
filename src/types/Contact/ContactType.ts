@@ -11,6 +11,7 @@ export interface FeaturesType {
   arrow: ReactNode,
     icon: string,
     title: string | string[],
+    link: string,
 }
 
 // let's connect section

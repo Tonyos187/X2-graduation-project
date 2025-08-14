@@ -25,21 +25,25 @@ export const contactHeroCard: FeaturesType[] = [
     arrow: <TopRightArrow />,
     icon: "/assets/icons/emailIcon.svg",
     title: "info@estatein.com",
+    link: "/contact"
   },
   {
     arrow:<TopRightArrow />,
     icon: "/assets/icons/phoneIcon.svg",
     title: "+1 (123) 456-7890",
+    link: "/contact"
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/locationIcon.svg",
     title: "Main Headquarters",
+    link: "/contact"
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/roseIcon.svg",
     title: ["Instagram", "LinkedIn", "Facebook"],
+    link: "/contact"
   },
 ];
 

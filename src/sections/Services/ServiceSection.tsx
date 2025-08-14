@@ -14,7 +14,7 @@ interface Props {
 const ServiceSection = ({title, description, data , data1, investSection} : Props) => {
   return (
     <Container className={`flex flex-col ${investSection ? "lg:flex-row gap-10 md:gap-12.5 lg:gap-[2.0834vw] xl:gap-[3.125vw]" : "gap-10 md:gap-15 xl:gap-20"}`}>
-        <div className={`${investSection ? "flex flex-col gap-7.5 md:gap-10 xl:gap-12.5 w-full lg:w-[28.6112vw] xl:w-[27.03125vw]" : "w-full lg:w-[67.5vw]"}`}>            
+        <div id={title.replaceAll(" ", "_").replaceAll(",","")} className={`${investSection ? "flex flex-col gap-7.5 md:gap-10 xl:gap-12.5 w-full lg:w-[28.6112vw] xl:w-[27.03125vw]" : "w-full lg:w-[67.5vw]"}`}>            
             {investSection ? <Header title={title} description={description} withIcon textVW />  
                            : <Header title={title} description={description} withIcon />}
             {investSection && <ValuesCard withButton title={data1?.title} description={data1?.description} link={data1?.link} smartSection />}
