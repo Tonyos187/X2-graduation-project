@@ -1,6 +1,15 @@
 import HeaderHero from "../sections/sharedSections/HeaderHero";
 
-import { servicesData } from "../data/Services/ServicesData";
+import {
+  effortlessProperty,
+  effortlessPropertyHeader,
+  featuresCards,
+  servicesHeroData,
+  smartInvestments,
+  smartInvestmentsHeader,
+  unlockPropertyCards,
+  unlockPropertyHeader,
+} from "../data/Services/ServicesData";
 import Values from "../sections/Services/Values";
 import Features from "../sections/sharedSections/Features";
 
@@ -9,50 +18,34 @@ const Services = () => {
     <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
       <div>
         <HeaderHero
-          title="Elevate Your Real Estate Experience"
-          description="Welcome to Estatein, where your real estate aspirations meet expert guidance. Explore our comprehensive range of services, each designed to cater to your unique needs and dreams."
+          title={servicesHeroData.title}
+          description={servicesHeroData.description}
         />
-        {servicesData.servicesSection.featuresCards && (
-          <Features data={servicesData.servicesSection.featuresCards} />
-        )}
+
+        <Features data={featuresCards} />
       </div>
 
-      {servicesData.unlockProperty.sectionTitle &&
-        servicesData.unlockProperty.sectionDescription &&
-        servicesData.unlockProperty.cards &&
-        servicesData.unlockProperty.promotionalCard && (
-          <Values
-            title={servicesData.unlockProperty.sectionTitle}
-            description={servicesData.unlockProperty.sectionDescription}
-            data={servicesData.unlockProperty.cards}
-            data1={servicesData.unlockProperty.promotionalCard}
-          />
-        )}
+      <Values
+        title={unlockPropertyHeader.title}
+        description={unlockPropertyHeader.description}
+        data={unlockPropertyCards.cards}
+        data1={unlockPropertyCards.promotionalCard}
+      />
 
-      {servicesData.effortlessProperty.sectionTitle &&
-        servicesData.effortlessProperty.sectionDescription &&
-        servicesData.effortlessProperty.cards &&
-        servicesData.effortlessProperty.promotionalCard && (
-          <Values
-            title={servicesData.effortlessProperty.sectionTitle}
-            description={servicesData.effortlessProperty.sectionDescription}
-            data={servicesData.effortlessProperty.cards}
-            data1={servicesData.effortlessProperty.promotionalCard}
-          />
-        )}
+      <Values
+        title={effortlessPropertyHeader.title}
+        description={effortlessPropertyHeader.description}
+        data={effortlessProperty.cards}
+        data1={effortlessProperty.promotionalCard}
+      />
 
-      {servicesData.smartInvestments.sectionTitle &&
-        servicesData.smartInvestments.sectionDescription &&
-        servicesData.smartInvestments.cards &&
-        servicesData.smartInvestments.promotionalCard && (
-          <Values
-            title={servicesData.smartInvestments.sectionTitle}
-            description={servicesData.smartInvestments.sectionDescription}
-            data={servicesData.smartInvestments.cards}
-            data1={servicesData.smartInvestments.promotionalCard}
-            investSection
-          />
-        )}
+      <Values
+        title={smartInvestmentsHeader.title}
+        description={smartInvestmentsHeader.description}
+        data={smartInvestments.cards}
+        data1={smartInvestments.promotionalCard}
+        investSection
+      />
     </div>
   );
 };
