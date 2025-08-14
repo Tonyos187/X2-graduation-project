@@ -10,8 +10,8 @@ import {
   unlockPropertyCards,
   unlockPropertyHeader,
 } from "../data/Services/ServicesData";
-import Values from "../sections/Services/Values";
 import Features from "../sections/sharedSections/Features";
+import ServiceSection from "../sections/Services/ServiceSection";
 
 const Services = () => {
   return (
@@ -25,21 +25,21 @@ const Services = () => {
         <Features data={featuresCards} />
       </div>
 
-      <Values
+      <ServiceSection
         title={unlockPropertyHeader.title}
         description={unlockPropertyHeader.description}
         data={unlockPropertyCards.cards}
         data1={unlockPropertyCards.promotionalCard}
       />
 
-      <Values
+      <ServiceSection
         title={effortlessPropertyHeader.title}
         description={effortlessPropertyHeader.description}
         data={effortlessProperty.cards}
         data1={effortlessProperty.promotionalCard}
       />
 
-      <Values
+      <ServiceSection
         title={smartInvestmentsHeader.title}
         description={smartInvestmentsHeader.description}
         data={smartInvestments.cards}
