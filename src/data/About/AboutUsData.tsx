@@ -1,3 +1,6 @@
+import Gradution from "../../svg/Gradution";
+import Peopole from "../../svg/Peopole";
+import Star from "../../svg/Star";
 import type {
   OurValueSectionType,
   OurAchievementsSectionType,
@@ -5,7 +8,6 @@ import type {
   MeetEstateinTeamCardSectionType,
   OurValuedClientsSectionType,
 } from "../../types/About/AboutType";
-
 // Our Values section Data
 
 export const OurValueSectionData: OurValueSectionType = {
@@ -15,28 +17,28 @@ export const OurValueSectionData: OurValueSectionType = {
   values: [
     {
       id: "1",
-      icon: "/assets/images/About/icons/star.svg",
+      icon: <Star/>,
       title: "Trust",
       description:
         "Trust is the cornerstone of every successful real estate transaction.",
     },
     {
       id: "2",
-      icon: "/assets/images/About/icons/gradution.svg",
+      icon: <Gradution/>,
       title: "Excellence",
       description:
         "We set the bar high for ourselves. From the properties we list to the services we provide.",
     },
     {
       id: "3",
-      icon: "/assets/images/About/icons/pepole.svg",
+      icon: <Peopole/>,
       title: "Client-Centric",
       description:
         "Your dreams and needs are at the center of our universe. We listen, understand..",
     },
     {
       id: "4",
-      icon: "/assets/images/About/icons/star.svg",
+      icon: <Star/>,
       title: "Our Commitment",
       description:
         "We are dedicated to providing you with the highest level of service, professionalism, and support.",
