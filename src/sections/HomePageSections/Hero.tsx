@@ -10,7 +10,6 @@ const Hero = () => {
     "Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.";
   const headline = "Discover Your Dream Property with Estatein";
   const heroImage = "/assets/images/Home/heroBuilding.webp";
-  const bgImage = "/assets/images/Home/backgroundHeroImage.png";
 
   return (
     <Container className="min-h-screen max-lg:gap-14 pt-[108px] lg:pt-[77px] xl:pt-[99px] flex justify-between items-center max-lg:flex-col-reverse lg:pr-0 xl:pr-0">
@@ -40,7 +39,6 @@ const Hero = () => {
         {/* Clipping wrapper for images */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Background Image - cover */}
-          {/* <img src={bgImage} alt="background" className="absolute inset-0 w-full h-full object-cover z-10" /> */}
           <div className="absolute inset-0 w-[200%] h-[200%] -top-[25%] -left-[50%] object-cover z-10">
             <WavyBackdrop paths={HERO_PATH} />
           </div>

@@ -22,7 +22,7 @@ function Container({
 }) {
   return (
     <section
-      className={`px-[4.1025%] md:px-[6.25%] xl:px-[8.4375%] ${className}`}
+      className={`px-[4.1025%] md:px-[5.5555%] xl:px-[8.4375%] ${className}`}
     >
       {children}
     </section>

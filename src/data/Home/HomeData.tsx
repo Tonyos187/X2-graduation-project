@@ -33,27 +33,27 @@ export const Stats: HeroStat[] = [
 export const featuresSectionData: FeaturesType[] = [
   {
     arrow: <TopRightArrow />,
-    // icon: <Market />,
-    icon: "/assets/icons/emailIcon.svg",
+    icon: "/assets/icons/market.svg",
     title: "Find Your Dream Home",
+    link: "/properties"
   },
   {
     arrow: <TopRightArrow />,
-    // icon: <Camera />,
-    icon: "/assets/icons/phoneIcon.svg",
+    icon: "/assets/icons/camera.svg",
     title: "Unlock Property Value",
+    link: "/services#Unlock_Property_Value"
   },
   {
     arrow: <TopRightArrow />,
-    // icon: <BuildingIcon />,
-    icon: "/assets/icons/locationIcon.svg",
+    icon: "/assets/icons/building.svg",
     title: "Effortless Property Management",
+    link: "/services#Effortless_Property_Management"
   },
   {
     arrow: <TopRightArrow />,
-    // icon: <Sun />,
-    icon: "/assets/icons/roseIcon.svg",
+    icon: "/assets/icons/sun.svg",
     title: "Smart Investments, Informed Decisions",
+    link: "/services#Smart_Investments_Informed_Decisions"
   },
 ];
 
