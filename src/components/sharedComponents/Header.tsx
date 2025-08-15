@@ -12,6 +12,7 @@ const Header = ({
   className = "",
   type = "",
   textVW,
+  hash ="",
 }: {
   title?: string;
   description?: string;
@@ -23,10 +24,11 @@ const Header = ({
   className?: string;
   type?: string;
   textVW ?: boolean
+  hash?: string;
 }) => {
   return (
     <div
-      className={`relative flex flex-col ${gap} md:gap-2.5 xl:gap-3.5 ${className}`}
+      className={`relative flex flex-col ${gap} md:gap-2.5 xl:gap-3.5 ${className}`} id={hash}
     >
       {/* stars icon*/}
       {withIcon && (

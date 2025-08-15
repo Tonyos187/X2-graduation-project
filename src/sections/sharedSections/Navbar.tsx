@@ -32,6 +32,7 @@ const Navbar = (): JSX.Element => {
       ? "text-White bg-Grey-08 border xl:py-3.5 md:py-3 md:px-5 xl:px-6 rounded-lg border-Grey-15"
       : " text-White xl:py-3.5 md:py-3 border border-Grey-10";
 
+  const scrollTop = () =>{ window.scrollTo({ top:0, behavior:'smooth' }) };
   return (
     <>
       {/* Overlay */}
@@ -49,7 +50,7 @@ const Navbar = (): JSX.Element => {
         {/* Center Links (Desktop) */}
         <div className="hidden md:flex gap-6 xl:text-lg items-center absolute left-1/2 transform -translate-x-1/2">
           {navLinks.slice(0, 4).map((link) => (
-            <NavLink key={link.path} to={link.path} className={navLinkStyles}>
+            <NavLink key={link.path} to={link.path} className={navLinkStyles} onClick={scrollTop}>
               {link.name}
             </NavLink>
           ))}
@@ -64,6 +65,7 @@ const Navbar = (): JSX.Element => {
                 ? "text-white bg-Purple-60 xl:py-4 xl:px-6 md:py-3.5 md:px-5  rounded-lg border border-Grey-10 xl:text-lg"
                 : "xl:text-lg text-White xl:py-4 xl:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15"
             }
+            onClick={scrollTop}
           >
             Contact Us
           </NavLink>
