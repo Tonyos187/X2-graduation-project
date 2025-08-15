@@ -1,7 +1,7 @@
-import Container from '../../layouts/Container'
-import FAQCard from '../../components/cards/FAQCard'
-import Header from '../../components/sharedComponents/Header'
-import { OurAchievementsSectionData } from '../../data/About/AboutUsData'
+import Container from "../../layouts/Container";
+import FAQCard from "../../components/cards/FAQCard";
+import Header from "../../components/sharedComponents/Header";
+import { OurAchievementsSectionData } from "../../data/About/AboutUsData";
 
 const OurAchievementsSection = () => {
   return (
@@ -30,5 +30,4 @@ const OurAchievementsSection = () => {
   )
 }
 
-export default OurAchievementsSection
-
+export default OurAchievementsSection;

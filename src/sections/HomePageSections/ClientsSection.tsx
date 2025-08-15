@@ -8,7 +8,7 @@ import type { Testimonial } from "../../types/Home/HomeTypes"
 const ClientsSection = () => {
   const data = testimonialsSectionData
   return (
-    <Container >
+    <Container>
         <Header title={data.headline}
         description={data.description}
         withBtn
@@ -16,11 +16,11 @@ const ClientsSection = () => {
         btnContent={data.button.text}
         link={data.button.link}/>
         <Slider
-        withBtn
-        btnContent={data.button.text}
-        link={data.button.link}
-        cards={data.testimonials.map((testimonial: Testimonial) => (
-          <Clients testimonial={testimonial} />
+          withBtn
+          btnContent={data.button.text}
+          link={data.button.link}
+          cards={data.testimonials.map((testimonial: Testimonial) => (
+            <Clients testimonial={testimonial} />
         ))}
       />
     </Container>

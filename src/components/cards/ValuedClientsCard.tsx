@@ -17,7 +17,7 @@ interface ValuedClientsData {
 }
 function ValuedClientsCard({date,title,subCards,whatSay,say,btnText,btnLink}:ValuedClientsData) {
     return (
-        <div className="h-full w-full border border-Grey-15 p-6 md:p-10 xl:p-12.5 rounded-[10px] md:rounded-xl 
+        <div className=" w-full border border-Grey-15 p-6 md:p-10 xl:p-12.5 rounded-[10px] md:rounded-xl 
         flex flex-col gap-7.5 xl:gap-10 justify-between m-0 shadow-[0_0_0_6px_#191919] md:shadow-[0_0_0_8px_#191919]">
             <div className="flex flex-col lg:flex-row justify-between gap-y-5 ">
                 <div className="flex flex-col gap-0.5 md:gap-1 xl:gap-1.5">

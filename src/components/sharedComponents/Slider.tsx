@@ -86,7 +86,7 @@ export default function Slider({
           <span className="text-White ">
             {String(currentPage).padStart(2, "0")}
           </span>{" "}
-          <span className="text-Grey-60">of {totalPages}</span>
+          <span className="text-Grey-60">of {String(totalPages).padStart(2, "0")}</span>
         </div>
 
         <div className="flex md:gap-2.5">
@@ -143,7 +143,7 @@ export default function Slider({
               <span className="text-White ">
                 {String(currentPage).padStart(2, "0")}
               </span>{" "}
-              <span className="text-Grey-60">of {totalPages}</span>
+              <span className="text-Grey-60">of {String(totalPages).padStart(2, "0")}</span>
             </div>
 
             <button

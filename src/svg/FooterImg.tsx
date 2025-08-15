@@ -153,7 +153,6 @@ const FooterImg: React.FC<FooterImgProps> = ({
             style={{
               transition: `fill ${transitionMs}ms ease`,
               filter: isHovered ? neonShadow : undefined,
-              cursor: "pointer",
             }}
             onMouseEnter={() => setHoveredIndex(i)}
             onMouseLeave={() => setHoveredIndex(null)}
