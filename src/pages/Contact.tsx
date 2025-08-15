@@ -6,8 +6,8 @@ import {
 } from "../data/Contact/ContactData.tsx";
 import ContactExploreWorld from "../sections/Contact/ContactExploreWorld.tsx";
 import Features from "../sections/sharedSections/Features.tsx";
-import OurOffice from "../sections/Contact/OurOffice.tsx";
 import ContactForm from "../sections/Contact/ContactForm.tsx";
+import OurOfficeSection from "../sections/Contact/OurOfficeSection.tsx";
 import HeaderHero from "../sections/sharedSections/HeaderHero.tsx";
 
 const Contact = () => {
@@ -20,16 +20,9 @@ const Contact = () => {
         />
         <Features data={contactHeroCard} />
       </div>
-      
-      <ContactForm
-        title={contactLetsConnectData.title}
-        description={contactLetsConnectData.description}
-        data={contactLetsConnectFormData.conactForm}
-        areaText={contactLetsConnectFormData.areaText}
-      />
-
+      <ContactForm title={contactLetsConnectData.title} description={contactLetsConnectData.description} data={contactLetsConnectFormData.conactForm} areaText={contactLetsConnectFormData.areaText} />
+      <OurOfficeSection/>
       <ContactExploreWorld />
-      <OurOffice />
     </div>
   );
 };

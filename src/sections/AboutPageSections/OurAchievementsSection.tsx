@@ -5,33 +5,29 @@ import { OurAchievementsSectionData } from "../../data/About/AboutUsData";
 
 const OurAchievementsSection = () => {
   return (
-    <section>
-      <Container>
+      <Container >
         <Header
           title={OurAchievementsSectionData.headline}
           description={OurAchievementsSectionData.description}
           withIcon
         />
-
-        <div className="flex flex-wrap md:flex-nowrap justify-between mt-6 lg:mt-[60px] xl:mt-20 gap-6 w-full">
-          {OurAchievementsSectionData.properties.map((item) => (
-            <div key={item.id} className="w-full lg:w-[48%] xl:w-[31.6%] flex">
-              <FAQCard
-                faq={{
-                  id: item.id,
-                  question: item.title,
-                  answer: item.description,
-                  readMoreLink: "#",
-                }}
-                withShadow={true}
-                showButton={false}
-              />
-            </div>
-          ))}
+        <div className='flex flex-col lg:flex-row gap-y-5 justify-between'>
+          {OurAchievementsSectionData.properties.map((item,index) => (
+            <FAQCard
+              key={index}
+              faq={{
+                id: item.id,
+                question: item.title,
+                answer: item.description,
+                readMoreLink: "#",
+              }}
+              withShadow={true}
+              showButton={false}
+            />
+        ))}
         </div>
       </Container>
-    </section>
-  );
-};
+  )
+}
 
 export default OurAchievementsSection;

@@ -3,6 +3,7 @@ import ContactForm from "../sections/Contact/ContactForm";
 import PricingDetailsSection from "../sections/propertiesDetails/PricingDetailsSection";
 import PropertyDetailsSlider from "../sections/propertiesDetails/PropertyDetailsSlider";
 import PropertyInfoSection from "../sections/FeatureAndDesc/PropertyInfoSection";
+import { ComprehensivePricingDetails } from "../data/PropertyDetails/ComprehensivePricingDetails";
 import FAQSection from "../sections/HomePageSections/FAQSection";
 const PropertyDetails = () => {
   return (
@@ -10,10 +11,7 @@ const PropertyDetails = () => {
       <PropertyDetailsSlider />
       <PropertyInfoSection />
       <ContactForm title={detailsFormHeaderData.title} description={detailsFormHeaderData.description} data={detailsFormData.conactForm} areaText={detailsFormData.areaText} detailsPage />
-
-      <PricingDetailsSection/>
-
-      {/* <ComprehensivePricing/> */}
+      <PricingDetailsSection data={ComprehensivePricingDetails}/>
       <FAQSection />
     </div>
   );

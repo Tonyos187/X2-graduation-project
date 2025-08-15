@@ -16,11 +16,11 @@ const ClientsSection = () => {
         btnContent={data.button.text}
         link={data.button.link}/>
         <Slider
-        withBtn
-        btnContent={data.button.text}
-        link={data.button.link}
-        cards={data.testimonials.map((testimonial: Testimonial) => (
-          <Clients testimonial={testimonial} />
+          withBtn
+          btnContent={data.button.text}
+          link={data.button.link}
+          cards={data.testimonials.map((testimonial: Testimonial) => (
+            <Clients testimonial={testimonial} />
         ))}
       />
     </Container>

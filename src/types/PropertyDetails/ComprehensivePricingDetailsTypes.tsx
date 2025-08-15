@@ -8,6 +8,8 @@ export interface PricingDetailsSection {
     pricingCard: PricingCardItem[];
 }
 export interface PricingDetailsDataType {
+    headline:string,
+    description:string
     note: string;
     listingPrice: string;
     pricingDetailsCards: PricingDetailsSection[];

@@ -1,6 +1,8 @@
 import type { PricingDetailsDataType } from "../../types/PropertyDetails/ComprehensivePricingDetailsTypes";
 
 export const ComprehensivePricingDetails : PricingDetailsDataType = {
+    headline: "Comprehensive Pricing Details",
+    description:"At Estatein, transparency is key. We want you to have a clear understanding of all costs associated with your property investment. Below, we break down the pricing for Seaside Serenity Villa to help you make an informed decision",
     note : "The figures provided above are estimates and may vary depending on the property, location, and individual circumstances.",
     listingPrice: "$1,250,000",
     pricingDetailsCards : [
