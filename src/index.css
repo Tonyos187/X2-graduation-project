@@ -320,17 +320,17 @@
 
 @keyframes spin_border {
     from {
-        --angle: 180deg;
+        --angle: -110deg;
     }
     to {
-        --angle: 540deg;
+        --angle: -470deg;
     }
 }
 
 .rotate-conic:hover::before,
 .rotate-conic:hover::after {
     content: "";
-    --angle: 180deg;
+    --angle: -110deg;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -338,13 +338,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 12px;
-    padding: 6px;
-    background: conic-gradient(from var(--angle), transparent 75%, #703bf7);
+    padding: 0px;
+    background: conic-gradient(from var(--angle), #703bf7, #946cf9 10%, transparent 25%, transparent 100%);
     animation: 3s spin_border linear infinite;
     z-index: -10;
 }
 
 .rotate-conic::before {
-    filter: blur(.3rem);
-    opacity: 0.8;
+    filter: blur(.5rem);
+    opacity: 0.5;
 }
