@@ -28,6 +28,8 @@ function PropertiesSection({ data }: { data: FeaturedPropertiesSectionType }) {
             lessDescription={property.description}
             details={property.details}
             showInfo={true}
+            btnLink={property.button.link}
+            btnText={property.button.text}
           />
         ))}
       />

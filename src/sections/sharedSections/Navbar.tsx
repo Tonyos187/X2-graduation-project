@@ -55,7 +55,7 @@ const Navbar = (): JSX.Element => {
         {/* Center Links (Desktop) */}
         <div className="hidden md:flex gap-6 xl:text-lg items-center absolute left-1/2 transform -translate-x-1/2">
           {navLinks.slice(0, 4).map((link) => (
-            <NavLink key={link.path} to={link.path} className={navLinkStyles} onClick={()=>scrollTop}>
+            <NavLink key={link.path} to={link.path} className={navLinkStyles} onClick={scrollTop}>
               {link.name}
             </NavLink>
           ))}

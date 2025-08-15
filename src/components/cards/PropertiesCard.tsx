@@ -17,8 +17,10 @@ interface PropertiesProps {
     lessDescription:string,
     price:string,
     title:string,
+    btnText:string,
+    btnLink:string,
 }
-function PropertiesCard({showInfo,details,fullDescription,image,discoverDescription,lessDescription,price,title}:PropertiesProps) {
+function PropertiesCard({showInfo,details,fullDescription,image,discoverDescription,lessDescription,price,title,btnText,btnLink}:PropertiesProps) {
     // State to check if the card is flipped or not
     const [flipped, setFlipped] = useState<boolean>(false);
     return (
@@ -38,8 +40,8 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                             }}>
                             <img src={image} alt="" className="w-full h-[210px] md:h-[255px] xl:h-[318px] object-cover rounded-[10px]"/>
                             {!showInfo && (
-                                <div className="py-1.5 px-3 xl:py-2 xl:px-3 bg-Grey-10 rounded-[28px] border border-Grey-15 w-fit">
-                                    <p className="text-sm xl:text-lg text-White">{discoverDescription}</p>
+                                <div className="py-1.5 px-3 xl:py-2 xl:px-3 bg-Grey-10 rounded-[28px] border border-Grey-15 max-w-max">
+                                    <p className="text-sm xl:text-lg text-White max-w-max">{discoverDescription}</p>
                                 </div>
                             ) }
                             <div>
@@ -66,7 +68,7 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                                     <span className="text-sm xl:text-lg font-medium text-Grey-60" >Price</span>
                                     <p className="font-semibold  text-lg md:text-xl xl:text-2xl">{price}</p>
                                 </div>
-                                <Button content={"View Property Details"} className="bg-Purple-60"/>
+                                <Button link={btnLink} content={btnText} className="bg-Purple-60"/>
                             </div>
                         </div>
                         <div className="flex flex-col justify-between h-full "

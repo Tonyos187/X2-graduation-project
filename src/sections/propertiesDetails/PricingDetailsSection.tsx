@@ -4,7 +4,7 @@ import Container from "../../layouts/Container"
 import PricingDetails from "./PricingDetails"
 
 
-function ComprehensivePricing() {
+function PricingDetailsSection() {
     const sectionData = ComprehensivePricingDetails
     return (
         <Container className={"flex flex-col gap-10 md:gap-14.5 xl:gap-20"}>
@@ -15,4 +15,4 @@ function ComprehensivePricing() {
     )
 }
 
-export default ComprehensivePricing
+export default PricingDetailsSection

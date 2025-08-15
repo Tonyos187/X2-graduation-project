@@ -1,5 +1,6 @@
-import { OurValueSectionData } from "../data/About/AboutUsData";
+import { OurValuedClientsSectionData, OurValueSectionData } from "../data/About/AboutUsData";
 import Hero from "../sections/AboutPageSections/Hero";
+import OurClientsSection from "../sections/AboutPageSections/OurClientsSection";
 import OurTeam from "../sections/AboutPageSections/OurTeam";
 import OurValueSection from "../sections/AboutPageSections/OurValueSection";
 
@@ -9,6 +10,7 @@ const About = () => {
       <Hero />
       <OurValueSection data={OurValueSectionData} />
       <OurTeam />
+      <OurClientsSection data={OurValuedClientsSectionData}/>
     </div>
   );
 };
