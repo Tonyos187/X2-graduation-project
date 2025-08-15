@@ -5,7 +5,6 @@ import { OurAchievementsSectionData } from '../../data/About/AboutUsData'
 
 const OurAchievementsSection = () => {
   return (
-    <section>
       <Container>
         <Header
           title={OurAchievementsSectionData.headline}
@@ -13,7 +12,7 @@ const OurAchievementsSection = () => {
           withIcon
         />
 
-<div className="flex flex-wrap justify-between mt-6 lg:mt-[60px] xl:mt-20 w-full">
+<div className="flex flex-wrap justify-between  mt-10 lg:mt-[60px] xl:mt-20 w-full">
   {OurAchievementsSectionData.properties.map((item) => (
     <div
       key={item.id}
@@ -36,7 +35,6 @@ const OurAchievementsSection = () => {
 
 
       </Container>
-    </section>
   )
 }
 

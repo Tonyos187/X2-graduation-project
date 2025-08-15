@@ -18,7 +18,7 @@ function FAQCard({ faq, showButton = true, withShadow = false, className = '' }:
       <div>
         <h3
           className={`text-White font-semibold ${
-            withShadow ? "lg:text-[30px] md:text-2xl text-[18px] mb-5 lg:mb-6 xl:mb-[30px]" : "text-xl lg:text-2xl"
+            withShadow ? "lg:text-[30px] md:text-2xl text-[18px] mb-4 lg:mb-6 xl:mb-[30px]" : "text-xl lg:text-2xl"
           }`}
         >
           {faq?.question}
