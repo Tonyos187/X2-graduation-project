@@ -8,7 +8,7 @@ type Props = {
 
 const Clients: React.FC<Props> = ({ testimonial }) => {
   return (
-    <div className="bg-Grey-08 border border-Grey-15 rounded-[12px] p-[30px] md:p-10 lg:p-[50px] min-h-[303px] md:min-h-[364px] lg:min-h-[442px] w-full md:w-[48%] lg:w-[32%] flex flex-col">
+    <div className="bg-Grey-08 border border-Grey-15 rounded-xl p-[30px] md:p-10 lg:p-[50px] flex flex-col">
       {/* Rating Stars */}
       <div className="flex mb-6">
         {Array.from({ length: testimonial?.rating }).map((_, i) => (
