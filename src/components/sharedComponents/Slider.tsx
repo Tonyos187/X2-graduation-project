@@ -13,7 +13,7 @@ export default function Slider({
   num_Of_Cards_in_xl_screen = 3,
   gap_cards = "md:gap-[1.56%] xl:gap-[1.88%] gap-7.5",
 }: {
-  cards: any[];
+  cards: React.ReactNode[];
   num_Of_Cards_in_sm_screen?: number;
   num_Of_Cards_in_md_screen?: number;
   num_Of_Cards_in_xl_screen?: number;
@@ -66,14 +66,14 @@ export default function Slider({
 
   return (
     <>
-      <div className={`flex items-start justify-center md:justify-between ${gap_cards}`}>
+      <div className={`flex items-stretch justify-center md:justify-between ${gap_cards} min-h-[300px]`}>
         {visibleCards.map((card, index) => (
           <div
             key={index}
             data-aos="fade-down"
             data-aos-duration="800"
             data-aos-delay={index * 100}
-            className="h-full w-full"
+            className="flex-1 min-w-0 flex"
           >
             {card}
           </div>
@@ -105,7 +105,7 @@ export default function Slider({
             className={`flex items-center justify-center xl:p-3.5 xl:w-14.5 xl:h-14.5 md:p-2.5 md:w-11 md:h-11 border border-Grey-15 rounded-full transition ${
               isAtEnd
                 ? "bg-Grey-15 text-Grey-50 cursor-not-allowed"
-                : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15]"
+                : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15"
             }`}
             onClick={nextSlide}
             disabled={isAtEnd}
@@ -150,7 +150,7 @@ export default function Slider({
               className={`flex items-center justify-center p-2 w-8 h-8 xs:p-2.5 xs:w-11 xs:h-11 border border-Grey-15 rounded-full transition ${
                 isAtEnd
                   ? "bg-Grey-15 text-Grey-50 cursor-not-allowed"
-                  : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15]"
+                  : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15"
               }`}
               onClick={nextSlide}
               disabled={isAtEnd}
