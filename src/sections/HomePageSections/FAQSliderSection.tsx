@@ -26,7 +26,7 @@ const FAQSlider = () => {
                 key={faq.id}
                 className="flex  mb-[30px] lg:mb-10 xl:mb-[50px]"
               >
-                  <FAQCard faq={faq} showButton={true} className='min-h-[346px]'/>
+                  <FAQCard faq={faq} showButton={true} className='min-h-[282px] lg:min-h-[346px]'/>
               </div>
             ))}
             num_Of_Cards_in_sm_screen={1}
