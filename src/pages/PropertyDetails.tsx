@@ -13,7 +13,7 @@ const PropertyDetails = () => {
 
       <PricingDetailsSection/>
 
-      <ComprehensivePricing/>
+      {/* <ComprehensivePricing/> */}
       <FAQSlider />
     </div>
   );
