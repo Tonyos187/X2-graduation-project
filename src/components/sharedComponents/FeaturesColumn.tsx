@@ -9,7 +9,6 @@ export default function FeatureColumn({ icon, label }: FeaturesType) {
         transition-all duration-300 ease-out 
         hover:scale-[1.03] hover:shadow-[0_0_12px_rgba(186,104,255,0.4)]
         hover:border-Purple-60 
-        cursor-pointer
       "
       style={{
         background:
