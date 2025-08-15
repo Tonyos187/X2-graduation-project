@@ -6,7 +6,7 @@ import type { OurValuedClientsSectionType } from "../../types/About/AboutType"
 
 function OurClients({data}:{data:OurValuedClientsSectionType}) {
     return (
-        <Container className="gap-10 md:gap-15 xl:gap-20 flex flex-col ">
+        <Container>
             <Header
                 title={data.headline}
                 description={data.description}

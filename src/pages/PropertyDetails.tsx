@@ -3,7 +3,7 @@ import ContactForm from "../sections/Contact/ContactForm";
 import PricingDetailsSection from "../sections/propertiesDetails/PricingDetailsSection";
 import PropertyDetailsSlider from "../sections/propertiesDetails/PropertyDetailsSlider";
 import PropertyInfoSection from "../sections/FeatureAndDesc/PropertyInfoSection";
-import FAQSlider from "../sections/HomePageSections/FAQSlider";
+import FAQSection from "../sections/HomePageSections/FAQSection";
 const PropertyDetails = () => {
   return (
     <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
@@ -14,7 +14,7 @@ const PropertyDetails = () => {
       <PricingDetailsSection/>
 
       {/* <ComprehensivePricing/> */}
-      <FAQSlider />
+      <FAQSection />
     </div>
   );
 };

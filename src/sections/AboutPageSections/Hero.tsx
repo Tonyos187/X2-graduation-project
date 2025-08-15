@@ -1,6 +1,5 @@
 import Header from "../../components/sharedComponents/Header";
 import Statistics from "../../components/sharedComponents/statistics/Statistics";
-import Container from "../../layouts/Container";
 import WavyBackdrop from "../../svg/WavyBackdrop";
 
 const Hero = () => {
@@ -10,7 +9,7 @@ const Hero = () => {
   const heroImage = "/assets/images/About/Hero-img.webp";
 
   return (
-    <Container className="min-h-screen pt-[108px] lg:pt-[77px] xl:pt-[99px] flex justify-between items-center max-lg:flex-col-reverse max-lg:gap-10">
+    <section className="px-[4.1025%] md:px-[5.5555%] xl:px-[8.4375%] min-h-screen pt-[108px] lg:pt-[77px] xl:pt-[99px] flex justify-between items-center max-lg:flex-col-reverse max-lg:gap-10">
       {/* Left Side of Hero */}
       <div className="w-full lg:w-[47.3057%] flex flex-col gap-10 lg:gap-12.5 xl:gap-20">
         <Header title={headline} description={description} withIcon />
@@ -33,7 +32,7 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-contain object-bottom-right z-30"
         />
       </div>
-    </Container>
+    </section>
   );
 };
 

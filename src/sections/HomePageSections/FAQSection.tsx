@@ -4,7 +4,7 @@ import { faqSectionData } from '../../data/Home/HomeData'
 import Slider from '../../components/sharedComponents/Slider'
 import FAQCard from '../../components/cards/FAQCard'
 
-const FAQSlider = () => {
+const FAQSection = () => {
   return (
     <section className='my-[60px] lg:my-[90px] xl:my-[120px]'>
       <Container>
@@ -41,4 +41,4 @@ const FAQSlider = () => {
   )
 }
 
-export default FAQSlider
+export default FAQSection
