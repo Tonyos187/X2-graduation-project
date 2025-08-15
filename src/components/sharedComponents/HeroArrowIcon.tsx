@@ -30,7 +30,7 @@ export default function HeroArrowIcon() {
   return (
       <div
         ref={circle}
-        className={`relative border border-[#262626] w-29.5 h-29.5 md:w-32 md:h-32 xl:w-44 xl:h-44 
+        className={`relative border border-[#262626] w-29.5 h-29.5 md:w-33 md:h-33 xl:w-44 xl:h-44 
           flex items-center justify-center rounded-full bg-[#141414] overflow-hidden hover-glow ${
           isPulsing ? "animate-pulse-once" : ""
         }`}
