@@ -9,9 +9,9 @@ type Props = {
 function FAQCard({ faq, showButton = true, withShadow = false }: Props) {
   return (
     <div
-      className={`bg-Grey-08 border border-Grey-15 rounded-[10px] lg:rounded-xl flex flex-col justify-between
-        ${withShadow ? "shadow-[0_0_0_8px_#191919] h-auto" : "min-h-[346px]"}
-        p-[30px] md:p-10 lg:p-[50px] w-full md:w-[48%] lg:w-[32%]`}
+      className={`bg-Grey-08 border border-Grey-15 rounded-[10px] lg:rounded-xl flex flex-col justify-around  h-full
+        ${withShadow ? "shadow-[0_0_0_8px_#191919]" : ""}
+        p-[30px] lg:p-10 xl:p-[50px] w-full`}
     >
       <h3
         className={`text-White font-semibold ${
@@ -20,7 +20,7 @@ function FAQCard({ faq, showButton = true, withShadow = false }: Props) {
       >
         {faq?.question}
       </h3>
-      <p className="text-Grey-60 text-sm lg:text-[18px] my-6 md:my-[30px]">{faq?.answer}</p>
+      <p className="text-Grey-60 text-sm md:text-[16px] xl:text-[18px] my-3.5 sm:my-[30px] lg:my-10 xl:my-[50px]">{faq?.answer}</p>
 
       {showButton && (
         <a
@@ -41,9 +41,6 @@ function FAQCard({ faq, showButton = true, withShadow = false }: Props) {
 }
 
 export default FAQCard;
-
-
-
 
 
 
