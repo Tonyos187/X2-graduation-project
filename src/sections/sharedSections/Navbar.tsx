@@ -32,7 +32,14 @@ const Navbar = (): JSX.Element => {
       ? "text-White bg-Grey-08 border xl:py-3.5 md:py-3 md:px-5 xl:px-6 rounded-lg border-Grey-15"
       : " text-White xl:py-3.5 md:py-3 border border-Grey-10";
 
-  const scrollTop = () =>{ window.scrollTo({ top:0, behavior:'smooth' }) };
+
+      const scrollTop = () =>{
+        window.scrollTo({
+            top:0, 
+            behavior:'smooth'
+        })
+    };
+
   return (
     <>
       {/* Overlay */}

@@ -2,6 +2,7 @@ import ContactFormFieldsComponent from "../components/form/formComponents/Contac
 import SearchDropDownComponent from "../components/form/formComponents/SearchDropDown";
 import SearchFild from "../components/form/formComponents/SerchFild";
 import { propertiesData } from "../data/Properties/PropertisData";
+import PropertiesSection from "../sections/PropertiesPageSections/PropertiesSection";
 import HeaderHero from "../sections/sharedSections/HeaderHero";
 
 const Properties = () => {
@@ -15,6 +16,7 @@ const Properties = () => {
         />
         <SearchFild data={propertiesData.searchSection} />
         <SearchDropDownComponent data={propertiesData.searchFilterSection} />
+        <PropertiesSection data={propertiesData.propertySliderSection}/>
         <ContactFormFieldsComponent data={propertiesData.contactFormSection} />
       </div>
     </div>

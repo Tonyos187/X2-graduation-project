@@ -17,27 +17,31 @@ interface PropertiesProps {
     lessDescription:string,
     price:string,
     title:string,
+    btnText:string,
+    btnLink:string,
 }
-function PropertiesCard({showInfo,details,fullDescription,image,discoverDescription,lessDescription,price,title}:PropertiesProps) {
+function PropertiesCard({showInfo,details,fullDescription,image,discoverDescription,lessDescription,price,title,btnText,btnLink}:PropertiesProps) {
     // State to check if the card is flipped or not
     const [flipped, setFlipped] = useState<boolean>(false);
     return (
-            <div className="w-full bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl" style={{perspective:"800px"}}>
-                    <div className="grid w-full transition-transform duration-700 ease-in-out "
+            <div className=" w-full h-full  bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl " style={{perspective:"800px"}}>
+                    <div className="grid w-full transition-transform duration-700 ease-in-out h-full "
                             style={{
                             transformStyle: "preserve-3d",
                             transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
                             gridTemplateAreas: "front",
                             }}>
-                        <div className="flex flex-col gap-7.5 justify-between " style={{
+                        <div className="flex flex-col  justify-between gap-7.5 h-full" style={{
                                 gridArea: "front",
+                                gridRow: " 1 / -1",
+                                gridColumn: "1 / -1",
                                 backfaceVisibility: "hidden",
-                                zIndex: flipped ? 1 : 2,
+                                zIndex: flipped ? 1 : 0,
                             }}>
                             <img src={image} alt="" className="w-full h-[210px] md:h-[255px] xl:h-[318px] object-cover rounded-[10px]"/>
                             {!showInfo && (
-                                <div className="py-1.5 px-3 xl:py-2 xl:px-3 bg-Grey-10 rounded-[28px] border border-Grey-15 w-fit">
-                                    <p className="text-sm xl:text-lg text-White">{discoverDescription}</p>
+                                <div className="py-1.5 px-3 xl:py-2 xl:px-3 bg-Grey-10 rounded-[28px] border border-Grey-15 max-w-max">
+                                    <p className="text-sm xl:text-lg text-White max-w-max">{discoverDescription}</p>
                                 </div>
                             ) }
                             <div>
@@ -59,20 +63,22 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                                     ))}
                                 </div>
                                 )}
-                            <div className="flex justify-between flex-wrap gap-y-3">
+                            <div className="flex justify-between flex-wrap gap-y-4">
                                 <div>
                                     <span className="text-sm xl:text-lg font-medium text-Grey-60" >Price</span>
                                     <p className="font-semibold  text-lg md:text-xl xl:text-2xl">{price}</p>
                                 </div>
-                                <Button content={"View Property Details"} className="bg-Purple-60"/>
+                                <Button link={btnLink} content={btnText} className="bg-Purple-60"/>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-between h-full"
+                        <div className="flex flex-col justify-between h-full "
                             style={{
                                 gridArea: "front",
+                                gridRow: " 1 / -1",
+                                gridColumn: "1 / -1",
                                 backfaceVisibility: "hidden",
                                 transform: "rotateY(180deg)",
-                                zIndex: flipped ? 2 : 1,
+                                zIndex: flipped ? 2 : 0,
                             }}>
                             <p className="text-sm md:text-lg font-medium text-white">
                                 {fullDescription}

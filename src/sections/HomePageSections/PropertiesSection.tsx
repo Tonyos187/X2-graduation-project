@@ -6,7 +6,7 @@ import type { FeaturedPropertiesSectionType } from "../../types/Home/HomeTypes";
 
 function PropertiesSection({ data }: { data: FeaturedPropertiesSectionType }) {
   return (
-    <Container className="gap-10 md:gap-15 xl:gap-20 flex flex-col">
+    <Container className="gap-10 md:gap-15 xl:gap-20 flex flex-col ">
       <Header
         title={data.headline}
         description={data.description}
@@ -26,6 +26,10 @@ function PropertiesSection({ data }: { data: FeaturedPropertiesSectionType }) {
             fullDescription={property.description}
             price={property.price}
             lessDescription={property.description}
+            details={property.details}
+            showInfo={true}
+            btnLink={property.button.link}
+            btnText={property.button.text}
           />
         ))}
       />
