@@ -5,7 +5,7 @@ import { PropertyDetailsData } from "../../data/PropertyDetails/PropertyDetailsD
 
 export default function PropertyInfoSection() {
   return (
-    <Container className="mt-32">
+    <Container >
       <div className="flex flex-col flex-wrap justify-between md:flex-row  pt-5 xl:pt-[30px]">
 
         {/* العمود الأول - Description */}

@@ -8,7 +8,6 @@ const Hero = () => {
   const description =
     "Our story is one of continuous growth and evolution. We started as a small team with big dreams, determined to create a real estate platform that transcended the ordinary. Over the years, we've expanded our reach, forged valuable partnerships, and gained the trust of countless clients.";
   const heroImage = "/assets/images/About/Hero-img.webp";
-  // const bgImage = "/assets/images/About/bgImgHero.png";
 
   return (
     <Container className="min-h-screen pt-[108px] lg:pt-[77px] xl:pt-[99px] flex justify-between items-center max-lg:flex-col-reverse max-lg:gap-10">
@@ -21,11 +20,6 @@ const Hero = () => {
       {/* Right Side Hero*/}
       <div className="w-full lg:w-[47.3057%] relative overflow-hidden border border-Grey-15 bg-Grey-10 rounded-[12px] xl:min-h-[50.555vh] 2xl:h-[546px] 2xl:w-[755px] max-md:h-[44.3618vh] md:min-h-[68.9381vh]">
         {/* Background Image */}
-        {/* <img
-          src={bgImage}
-          alt="background"
-          className="absolute inset-0 w-full h-full object-cover z-10"
-        /> */}
         <div className="absolute inset-0 -top-[30%] -left-[35%] w-[155%] h-[155%] object-co object-center z-10 pointer-events-none">
           <WavyBackdrop />
         </div>

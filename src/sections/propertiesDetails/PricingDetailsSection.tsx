@@ -7,7 +7,7 @@ import PricingDetails from "./PricingDetails"
 
 function PricingDetailsSection({data}:{data:PricingDetailsDataType}) {
     return (
-        <Container className={"flex flex-col gap-10 md:gap-14.5 xl:gap-20"}>
+        <Container >
             <Header title={data.headline} description={data.description} 
                 withIcon />
             <PricingDetails note={data.note} listingPrice={data.listingPrice} Pricing={data.pricingDetailsCards}/>

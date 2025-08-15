@@ -4,6 +4,7 @@ import PricingDetailsSection from "../sections/propertiesDetails/PricingDetailsS
 import PropertyDetailsSlider from "../sections/propertiesDetails/PropertyDetailsSlider";
 import PropertyInfoSection from "../sections/FeatureAndDesc/PropertyInfoSection";
 import { ComprehensivePricingDetails } from "../data/PropertyDetails/ComprehensivePricingDetails";
+import FAQSection from "../sections/HomePageSections/FAQSection";
 const PropertyDetails = () => {
   return (
     <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
@@ -11,6 +12,7 @@ const PropertyDetails = () => {
       <PropertyInfoSection />
       <ContactForm title={detailsFormHeaderData.title} description={detailsFormHeaderData.description} data={detailsFormData.conactForm} areaText={detailsFormData.areaText} detailsPage />
       <PricingDetailsSection data={ComprehensivePricingDetails}/>
+      <FAQSection />
     </div>
   );
 };
