@@ -3,10 +3,10 @@ import {
   featuresSectionData,
 } from "../data/Home/HomeData";
 import ClientsSection from "../sections/HomePageSections/ClientsSection";
+import FAQSection from "../sections/HomePageSections/FAQSection";
 import Hero from "../sections/HomePageSections/Hero";
 import PropertiesSection from "../sections/HomePageSections/PropertiesSection";
 import Features from "../sections/sharedSections/Features";
-import FAQSlider from "../sections/HomePageSections/FAQSlider";
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
         <PropertiesSection data={featuredPropertiesSectionData} />
         <ClientsSection/>
       </div>
-      <FAQSlider />
+      <FAQSection />
     </>
   );
 };

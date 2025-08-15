@@ -8,7 +8,7 @@ import type { Testimonial } from "../../types/Home/HomeTypes"
 const ClientsSection = () => {
   const data = testimonialsSectionData
   return (
-    <Container className="gap-10 md:gap-15 xl:gap-20 flex flex-col">
+    <Container>
         <Header title={data.headline}
         description={data.description}
         withBtn

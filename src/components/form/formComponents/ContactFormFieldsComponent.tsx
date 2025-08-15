@@ -39,7 +39,7 @@ const ContactFormFieldsComponent: React.FC<Props> = ({ data }) => {
   };
 
   return (
-    <Container className="w-full flex flex-col gap-10 md:gap-12.5 lg:gap-15 xl:gap-20">
+    <Container className="w-full flex flex-col">
       <div className="w-full lg:w-[67.5vw]">
         <Header
           title={propertiesData.contactFormSection.sectionTitle}

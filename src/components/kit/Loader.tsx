@@ -1,4 +1,4 @@
-import React from 'react';
+;
 
 type LoaderProps = {
   size?: string;      // Tailwind size classes like 'w-12 h-12'

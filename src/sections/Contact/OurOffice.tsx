@@ -19,7 +19,7 @@ const OurOffice = () => {
         );
 
   return (
-    <Container className="">
+    <Container>
       <Header
         title={contactDiscoverLocationsData.title}
         description={contactDiscoverLocationsData.description}

@@ -6,7 +6,7 @@ import type { PropertySliderSection } from "../../types/Properties/PropertiesTyp
 
 function PropertiesSection({data}:{data:PropertySliderSection}) {
     return (
-        <Container className="gap-10 md:gap-15 xl:gap-20 flex flex-col ">
+        <Container>
             <Header
                 title={data.sectionTitle}
                 description={data.sectionDescription}

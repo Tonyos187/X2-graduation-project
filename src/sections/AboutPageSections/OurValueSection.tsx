@@ -6,7 +6,7 @@ import type { OurValueSectionType } from "../../types/About/AboutType";
 
 function OurValueSection({ data }: { data: OurValueSectionType }) {
   return (
-    <Container className="flex flex-col gap-10 lg:flex-row lg:gap-[4.68%] lg:items-center ">
+    <Container className="lg:flex-row lg:items-center ">
       
       <Header title={data.headline} description={data.description} withIcon 
       className="lg:w-[32%] xl:w-[32.39%]"/>
