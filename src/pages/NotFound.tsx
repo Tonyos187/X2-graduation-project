@@ -5,7 +5,7 @@ const NotFound = () => {
     <div className="min-h-[100vh] w-full flex items-center justify-center px-4"
       style={{
         background:
-          "radial-gradient(60% 60% at 50% 40%, rgba(10,10,10,0) 0%, rgba(10,10,10,0.55) 58%, rgba(10,10,10,0.85) 100%), linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.7) 100%)",
+          "radial-gradient(60% 60% at 50% 40%, var(--color-Grey-08) 0%, var(--color-Grey-15) 58%, var(--color-Grey-10) 100%), linear-gradient(180deg, var(--color-Grey-15) 0%, var(--color-Grey-08) 100%)",
       }}>
       <div
         className="relative w-full max-w-4xl text-center border border-Grey-15 bg-Grey-10/60 backdrop-blur-lg rounded-xl p-8 md:p-12 overflow-hidden"
@@ -29,7 +29,7 @@ const NotFound = () => {
           className="absolute inset-0 z-20 pointer-events-none"
           style={{
             background:
-              "radial-gradient(60% 60% at 50% 40%, rgba(10,10,10,0) 0%, rgba(10,10,10,0.55) 58%, rgba(10,10,10,0.85) 100%), linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.7) 100%)",
+              "radial-gradient(60% 60% at 50% 40%, var(--color-Grey-08) 0%, var(--color-Grey-10) 80%, linear-gradient(180deg, var(--color-Grey-70) 30%, var(--color-Grey-60) 100%)",
           }}
         />
 
@@ -42,7 +42,7 @@ const NotFound = () => {
             Page not found
           </h2>
           <p className="mt-3 md:mt-4 text-Grey-60 md:text-lg leading-[150%] max-w-2xl">
-            The page you are looking for doesn’t exist or has been moved.
+            The page you are looking for doesn't exist or has been moved.
           </p>
 
           {/* Accent underline with neon effect */}
