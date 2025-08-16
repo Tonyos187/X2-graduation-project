@@ -2,11 +2,10 @@ import Clients from "../../components/cards/ClientsCard"
 import Header from "../../components/sharedComponents/Header"
 import Slider from "../../components/sharedComponents/Slider"
 import Container from "../../layouts/Container"
-import { testimonialsSectionData } from "../../data/Home/HomeData"
-import type { Testimonial } from "../../types/Home/HomeTypes"
+import type { Testimonial, TestimonialsSectionType } from "../../types/Home/HomeTypes"
 
-const ClientsSection = () => {
-  const data = testimonialsSectionData
+const ClientsSection = ({data} : {data:TestimonialsSectionType}) => {
+
   return (
     <Container>
         <Header title={data.headline}

@@ -1,6 +1,8 @@
 import {
+  faqSectionData,
   featuredPropertiesSectionData,
   featuresSectionData,
+  testimonialsSectionData,
 } from "../data/Home/HomeData";
 import ClientsSection from "../sections/HomePageSections/ClientsSection";
 import FAQSection from "../sections/HomePageSections/FAQSection";
@@ -16,8 +18,8 @@ const Home = () => {
       <Features data={featuresSectionData} />
       <div className="space-y-20 md:space-y-30 xl:space-y-37.5 mt-50 md:mt-30 xl:mt-37.5">
         <PropertiesSection data={featuredPropertiesSectionData} />
-        <ClientsSection/>
-        <FAQSection />
+        <ClientsSection data={testimonialsSectionData}/>
+        <FAQSection data={faqSectionData}/>
       </div>
       
     </div>
