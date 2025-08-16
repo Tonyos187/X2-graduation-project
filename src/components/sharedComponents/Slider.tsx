@@ -125,8 +125,8 @@ export default function Slider({
         )}
 
         {/* Pagination + Buttons at sm screen */}
-        <div className="flex items-center justify-between ">
-          <div className="flex items-center gap-2.5">
+        <div className={`flex items-center justify-between ${withBtn ? "" : "w-full"}`}>
+          <div className="flex items-center justify-between w-full gap-2.5">
             <button
               className={`flex items-center justify-center p-2 w-8 h-8 xs:p-2.5 xs:w-11 xs:h-11 border border-Grey-15 rounded-full transition ${
                 isAtStart
