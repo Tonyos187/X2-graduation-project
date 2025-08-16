@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { FaqItem } from "../../types/Home/HomeTypes";
 
 type Props = {
@@ -9,41 +10,28 @@ type Props = {
 function FAQCard({ faq, showButton = true, withShadow = false }: Props) {
   return (
     <div
-      className={`bg-Grey-08 border border-Grey-15 rounded-[10px] lg:rounded-xl flex flex-col justify-between
-        ${withShadow ? "shadow-[0_0_0_8px_#191919] h-auto" : "min-h-[346px]"}
-        p-[30px] md:p-10 lg:p-[50px] w-full md:w-[48%] lg:w-[32%]`}
+      className={`bg-Grey-08 border border-Grey-15 rounded-[10px] xl:rounded-xl flex flex-col justify-between gap-5 md:gap-6 xl:gap-7.5 
+        ${withShadow ? " w-full lg:w-[31.663%] shadow-[0_0_0_4px_var(--color-Grey-10)] md:shadow-[0_0_0_6px_var(--color-Grey-10)] xl:shadow-[0_0_0_8px_var(--color-Grey-10)]" : ""}
+        p-7.5 md:p-10 xl:p-12.5`}
     >
       <h3
         className={`text-White font-semibold ${
-          withShadow ? "lg:text-[30px] md:text-2xl text-[18px]" : "text-lg md:text-xl lg:text-2xl"
+          withShadow ? "text-xl md:text-2xl xl:text-3xl" : "text-lg md:text-xl xl:text-2xl"
         }`}
       >
         {faq?.question}
       </h3>
-      <p className="text-Grey-60 text-sm lg:text-[18px] my-6 md:my-[30px]">{faq?.answer}</p>
-
+      <p className="text-Grey-60 text-sm md:text-base xl:text-lg font-medium">{faq?.answer}</p>
       {showButton && (
-        <a
-          href={faq?.readMoreLink}
-          className="flex items-center justify-center
-            w-full
-            md:w-[134px] h-[60px] gap-[10px]
-            rounded-[10px] border border-Grey-15
-            px-[24px] py-[18px]
-            bg-Grey-10 text-White text-sm
-            opacity-100"
-        >
+        <Link to={faq?.readMoreLink} className="py-3.5 px-5 xl:py-4.5 xl:px-6 text-center md:w-fit rounded-[10px] border border-Grey-15 bg-Grey-10 text-White text-sm xl:text-lg font-medium">
           Read More
-        </a>
+        </Link>
       )}
     </div>
   );
 }
 
 export default FAQCard;
-
-
-
 
 
 

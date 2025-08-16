@@ -15,7 +15,7 @@ function Additional({title,price,desc,className}:prop) {
                 <span className="urbanist font-semibold text-lg md:text-xl xl:text-2xl text-White">{price}</span>
                 {hasDesc && (
                     <p className="py-1 px-3 md:py-1.5 xl:py-2 xl:px-3.5 border border-Grey-15 rounded-md md:rounded-[28px] bg-Grey-10
-                text-Grey-60 text-sm xl:text-lg font-medium urbanist ">{desc}
+                text-Grey-60 text-sm xl:text-lg font-medium urbanist w-fit">{desc}
                 </p>
                 )}
             </div>

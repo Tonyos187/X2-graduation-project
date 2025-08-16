@@ -50,7 +50,7 @@ const ValuesCard = ({
             : "flex-row gap-2.5 lg:gap-4 xl:gap-5"
         }`}
       >
-        {withIcon && iconURL && <SpinigCircleIcon iconURL={iconURL} nomargin />}
+        {withIcon && iconURL && <SpinigCircleIcon iconURL={iconURL} isValuesCard />}
         <h3
           className={`flex-1 mr-auto ${
             withButton && !smartSection

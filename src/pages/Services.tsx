@@ -3,15 +3,15 @@ import HeaderHero from "../sections/sharedSections/HeaderHero";
 import {
   effortlessProperty,
   effortlessPropertyHeader,
-  featuresCards,
   servicesHeroData,
   smartInvestments,
   smartInvestmentsHeader,
   unlockPropertyCards,
   unlockPropertyHeader,
 } from "../data/Services/ServicesData";
-import Values from "../sections/Services/Values";
 import Features from "../sections/sharedSections/Features";
+import ServiceSection from "../sections/Services/ServiceSection";
+import { featuresSectionData } from "../data/Home/HomeData";
 
 const Services = () => {
   return (
@@ -22,24 +22,24 @@ const Services = () => {
           description={servicesHeroData.description}
         />
 
-        <Features data={featuresCards} />
+        <Features data={featuresSectionData} />
       </div>
 
-      <Values
+      <ServiceSection
         title={unlockPropertyHeader.title}
         description={unlockPropertyHeader.description}
         data={unlockPropertyCards.cards}
         data1={unlockPropertyCards.promotionalCard}
       />
 
-      <Values
+      <ServiceSection
         title={effortlessPropertyHeader.title}
         description={effortlessPropertyHeader.description}
         data={effortlessProperty.cards}
         data1={effortlessProperty.promotionalCard}
       />
 
-      <Values
+      <ServiceSection
         title={smartInvestmentsHeader.title}
         description={smartInvestmentsHeader.description}
         data={smartInvestments.cards}
