@@ -20,7 +20,7 @@ export const propertiesData: PropertiesData = {
         cards: [
             {
                 id: 1,
-                image: "/assets/Properties/imageSlideCard1.webp",
+                image: "/assets/images/Properties/imageSlideCard1.webp",
                 smallTitle: "Coastal Escapes - Where Waves Beckon",
                 mainTitle: "Seaside Serenity Villa",
                 description: "Wake up to the soothing melody of waves. This beachfront villa offers...",
@@ -33,7 +33,7 @@ export const propertiesData: PropertiesData = {
             },
             {
                 id: 2,
-                image: "/assets/Properties/imageSlideCard2.webp",
+                image: "/assets/images/Properties/imageSlideCard2.webp",
                 smallTitle: "Urban Oasis - Life in the Heart of the City",
                 mainTitle: "Metropolitan Haven",
                 description: "Immerse yourself in the energy of the city. This modern apartment in the heart...",
@@ -46,7 +46,7 @@ export const propertiesData: PropertiesData = {
             },
             {
                 id: 3,
-                image: "/assets/Properties/imageSlideCard3.webp",
+                image: "/assets/images/Properties/imageSlideCard3.webp",
                 smallTitle: "Countryside Charm - Escape to Nature's Embrace",
                 mainTitle: "Rustic Retreat Cottage",
                 description: "Find tranquility in the countryside. This charming cottage is nestled amidst rolling hills...",
@@ -228,8 +228,4 @@ export const propertiesData: PropertiesData = {
             variant: "primary"
         }
     }
-
-
-
-
 }

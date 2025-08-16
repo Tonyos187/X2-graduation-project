@@ -18,7 +18,7 @@ function PricingDetailsCard({PricingItem,title}:PricingDetailsCardPopps) {
                 <h3 className="text-lg md:text-xl xl:text-2xl font-semibold urbanist">{title}</h3>
                 <Button content={"Learn More"} className={"border border-Grey-15"}/>
             </div>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap ">
                 {PricingItem.map((data, index) => {
                 // number of cards in each row (1 or 2)
                 const cardPerRow = PricingItem.length > 2 ? 2 : 1;
@@ -35,7 +35,7 @@ function PricingDetailsCard({PricingItem,title}:PricingDetailsCardPopps) {
                             ${!isLastRow ? "border-b border-Grey-15 py-5 md:py-7.5 xl:py-10" : "pt-5 md:pt-7.5 xl:pt-10"}
                         `}
                     >
-                        <Additional title={data.label} price={data.value} desc={data.description} className={`${PricingItem.length > 2 && index % 2 === 1 ? "lg:border-l border-Grey-15 lg:pl-5" : ""}`}
+                        <Additional title={data.label} price={data.value} desc={data.description} className={`${PricingItem.length > 2 && index % 2 === 1 ? "lg:border-l border-Grey-15 lg:pl-5 " : ""}`}
                         />
                     </div>
                 );
