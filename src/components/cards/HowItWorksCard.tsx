@@ -1,5 +1,5 @@
 export type HowItWorksCardProps = {
-  step: string;
+  step: number;
   title: string;
   description: string;
 };
@@ -7,27 +7,25 @@ export type HowItWorksCardProps = {
 const HowItWorksCard = ({ step, title, description }: HowItWorksCardProps) => {
   return (
     <div className="w-full h-full flex flex-col">
-      <div className="px-4 py-3.5 xl:px-5 xl:py-4 border-l border-Purple-60 bg-Grey-08">
-        <p className="text-White text-[16px] xl:text-[20px] font-medium">
-          Step {step}
-        </p>
-      </div>
-
+     
+      <h4 className="text-White text-base xl:text- leading-[150%] font-medium px-4 py-3.5 xl:px-5 xl:py-4  border-l border-Purple-60">
+          Step {String(step).padStart(2, "0")}
+      </h4>
+     
       <div
-        className="flex flex-col items-stretch h-full bg-[linear-gradient(120.79deg,#703BF7_-49.01%,rgba(112,59,247,0)_13.65%))]   p-[30px] lg:p-[40px] xl:p-[50px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] xl:rounded-tr-[12px] xl:rounded-bl-[12px] xl:rounded-br-[12px] rounded-tl-0"
-        style={{
-          border: "1px solid",
-          borderImageSource:
-            "linear-gradient(0deg, #262626, #262626), linear-gradient(117.89deg, #703BF7 0%, rgba(112, 59, 247, 0) 24%)",
-          borderImageSlice: 1,
-        }}
+        className="h-full bg-[linear-gradient(136deg,#703BF7_0%,rgba(112,59,247,0)_28%))] bg-Grey-15
+                   p-px rounded-tl-0 rounded-tr-[10px] xl:rounded-tr-xl rounded-b-[10px] xl:rounded-b-xl"
       >
-        <h4 className="text-White text-[18px] lg:text-[20px] xl:text-[26px] font-semibold mb-3.5 lg:mb-4 xl:mb-5">
+        <div className="flex flex-col h-full bg-Grey-08 bg-[linear-gradient(136deg,#703BF7_-49.01%,rgba(112,59,247,0)_14%))]  
+                        p-[8.4%] xs:p-[7%] md:p-[9%] rounded-tl-0 rounded-tr-[10px] xl:rounded-tr-xl rounded-b-[10px] xl:rounded-b-xl 
+                        gap-3.5 md:gap-4 xl:gap-5 relative group">
+          <h3 className="text-White text-lg lg:text-xl xl:text-[26px] font-semibold leading-[150%]">
           {title}
-        </h4>
-        <p className="text-Grey-60 leading-[150%] font-medium  text-[14px] lg:text-[16px] xl:text-[18px] max-w-[297px] lg:max-w-[333px] xl:max-w-[500px] ">
+        </h3>
+        <p className="text-Grey-60 leading-[150%] font-medium  text-sm md:text-base xl:text-lg ">
           {description}
         </p>
+        </div>
       </div>
     </div>
   );
