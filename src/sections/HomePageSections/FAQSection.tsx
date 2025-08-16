@@ -20,7 +20,7 @@ const FAQSection = ({data}:{data:FaqSectionType}) => {
               btnContent={data.button.text}
               link={data.button.link}
               cards={data.faqs.map((faq) => (
-                  <FAQCard faq={faq} showButton={true} withShadow={false}/>
+                  <FAQCard faq={faq} showButton={true} withShadow={false} />
               ))}
             />
         </Container>

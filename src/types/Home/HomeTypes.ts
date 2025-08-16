@@ -97,6 +97,7 @@ export interface FaqItem {
   id: string;
   question: string;
   answer: string;
+  btnText:string;
   readMoreLink: string;
 }
 export interface FaqSectionType {

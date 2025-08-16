@@ -4,8 +4,7 @@ import Slider from "../../components/sharedComponents/Slider"
 import Container from "../../layouts/Container"
 import type { Testimonial, TestimonialsSectionType } from "../../types/Home/HomeTypes"
 
-const ClientsSection = ({data} : {data:TestimonialsSectionType}) => {
-
+const TestimonialsSection = ({data} : {data:TestimonialsSectionType}) => {
   return (
     <Container>
         <Header title={data.headline}
@@ -26,4 +25,4 @@ const ClientsSection = ({data} : {data:TestimonialsSectionType}) => {
   )
 }
 
-export default ClientsSection
+export default TestimonialsSection
