@@ -1,33 +1,34 @@
 export type HowItWorksCardProps = {
-  step: string;
+  step: number;
   title: string;
   description: string;
 };
 
 const HowItWorksCard = ({ step, title, description }: HowItWorksCardProps) => {
   return (
-    <div className="w-full h-full flex flex-col">
-      <div className="px-4 py-3.5 xl:px-5 xl:py-4 border-l border-Purple-60 bg-Grey-08">
-        <p className="text-White text-[16px] xl:text-[20px] font-medium">
-          Step {step}
-        </p>
-      </div>
+    <div className="w-full h-full flex flex-col relative group">
+      <h4 className=" text-base xl:text-[20px] text-White leading-[150%] font-medium px-4 py-3.5 xl:px-5 xl:py-4 border-l border-Purple-60">
+        Step {String(step).padStart(2, "0")}
+      </h4>
 
-      <div
-        className="flex flex-col items-stretch h-full bg-[linear-gradient(120.79deg,#703BF7_-49.01%,rgba(112,59,247,0)_13.65%))]   p-[30px] lg:p-[40px] xl:p-[50px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[10px] xl:rounded-tr-[12px] xl:rounded-bl-[12px] xl:rounded-br-[12px] rounded-tl-0"
-        style={{
-          border: "1px solid",
-          borderImageSource:
-            "linear-gradient(0deg, #262626, #262626), linear-gradient(117.89deg, #703BF7 0%, rgba(112, 59, 247, 0) 24%)",
-          borderImageSlice: 1,
-        }}
-      >
-        <h4 className="text-White text-[18px] lg:text-[20px] xl:text-[26px] font-semibold mb-3.5 lg:mb-4 xl:mb-5">
-          {title}
-        </h4>
-        <p className="text-Grey-60 leading-[150%] font-medium  text-[14px] lg:text-[16px] xl:text-[18px] max-w-[297px] lg:max-w-[333px] xl:max-w-[500px] ">
-          {description}
-        </p>
+      <div className="h-full bg-[linear-gradient(136deg,#703BF7_0%,rgba(112,59,247,0)_28%)] bg-Grey-15 p-px 
+                   rounded-tl-0 rounded-tr-[10px] xl:rounded-tr-xl rounded-b-[10px] xl:rounded-b-xl overflow-hidden">
+        <div className=" h-full relative flex flex-col bg-Grey-08 bg-[linear-gradient(136deg,#703BF7_-49.01%,rgba(112,59,247,0)_14%))]
+                      p-[8.4%] xs:p-[7%] md:p-[9%]
+                      rounded-tl-0 rounded-tr-[10px] xl:rounded-tr-xl rounded-b-[10px] xl:rounded-b-xl 
+                      gap-3.5 md:gap-4 xl:gap-5">
+          <h3 className="text-lg lg:text-xl xl:text-[26px] text-White font-semibold leading-[150%]">
+            {title}
+          </h3>
+          <p className="text-sm md:text-base xl:text-lg text-Grey-60 leading-[150%] font-medium">
+            {description}
+          </p>
+          <span
+            className="absolute top-0 h-full w-[25%] -left-[50%] 
+                       bg-[linear-gradient(90deg,rgba(255,255,255,0),#703bf780,rgba(255,255,255,0))]
+                       opacity-0 group-hover:opacity-50 skew-x-[-45deg] shine-effect"
+          />
+        </div>
       </div>
     </div>
   );
