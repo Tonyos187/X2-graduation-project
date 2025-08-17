@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import type { FaqItem } from "../../types/Home/HomeTypes";
+import Button from "../sharedComponents/Button";
 
 type Props = {
   faq: FaqItem;
@@ -23,9 +23,7 @@ function FAQCard({ faq, showButton = true, withShadow = false }: Props) {
       </h3>
       <p className="text-Grey-60 text-sm md:text-base xl:text-lg font-medium">{faq?.answer}</p>
       {showButton && (
-        <Link to={faq?.readMoreLink} className="py-3.5 px-5 xl:py-4.5 xl:px-6 text-center md:w-fit rounded-[10px] border border-Grey-15 bg-Grey-10 text-White text-sm xl:text-lg font-medium">
-          Read More
-        </Link>
+        <Button link={faq?.readMoreLink} content={faq.btnText} className=" md:w-fit bg-Grey-10" withBorder/>
       )}
     </div>
   );

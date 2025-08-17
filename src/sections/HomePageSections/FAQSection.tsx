@@ -1,26 +1,26 @@
 import Header from '../../components/sharedComponents/Header'
 import Container from '../../layouts/Container'
-import { faqSectionData } from '../../data/Home/HomeData'
 import Slider from '../../components/sharedComponents/Slider'
 import FAQCard from '../../components/cards/FAQCard'
+import type { FaqSectionType } from '../../types/Home/HomeTypes'
 
-const FAQSection = () => {
+const FAQSection = ({data}:{data:FaqSectionType}) => {
   return (
       <Container >
           <Header
-            title={faqSectionData.headline}
-            description={faqSectionData.description}
+            title={data.headline}
+            description={data.description}
             withIcon
             withBtn={true}
-            btnContent={faqSectionData.button.text}
-            link={faqSectionData.button.link}
+            btnContent={data.button.text}
+            link={data.button.link}
           />
             <Slider
               withBtn
-              btnContent={faqSectionData.button.text}
-              link={faqSectionData.button.link}
-              cards={faqSectionData.faqs.map((faq) => (
-                  <FAQCard faq={faq} showButton={true} withShadow={false}/>
+              btnContent={data.button.text}
+              link={data.button.link}
+              cards={data.faqs.map((faq) => (
+                  <FAQCard faq={faq} showButton={true} withShadow={false} />
               ))}
             />
         </Container>
