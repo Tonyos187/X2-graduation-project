@@ -37,7 +37,7 @@ export interface FormField {
     icon?: string | ReactElement | ComponentType<{ className?: string }>;
     required?: boolean;
     options?: string[];
-    name: string;
+    name: string; 
 }
 export interface FieldSection {
     img?: string;

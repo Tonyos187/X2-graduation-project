@@ -5,7 +5,112 @@ import Cube from "../../svg/Cube";
 import Email from "../../svg/Email";
 import Location from "../../svg/Location";
 import Phone from "../../svg/Phone";
+import type { ContactHeroDataType, ContactLetsConnectFormDataType } from "../../types/Contact/ContactType";
 import type { PropertiesData } from "../../types/Properties/PropertiesTypes";
+
+export const contactFormSectionHeader: ContactHeroDataType = {
+    title: "Let's Make it Happen",
+        description: "Ready to take the first step toward your dream property? Fill out the form below, and our real estate wizards will work their magic to find your perfect match. Don't wait; let's embark on this exciting journey together.",
+}
+
+export const contactFormSection: ContactLetsConnectFormDataType= {
+        conactForm: [
+            {
+                id: "first-name",
+                label: "First Name",
+                placeholder: "Enter First Name",
+                type: "text",
+                name: "firstName",
+                required: true
+            },
+            {
+                id: "last-name",
+                label: "Last Name",
+                placeholder: "Enter Last Name",
+                type: "text",
+                name: "lastName",
+                required: true
+            },
+            {
+                id: "email",
+                label: "Email",
+                placeholder: "Enter Your Email",
+                type: "email",
+                name: "email",
+                required: true
+            },
+            {
+                id: "phone",
+                label: "Phone",
+                placeholder: "Enter Phone Number",
+                type: "tel",
+                name: "phone"
+            },
+            {
+                id: "location",
+                label: "Preferred Location",
+                placeholder: "Select Location",
+                type: "text",
+                name: "location",
+                options: ["Riyadh", "Jeddah", "Dammam", "Khobar", "Dubai"]
+            },
+            {
+                id: "property-type",
+                label: "Property Type",
+                placeholder: "Select Property Type",
+                type: "text",
+                name: "propertyType",
+                options: ["Villa", "Apartment", "Office", "Land"]
+            },
+            {
+                id: "bedrooms",
+                label: "No. of Bedrooms",
+                placeholder: "Select no. of Bedrooms",
+                type: "text",
+                name: "bedrooms",
+                options: ["1", "2", "3", "4", "5+"]
+            },
+            {
+                id: "bathrooms",
+                label: "No. of Bathrooms",
+                placeholder: "Select no. of Bathrooms",
+                type: "text",
+                name: "bathrooms",
+                options: ["1", "2", "3", "4", "5+"]
+            },
+            {
+                id: "budget",
+                label: "Budget",
+                placeholder: "Select Budget",
+                type: "text",
+                name: "budget",
+                options: ["$100,000 - $300,000", "$300,000 - $500,000", "$500,000 - $1,000,000", "$1,000,000+"]
+            },
+            {
+                id: "contact-method-phone",
+                label: "Preferred Contact Method",
+                placeholder: "Enter Your Number",
+                type: "checkbox",
+                name: "contactByPhone",
+                icon: <Phone />
+            },
+            {
+                id: "contact-method-email",
+                placeholder: "Enter Your Email",
+                type: "checkbox",
+                name: "contactByEmail",
+                icon: <Email />
+            },
+            
+        ],
+        areaText: {
+                id: "message",
+                label: "Message",
+                placeholder: "Enter your Message here..",
+                type: "textarea",
+                name: "message"
+            }
+    };
 
 export const propertiesData: PropertiesData = {
     heroSection: {
