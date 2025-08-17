@@ -113,7 +113,7 @@ export const detailsFormData: ContactLetsConnectFormDataType = {
       label: "Selected Property",
       type: "text",
       placeholder: "Empty",
-      location: <Location />,
+      icon: <Location />,
     },
   ],
   areaText: {

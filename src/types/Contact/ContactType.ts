@@ -24,12 +24,13 @@ export interface ConactFormType {
   placeholder: string;
   icon?: ReactNode;
   options?: string[];
-  location?: ReactNode;
+  // location?: ReactNode;
   required?: boolean;
 }
 
 export interface ContactLetsConnectFormDataType {
   conactForm: ConactFormType[];
+  boxCheck?: ConactFormType[];
   areaText: ConactFormType;
 }
 
