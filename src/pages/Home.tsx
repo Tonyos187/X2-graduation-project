@@ -7,11 +7,6 @@ import FAQSection from "../sections/HomePageSections/FAQSection";
 import Hero from "../sections/HomePageSections/Hero";
 import PropertiesSection from "../sections/HomePageSections/PropertiesSection";
 import Features from "../sections/sharedSections/Features";
-<<<<<<< HEAD
-import FAQSlider from "../sections/HomePageSections/FAQSliderSection";
-=======
-
->>>>>>> 9f874c082006527875b992fc8d1381f02af1163e
 
 const Home = () => {
   return (
