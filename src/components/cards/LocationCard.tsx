@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import { Link } from "react-router-dom"
 import InfoComponent from "../sharedComponents/InfoComponent";
+import Button from "../sharedComponents/Button";
 // Contact Detail Data type
 interface ContactDetails {
         icon: ReactNode;
@@ -11,11 +11,13 @@ interface LocationCardData {
     title:string,
     address:string,
     description:string,
+    btnText:string,
+    btnLink:string,
     contactDetails:ContactDetails[],
 }
-function LocationCard({title,address,description,contactDetails}:LocationCardData) {
+function LocationCard({title,address,description,contactDetails,btnLink,btnText}:LocationCardData) {
     return (
-        <div className="md:w-[49.0607%] w-full bg-Grey-08 border border-Grey-15 p-6 lg:p-10 xl:p-12.5 rounded-xl flex flex-col xl:gap-10 md:gap-7.5 gap-6">
+        <div className="lg:w-[49.0607%] w-full bg-Grey-08 border border-Grey-15 p-6 lg:p-10 xl:p-12.5 rounded-xl flex justify-between flex-col xl:gap-10 md:gap-7.5 gap-6">
             <div>
                 <span className="urbanist text-sm xl:text-lg font-medium text-White">{title}</span>
                 <h3 className="xl:text-3xl md:text-2xl text-xl font-semibold mt-1 mb-2 md:mt-1.5 md:mb-2.5 xl:mt-2.5 xl:mb-3.5 text-White">{address}</h3>
@@ -28,7 +30,7 @@ function LocationCard({title,address,description,contactDetails}:LocationCardDat
                     )
                 })}
             </div>
-            <Link to={""} className="w-full xl:py-4.5 xl:px-6 py-3.5 px-5 bg-Purple-60 rounded-[8px] xl:rounded-[10px] urbanist text-sm xl:text-lg font-medium text-center">Get Direction</Link>
+            <Button link={btnLink} content={btnText} className="bg-Purple-60"/>
         </div>
     )
 }

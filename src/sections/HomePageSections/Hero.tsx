@@ -1,7 +1,6 @@
 import Statistics from "../../components/sharedComponents/statistics/Statistics";
 import Button from "../../components/sharedComponents/Button";
 import HeroArrowIcon from "../../components/sharedComponents/HeroArrowIcon";
-import Container from "../../layouts/Container";
 import WavyBackdrop from "../../svg/WavyBackdrop";
 import { HERO_PATH } from "../../svg/Paths";
 
@@ -12,7 +11,7 @@ const Hero = () => {
   const heroImage = "/assets/images/Home/heroBuilding.webp";
 
   return (
-    <Container className="min-h-screen max-lg:gap-14 pt-[108px] lg:pt-[77px] xl:pt-[99px] flex justify-between items-center max-lg:flex-col-reverse lg:pr-0 xl:pr-0">
+    <section className="px-[4.1025%] md:px-[5.5555%] xl:px-[8.4375%] min-h-screen max-lg:gap-14 pt-[108px] lg:pt-[77px] xl:pt-[99px] flex justify-between items-center max-lg:flex-col-reverse lg:pr-0 xl:pr-0">
       {/* Left Content */}
       <div className="h-full w-full max-lg:mb-10 lg:w-[43.1171%] flex flex-col gap-10 lg:gap-12.5 xl:gap-15">
         <div className="flex flex-col gap-4 lg:gap-6">
@@ -64,7 +63,7 @@ const Hero = () => {
           <HeroArrowIcon />
         </div>
       </div>
-    </Container>
+    </section>
   );
 };
 

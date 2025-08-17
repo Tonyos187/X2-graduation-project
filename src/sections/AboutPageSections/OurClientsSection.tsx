@@ -6,13 +6,14 @@ import type { OurValuedClientsSectionType } from "../../types/About/AboutType"
 
 function OurClients({data}:{data:OurValuedClientsSectionType}) {
     return (
-        <Container className="gap-10 md:gap-15 xl:gap-20 flex flex-col ">
+        <Container>
             <Header
                 title={data.headline}
                 description={data.description}
                 withIcon
             />
             <Slider
+                withBtn={false}
                 num_Of_Cards_in_xl_screen={2}
                 cards={data.properties.map((client) => (
                     <ValuedClientsCard

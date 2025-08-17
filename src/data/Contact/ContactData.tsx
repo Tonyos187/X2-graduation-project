@@ -131,9 +131,9 @@ export const contactDiscoverLocationsFilterData: ContactDiscoverLocationsFilterD
         description:
           "Our main headquarters serve as the heart of Estatein. Located in the bustling city center, this is where our core team of experts operates, driving the excellence and innovation that define us.",
         contactDetailes: [
-          { icon: <Email />, title: ["info@estatein.com"] },
-          { icon: <Phone />, title: ["+1 (123) 456-7890"] },
-          { icon: <Location />, title: ["Metropolis"] },
+          { icon:<Email/> , title: ["info@estatein.com"] },
+          { icon:<Phone/> , title: ["+1 (123) 456-7890"] },
+          { icon:<Location />, title: ["Metropolis"] },
         ],
         button: {
           text: "Get Directions",
