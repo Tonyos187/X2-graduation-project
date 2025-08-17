@@ -22,7 +22,7 @@ function Container({
 }) {
   return (
     <section
-      className={`px-[4.1025%] md:px-[5.5555%] xl:px-[8.4375%] flex flex-col gap-10 md:gap-15 xl:gap-20 ${className}`}
+      className={`px-[4.1025%] md:px-[5.5555%] xl:px-[8.4375%] flex flex-col justify-between gap-10 md:gap-15 xl:gap-20 ${className}`}
     >
       {children}
     </section>

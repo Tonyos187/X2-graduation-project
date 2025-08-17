@@ -3,7 +3,7 @@ import Location from "../svg/Location"
 
 function PropertyDetailsHeder() {
     return (
-        <div className="flex  flex-col md:flex-row md:items-center gap-5 gap-y-2">
+        <div className="flex  flex-col md:flex-row md:items-center gap-5 gap-y-2 ">
             <div className=" min-w-max">
                 <h3 className="text-xl md:text-2xl xl:text-3xl font-semibold font-urbanist text-mainText">Seaside Serenity Villa</h3>
             </div>

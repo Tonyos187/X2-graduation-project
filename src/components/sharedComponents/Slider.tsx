@@ -66,7 +66,9 @@ export default function Slider({
 
   return (
     <>
-      <div className={`flex items-stretch justify-center md:justify-between ${gap_cards} min-h-[240px]`}>
+      <div
+        className={`flex items-stretch justify-center md:justify-between ${gap_cards} min-h-[240px]`}
+      >
         {visibleCards.map((card, index) => (
           <div
             key={index}
@@ -85,7 +87,9 @@ export default function Slider({
           <span className="text-White ">
             {String(currentPage).padStart(2, "0")}
           </span>{" "}
-          <span className="text-Grey-60">of {String(totalPages).padStart(2, "0")}</span>
+          <span className="text-Grey-60">
+            of {String(totalPages).padStart(2, "0")}
+          </span>
         </div>
 
         <div className="flex md:gap-2.5">
@@ -113,6 +117,8 @@ export default function Slider({
           </button>
         </div>
       </div>
+
+      {/* Pagination + Buttons at sm screen */}
       <div className="flex items-center justify-between border-t border-t-Grey-15 pt-4 md:hidden">
         {withBtn && (
           <Button
@@ -123,8 +129,12 @@ export default function Slider({
           />
         )}
 
-        <div className="flex items-center justify-between ">
-          <div className="flex items-center gap-2.5">
+        <div
+          className={`flex items-center justify-between ${
+            withBtn ? "" : "w-full"
+          }`}
+        >
+          <div className="flex items-center justify-between w-full gap-2.5">
             <button
               className={`flex items-center justify-center p-2 w-8 h-8 xs:p-2.5 xs:w-11 xs:h-11 border border-Grey-15 rounded-full transition ${
                 isAtStart
@@ -140,7 +150,9 @@ export default function Slider({
               <span className="text-White ">
                 {String(currentPage).padStart(2, "0")}
               </span>{" "}
-              <span className="text-Grey-60">of {String(totalPages).padStart(2, "0")}</span>
+              <span className="text-Grey-60">
+                of {String(totalPages).padStart(2, "0")}
+              </span>
             </div>
 
             <button

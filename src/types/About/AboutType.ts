@@ -32,8 +32,7 @@ export interface OurAchievementsSectionType {
 // Navigating the Estatein Experience card type
 
 export interface NavigatingEstateinExperienceCard {
-  id: string;
-  stepId: string;
+  id: number;
   title: string;
   description: string;
 }
