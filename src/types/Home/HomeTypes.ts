@@ -81,7 +81,6 @@ export interface Testimonial {
   author: TestimonialAuthor;
 }
 
-// البيانات الكاملة لقسم التقييمات
 export interface TestimonialsSectionType {
   headline: string;
   description: string;
@@ -92,7 +91,6 @@ export interface TestimonialsSectionType {
   testimonials: Testimonial[];
 }
 
-// عنصر فردي في قائمة الأسئلة
 export interface FaqItem {
   id: string;
   question: string;
