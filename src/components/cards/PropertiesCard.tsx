@@ -24,9 +24,9 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
     // State to check if the card is flipped or not
     const [flipped, setFlipped] = useState<boolean>(false);
     return (
-            <div className=" w-full h-full  bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl " style={{perspective:"800px"}}>
-                    <div className="grid w-full transition-transform duration-700 ease-in-out h-full "
-                            style={{
+            <div className=" w-full h-full  bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl grid  transition-transform duration-700 ease-in-out"
+                        style={{
+                            perspective:"800px",
                             transformStyle: "preserve-3d",
                             transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
                             gridTemplateAreas: "front",
@@ -86,7 +86,6 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                             <button className="w-full text-white text-sm md:text-base xl:text-[18px] cursor-pointer py-3 px-5 rounded-lg xl:rounded-[10px] bg-Purple-60" onClick={() => setFlipped(false)}>close</button>
                             
                         </div>
-                    </div>
             </div>
     )
 }
