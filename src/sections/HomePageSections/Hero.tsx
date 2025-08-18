@@ -25,7 +25,7 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className="flex flex-col lg:flex-row gap-4">
-          <Button content="Learn More" withBorder />
+          <Button content="Learn More" withBorder className="text-White"/>
           <Button content="Browse Properties" className="bg-Purple-60 text-white" />
         </div>
 

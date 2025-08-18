@@ -1,23 +1,19 @@
 import FeaturesSection from "./FeaturesSection";
 import DescriptionSection from "./DescriptionSection";
-import { PropertyDetailsData } from "../../data/PropertyDetails/PropertyDetailsData";
+import type { PropertyDetailsType } from "../../types/PropertyDetails/PropertyDetailsTypes";
 
-export default function PropertyInfoSection() {
+export default function PropertyInfoSection({data}:{data:PropertyDetailsType}) {
   return (
-      <div className="flex flex-col flex-wrap justify-between md:flex-row pt-5 xl:pt-[30px]">
-        <div className="order-1 xl:order-none w-full lg:w-[49.06%]">
+      <div className="flex flex-col lg:flex-row justify-between gap-y-5">
           <DescriptionSection
             title="Description"
-            description={PropertyDetailsData.description?.description || ""}
-            details={PropertyDetailsData.description?.details || []}
+            description={data.description?.description || ""}
+            details={data.description?.details || []}
           />
-        </div>
-        <div className="order-2 xl:order-none w-full lg:w-[49.06%]">
           <FeaturesSection
             title="Key Features and Amenities"
-            features={PropertyDetailsData.description?.features || []}
+            features={data.description?.features || []}
           />
-        </div>
       </div>
     
   );
