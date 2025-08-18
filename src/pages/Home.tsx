@@ -13,14 +13,15 @@ import TestimonialsSection from "../sections/HomePageSections/TestimonialsSectio
 const Home = () => {
   return (
     <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
-      <Hero />
-      <Features data={featuresSectionData} />
-      <div className="space-y-20 md:space-y-30 xl:space-y-37.5 mt-50 md:mt-30 xl:mt-37.5">
-        <PropertiesSection data={featuredPropertiesSectionData} />
-        <TestimonialsSection data={testimonialsSectionData}/>
-        <FAQSection data={faqSectionData}/>
+      <div>
+        <Hero />
+        <Features data={featuresSectionData} />
       </div>
-      
+      <div className="space-y-20 md:space-y-30 xl:space-y-37.5 ">
+        <PropertiesSection data={featuredPropertiesSectionData} />
+        <TestimonialsSection data={testimonialsSectionData} />
+        <FAQSection data={faqSectionData} />
+      </div>
     </div>
   );
 };

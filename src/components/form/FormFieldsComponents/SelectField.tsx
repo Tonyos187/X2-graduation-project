@@ -1,91 +1,71 @@
-import React, { Fragment, useState } from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import type { FormField } from "../../../types/Properties/PropertiesTypes";
+import React, { useEffect, useRef, useState } from "react";
 import DownArrow from "../../../svg/DownArrow";
+import type { ConactFormType } from "../../../types/Contact/ContactType";
+import FormLabel from "./FormLabel";
 
-const SelectField: React.FC<{ field: FormField }> = ({ field }) => {
-  const [selected, setSelected] = useState<string | null>("");
+const SelectField: React.FC<{ field: ConactFormType }> = ({ field }) => {
+  const [selected, setSelected] = useState<string>("");
+  const [showList, setShowList] = useState<boolean>(false);
+  const selectRef = useRef<HTMLDivElement>(null);
 
-  const Icon = typeof field.icon === "function" ? field.icon : undefined;
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        selectRef.current &&
+        !selectRef.current.contains(event.target as Node)
+      ) {
+        setShowList(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col gap-2.5 md:gap-3.5 xl:gap-4 w-full relative">
-      {field.label && (
-        <label htmlFor={field.id} className="text-White font-semibold text-base/[150%] xl:text-xl/[150%]">
-          {field.label}
-        </label>
-      )}
+      <FormLabel label={field.label} id={field.id} />
 
+      <div ref={selectRef} className="relative">
+        <input
+          type={field.type}
+          id={field.id}
+          disabled
+          name={field.name}
+          value={selected}
+          placeholder={field.placeholder}
+          className={`w-full bg-Grey-10 text-White placeholder:text-Grey-40 border border-Grey-15 rounded-md xl:rounded-lg pl-5 pr-9 xl:pr-12 py-4 xl:py-6 text-sm/[20px] xl:text-lg/[20px] outline-none transition-all duration-200 ${
+            showList && "border-Purple-60"
+          }`}
+          required={field.required}
+        />
 
-      <Listbox value={selected} onChange={setSelected}>
-        <div className="relative">
-          <Listbox.Button
-            className={`relative w-full cursor-pointer rounded-md xl:rounded-lg text-sm/[20px] xl:text-lg/[20px] font-medium ${Icon ? "bg-Grey-08" : "bg-Grey-10"
-              } py-4 xl:py-6 ${Icon ? "pl-12" : "pl-5"} pr-10 text-left text-Grey-40 border border-Grey-15 focus:outline-none focus-visible:ring-2 focus-visible:ring-Purple-60 transition-all duration-200`}
-          >{Icon && (
-            <>
-              <span className="absolute inset-y-0 left-3 flex items-center">
-                <Icon className="w-5 h-5 xl:w-6 xl:h-6 text-White" />
-              </span>
-              <span className="absolute inset-y-4 mx-1 left-10 w-[1px] bg-Grey-15" />
-            </>
-          )}
-
-
-
-
-            <span className="block truncate">
-              {selected || field.placeholder}
-            </span>
-
-            <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
-              <div className="w-5 h-5 xl:w-6 xl:h-6 flex items-center justify-center rounded-[50%] bg-Grey-10 text-White">
-                <DownArrow />
-
-              </div>
-            </span>
-          </Listbox.Button>
-
-          <Transition
-            as={Fragment}
-            leave="transition ease-in duration-100"
-            leaveFrom="opacity-100 translate-y-0"
-            leaveTo="opacity-0 -translate-y-1"
-          >
-            
-            <Listbox.Options
-              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-lg bg-Grey-10 text-White shadow-lg ring-1 ring-Purple-60 ring-opacity-5 focus:outline-none z-50"
-            >
-              {field.options?.map((option) => (
-                <Listbox.Option
-                  key={option}
-                  className={({ active }) =>
-                    `relative cursor-pointer select-none py-3 pl-10 pr-4 ${active
-                      ? "bg-Purple-60transition-all duration-400 text-White"
-                      : "text-Grey-60"
-                    }`
-                  }
-                  value={option}
-                >
-                  {({ selected }) => (
-                    <>
-                      <span
-                        className={`block truncate ${selected ? "font-medium" : "font-normal"
-                          }`}
-                      >
-                        {option}
-                      </span>
-                      {selected && (
-                        <span className="absolute inset-y-0 left-2 flex items-center text-White" />
-                      )}
-                    </>
-                  )}
-                </Listbox.Option>
-              ))}
-            </Listbox.Options>
-          </Transition>
+        <div
+          onClick={() => setShowList(!showList)}
+          className="absolute top-1/2 -translate-y-1/2 right-4 xl:right-6 w-5 h-5 xl:w-6 xl:h-6 text-White"
+        >
+          <DownArrow />
         </div>
-      </Listbox>
+
+        {showList && (
+          <ul className="absolute top-12 xl:top-15 inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm/[20px] xl:text-lg/[20px] text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
+            {field.options?.map((option) => (
+              <li
+                key={option}
+                onClick={() => {
+                  setSelected(option);
+                  setShowList(false);
+                }}
+                className="cursor-pointer hover:bg-Grey-08"
+              >
+                {option}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };

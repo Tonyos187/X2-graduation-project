@@ -1,7 +1,7 @@
-import ContactFormFieldsComponent from "../components/form/formComponents/ContactFormFieldsComponent";
 import SearchDropDownComponent from "../components/form/formComponents/SearchDropDown";
 import SearchFild from "../components/form/formComponents/SerchFild";
-import { propertiesData } from "../data/Properties/PropertisData";
+import { contactFormSection, contactFormSectionHeader, propertiesData } from "../data/Properties/PropertisData";
+import ContactForm from "../sections/Contact/ContactForm";
 import PropertiesSection from "../sections/PropertiesPageSections/PropertiesSection";
 import HeaderHero from "../sections/sharedSections/HeaderHero";
 
@@ -16,7 +16,8 @@ const Properties = () => {
         <SearchFild data={propertiesData.searchSection} />
         <SearchDropDownComponent data={propertiesData.searchFilterSection} />
         <PropertiesSection data={propertiesData.propertySliderSection}/>
-        <ContactFormFieldsComponent data={propertiesData.contactFormSection} />
+        <ContactForm title={contactFormSectionHeader.title}
+          description={contactFormSectionHeader.description} data={contactFormSection.conactForm} areaText={contactFormSection.areaText} properties />
       </div>
     </div>
   );
