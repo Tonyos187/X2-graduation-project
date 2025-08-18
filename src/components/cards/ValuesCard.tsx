@@ -40,7 +40,7 @@ const ValuesCard = ({
     >
       {withButton && (
         <div className="absolute inset-0 -top-[20%] left-0 w-[170%] h-[250%] object-co object-center z-0 pointer-events-none">
-          <WavyBackdrop paths={VALUE_PATH}/>
+          <WavyBackdrop paths={VALUE_PATH} />
         </div>
       )}
       <div
@@ -69,11 +69,7 @@ const ValuesCard = ({
           />
         )}
       </div>
-      <p
-        className={`text-sm/[150%] lg:text-base/[150%] xl:text-lg/[150%] font-medium z-10 ${
-          smartSection ? "text-White-90" : "text-Grey-60"
-        }`}
-      >
+      <p className="text-sm/[150%] lg:text-base/[150%] xl:text-lg/[150%] font-medium z-10 text-Grey-60">
         {description}
       </p>
       {withButton && smartSection && (
