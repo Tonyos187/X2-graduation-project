@@ -68,8 +68,7 @@ const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
         {showList && (
           <ul
             role="listbox"
-            className="absolute top-13.5 xl:top-17.5 inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm/[20px] xl:text-lg/[20px] text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md"
-          >
+            className="absolute top-full inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm/[20px] xl:text-lg/[20px] text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
             {field.options?.map((option) => (
               <li
                 role="option"

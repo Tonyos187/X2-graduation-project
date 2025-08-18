@@ -1,9 +1,10 @@
-import { useState, type JSX, type MouseEvent } from "react";
+import { useEffect, useState, type JSX, type MouseEvent } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../components/sharedComponents/Logo";
 import X from "../../svg/X";
 import WavyBackdrop from "../../svg/WavyBackdrop";
 import { HERO_PATH } from "../../svg/Paths";
+import LightDarkBtn from "../../components/kit/LightDarkBtn";
 
 type NavItem = {
   name: string;
@@ -22,6 +23,16 @@ const Navbar = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [showBanner, setShowBanner] = useState<boolean>(true);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
   };
@@ -31,10 +42,16 @@ const Navbar = (): JSX.Element => {
     toggleMenu();
   };
 
-  const navLinkStyles = ({ isActive }: { isActive: boolean }) =>
-    isActive
-      ? "text-White bg-Grey-08 border xl:py-3.5 md:py-3 md:px-5 xl:px-6 rounded-lg border-Grey-15"
-      : " text-White xl:py-3.5 md:py-3 border border-Grey-10";
+  const navLinkStyles = ({ isActive }: { isActive: boolean }) => {
+    const baseStyles =
+      "text-White xl:py-3.5 md:py-3 border transition-all ease-in-out duration-1000";
+    const activeStyles = "bg-Grey-08 border-Grey-15 md:px-5 xl:px-6 rounded-lg";
+    const inactiveStyles = "border-Grey-10";
+
+    return isActive
+      ? `${baseStyles} ${activeStyles}`
+      : `${baseStyles} ${inactiveStyles}`;
+  };
 
   const scrollTop = () => {
     window.scrollTo({
@@ -73,7 +90,7 @@ const Navbar = (): JSX.Element => {
       {/* Overlay */}
       {isMenuOpen && (
         <div
-          className="fixed top-0 left-0 w-screen h-screen bg-Grey-10 opacity-60 z-40"
+          className="fixed md:hidden top-0 left-0 w-screen h-screen bg-Grey-10 opacity-60 z-40"
           onClick={handleOverlayClick}
         />
       )}
@@ -102,6 +119,7 @@ const Navbar = (): JSX.Element => {
 
         {/* Contact Link (Desktop) */}
         <div className="hidden md:flex">
+          {!isMenuOpen && <LightDarkBtn />}
           <NavLink
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
@@ -168,9 +186,11 @@ const Navbar = (): JSX.Element => {
             </NavLink>
           ))}
         </div>
+        {isMenuOpen && <LightDarkBtn />}
       </div>
     </>
   );
 };
 
 export default Navbar;
+
