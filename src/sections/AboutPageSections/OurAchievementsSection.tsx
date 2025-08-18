@@ -1,18 +1,18 @@
 import Container from "../../layouts/Container";
 import FAQCard from "../../components/cards/FAQCard";
 import Header from "../../components/sharedComponents/Header";
-import { OurAchievementsSectionData } from "../../data/About/AboutUsData";
+import type { OurAchievementsSectionType } from "../../types/About/AboutType";
 
-const OurAchievementsSection = () => {
+const OurAchievementsSection = ({data}:{data:OurAchievementsSectionType}) => {
   return (
       <Container >
         <Header
-          title={OurAchievementsSectionData.headline}
-          description={OurAchievementsSectionData.description}
+          title={data.headline}
+          description={data.description}
           withIcon
         />
         <div className='flex flex-col lg:flex-row gap-y-5 justify-between'>
-          {OurAchievementsSectionData.properties.map((item,index) => (
+          {data.properties.map((item,index) => (
             <FAQCard
               key={index}
               faq={{
@@ -20,6 +20,7 @@ const OurAchievementsSection = () => {
                 question: item.title,
                 answer: item.description,
                 readMoreLink: "#",
+                btnText:""
               }}
               withShadow={true}
               showButton={false}

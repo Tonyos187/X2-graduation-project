@@ -5,7 +5,6 @@ export interface PropertiesData {
     searchSection: SearchSection;
     searchFilterSection: SearchFilterSection;
     propertySliderSection: PropertySliderSection;
-    contactFormSection: FieldSection;
 
 }
 
@@ -19,7 +18,7 @@ export interface CTAButton {
 export interface CustomSelectOption {
     value: string;
     label: string;
-}
+} 
 
 export type InputType =
     | 'text'
@@ -37,7 +36,7 @@ export interface FormField {
     icon?: string | ReactElement | ComponentType<{ className?: string }>;
     required?: boolean;
     options?: string[];
-    name: string;
+    name: string; 
 }
 export interface FieldSection {
     img?: string;

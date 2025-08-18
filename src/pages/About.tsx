@@ -1,5 +1,7 @@
 import {
+  MeetEstateinTeamCardSectionData,
   NavigatingEstateinExperienceData,
+  OurAchievementsSectionData,
   OurValuedClientsSectionData,
   OurValueSectionData,
 } from "../data/About/AboutUsData";
@@ -14,9 +16,9 @@ const About = () => {
     <div className="space-y-20 md:space-y-30 xl:space-y-37.5">
       <Hero />
       <OurValueSection data={OurValueSectionData} />
-      <OurAchievementsSection />
+      <OurAchievementsSection data={OurAchievementsSectionData} />
       <HowItWorkSection data={NavigatingEstateinExperienceData} />
-      <OurTeam />
+      <OurTeam data={MeetEstateinTeamCardSectionData} />
       <OurClientsSection data={OurValuedClientsSectionData} />
     </div>
   );
