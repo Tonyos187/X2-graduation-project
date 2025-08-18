@@ -1,6 +1,7 @@
-import { useState, type JSX, type MouseEvent } from "react";
+import { useEffect, useState, type JSX, type MouseEvent } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../components/sharedComponents/Logo";
+import LightDarkBtn from "../../components/kit/LightDarkBtn";
 
 type NavItem = {
   name: string;
@@ -17,7 +18,16 @@ const navLinks: NavItem[] = [
 
 const Navbar = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
   };
@@ -27,25 +37,30 @@ const Navbar = (): JSX.Element => {
     toggleMenu();
   };
 
-  const navLinkStyles = ({ isActive }: { isActive: boolean }) =>
-    isActive
-      ? "text-White bg-Grey-08 border xl:py-3.5 md:py-3 md:px-5 xl:px-6 rounded-lg border-Grey-15"
-      : " text-White xl:py-3.5 md:py-3 border border-Grey-10";
+  const navLinkStyles = ({ isActive }: { isActive: boolean }) => {
+    const baseStyles =
+      "text-White xl:py-3.5 md:py-3 border transition-all ease-in-out duration-1000";
+    const activeStyles = "bg-Grey-08 border-Grey-15 md:px-5 xl:px-6 rounded-lg";
+    const inactiveStyles = "border-Grey-10";
 
+    return isActive
+      ? `${baseStyles} ${activeStyles}`
+      : `${baseStyles} ${inactiveStyles}`;
+  };
 
-      const scrollTop = () =>{
-        window.scrollTo({
-            top:0, 
-            behavior:'smooth'
-        })
-    };
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
       {/* Overlay */}
       {isMenuOpen && (
         <div
-          className="fixed top-0 left-0 w-screen h-screen bg-Grey-10 opacity-60 z-40"
+          className="fixed md:hidden top-0 left-0 w-screen h-screen bg-Grey-10 opacity-60 z-40"
           onClick={handleOverlayClick}
         />
       )}
@@ -57,7 +72,12 @@ const Navbar = (): JSX.Element => {
         {/* Center Links (Desktop) */}
         <div className="hidden md:flex gap-6 xl:text-lg items-center absolute left-1/2 transform -translate-x-1/2">
           {navLinks.slice(0, 4).map((link) => (
-            <NavLink key={link.path} to={link.path} className={navLinkStyles} onClick={scrollTop}>
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={navLinkStyles}
+              onClick={scrollTop}
+            >
               {link.name}
             </NavLink>
           ))}
@@ -65,6 +85,7 @@ const Navbar = (): JSX.Element => {
 
         {/* Contact Link (Desktop) */}
         <div className="hidden md:flex">
+          {!isMenuOpen && <LightDarkBtn />}
           <NavLink
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
@@ -127,6 +148,7 @@ const Navbar = (): JSX.Element => {
             </NavLink>
           ))}
         </div>
+        {isMenuOpen && <LightDarkBtn />}
       </div>
     </>
   );

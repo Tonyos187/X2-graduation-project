@@ -50,7 +50,7 @@ const SelectField: React.FC<{ field: ConactFormType }> = ({ field }) => {
         </div>
 
         {showList && (
-          <ul className="absolute top-12 xl:top-15 inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm/[20px] xl:text-lg/[20px] text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
+          <ul className="absolute top-full inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm/[20px] xl:text-lg/[20px] text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
             {field.options?.map((option) => (
               <li
                 key={option}
