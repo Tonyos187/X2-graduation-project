@@ -235,7 +235,21 @@
     left: 150%;
   }
 }
-
+@keyframes check-draw {
+    0% {
+        stroke-dasharray: 0 50;
+        stroke-dashoffset: 50;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        stroke-dasharray: 50 50;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
 /* Track */
 .switch-wrapper .toggle-track {
   cursor: url("/assets/icons/cursor-pointer.svg"), auto; 

@@ -1,6 +1,9 @@
 import { useEffect, useState, type JSX, type MouseEvent } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../components/sharedComponents/Logo";
+import X from "../../svg/X";
+import WavyBackdrop from "../../svg/WavyBackdrop";
+import { HERO_PATH } from "../../svg/Paths";
 import LightDarkBtn from "../../components/kit/LightDarkBtn";
 
 type NavItem = {
@@ -18,6 +21,8 @@ const navLinks: NavItem[] = [
 
 const Navbar = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [showBanner, setShowBanner] = useState<boolean>(true);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -57,6 +62,31 @@ const Navbar = (): JSX.Element => {
 
   return (
     <>
+      {/* Dismissible Top Banner */}
+      {showBanner && (
+        <div className="fixed top-0 left-0 w-full px-4 lg:px-8 bg-Grey-10 border-b border-Grey-15 z-[1100] h-[49px] xl:h-[63px] flex items-center overflow-hidden">
+          <div className="relative w-full h-full text-center flex">
+            {/* الخلفية المدمرة يا الهييييييي */}
+            <div className="absolute inset-0 w-[200%] h-[1000%] -top-[100%] -left-[50%] object-cover">
+              <WavyBackdrop paths={HERO_PATH} />
+            </div>
+            <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full xl:text-lg md:text-sm xs:text-[12px] pr-6.5 text-[10px]">
+              <span className=" text-White xl:pr-2.5 pr-1.5">
+                ✨Discover Your Dream Property with Estatein
+              </span>
+              <span className="underline">Learn More</span>
+            </div>
+            <button
+              aria-label="Close banner"
+              onClick={() => setShowBanner(false)}
+              className="absolute right-0 top-1/2 -translate-y-1/2 text-White hover:text-Purple-75 rounded-full w-6.5 xl:w-8 h-6.5 xl:h-8 flex items-center justify-center bg-White/10"
+            >
+              <X className="w-[9px] h-[9px] xl:w-3 xl:h-3 text-inherit" />
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Overlay */}
       {isMenuOpen && (
         <div
@@ -65,7 +95,11 @@ const Navbar = (): JSX.Element => {
         />
       )}
 
-      <nav className="fixed top-0 left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5  bg-Grey-10 shadow">
+      <nav
+        className={`fixed ${
+          showBanner ? "top-[49px] xl:top-[63px]" : "top-0"
+        } left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5  bg-Grey-10 shadow`}
+      >
         {/* Logo */}
         <Logo />
 
@@ -89,9 +123,11 @@ const Navbar = (): JSX.Element => {
           <NavLink
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
-              isActive
-                ? "text-white bg-Purple-60 xl:py-4 xl:px-6 md:py-3.5 md:px-5  rounded-lg border border-Grey-10 xl:text-lg"
-                : "xl:text-lg text-White xl:py-4 xl:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15"
+              `${
+                isActive
+                  ? "text-white bg-Purple-60"
+                  : "xl:text-lg text-White"
+              } xl:py-4 xl:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15 hover:bg-gradient-to-br hover:from-40% hover:from-Purple-65/65 hover:via-50% hover:via-Purple-75 hover:to-70% hover:to-Purple-65/65 bg-[length:200%_200%] bg-[position:0%_0%] transition-[background-position] duration-500 ease-in-out hover:bg-[position:100%_100%]`
             }
             onClick={scrollTop}
           >
@@ -128,7 +164,9 @@ const Navbar = (): JSX.Element => {
 
       {/* Mobile Slide-in Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-1/2 bg-Grey-10 z-50 transform transition-transform duration-300 md:hidden ${
+        className={`fixed ${
+          showBanner ? "top-[49px] xl:top-[63px]" : "top-0"
+        } right-0 h-[calc(100%-49px)] xl:h-[calc(100%-63px)] w-1/2 bg-Grey-10 z-50 transform transition-transform duration-300 md:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -155,3 +193,4 @@ const Navbar = (): JSX.Element => {
 };
 
 export default Navbar;
+

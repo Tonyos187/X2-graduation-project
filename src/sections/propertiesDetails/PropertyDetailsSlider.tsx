@@ -61,63 +61,63 @@ function PropertyDetailsSlider({data}:{data:PropertyDetailsType}) {
                     </div>
                 </div>
                 <div className="w-full bg-Grey-10 p-5 md:p-10 xl:p-12.5 flex flex-col gap-5 xl:gap-7.5 rounded-xl border border-Grey-15 ">
-                    <div className="flex flex-col-reverse md:flex-col gap-5 xl:gap-7.5">
-                        {/* Thumbnails */}
-                        <div className="overflow-hidden w-full bg-Grey-08 py-2.5 md:py-5 relative rounded-xl" >
-                            <div className="absolute left-0 top-0 w-24 h-full z-10 bg-gradient-to-r from-Grey-08  to-transparent" />
-                            <div className="absolute right-0 top-0 w-24 h-full z-10 bg-gradient-to-l from-Grey-08 to-transparent" />
-                            <div className="flex w-full scroll  md:gap-5 gap-2.5">
-                                {ImageScroll.map((img,index) => {
-                                    return(
-                                        <div className="relative "  key={index} >
-                                            <img className="w-[67px] h-[41px] min-w-[67px] md:w-[122px] md:h-[74px] md:min-w-[122px] xl:w-[144px] xl:h-[94px] xl:min-w-[144px] xl:rounded-lg rounded-md"src={img.image}/>
-                                            {/* Overlay hover effect */}
-                                            <div className="absolute top-0 w-full h-full bg-Grey-70 bg-opacity-40 hover:opacity-0 "></div>
-                                        </div>
-                                    )
-                                })}
-                                
-                            </div>
-                        </div>
-                        {/* Main displayed Images  */}
-                        <div className="flex w-full justify-between">
-                            {currentImages.map((img,index) => {
+                <div className="flex flex-col-reverse md:flex-col gap-5 xl:gap-7.5">
+                    {/* Thumbnails */}
+                    <div className="overflow-hidden w-full bg-Grey-08 py-2.5 md:py-5 relative rounded-xl" >
+                        <div className="absolute left-0 top-0 w-24 h-full z-10 bg-gradient-to-r from-Grey-08  to-transparent" />
+                        <div className="absolute right-0 top-0 w-24 h-full z-10 bg-gradient-to-l from-Grey-08 to-transparent" />
+                        <div className="flex w-full scroll  md:gap-5 gap-2.5">
+                            {ImageScroll.map((img,index) => {
                                 return(
-                                    <img className="lg:w-[48.9973%] w-full xl:h-[583px] md:h-[507px] h-[250px] object-cover rounded-[10px]" key={index} src={img.image}/>
+                                    <div className="relative "  key={index} >
+                                        <img className="w-[67px] h-[41px] min-w-[67px] md:w-[122px] md:h-[74px] md:min-w-[122px] xl:w-[144px] xl:h-[94px] xl:min-w-[144px] xl:rounded-lg rounded-md"src={img.image}/>
+                                        {/* Overlay hover effect */}
+                                            <div className="absolute top-0 w-full h-full bg-Grey-70 bg-opacity-40 hover:opacity-0 "></div>
+                                    </div>
                                 )
                             })}
+                            
                         </div>
                     </div>
-                    {/* Slider controls */}
+                    {/* Main displayed Images  */}
+                    <div className="flex w-full justify-between">
+                        {currentImages.map((img,index) => {
+                            return(
+                                <img className="lg:w-[48.9973%] w-full xl:h-[583px] md:h-[507px] h-[250px] object-cover rounded-[10px]" key={index} src={img.image}/>
+                            )
+                        })}
+                    </div>
+                </div>
+                {/* Slider controls */}
                     <div className="flex justify-between items-center gap-2.5 bg-Grey-08 md:mx-auto p-2.5 rounded-full">
-                        <button onClick={prev} className={`w-11 h-11 md:w-14.5 md:h-14.5 md:p-3.5 p-2.5 border border-Grey-15
-                        rounded-full flex  justify-center items-center cursor-pointer
-                        ${currentIndex === 0 ? 'bg-Grey-08 text-Grey-50': 'bg-Grey-10 '}`}>
-                            <Previous/>
-                        </button>
-                        <div className="flex gap-1">
-                            {Array.from({ length: 6 }).map((_, i) => {
-                                const lastDot = i === 5;
-                                const active = (currentIndex === i * imagesPerSlide) || (lastDot && currentIndex >= 5 * imagesPerSlide)
-                                return(
-                                    <span
-                                        key={i}
-                                        className={`w-[11.7px] h-[3px] md:w-[20px] md:h-[5px] rounded ${
-                                        active
-                                            ? 'bg-Purple-60'
-                                            : 'bg-Grey-30'
-                                        }`}
-                                    ></span>
-                            )})}
-                        </div>
-                        
-                        <button onClick={next} 
-                            className={`w-11 h-11 md:w-14.5 md:h-14.5 md:p-3.5 p-2.5 border border-Grey-15
-                            rounded-full flex  justify-center items-center cursor-pointer
-                            ${currentIndex + imagesPerSlide >= images.length ? 'bg-Grey-08 text-Grey-50': 'bg-Grey-10 '}`}>
-                            <Next/>
-                        </button>
+                    <button onClick={prev} className={`w-11 h-11 md:w-14.5 md:h-14.5 md:p-3.5 p-2.5 border border-Grey-15
+                    rounded-full flex  justify-center items-center cursor-pointer
+                    ${currentIndex === 0 ? 'bg-Grey-08 text-Grey-50': 'bg-Grey-10 '}`}>
+                        <Previous/>
+                    </button>
+                    <div className="flex gap-1">
+                        {Array.from({ length: 6 }).map((_, i) => {
+                            const lastDot = i === 5;
+                            const active = (currentIndex === i * imagesPerSlide) || (lastDot && currentIndex >= 5 * imagesPerSlide)
+                            return(
+                                <span
+                                    key={i}
+                                    className={`w-[11.7px] h-[3px] md:w-[20px] md:h-[5px] rounded ${
+                                    active
+                                        ? 'bg-Purple-60'
+                                        : 'bg-Grey-30'
+                                    }`}
+                                ></span>
+                        )})}
                     </div>
+                    
+                    <button onClick={next} 
+                        className={`w-11 h-11 md:w-14.5 md:h-14.5 md:p-3.5 p-2.5 border border-Grey-15
+                        rounded-full flex  justify-center items-center cursor-pointer
+                        ${currentIndex + imagesPerSlide >= images.length ? 'bg-Grey-08 text-Grey-50': 'bg-Grey-10 '}`}>
+                        <Next/>
+                    </button>
+                </div>
                 </div>
             </div>
     )
