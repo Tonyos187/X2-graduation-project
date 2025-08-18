@@ -19,20 +19,20 @@ const SearchFild: React.FC<Props> = ({ data }) => {
     </button>
   );
 
- return (
-  <div className=" px-4 sm:px-6 md:px-20 lg:px-[148px] mx-auto py-4 w-full max-w-[1596px] h-[103px]">
-    <div className="relative w-full h-[103px]">
-      <input
-        type={searchField.type}
-        id={searchField.id}
-        placeholder={searchField.placeholder}
-        className="w-full h-full text-base md:text-xl  px-[24px] py-[20px] rounded-[12px]  md:rounded-bl-[0px] md:rounded-br-[0px] border border-[#262626] shadow-[0px_0px_0px_10px_#191919] bg-[#0E0E0E] text-white placeholder:text-gray-400 focus:outline-none "
-      />
-      <div className="absolute top-1/2 right-[20px] transform -translate-y-1/2">
-        {renderButton(searchButton)}
+  return (
+    <div className=" px-4 sm:px-6 md:px-20 lg:px-[148px] mx-auto py-4 w-full max-w-[1596px] h-[103px]">
+      <div className="relative w-full h-[103px]">
+        <input
+          type={searchField.type}
+          id={searchField.id}
+          placeholder={searchField.placeholder}
+          className="w-full h-full text-base md:text-xl  px-[24px] py-[20px] rounded-[12px]  md:rounded-bl-[0px] md:rounded-br-[0px] border border-[#262626] shadow-[0px_0px_0px_10px_#191919] bg-[#0E0E0E] text-white placeholder:text-gray-400 focus:outline-none "
+        />
+        <div className="absolute top-1/2 right-[20px] transform -translate-y-1/2">
+          {renderButton(searchButton)}
+        </div>
       </div>
     </div>
-  </div>
 );
 
 };
