@@ -68,17 +68,17 @@ export default function Slider({
     <>
       <div className={`flex items-stretch justify-center md:justify-between ${gap_cards} min-h-[240px]`}>
         {visibleCards.map((card, index) => (
-          <div
-            key={index}
+            <div
+              key={index}
             data-aos="fade-down"
             data-aos-duration="800"
             data-aos-delay={index * 100}
             className="flex-1 min-w-0 flex"
           >
             {card}
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
 
       {/* Pagination + Buttons at md and xl screen */}
       <div className="hidden md:flex items-center justify-between border-t border-t-Grey-15 md:pt-4 xl:pt-5">
@@ -87,7 +87,7 @@ export default function Slider({
             {String(currentPage).padStart(2, "0")}
           </span>{" "}
           <span className="text-Grey-60">of {String(totalPages).padStart(2, "0")}</span>
-        </div>
+      </div>
 
         <div className="flex md:gap-2.5">
           <button
@@ -101,17 +101,17 @@ export default function Slider({
           >
             <Previous />
           </button>
-          <button
+      <button
             className={`flex items-center justify-center xl:p-3.5 xl:w-14.5 xl:h-14.5 md:p-2.5 md:w-11 md:h-11 border border-Grey-15 rounded-full transition ${
               isAtEnd
                 ? "bg-Grey-15 text-Grey-50 cursor-not-allowed"
                 : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15"
             }`}
-            onClick={nextSlide}
+        onClick={nextSlide}
             disabled={isAtEnd}
-          >
+      >
             <NextArrow />
-          </button>
+      </button>
         </div>
       </div>
       <div className="flex items-center justify-between border-t border-t-Grey-15 pt-4 md:hidden">
@@ -127,17 +127,17 @@ export default function Slider({
         {/* Pagination + Buttons at sm screen */}
         <div className={`flex items-center justify-between ${withBtn ? "" : "w-full"}`}>
           <div className="flex items-center justify-between w-full gap-2.5">
-            <button
+        <button
               className={`flex items-center justify-center p-2 w-8 h-8 xs:p-2.5 xs:w-11 xs:h-11 border border-Grey-15 rounded-full transition ${
                 isAtStart
                   ? "bg-Grey-15 text-Grey-50 cursor-not-allowed"
                   : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15"
               }`}
-              onClick={prevSlide}
+          onClick={prevSlide}
               disabled={isAtStart}
-            >
+        >
               <Previous />
-            </button>
+        </button>
             {/* pagination */}
             <div className="text-[12px] xs:text-sm font-medium leading-[150%]">
               <span className="text-White ">
@@ -146,19 +146,19 @@ export default function Slider({
               <span className="text-Grey-60">of {String(totalPages).padStart(2, "0")}</span>
             </div>
 
-            <button
+        <button
               className={`flex items-center justify-center p-2 w-8 h-8 xs:p-2.5 xs:w-11 xs:h-11 border border-Grey-15 rounded-full transition ${
                 isAtEnd
                   ? "bg-Grey-15 text-Grey-50 cursor-not-allowed"
                   : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15"
               }`}
-              onClick={nextSlide}
+          onClick={nextSlide}
               disabled={isAtEnd}
-            >
+        >
               <NextArrow />
-            </button>
-          </div>
-        </div>
+        </button>
+      </div>
+    </div>
       </div>
     </>
   );
