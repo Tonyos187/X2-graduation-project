@@ -205,14 +205,14 @@
   content: "";
   --angle: -110deg;
   position: absolute;
-  height: 100%;
+  height: 100.5%;
   width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 12px;
   padding: 0px;
-  background: conic-gradient(from var(--angle),#703bf7,#946cf9 10%,transparent 25%,transparent 100%);
+  background: conic-gradient(from var(--angle),#bda7f3 10%,transparent 25%,transparent 100%);
   animation: 3s spin_border linear infinite;
   z-index: -10;
 }
