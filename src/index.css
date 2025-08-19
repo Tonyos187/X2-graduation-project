@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./css/styles.css";
+
 /* Default theme: Dark Mode */
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -49,13 +50,13 @@
 
 .light {
     /* Absolute Colors */
-    --color-White: #000000;
+    --color-White: #322a49;
     /* Purple Shades — keep unchanged */
     /* no override needed */
     /* Grey Shades → flipped to light greys */
-    --color-Grey-08: #ede7fe;
+    --color-Grey-08: #f7f7f8;
     /* Was #141414 */
-    --color-Grey-10: #f7f7f8;
+    --color-Grey-10: #ede7fe;
     /* Was #1A1A1A */
     --color-Grey-15: #dbcefd;
     /* Was #262626 */
