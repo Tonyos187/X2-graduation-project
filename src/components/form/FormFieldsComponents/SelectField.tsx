@@ -49,7 +49,7 @@ const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
           placeholder={field.placeholder}
           readOnly
           onClick={toggleList}
-          className={`w-full bg-Grey-10 text-White placeholder:text-Grey-40 border border-Grey-15 rounded-md xl:rounded-lg pl-5 pr-9 xl:pr-12 py-4 xl:py-6 text-sm/[20px] xl:text-lg/[20px] outline-none transition-all duration-200 cursor-pointer ${
+          className={`w-full bg-Grey-10 text-White dark:placeholder:text-Grey-40 border border-Grey-15 rounded-md xl:rounded-lg pl-5 pr-9 xl:pr-12 py-4 xl:py-6 text-sm/[20px] xl:text-lg/[20px] outline-none transition-all duration-200 cursor-pointer ${
             showList ? "border-Purple-60" : ""
           }`}
           required={field.required}
