@@ -81,12 +81,12 @@ const Navbar = (): JSX.Element => {
           `}
         >
           <div className="relative w-full h-full text-center flex">
-            {/* الخلفية */}
+        
             <div className="absolute inset-0 w-[300%] -left-[100%] md:w-[110%] h-[1150%] -top-[410%] md:-left-[5%] object-cover">
               <WavyBackdrop paths={BANNER_PATH} />
             </div>
 
-            {/* النص */}
+            
             <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full xl:text-lg md:text-sm xs:text-[12px] pr-6.5 text-[10px]">
               <span className=" text-White xl:pr-2.5 pr-1.5">
                 ✨Discover Your Dream Property with Estatein
@@ -94,7 +94,6 @@ const Navbar = (): JSX.Element => {
               <span className="underline">Learn More</span>
             </div>
 
-            {/* زر الإغلاق */}
             <button
               aria-label="Close banner"
               onClick={closeBanner}
