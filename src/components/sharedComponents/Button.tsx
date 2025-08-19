@@ -13,7 +13,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`text-white text-sm xl:text-lg text-nowrap cursor-pointer
+      className={`text-White text-sm xl:text-lg text-nowrap cursor-pointer
         px-3 py-2.5 xs:px-5 xs:py-3.5 xl:px-6 xl:py-4.5 rounded-lg xl:rounded-[10px]
         flex items-center justify-center font-medium hover:bg-gradient-to-br 
         hover:from-40% hover:from-Purple-65/65
