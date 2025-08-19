@@ -6,7 +6,7 @@ const FeaturesCard = ({ item }: { item: FeaturesType }) => {
   return (
     <Link
       to={item.link}
-      className="rotate-conic relative group flex items-center justify-center border border-Grey-15 rounded-[10px] bg-Grey-10 z-1 transition-all linear"
+      className="rotate-conic relative group flex items-center justify-center border border-Grey-15 rounded-[12px] bg-Grey-10 z-1 transition-all linear"
     >
     <div className="relative h-[98%] w-[99%] flex flex-col items-center xs:justify-center gap-3.5 lg:gap-4 xl:gap-5 py-[5.1282vw] px-[3.5897vw] lg:py-[2.0834vw] lg:px-[1.1112vw] xl:py-[2.08334vw] xl:px-[1.04167vw] rounded-[10px] bg-Grey-10 z-1 cursor-pointer overflow-hidden">
         {/* top right arrow icon component */}
