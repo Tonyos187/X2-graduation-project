@@ -52,7 +52,7 @@ interface BaseSelectField {
                         placeholder={field.placeholder}
                         readOnly
                         onClick={toggleList}
-                        className={`placeholder:text-Grey-40  rounded-md xl:rounded-lg  text-sm xl:text-lg outline-none transition-all duration-200 cursor-pointer ${
+                        className={`dark:placeholder:text-Grey-40  rounded-md xl:rounded-lg  text-sm xl:text-lg outline-none transition-all duration-200 cursor-pointer ${
                         showList ? "border-Purple-60" : ""
                         }`}
                         required={field.required}

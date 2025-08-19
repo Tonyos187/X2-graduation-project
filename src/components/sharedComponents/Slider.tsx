@@ -93,8 +93,8 @@ export default function Slider({
           <button
             className={`flex items-center justify-center xl:p-3.5 xl:w-14.5 xl:h-14.5 md:p-2.5 md:w-11 md:h-11 border border-Grey-15 rounded-full transition ${
               isAtStart
-                ? "bg-Grey-15 text-Grey-50 cursor-not-allowed"
-                : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15"
+                ? "bg-Grey-15 text-Purple-75 dark:text-Grey-50 cursor-not-allowed"
+                : "cursor-pointer bg-Grey-10 text-Purple-70 dark:text-White hover:bg-Grey-15"
             }`}
             onClick={prevSlide}
             disabled={isAtStart}
@@ -104,8 +104,8 @@ export default function Slider({
       <button
             className={`flex items-center justify-center xl:p-3.5 xl:w-14.5 xl:h-14.5 md:p-2.5 md:w-11 md:h-11 border border-Grey-15 rounded-full transition ${
               isAtEnd
-                ? "bg-Grey-15 text-Grey-50 cursor-not-allowed"
-                : "cursor-pointer bg-Grey-10 text-White hover:bg-Grey-15"
+                ? "bg-Grey-15 text-Purple-75 dark:text-Grey-50 cursor-not-allowed"
+                : "cursor-pointer bg-Grey-10 text-Purple-70 dark:text-White hover:bg-Grey-15"
             }`}
         onClick={nextSlide}
             disabled={isAtEnd}
