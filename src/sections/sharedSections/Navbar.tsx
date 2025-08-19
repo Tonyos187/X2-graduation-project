@@ -20,7 +20,8 @@ const navLinks: NavItem[] = [
 
 const Navbar = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [showBanner, setShowBanner] = useState<boolean>(true);
+  const [showBanner, setShowBanner] = useState<boolean>(true); // للتحكم بالأنيميشن
+  const [isBannerVisible, setIsBannerVisible] = useState<boolean>(true); // لإخفاء العنصر من DOM بعد الأنيميشن
 
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
@@ -43,13 +44,25 @@ const Navbar = (): JSX.Element => {
     });
   };
 
+  const closeBanner = () => {
+    setShowBanner(false);
+    setTimeout(() => setIsBannerVisible(false), 500); 
+  };
+
   return (
     <>
       {/* Dismissible Top Banner */}
-      {showBanner && (
-        <div className="fixed top-0 left-0 w-full px-4 lg:px-8 bg-Grey-10 border-b border-Grey-15 z-[1100] h-[49px] xl:h-[63px] flex items-center overflow-hidden">
+      {isBannerVisible && (
+        <div
+          className={`
+            fixed top-0 left-0 w-full px-4 lg:px-8 bg-Grey-10 border-b border-Grey-15 z-[1100] 
+            h-[49px] xl:h-[63px] flex items-center overflow-hidden 
+            transition-all duration-500 ease-in-out
+            ${showBanner ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
+          `}
+        >
           <div className="relative w-full h-full text-center flex">
-            {/* الخلفية المدمرة يا الهييييييي */}
+            {/* الخلفية */}
             <div className="absolute inset-0 w-[200%] h-[1000%] -top-[100%] -left-[50%] object-cover">
               <WavyBackdrop paths={HERO_PATH} />
             </div>
@@ -61,7 +74,7 @@ const Navbar = (): JSX.Element => {
             </div>
             <button
               aria-label="Close banner"
-              onClick={() => setShowBanner(false)}
+              onClick={closeBanner}
               className="absolute right-0 top-1/2 -translate-y-1/2 text-White hover:text-Purple-75 rounded-full w-6.5 xl:w-8 h-6.5 xl:h-8 flex items-center justify-center bg-White/10"
             >
               <X className="w-[9px] h-[9px] xl:w-3 xl:h-3 text-inherit" />
@@ -80,8 +93,8 @@ const Navbar = (): JSX.Element => {
 
       <nav
         className={`fixed ${
-          showBanner ? "top-[49px] xl:top-[63px]" : "top-0"
-        } left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5  bg-Grey-10 shadow`}
+          isBannerVisible ? (showBanner ? "top-[49px] xl:top-[63px]" : "top-0") : "top-0"
+        } left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5  bg-Grey-10 shadow transition-all duration-500`}
       >
         {/* Logo */}
         <Logo />
@@ -147,7 +160,7 @@ const Navbar = (): JSX.Element => {
       {/* Mobile Slide-in Menu */}
       <div
         className={`fixed ${
-          showBanner ? "top-[49px] xl:top-[63px]" : "top-0"
+          isBannerVisible ? (showBanner ? "top-[49px] xl:top-[63px]" : "top-0") : "top-0"
         } right-0 h-[calc(100%-49px)] xl:h-[calc(100%-63px)] w-1/2 bg-Grey-10 z-50 transform transition-transform duration-300 md:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
