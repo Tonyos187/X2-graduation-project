@@ -4,7 +4,7 @@ import type {
     SearchFilterSection,
     SearchSection,
     } from "../../../types/Properties/PropertiesTypes";
-import SelectField from "./SelectField";
+import SearchSelect from "./SearchSelect";
 
 interface Props {
 searchData: SearchSection;
@@ -48,7 +48,7 @@ const renderButton = (btn: CTAButton) => (
                 {formFields.map(
                     (field) =>
                     field.type === "select" && (
-                        <SelectField key={field.id} field={field} />
+                        <SearchSelect key={field.id} field={field} />
                     )
                 )}
             </div>
