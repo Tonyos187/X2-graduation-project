@@ -10,37 +10,64 @@ function EndFooter({ endFooterData }: { endFooterData: EndFooterType }) {
       >
         <span>{endFooterData.copyright}</span>
         <span>
-          <Link to={"/terms"} className={`underline text-Purple-60 hover:text-Purple-75`}>{"Terms"}</Link>
+          <Link
+            to={"/terms"}
+            className={`underline text-Purple-60 hover:text-Purple-75`}
+          >
+            {"Terms"}
+          </Link>
           {` & `}
-          <Link to={"/privacy"} className={`underline text-Purple-60 hover:text-Purple-75`}>{"Conditions"}</Link>
+          <Link
+            to={"/privacy"}
+            className={`underline text-Purple-60 hover:text-Purple-75`}
+          >
+            {"Conditions"}
+          </Link>
         </span>
       </div>
       <div className="flex items-center justify-center gap-2">
         {endFooterData.socialLinks.map((icon, index) => (
           <div className="relative group">
-           <div className={`absolute w-fit h-fit px-2 py-1 rounded-full -top-9 left-1/2 translate-x-[-50%] opacity-0 transition-all ease-in-out duration-300
-              ${icon.name == "Facebook" ? "bg-[#0035bb] group-hover:opacity-100 group-hover:-top-3/4" 
-              : icon.name == "LinkedIn" ? "bg-[#0274b3] group-hover:opacity-100 group-hover:-top-3/4"  
-              : icon.name == "Twitter" ? "bg-[#1c96e8] group-hover:opacity-100 group-hover:-top-3/4"
-              : icon.name == "YouTube" ? "bg-[#ff0000] group-hover:opacity-100 group-hover:-top-3/4"
-              :  "bg-[#00ff00] group-hover:top-0"}
-              `}>{icon.name}</div>
-          <Link
-            to="#"
-            key={index}
-            className={`relative flex items-center justify-center text-White w-15 h-15 p-5 md:w-10 md:h-10 md:p-2.5 xl:w-13.5 xl:h-13.5 xl:p-3.5 bg-Grey-08 rounded-full
+            <div
+              className={`absolute w-fit h-fit px-2 py-1 rounded-full text-white -top-9 left-1/2 translate-x-[-50%] opacity-0 transition-all ease-in-out duration-300
+              ${
+                icon.name == "Facebook"
+                  ? "bg-[#0035bb] group-hover:opacity-100 group-hover:-top-3/4"
+                  : icon.name == "LinkedIn"
+                  ? "bg-[#0274b3] group-hover:opacity-100 group-hover:-top-3/4"
+                  : icon.name == "Twitter"
+                  ? "bg-[#1c96e8] group-hover:opacity-100 group-hover:-top-3/4"
+                  : icon.name == "YouTube"
+                  ? "bg-[#ff0000] group-hover:opacity-100 group-hover:-top-3/4"
+                  : "bg-[#00ff00] group-hover:top-0"
+              }
+              `}
+            >
+              {icon.name}
+            </div>
+            <Link
+              to="#"
+              key={index}
+              className={`relative flex items-center justify-center text-White w-15 h-15 p-5 md:w-10 md:h-10 md:p-2.5 xl:w-13.5 xl:h-13.5 xl:p-3.5 bg-Grey-08 rounded-full
               group overflow-hidden
               `}
-          >
-            {icon.icon}
-          <div className={`absolute z-0 w-full h-full top-full transition-all ease-in-out duration-300 
-              ${icon.name == "Facebook" ? "bg-[#0035bb] group-hover:top-0" 
-              : icon.name == "LinkedIn" ? "bg-[#0274b3] group-hover:top-0"  
-              : icon.name == "Twitter" ? "bg-[#1c96e8] group-hover:top-0"
-              : icon.name == "YouTube" ? "bg-[#ff0000] group-hover:top-0"
-               :  "bg-[#00ff00] group-hover:top-0"}`}>
-           </div>
-          </Link>
+            >
+              {icon.icon}
+              <div
+                className={`absolute z-0 w-full h-full top-full transition-all ease-in-out duration-300 
+              ${
+                icon.name == "Facebook"
+                  ? "bg-[#0035bb] group-hover:top-0"
+                  : icon.name == "LinkedIn"
+                  ? "bg-[#0274b3] group-hover:top-0"
+                  : icon.name == "Twitter"
+                  ? "bg-[#1c96e8] group-hover:top-0"
+                  : icon.name == "YouTube"
+                  ? "bg-[#ff0000] group-hover:top-0"
+                  : "bg-[#00ff00] group-hover:top-0"
+              }`}
+              ></div>
+            </Link>
           </div>
         ))}
       </div>
