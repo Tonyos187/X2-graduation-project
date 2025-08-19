@@ -93,9 +93,8 @@
 // export default SelectField;
 
 
-import React, { useEffect, useRef, useState, type ReactNode } from "react";
+import React, { useEffect, useRef, useState, type ComponentType, type ReactElement, type ReactNode } from "react";
 import DownArrow from "../../../svg/DownArrow";
-import FormLabel from "./FormLabel";
 
 interface BaseSelectField {
   id: string;
@@ -105,7 +104,7 @@ interface BaseSelectField {
   placeholder: string;
   required?: boolean;
   options?: string[];
-  icon:ReactNode;
+  icon?: ReactNode;
 }
 
 const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
@@ -133,8 +132,6 @@ const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
 
   return (
     <div className="flex flex-col gap-2.5 md:gap-3.5 xl:gap-4 w-full relative">
-      {/* <FormLabel label={field.label} id={field.id} /> */}
-
       <div ref={selectRef} className="relative">
         <div className="flex py-3 px-3.5 xl:p-5 bg-Grey-08 rounded-xl border border-Grey-15 max-w-full">
           <div className="flex gap-2.5">
@@ -150,7 +147,7 @@ const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
                     placeholder={field.placeholder}
                     readOnly
                     onClick={toggleList}
-                    className={`placeholder:text-Grey-40  rounded-md xl:rounded-lg  text-sm/[20px] xl:text-lg/[20px] outline-none transition-all duration-200 cursor-pointer ${
+                    className={`placeholder:text-Grey-40  rounded-md xl:rounded-lg  text-sm xl:text-lg outline-none transition-all duration-200 cursor-pointer ${
                       showList ? "border-Purple-60" : ""
                     }`}
                     required={field.required}
@@ -169,34 +166,10 @@ const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
             </button>
         
         </div>
-        {/* <input
-          type={field.type}
-          id={field.id}
-          name={field.name}
-          value={selected}
-          placeholder={field.placeholder}
-          readOnly
-          onClick={toggleList}
-          className={`w-full bg-Purple-60 text-White placeholder:text-Grey-40 border border-Grey-15 rounded-md xl:rounded-lg pl-5 pr-9 xl:pr-12 py-4 xl:py-6 text-sm/[20px] xl:text-lg/[20px] outline-none transition-all duration-200 cursor-pointer ${
-            showList ? "border-Purple-60" : ""
-          }`}
-          required={field.required}
-          aria-haspopup="listbox"
-          aria-expanded={showList}
-        /> */}
-        {/* <button
-          type="button"
-          onClick={toggleList}
-          aria-label="Open select options"
-          className="absolute top-1/2 -translate-y-1/2 right-4 xl:right-6 w-5 h-5 xl:w-6 xl:h-6 text-White cursor-pointer"
-        >
-          <DownArrow />
-        </button> */}
-
         {showList && (
           <ul
             role="listbox"
-            className="absolute top-full inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm/[20px] xl:text-lg/[20px] text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
+            className="absolute top-full inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm xl:text-lg text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
             {field.options?.map((option) => (
               <li
                 role="option"

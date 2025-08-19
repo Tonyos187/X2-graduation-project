@@ -81,7 +81,7 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                                 transform: "rotateY(180deg)",
                                 zIndex: flipped ? 2 : 0,
                             }}>
-                            <p className="text-sm md:text-lg font-medium text-white">
+                            <p className="text-sm md:text-lg font-medium text-White">
                                 {fullDescription}
                             </p>
                             <button className="w-full text-white text-sm md:text-base xl:text-[18px] cursor-pointer py-3 px-5 rounded-lg xl:rounded-[10px] bg-Purple-60" onClick={() => setFlipped(false)}>close</button>
