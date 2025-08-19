@@ -16,7 +16,7 @@ const { searchField, searchButton } = searchData;
 const { formFields } = filterData;
 
 const renderButton = (btn: CTAButton) => (
-    <button className="flex items-center text-sm lg:text-lg font-medium justify-center gap-2 w-fit lg:w-46 h-[63px] px-5 py-3.5 xl:px-6 xl:py-4.5 rounded-[10px] bg-Purple-60 text-white hover:bg-Purple-75 transition">
+    <button className="flex items-center text-sm lg:text-lg font-medium justify-center gap-2 w-fit lg:w-46 h-[63px] px-5 py-3.5 xl:px-6 xl:py-4.5 rounded-t-[10px] bg-Purple-60 text-white hover:bg-Purple-75 transition">
     {btn.icon && (
         <img
         src={btn.icon.toString()}
@@ -36,7 +36,7 @@ const renderButton = (btn: CTAButton) => (
                     type={searchField.type}
                     id={searchField.id}
                     placeholder={searchField.placeholder}
-                    className="pl-3.5 md:pl-5 xl:pl-6 w-full h-full text-base md:text-xl rounded-xl  lg:rounded-bl-0 lg:rounded-br-0 border border-Grey-15 
+                    className="pl-3.5 md:pl-5 xl:pl-6 w-full h-full text-base md:text-xl rounded-t-xl rounded-bl-0 rounded-br-0 border border-Grey-15 
                     shadow-[0px_0px_0px_4px_var(--color-Grey-10)] lg:shadow-[0px_0px_0px_10px_var(--color-Grey-10)] bg-Grey-08 placeholder:text-Grey-60 focus:outline-none "
                     />
                     <div className="absolute top-1/2 right-[20px] transform -translate-y-1/2 ">

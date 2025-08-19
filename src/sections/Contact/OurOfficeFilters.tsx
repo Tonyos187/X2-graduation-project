@@ -17,11 +17,11 @@ function OurOfficeFilters({data}:{data:ContactDiscoverLocationsFilterDataType}) 
                         key={option}
                         onClick={() => setActiveTab(option)}
                         className={`py-3.5 px-5 xl:py-4.5 xl:px-6 min-w-25 md:min-w-31 xl:min-w-39.5 rounded-lg xl:rounded-[10px] border border-Grey-15 
-                            transition-all duration-200 text-white text-sm xl:text-lg font-medium
+                            transition-all duration-200 text-White text-sm xl:text-lg font-medium
                         ${
                             activeTab === option
                             ? "bg-Grey-08  "
-                            : "bg-transparent   hover:border-white"
+                            : "bg-transparent hover:border-White"
                         }`}
                     >
                         {option}
