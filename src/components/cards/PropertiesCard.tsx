@@ -47,7 +47,8 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                             <div>
                                 <div>
                                     <h3 className="text-lg md:text-xl xl:text-2xl font-semibold">{title}</h3>
-                                    <p className="font-medium text-sm md:text-base xl:text-lg text-Grey-60">{lessDescription}<span className="font-medium text-sm md:text-base xl:text-lg text-White underline cursor-pointer" onClick={() => setFlipped(true)}>Read More</span></p>
+                                    <p className="font-medium text-sm md:text-base xl:text-lg text-Grey-60 ">{lessDescription}<span className="font-medium text-sm md:text-base xl:text-lg text-White underline cursor-pointer" onClick={() => setFlipped(true)}>Read More</span></p>
+                                    
                                 </div>
                                 
                             </div>
@@ -80,7 +81,7 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                                 transform: "rotateY(180deg)",
                                 zIndex: flipped ? 2 : 0,
                             }}>
-                            <p className="text-sm md:text-lg font-medium text-white">
+                            <p className="text-sm md:text-lg font-medium text-White">
                                 {fullDescription}
                             </p>
                             <button className="w-full text-white text-sm md:text-base xl:text-[18px] cursor-pointer py-3 px-5 rounded-lg xl:rounded-[10px] bg-Purple-60" onClick={() => setFlipped(false)}>close</button>
