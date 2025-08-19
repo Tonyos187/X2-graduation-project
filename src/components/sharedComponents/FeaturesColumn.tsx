@@ -12,7 +12,7 @@ export default function FeatureColumn({ icon, label }: FeaturesType) {
       "
       style={{
         background:
-          "linear-gradient(90deg, #1A1A1A 0%, rgba(26, 26, 26, 0) 100%)",
+          "linear-gradient(90deg, var(--color-Grey-10) 0%, rgba(26, 26, 26, 0) 100%)",
       }}
     >
       <span
