@@ -74,7 +74,7 @@ interface BaseSelectField {
             {showList && (
             <ul
                 role="listbox"
-                className="absolute top-full inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm xl:text-lg text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
+                className="absolute top-full inset-x-0 w-full bg-Grey-08  flex flex-col text-sm xl:text-lg text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
                 {field.options?.map((option) => (
                 <li
                     role="option"
@@ -84,7 +84,7 @@ interface BaseSelectField {
                     setSelected(option);
                     setShowList(false);
                     }}
-                    className="cursor-pointer hover:bg-Grey-08"
+                    className="cursor-pointer hover:bg-Grey-40 py-4 px-4 "
                 >
                     {option}
                 </li>
