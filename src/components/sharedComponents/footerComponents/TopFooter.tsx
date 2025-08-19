@@ -19,7 +19,7 @@ function TopFooter({ data }: { data: CtaSectionType }) {
                       drop-shadow(0 0 ${glowSize}px #ede7fe)
                       drop-shadow(0 0 ${glowSize * 2.5}px #fff)`;
   return (
-    <div className="relative w-full flex flex-col md:flex-row md:items-center px-4 py-12.5 md:px-20 md:py-15 xl:px-40.5 xl:py-25 border-t border-b border-t-Grey-15 border-b-Grey-15 gap-7.5 md:gap-37.5 xl:gap-50 overflow-hidden dark:bg-[#141414]">
+    <div className="relative w-full flex flex-col md:flex-row md:items-center px-4 py-12.5 md:px-20 md:py-15 xl:px-40.5 xl:py-25 border-t border-b border-t-Grey-15 border-b-Grey-15 gap-7.5 md:gap-37.5 xl:gap-50 overflow-hidden dark:bg-Grey-08 bg-Purple-95 ">
       <div className="absolute z-0 right-0 bottom-0 text-Purple-90/50 dark:text-Grey-10">
         <FooterImg hoverColor={hoverColor} strokeHoverColor={strokeHoverColor} neonShadow={neonShadow} />
       </div>
@@ -28,7 +28,6 @@ function TopFooter({ data }: { data: CtaSectionType }) {
         description={data.description}
         gap="gap-1.5"
         className="z-1"
-        type="footer"
       />
       <Button
         content="Explore Properties"
