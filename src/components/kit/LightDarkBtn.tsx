@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "../../redux/Slices/themeSlice";
 
 const LightDarkBtn: React.FC = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const dispatch = useDispatch();
+  const darkMode = useSelector(
+    (state: { theme: { darkMode: boolean } }) => state.theme.darkMode
+  );
 
   useEffect(() => {
     const root = document.documentElement;
@@ -14,8 +19,8 @@ const LightDarkBtn: React.FC = () => {
     }
   }, [darkMode]);
 
-  const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDarkMode(e.target.checked);
+  const handleToggle = () => {
+    dispatch(toggleTheme());
   };
 
   const particles = [
