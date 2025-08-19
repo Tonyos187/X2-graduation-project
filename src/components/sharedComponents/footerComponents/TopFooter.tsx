@@ -35,7 +35,7 @@ function TopFooter({ data }: { data: CtaSectionType }) {
         className="bg-Purple-60 z-1"
         link="/properties"
       />
-      <div className="absolute z-0 -left-[100%] xs:-left-[110%] md:left-0 -top-[120%] xs:-top-[75%] md:top-0 md:bottom-0  md:rotate-y-180 md:rotate-x-0 text-[#1a1a1a]">
+      <div className="absolute z-0 -left-[100%] xs:-left-[110%] md:left-0 -top-[120%] xs:-top-[75%] md:top-0 md:bottom-0  md:rotate-y-180 md:rotate-x-0 text-Purple-90/50 dark:text-Grey-10">
         <FooterImg hoverColor={hoverColor} strokeHoverColor={strokeHoverColor} neonShadow={neonShadow} />
       </div>
     </div>
