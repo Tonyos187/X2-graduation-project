@@ -47,7 +47,8 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                             <div>
                                 <div>
                                     <h3 className="text-lg md:text-xl xl:text-2xl font-semibold">{title}</h3>
-                                    <p className="font-medium text-sm md:text-base xl:text-lg text-Grey-60">{lessDescription}<span className="font-medium text-sm md:text-base xl:text-lg text-White underline cursor-pointer" onClick={() => setFlipped(true)}>Read More</span></p>
+                                    <p className="font-medium text-sm md:text-base xl:text-lg text-Grey-60 ">{lessDescription}<span className="font-medium text-sm md:text-base xl:text-lg text-White underline cursor-pointer" onClick={() => setFlipped(true)}>Read More</span></p>
+                                    
                                 </div>
                                 
                             </div>

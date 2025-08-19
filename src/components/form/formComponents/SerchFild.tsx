@@ -38,6 +38,7 @@ const SearchFild: React.FC<Props> = ({ data }) => {
         </div>
       </div>
     </div>
+    
 );
 
 };

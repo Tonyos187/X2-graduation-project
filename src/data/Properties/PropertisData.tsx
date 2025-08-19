@@ -201,31 +201,31 @@ export const propertiesData: PropertiesData = {
     formFields: [
       {
         id: "location",
-        placeholder: "Select Location",
+        placeholder: " Location",
         type: "select",
         name: "location",
         options: ["Villa", "Apartment", "Office", "Land"],
-        icon: Location,
+        icon: <Location/>,
       },
       {
         id: "property-type",
-        placeholder: "Select Property Type",
+        placeholder: "Property Type",
         type: "select",
         name: "propertyType",
         options: ["Villa", "Apartment", "Office", "Land"],
-        icon: AirplaneIcon,
+        icon: <AirplaneIcon/>,
       },
       {
         id: "price-range",
-        placeholder: "Select Price Range",
+        placeholder: "Price Range",
         type: "select",
         name: "priceRange",
         options: ["$100K - $300K", "$300K - $500K", "$500K - $1M", "$1M+"],
-        icon: Camera,
+        icon: <Camera/>,
       },
       {
         id: "property-size",
-        placeholder: "Select Size",
+        placeholder: "Property Size",
         type: "select",
         name: "propertySize",
         options: [
@@ -234,11 +234,11 @@ export const propertiesData: PropertiesData = {
           "2000 - 3000 sqft",
           "3000+ sqft",
         ],
-        icon: Cube,
+        icon: <Cube/>,
       },
       {
         id: "build-year",
-        placeholder: "Select Year",
+        placeholder: "Build Year",
         type: "select",
         name: "buildYear",
         options: [
@@ -247,7 +247,7 @@ export const propertiesData: PropertiesData = {
           "2000 - 2010",
           "1990 - 2000",
         ],
-        icon: Calendar,
+        icon: <Calendar/>,
       },
     ],
     submitButton: {

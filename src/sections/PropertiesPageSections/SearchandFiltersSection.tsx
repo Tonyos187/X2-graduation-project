@@ -1,18 +1,14 @@
-import SearchDropDownComponent from "../../components/form/formComponents/SearchDropDown"
-import SearchFild from "../../components/form/formComponents/SerchFild"
+import SearchAndFilters from "../../components/form/FormFieldsComponents/SearchAndFilters"
+import { propertiesData } from "../../data/Properties/PropertisData"
 import Container from "../../layouts/Container"
-import type { PropertiesData } from "../../types/Properties/PropertiesTypes"
 
 
-function SearchandFiltersSection({data}:{data:PropertiesData}) {
+function SearchAndFiltersSection() {
     return (
-        <Container >
-            <div >
-                <SearchFild data={data.searchSection} />
-                <SearchDropDownComponent data={data.searchFilterSection} />
-            </div>
+        <Container>
+            <SearchAndFilters searchData={propertiesData.searchSection} filterData={propertiesData.searchFilterSection}/>
         </Container>
     )
 }
 
-export default SearchandFiltersSection
+export default SearchAndFiltersSection
