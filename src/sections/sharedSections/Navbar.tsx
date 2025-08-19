@@ -1,9 +1,10 @@
-import { useState, type JSX, type MouseEvent } from "react";
+import { useEffect, useState, type JSX, type MouseEvent } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../components/sharedComponents/Logo";
 import X from "../../svg/X";
 import WavyBackdrop from "../../svg/WavyBackdrop";
-import { HERO_PATH } from "../../svg/Paths";
+import LightDarkBtn from "../../components/kit/LightDarkBtn";
+import { BANNER_PATH } from "../../svg/Paths";
 
 type NavItem = {
   name: string;
@@ -23,8 +24,20 @@ const Navbar = (): JSX.Element => {
   const [showBanner, setShowBanner] = useState<boolean>(true); // للتحكم بالأنيميشن
   const [isBannerVisible, setIsBannerVisible] = useState<boolean>(true); // لإخفاء العنصر من DOM بعد الأنيميشن
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
+    scrollTop();
   };
 
   const handleOverlayClick = (e: MouseEvent<HTMLDivElement>): void => {
@@ -32,10 +45,16 @@ const Navbar = (): JSX.Element => {
     toggleMenu();
   };
 
-  const navLinkStyles = ({ isActive }: { isActive: boolean }) =>
-    isActive
-      ? "text-White bg-Grey-08 border xl:py-3.5 md:py-3 md:px-5 xl:px-6 rounded-lg border-Grey-15"
-      : " text-White xl:py-3.5 md:py-3 border border-Grey-10";
+  const navLinkStyles = ({ isActive }: { isActive: boolean }) => {
+    const baseStyles =
+      "text-White xl:py-3.5 md:py-3 border transition-all ease-in-out duration-1000";
+    const activeStyles = "bg-Grey-08 border-Grey-15 md:px-5 xl:px-6 rounded-lg";
+    const inactiveStyles = "border-Grey-10";
+
+    return isActive
+      ? `${baseStyles} ${activeStyles}`
+      : `${baseStyles} ${inactiveStyles}`;
+  };
 
   const scrollTop = () => {
     window.scrollTo({
@@ -46,7 +65,7 @@ const Navbar = (): JSX.Element => {
 
   const closeBanner = () => {
     setShowBanner(false);
-    setTimeout(() => setIsBannerVisible(false), 500); 
+    setTimeout(() => setIsBannerVisible(false), 500);
   };
 
   return (
@@ -63,15 +82,19 @@ const Navbar = (): JSX.Element => {
         >
           <div className="relative w-full h-full text-center flex">
             {/* الخلفية */}
-            <div className="absolute inset-0 w-[200%] h-[1000%] -top-[100%] -left-[50%] object-cover">
-              <WavyBackdrop paths={HERO_PATH} />
+            <div className="absolute inset-0 w-[300%] -left-[100%] md:w-[110%] h-[1150%] -top-[410%] md:-left-[5%] object-cover">
+              <WavyBackdrop paths={BANNER_PATH} />
             </div>
+
+            {/* النص */}
             <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full xl:text-lg md:text-sm xs:text-[12px] pr-6.5 text-[10px]">
               <span className=" text-White xl:pr-2.5 pr-1.5">
                 ✨Discover Your Dream Property with Estatein
               </span>
               <span className="underline">Learn More</span>
             </div>
+
+            {/* زر الإغلاق */}
             <button
               aria-label="Close banner"
               onClick={closeBanner}
@@ -86,7 +109,7 @@ const Navbar = (): JSX.Element => {
       {/* Overlay */}
       {isMenuOpen && (
         <div
-          className="fixed top-0 left-0 w-screen h-screen bg-Grey-10 opacity-60 z-40"
+          className="fixed md:hidden top-0 left-0 w-screen h-screen bg-Grey-10 opacity-60 z-40"
           onClick={handleOverlayClick}
         />
       )}
@@ -115,6 +138,7 @@ const Navbar = (): JSX.Element => {
 
         {/* Contact Link (Desktop) */}
         <div className="hidden md:flex">
+          {!isMenuOpen && <LightDarkBtn />}
           <NavLink
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
@@ -181,6 +205,7 @@ const Navbar = (): JSX.Element => {
             </NavLink>
           ))}
         </div>
+        {isMenuOpen && <LightDarkBtn />}
       </div>
     </>
   );

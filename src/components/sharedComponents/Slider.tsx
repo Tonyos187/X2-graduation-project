@@ -66,6 +66,7 @@ export default function Slider({
 
   return (
     <>
+      {/* cards */}
       <div
         className={`flex items-stretch justify-center md:justify-between ${gap_cards} min-h-[240px]`}
       >
@@ -82,6 +83,7 @@ export default function Slider({
         ))}
       </div>
 
+      {/* Pagination + Buttons (Desktop) */}
       <div className="hidden md:flex items-center justify-between border-t border-t-Grey-15 md:pt-4 xl:pt-5">
         <div className="xl:text-xl md:text-base font-medium leading-[150%]">
           <span className="text-White ">
@@ -118,7 +120,7 @@ export default function Slider({
         </div>
       </div>
 
-      {/* Pagination + Buttons at sm screen */}
+      {/* Pagination + Buttons (Mobile) */}
       <div className="flex items-center justify-between border-t border-t-Grey-15 pt-4 md:hidden">
         {withBtn && (
           <Button
@@ -146,6 +148,7 @@ export default function Slider({
             >
               <Previous />
             </button>
+
             <div className="text-[12px] xs:text-sm font-medium leading-[150%]">
               <span className="text-White ">
                 {String(currentPage).padStart(2, "0")}

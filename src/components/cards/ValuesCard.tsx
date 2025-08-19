@@ -39,9 +39,12 @@ const ValuesCard = ({
     } ${className}`}
     >
       {withButton && (
-        <div className="absolute inset-0 -top-[20%] left-0 w-[170%] h-[250%] object-co object-center z-0 pointer-events-none">
+        smartSection ? (<div className="absolute inset-0 -left-[60%] w-[350%] -top-[100%] md:-top-[90%] md:-left-[110%] md:w-[500%] h-[300%] object-co object-center z-0 pointer-events-none">
           <WavyBackdrop paths={VALUE_PATH} />
-        </div>
+        </div>)
+        : (<div className="absolute inset-0 -left-[60%] w-[350%] -top-[100%] md:-top-[120%] md:-left-[10%] md:w-[170%] h-[400%] object-co object-center z-0 pointer-events-none">
+          <WavyBackdrop paths={VALUE_PATH} />
+        </div>)
       )}
       <div
         className={`flex justify-center items-center z-10 ${

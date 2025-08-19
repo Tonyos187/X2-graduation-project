@@ -1,9 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import DownArrow from "../../../svg/DownArrow";
-import type { ConactFormType } from "../../../types/Contact/ContactType";
 import FormLabel from "./FormLabel";
 
-const SelectField: React.FC<{ field: ConactFormType }> = ({ field }) => {
+interface BaseSelectField {
+  id: string;
+  label?: string;
+  type: string;
+  name: string;
+  placeholder: string;
+  required?: boolean;
+  options?: string[];
+}
+
+const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
   const [selected, setSelected] = useState<string>("");
   const [showList, setShowList] = useState<boolean>(false);
   const selectRef = useRef<HTMLDivElement>(null);
@@ -24,6 +33,8 @@ const SelectField: React.FC<{ field: ConactFormType }> = ({ field }) => {
     };
   }, []);
 
+  const toggleList = () => setShowList((prev) => !prev);
+
   return (
     <div className="flex flex-col gap-2.5 md:gap-3.5 xl:gap-4 w-full relative">
       <FormLabel label={field.label} id={field.id} />
@@ -32,27 +43,36 @@ const SelectField: React.FC<{ field: ConactFormType }> = ({ field }) => {
         <input
           type={field.type}
           id={field.id}
-          disabled
           name={field.name}
           value={selected}
           placeholder={field.placeholder}
-          className={`w-full bg-Grey-10 text-White placeholder:text-Grey-40 border border-Grey-15 rounded-md xl:rounded-lg pl-5 pr-9 xl:pr-12 py-4 xl:py-6 text-sm/[20px] xl:text-lg/[20px] outline-none transition-all duration-200 ${
-            showList && "border-Purple-60"
+          readOnly
+          onClick={toggleList}
+          className={`w-full bg-Grey-10 text-White placeholder:text-Grey-40 border border-Grey-15 rounded-md xl:rounded-lg pl-5 pr-9 xl:pr-12 py-4 xl:py-6 text-sm/[20px] xl:text-lg/[20px] outline-none transition-all duration-200 cursor-pointer ${
+            showList ? "border-Purple-60" : ""
           }`}
           required={field.required}
+          aria-haspopup="listbox"
+          aria-expanded={showList}
         />
 
-        <div
-          onClick={() => setShowList(!showList)}
-          className="absolute top-1/2 -translate-y-1/2 right-4 xl:right-6 w-5 h-5 xl:w-6 xl:h-6 text-White"
+        <button
+          type="button"
+          onClick={toggleList}
+          aria-label="Open select options"
+          className="absolute top-1/2 -translate-y-1/2 right-4 xl:right-6 w-5 h-5 xl:w-6 xl:h-6 text-White cursor-pointer"
         >
           <DownArrow />
-        </div>
+        </button>
 
         {showList && (
-          <ul className="absolute top-12 xl:top-15 inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm/[20px] xl:text-lg/[20px] text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
+          <ul
+            role="listbox"
+            className="absolute top-full inset-x-0 w-full bg-Grey-08 p-5 xl:p-7 flex flex-col gap-4 xl:gap-6 text-sm/[20px] xl:text-lg/[20px] text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
             {field.options?.map((option) => (
               <li
+                role="option"
+                aria-selected={selected === option}
                 key={option}
                 onClick={() => {
                   setSelected(option);

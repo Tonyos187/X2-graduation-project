@@ -29,7 +29,6 @@ export const Stats: HeroStat[] = [
   { value: "16+", label: "Years of Experience" },
 ];
 
-/* yazan */
 export const featuresSectionData: FeaturesType[] = [
   {
     arrow: <TopRightArrow />,

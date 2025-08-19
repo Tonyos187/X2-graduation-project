@@ -12,6 +12,8 @@ const Properties = lazy(() => import("./pages/Properties"));
 const PropertyDetails = lazy(() => import("./pages/PropertyDetails"));
 const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Privacy = lazy(() => import("./pages/Privacy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 import Loader from "./components/kit/Loader";
 
@@ -22,6 +24,8 @@ const routes = [
   { path: "/properties/:id", element: <PropertyDetails /> },
   { path: "/services", element: <Services /> },
   { path: "/contact", element: <Contact /> },
+  { path: "/terms", element: <Terms /> },
+  { path: "/privacy", element: <Privacy /> },
 ];
 
 function App() {
