@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import Logo from "../../components/sharedComponents/Logo";
 import X from "../../svg/X";
 import WavyBackdrop from "../../svg/WavyBackdrop";
-import { HERO_PATH } from "../../svg/Paths";
 import LightDarkBtn from "../../components/kit/LightDarkBtn";
+import { BANNER_PATH } from "../../svg/Paths";
 
 type NavItem = {
   name: string;
@@ -35,6 +35,7 @@ const Navbar = (): JSX.Element => {
   }, []);
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
+    scrollTop()
   };
 
   const handleOverlayClick = (e: MouseEvent<HTMLDivElement>): void => {
@@ -66,9 +67,9 @@ const Navbar = (): JSX.Element => {
       {showBanner && (
         <div className="fixed top-0 left-0 w-full px-4 lg:px-8 bg-Grey-10 border-b border-Grey-15 z-[1100] h-[49px] xl:h-[63px] flex items-center overflow-hidden">
           <div className="relative w-full h-full text-center flex">
-            {/* الخلفية المدمرة يا الهييييييي */}
-            <div className="absolute inset-0 w-[200%] h-[1000%] -top-[100%] -left-[50%] object-cover">
-              <WavyBackdrop paths={HERO_PATH} />
+           
+            <div className="absolute inset-0 w-[300%] -left-[100%] md:w-[110%] h-[1150%] -top-[410%] md:-left-[5%] object-cover">
+              <WavyBackdrop  paths={BANNER_PATH}/>
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full xl:text-lg md:text-sm xs:text-[12px] pr-6.5 text-[10px]">
               <span className=" text-White xl:pr-2.5 pr-1.5">

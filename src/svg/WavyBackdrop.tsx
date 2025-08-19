@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux"; 
 import { ABOUT_HERO } from "./Paths";
 
 type WavyBackdropProps = {
   paths?: string[];
-  colors?: string[];
   colorAnimationSpeed?: number;
   waveMoveSpeed?: number;
   hoverStrokeWidth?: number;
@@ -15,7 +15,6 @@ type WavyBackdropProps = {
 
 export default function WavyBackdrop({
   paths = ABOUT_HERO,
-  colors = ["#1A1A1A", "#A685FA4d", "#333333", "#262626"],
   colorAnimationSpeed = 12,
   waveMoveSpeed = 5,
   hoverStrokeWidth = 2,
@@ -26,6 +25,11 @@ export default function WavyBackdrop({
 }: WavyBackdropProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const [viewBox, setViewBox] = useState("0 0 0 0");
+  const darkMode = useSelector((state: { theme: { darkMode: boolean } }) => state.theme.darkMode);
+  const colors = darkMode 
+    ? ["#1A1A1A", "#A685FA4d", "#333333", "#262626"] 
+    : ["#ede7fe", "#ede7fe", "#a685fa4d", "#dbcefd"];
+  const gradientValues = colors.concat(colors[0]).join(";");
 
   useEffect(() => {
     if (!svgRef.current || paths.length === 0) return;
@@ -46,8 +50,6 @@ export default function WavyBackdrop({
 
     setViewBox(`${minX} ${minY} ${maxX - minX} ${maxY - minY}`);
   }, [paths]);
-
-  const gradientValues = colors.concat(colors[0]).join(";");
 
   return (
     <div style={{ width: "100%", height: "100%" }}>
