@@ -9,21 +9,12 @@ function EndFooter({ endFooterData }: { endFooterData: EndFooterType }) {
          text-sm xl:text-[18px] font-medium leading-6 text-White"
       >
         <span>{endFooterData.copyright}</span>
-        <span>
           <Link
             to={"/terms"}
             className={`underline text-Purple-60 hover:text-Purple-75`}
           >
-            {"Terms"}
+            {"Terms & Conditions"}
           </Link>
-          {` & `}
-          <Link
-            to={"/privacy"}
-            className={`underline text-Purple-60 hover:text-Purple-75`}
-          >
-            {"Conditions"}
-          </Link>
-        </span>
       </div>
       <div className="flex items-center justify-center gap-2">
         {endFooterData.socialLinks.map((icon, index) => (

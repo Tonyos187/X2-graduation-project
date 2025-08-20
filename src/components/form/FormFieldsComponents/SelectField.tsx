@@ -37,9 +37,11 @@ const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
   };
 
   return (
+
     <div className="flex flex-col gap-2.5 md:gap-3.5 xl:gap-4 w-full">
       <FormLabel id={field.id} label={field.label} required={field.required} />
       <div className="relative" ref={dropdownRef}>
+
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
@@ -72,4 +74,6 @@ const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
   );
 };
 
+
 export default SelectField;
+

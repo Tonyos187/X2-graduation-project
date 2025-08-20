@@ -102,7 +102,7 @@ const CheckboxField: React.FC<CheckboxFieldProps> = ({
               value={inputValues[item.id] || ''}
               onChange={(e) => handleInputChange(item.id, e.target.value)}
               required={checked[item.id]}
-              className={`w-full text-sm/[20px] xl:text-lg/[20px] font-medium focus:outline-none pl-11.5 xl:pl-15 pr-7.5 xl:pr-10 py-4 xl:py-6 bg-Grey-10 text-White border rounded-md xl:rounded-lg placeholder:text-Grey-40 focus:border-Purple-60 transition-colors ${
+              className={`w-full text-sm/[20px] xl:text-lg/[20px] font-medium focus:outline-none pl-11.5 xl:pl-15 pr-7.5 xl:pr-10 py-4 xl:py-6 bg-Grey-10 text-White border rounded-md xl:rounded-lg dark:placeholder:text-Grey-40 focus:border-Purple-60 transition-colors ${
                 checked[item.id] 
                   ? 'border-Grey-15' 
                   : 'border-Grey-15 opacity-50'
