@@ -25,7 +25,7 @@ const ValuesCard = ({
   className,
 }: ValuesCardProps) => {
   return (
-    <div
+    <div id={title.replaceAll(" ", "_").replaceAll(",","").toLowerCase()}
       className={`relative overflow-hidden z-20 rounded-[10px] xl:rounded-xl bg-Grey-08 border border-Grey-15 
     ${
       smartSection

@@ -11,6 +11,7 @@ const OurOfficeSection = () => {
   return (
     <Container>
       <Header
+        hash="contact-offices"
         title={contactDiscoverLocationsData.title}
         description={contactDiscoverLocationsData.description}
       />

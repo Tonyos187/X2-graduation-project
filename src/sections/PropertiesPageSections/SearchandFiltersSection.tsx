@@ -72,7 +72,7 @@ function SearchAndFiltersSection() {
 
             {showResults && (
                 <Container className="relative z-0 mt-12 space-y-6">
-                    <div className="flex items-end justify-between">
+                    <div id="properties-categories" className="flex items-end justify-between">
                         <div>
                             <h2 className="text-2xl md:text-3xl font-semibold">Search Results</h2>
                             <p className="text-Grey-60 text-sm md:text-base">

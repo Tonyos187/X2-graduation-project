@@ -16,7 +16,7 @@ const ServiceSection = ({title, description, data , data1, investSection} : Prop
     <Container className={`${investSection ? "lg:flex-row " : ""}`}>
         <div className={`${investSection ? "flex flex-col gap-7.5 md:gap-10 xl:gap-12.5 w-full lg:w-[28.6112vw] xl:w-[27.03125vw]" : "w-full lg:w-[67.5vw]"}`}>            
             {investSection ? <Header title={title} description={description} withIcon textVW hash={title.replaceAll(" ", "_").replaceAll(",","")} />  
-                           : <Header title={title} description={description} withIcon hash={title.replaceAll(" ", "_").replaceAll(",","")} />}
+                           : <Header title={title} description={description} withIcon hash={title.replaceAll(" ", "_").replaceAll(",","").toLowerCase()} />}
             {investSection && <ValuesCard withButton title={data1?.title} description={data1?.description} link={data1?.link} smartSection />}
         </div>
 
