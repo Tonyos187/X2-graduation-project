@@ -20,7 +20,7 @@ function EndFooter({ endFooterData }: { endFooterData: EndFooterType }) {
         {endFooterData.socialLinks.map((icon, index) => (
           <div className="relative group">
             <div
-              className={`absolute w-fit h-fit px-2 py-1 rounded-full text-white text-sm -top-9 left-1/2 translate-x-[-50%] opacity-0 transition-all ease-in-out duration-300
+              className={`absolute w-fit h-fit px-2 py-1 rounded-full text-white text-xs xl:text-sm -top-9 left-1/2 translate-x-[-50%] opacity-0 transition-all ease-in-out duration-300
               ${
                 icon.name == "Facebook"
                   ? "bg-[#0035bb] group-hover:opacity-100 group-hover:-top-3/4"
