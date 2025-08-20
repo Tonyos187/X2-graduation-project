@@ -16,7 +16,7 @@ const { searchField, searchButton } = searchData;
 const { formFields } = filterData;
 
 const renderButton = (btn: CTAButton) => (
-    <button className="flex items-center text-sm lg:text-lg font-medium justify-center gap-2 w-fit lg:w-46 h-[63px] px-5 py-3.5 xl:px-6 xl:py-4.5 rounded-t-[10px] bg-Purple-60 text-white hover:bg-Purple-75 transition">
+    <button className="flex items-center text-sm lg:text-lg font-medium justify-center gap-2 w-fit lg:w-46 h-[63px] px-5 py-3.5 xl:px-6 xl:py-4.5 rounded-[10px] bg-Purple-60 text-white hover:bg-Purple-75 transition">
     {btn.icon && (
         <img
         src={btn.icon.toString()}

@@ -91,7 +91,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
       image: "/assets/images/Home/villaSliderCard1.webp",
       title: "Seaside Serenity Villa",
       description:
-        "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood.",
+        "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood, featuring a spacious open-plan living area, a modern gourmet kitchen, and a beautifully landscaped garden perfect for family gatherings or quiet relaxation. With ample natural light, elegant finishes, and a private garage, this home combines comfort, style, and convenience in one exceptional package",
       readMoreLink: "#",
       details: [
         { icon: <Bedroom />, label: "4-Bedroom" },
@@ -109,7 +109,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
       image: "/assets/images/Home/buildingSliderCard2.webp",
       title: "Metropolitan Haven",
       description:
-        "A chic and fully-furnished 2-bedroom apartment with panoramic city views.",
+        "A chic and fully-furnished 2-bedroom apartment with panoramic city views, featuring a modern open-plan living area, a sleek kitchen with top-of-the-line appliances, and a balcony perfect for enjoying sunsets. Residents also have access to premium amenities, including a fitness center, rooftop terrace, and 24-hour security, offering the ultimate blend of comfort, convenience, and urban sophistication",
       readMoreLink: "#",
       details: [
         { icon: <Bedroom />, label: "4-Bedroom" },
@@ -127,7 +127,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
       image: "/assets/images/Home/modernCitySliderCard3.webp",
       title: "Rustic Retreat Cottage",
       description:
-        "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.",
+        "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community, featuring a spacious open-concept living and dining area, a modern kitchen with high-end appliances, and a private backyard perfect for relaxing or entertaining. Residents enjoy access to exclusive amenities such as a swimming pool, fitness center, and beautifully landscaped communal areas, all within a safe and serene neighborhood that combines comfort, style, and convenience",
       readMoreLink: "#",
       details: [
         { icon: <Bedroom />, label: "4-Bedroom" },
@@ -145,7 +145,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
       image: "/assets/images/Home/villaSliderCard1.webp",
       title: "Seaside Serenity Villa",
       description:
-        "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood.",
+        "A chic and fully-furnished 2-bedroom apartment with panoramic city views, featuring a modern open-plan living area, a sleek kitchen with top-of-the-line appliances, and a balcony perfect for enjoying sunsets. Residents also have access to premium amenities, including a fitness center, rooftop terrace, and 24-hour security, offering the ultimate blend of comfort, convenience, and urban sophistication",
       readMoreLink: "#",
       details: [
         { icon: <Bedroom />, label: "4-Bedroom" },
@@ -163,7 +163,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
       image: "/assets/images/Home/buildingSliderCard2.webp",
       title: "Metropolitan Haven",
       description:
-        "A chic and fully-furnished 2-bedroom apartment with panoramic city views.",
+        "A chic and fully-furnished 2-bedroom apartment with panoramic city views, featuring a modern open-plan living area, a sleek kitchen with top-of-the-line appliances, and a balcony perfect for enjoying sunsets. Residents also have access to premium amenities, including a fitness center, rooftop terrace, and 24-hour security, offering the ultimate blend of comfort, convenience, and urban sophistication",
       readMoreLink: "#",
       details: [
         { icon: <Bedroom />, label: "4-Bedroom" },
@@ -181,7 +181,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
       image: "/assets/images/Home/modernCitySliderCard3.webp",
       title: "Rustic Retreat Cottage",
       description:
-        "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community.",
+        "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community, featuring a spacious open-concept living and dining area, a modern kitchen with high-end appliances, and a private backyard perfect for relaxing or entertaining. Residents enjoy access to exclusive amenities such as a swimming pool, fitness center, and beautifully landscaped communal areas, all within a safe and serene neighborhood that combines comfort, style, and convenience",
       readMoreLink: "#",
       details: [
         { icon: <Bedroom />, label: "4-Bedroom" },

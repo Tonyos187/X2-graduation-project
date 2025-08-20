@@ -143,8 +143,7 @@ export const propertiesData: PropertiesData = {
         image: "/assets/images/Properties/imageSlideCard1.webp",
         smallTitle: "Coastal Escapes - Where Waves Beckon",
         mainTitle: "Seaside Serenity Villa",
-        description:
-          "Wake up to the soothing melody of waves. This beachfront villa offers...",
+        description:"Wake up to the soothing melody of waves. This beachfront villa offers spacious, sunlit rooms with panoramic ocean views, a private terrace for morning coffee, and direct access to pristine sandy beaches. Enjoy the gentle sea breeze, relax by the infinity pool, or take evening strolls along the shore, all while indulging in the ultimate blend of luxury, comfort, and tranquility",
         price: "$1,250,000",
         button: {
           text: "View Property Details",
@@ -158,7 +157,7 @@ export const propertiesData: PropertiesData = {
         smallTitle: "Urban Oasis - Life in the Heart of the City",
         mainTitle: "Metropolitan Haven",
         description:
-          "Immerse yourself in the energy of the city. This modern apartment in the heart...",
+          "Immerse yourself in the energy of the city. This modern apartment in the heart of downtown offers sleek design, floor-to-ceiling windows with breathtaking skyline views, and all the conveniences of urban living at your doorstep—from trendy cafés and restaurants to cultural hotspots and vibrant nightlife. Experience the perfect blend of comfort, style, and excitement in a space that truly puts the city at your fingertips",
         price: "$650,000",
         button: {
           text: "View Property Details",
@@ -171,8 +170,7 @@ export const propertiesData: PropertiesData = {
         image: "/assets/images/Properties/imageSlideCard3.webp",
         smallTitle: "Countryside Charm - Escape to Nature's Embrace",
         mainTitle: "Rustic Retreat Cottage",
-        description:
-          "Find tranquility in the countryside. This charming cottage is nestled amidst rolling hills...",
+        description:"Find tranquility in the countryside. This charming cottage is nestled amidst rolling hills and surrounded by lush greenery, with fragrant gardens and a gentle stream nearby. The peaceful setting offers the perfect escape from the hustle and bustle of city life, where you can unwind on the porch, listen to the birds singing, and enjoy the fresh, crisp air every morning.",
         price: "$350,000",
         button: {
           text: "View Property Details",
