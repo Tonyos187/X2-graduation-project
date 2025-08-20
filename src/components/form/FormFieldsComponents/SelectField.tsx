@@ -47,7 +47,7 @@ const SelectField: React.FC<{ field: BaseSelectField }> = ({ field }) => {
           onClick={() => setIsOpen(!isOpen)}
           className="w-full bg-Grey-10 text-White placeholder:text-Grey-40 border border-Grey-15 rounded-md xl:rounded-lg px-5 py-4 xl:py-6 text-sm/[20px] xl:text-lg/[20px] outline-none focus:border-Purple-60 transition-all duration-200 flex items-center justify-between"
         >
-          <span className={selectedOption ? "text-White" : "text-Grey-40"}>
+          <span className={selectedOption ? "text-White" : "dark:text-Grey-40 text-[#8f88a4]"}>
             {selectedOption || field.placeholder}
           </span>
           <div className="flex items-center gap-2">
