@@ -62,6 +62,7 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       label: "First Name",
       type: "text",
       placeholder: "Enter First Name",
+      required: true,
     },
     {
       id: "lastName",
@@ -69,6 +70,7 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       label: "Last Name",
       type: "text",
       placeholder: "Enter Last Name",
+      required: true,
     },
     {
       id: "email",
@@ -76,6 +78,7 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       label: "Email",
       type: "email",
       placeholder: "Enter your Email",
+      required: true,
     },
     {
       id: "phone",
@@ -109,6 +112,7 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       label: "Message",
       type: "text",
       placeholder: "Enter your Message here..",
+      required: true,
     },
 };
 

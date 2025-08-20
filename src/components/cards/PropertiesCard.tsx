@@ -15,16 +15,24 @@ interface PropertiesProps {
     fullDescription:string,
     image:string,
     discoverDescription?:string,
-    lessDescription:string,
     price:string,
     title?:string,
     btnText:string,
     btnLink:string,
 }
+<<<<<<< HEAD
 function PropertiesCard({showInfo,details,fullDescription,image,discoverDescription,lessDescription,price,title,btnText,btnLink}:PropertiesProps) {
 
 
+=======
+function PropertiesCard({showInfo,details,fullDescription,image,discoverDescription,price,title,btnText,btnLink}:PropertiesProps) {
+    // State to check if the card is flipped or not
+>>>>>>> 6baabd469b230d7a119c6ee5c6e88fa92b53049e
     const [flipped, setFlipped] = useState<boolean>(false);
+    // clip the card description
+    const cut = 70;
+    const isLong = fullDescription.length > cut;
+    const displayText = isLong ? fullDescription.slice(0, cut) + "..." : fullDescription;
     return (
             <div className=" w-full h-full  bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl grid  transition-transform duration-700 ease-in-out"
                         style={{
@@ -47,10 +55,19 @@ function PropertiesCard({showInfo,details,fullDescription,image,discoverDescript
                                 </div>
                             ) }
                             <div>
-                                <div>
+                                <div >
                                     <h3 className="text-lg md:text-xl xl:text-2xl font-semibold">{title}</h3>
-                                    <p className="font-medium text-sm md:text-base xl:text-lg text-Grey-60 ">{lessDescription}<span className="font-medium text-sm md:text-base xl:text-lg text-White underline cursor-pointer" onClick={() => setFlipped(true)}>Read More</span></p>
-                                    
+                                    <p className="font-medium text-sm md:text-base xl:text-lg text-Grey-60">
+                                        {displayText}
+                                        {isLong &&  (
+                                            <span
+                                            className="font-medium text-sm md:text-base xl:text-lg text-White underline cursor-pointer ml-1"
+                                            onClick={() => setFlipped(true)}
+                                            >
+                                            Read More
+                                            </span>
+                                        )}
+                                    </p>
                                 </div>
                                 
                             </div>

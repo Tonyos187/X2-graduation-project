@@ -25,7 +25,6 @@ function PropertiesSection({ data }: { data: FeaturedPropertiesSectionType }) {
             title={property.title}
             fullDescription={property.description}
             price={property.price}
-            lessDescription={property.description}
             details={property.details}
             showInfo={true}
             btnLink={property.button.link}

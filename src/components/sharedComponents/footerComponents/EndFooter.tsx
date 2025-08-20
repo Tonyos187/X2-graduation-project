@@ -3,7 +3,7 @@ import type { EndFooterType } from "../../../types/Home/HomeTypes";
 
 function EndFooter({ endFooterData }: { endFooterData: EndFooterType }) {
   return (
-    <div className="flex flex-col-reverse md:flex-row md:justify-between gap-5 px-4 py-5 md:px-20 md:py-3 xl:px-40.5 xl:py-7.5 border-t border-t-Grey-10 w-full dark:bg-Grey-08 bg-Purple-95">
+    <div className="flex flex-col-reverse md:flex-row md:justify-between gap-5 px-4 py-5 md:px-20 md:py-3 xl:px-40.5 xl:py-7.5 border-t border-t-Grey-15 w-full dark:bg-Grey-08 bg-Purple-95">
       <div
         className="flex flex-col md:flex-row md:justify-between items-center justify-center gap-2.5 md:gap-5 xl:gap-9.5 py-2.5
          text-sm xl:text-[18px] font-medium leading-6 text-White"
@@ -20,7 +20,7 @@ function EndFooter({ endFooterData }: { endFooterData: EndFooterType }) {
         {endFooterData.socialLinks.map((icon, index) => (
           <div className="relative group">
             <div
-              className={`absolute w-fit h-fit px-2 py-1 rounded-full text-white text-sm -top-9 left-1/2 translate-x-[-50%] opacity-0 transition-all ease-in-out duration-300
+              className={`absolute z-10 w-fit h-fit px-2 py-1 rounded-full text-white text-xs xl:text-sm -top-9 left-1/2 translate-x-[-50%] opacity-0 transition-all ease-in-out duration-300
               ${
                 icon.name == "Facebook"
                   ? "bg-[#0035bb] group-hover:opacity-100 group-hover:-top-3/4"

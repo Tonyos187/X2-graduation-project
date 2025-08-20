@@ -43,11 +43,8 @@ const Hero = () => {
           </div>
           {/* Gradient Overlay */}
           <div
-            className="absolute inset-0 z-20 pointer-events-none max-lg:rounded-tr-xl"
-            style={{
-              background:
-                "linear-gradient(238.21deg, #2A213F 8.76%, rgba(25, 25, 25, 0) 50.09%)",
-            }}
+            className="absolute inset-0 z-20 pointer-events-none max-lg:rounded-tr-xl dark:bg-[linear-gradient(238.21deg,#2A213F_8.76%,rgba(25,25,25,0)_50.09%)]
+                                                                                           bg-[linear-gradient(238.21deg,#703bf790_8.76%,rgba(25,25,25,0)_50.09%)]"
           ></div>
 
           {/* Foreground Image - contain */}

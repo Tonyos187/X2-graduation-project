@@ -13,7 +13,7 @@ const Clients: React.FC<Props> = ({ testimonial }) => {
         {Array.from({ length: testimonial?.rating }).map((_, i) => (
           <div
             key={i}
-            className="rounded-full bg-Grey-10 border border-Grey-15 p-1.5 md:p-2 xl:p-2.5"
+            className="flex items-center justify-center rounded-full dark:bg-Grey-10 border border-Grey-15 p-1.5 md:p-2 xl:p-2.5"
           >
             <img
               src={testimonial?.icon}

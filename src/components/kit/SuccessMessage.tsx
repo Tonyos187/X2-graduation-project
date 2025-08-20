@@ -116,7 +116,7 @@ const SuccessMessage: React.FC<SuccessMessageProps> = ({
           <div className="flex gap-3">
             <button
               onClick={handleClose}
-              className="flex-1 px-4 py-2.5 bg-Purple-60 text-White rounded-lg font-medium hover:bg-Purple-65 transition-colors"
+              className="flex-1 px-4 py-2.5 bg-Purple-60 text-white rounded-lg font-medium hover:bg-Purple-65 transition-colors"
             >
               Continue
             </button>
