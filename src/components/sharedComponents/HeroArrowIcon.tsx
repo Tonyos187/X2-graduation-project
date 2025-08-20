@@ -30,8 +30,9 @@ export default function HeroArrowIcon() {
   return (
       <div
         ref={circle}
-        className={`relative border border-[#262626] w-29.5 h-29.5 md:w-33 md:h-33 xl:w-44 xl:h-44 
-          flex items-center justify-center rounded-full bg-[#141414] overflow-hidden hover-glow ${
+        className={`relative border border-Purple-95 dark:border-Grey-15 w-29.5 h-29.5 md:w-33 md:h-33 xl:w-44 xl:h-44 
+          flex items-center justify-center rounded-full dark:bg-Grey-08 bg-Purple-75 overflow-hidden hover-glow
+          drop-shadow-[0_0_6px_#a685fa] dark:drop-shadow-none backdrop-blur-lg ${
           isPulsing ? "animate-pulse-once" : ""
         }`}
         onClick={() => setIsPulsing(true)}
@@ -52,7 +53,7 @@ export default function HeroArrowIcon() {
           ))}
         </div>
 
-        <div className="text-white flex items-center justify-center bg-[#1a1a1a] w-[45%] h-[45%] rounded-full border border-[#262626] 
+        <div className="dark:text-white text-Purple-95 flex items-center justify-center dark:bg-Grey-10 bg-Purple-95/60 w-[45%] h-[45%] rounded-full border dark:border-Grey-15 border-Purple-95
                           absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer">
           <div className="w-[42%] h-[42%]">
             <TopRightArrow />
