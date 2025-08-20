@@ -21,8 +21,8 @@ const navLinks: NavItem[] = [
 
 const Navbar = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [showBanner, setShowBanner] = useState<boolean>(true); // للتحكم بالأنيميشن
-  const [isBannerVisible, setIsBannerVisible] = useState<boolean>(true); // لإخفاء العنصر من DOM بعد الأنيميشن
+  const [showBanner, setShowBanner] = useState<boolean>(true);
+  const [isBannerVisible, setIsBannerVisible] = useState<boolean>(true);
 
   useEffect(() => {
     const handleResize = () => {
