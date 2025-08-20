@@ -35,7 +35,7 @@ const Navbar = (): JSX.Element => {
   }, []);
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
-    scrollTop()
+    scrollTop();
   };
 
   const handleOverlayClick = (e: MouseEvent<HTMLDivElement>): void => {
@@ -67,9 +67,8 @@ const Navbar = (): JSX.Element => {
       {showBanner && (
         <div className="fixed top-0 left-0 w-full px-4 lg:px-8 bg-Grey-10 border-b border-Grey-15 z-[1100] h-[49px] xl:h-[63px] flex items-center overflow-hidden">
           <div className="relative w-full h-full text-center flex">
-           
             <div className="absolute inset-0 w-[300%] -left-[100%] md:w-[110%] h-[1150%] -top-[410%] md:-left-[5%] object-cover">
-              <WavyBackdrop  paths={BANNER_PATH}/>
+              <WavyBackdrop paths={BANNER_PATH} />
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full xl:text-lg md:text-sm xs:text-[12px] pr-6.5 text-[10px]">
               <span className=" text-White xl:pr-2.5 pr-1.5">
@@ -125,10 +124,11 @@ const Navbar = (): JSX.Element => {
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
               `${
-                isActive
-                  ? "text-white bg-Purple-60"
-                  : "xl:text-lg text-White"
-              } xl:py-4 xl:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15 hover:bg-gradient-to-br hover:from-40% hover:from-Purple-65/65 hover:via-50% hover:via-Purple-75 hover:to-70% hover:to-Purple-65/65 bg-[length:200%_200%] bg-[position:0%_0%] transition-[background-position] duration-500 ease-in-out hover:bg-[position:100%_100%]`
+                isActive ? "text-white bg-Purple-60" : "xl:text-lg text-White"
+              } xl:py-4 xl:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15 hover:bg-gradient-to-br hover:from-40%
+              hover:from-Purple-75 hover:via-50% hover:via-Purple-90 hover:to-70% hover:to-Purple-75
+              dark:hover:from-Purple-65/65 dark:hover:via-Purple-75 dark:hover:to-Purple-65/65 
+                bg-[length:200%_200%] bg-[position:0%_0%] transition-[background-position] duration-500 ease-in-out hover:bg-[position:100%_100%]`
             }
             onClick={scrollTop}
           >
@@ -194,4 +194,3 @@ const Navbar = (): JSX.Element => {
 };
 
 export default Navbar;
-
