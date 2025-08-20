@@ -2,12 +2,13 @@ import { useState } from "react"
 import type { ReactNode } from "react";
 import Button from "../sharedComponents/Button"
 import InfoComponent from "../sharedComponents/InfoComponent"
-// type for detail InfoComponent
+
+
 interface Detail {
     icon:ReactNode,
     label:string,
 }
-// props type for the propertiesCard 
+
 interface PropertiesProps {
     showInfo?:boolean,
     details?:Detail[],
@@ -16,12 +17,13 @@ interface PropertiesProps {
     discoverDescription?:string,
     lessDescription:string,
     price:string,
-    title:string,
+    title?:string,
     btnText:string,
     btnLink:string,
 }
 function PropertiesCard({showInfo,details,fullDescription,image,discoverDescription,lessDescription,price,title,btnText,btnLink}:PropertiesProps) {
-    // State to check if the card is flipped or not
+
+
     const [flipped, setFlipped] = useState<boolean>(false);
     return (
             <div className=" w-full h-full  bg-Grey-08 border border-Grey-15 p-6 md:p-7.5 xl:p-10 rounded-xl grid  transition-transform duration-700 ease-in-out"
