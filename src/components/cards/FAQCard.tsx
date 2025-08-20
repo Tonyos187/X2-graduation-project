@@ -12,7 +12,7 @@ type Props = {
 function FAQCard({ faq, showButton = true, withShadow = false, className = '' }: Props) {
   return (
     <div
-      className={`bg-Grey-08 border border-Grey-15 rounded-[10px] xl:rounded-xl flex flex-col justify-between gap-5 md:gap-6 xl:gap-7.5 
+      className={`bg-Grey-08 border border-Grey-15 rounded-[10px] xl:rounded-xl flex flex-col justify-between gap-5 md:gap-6 xl:gap-7.5 w-full 
         ${withShadow ? " w-full lg:w-[31.663%] shadow-[0_0_0_4px_var(--color-Grey-10)] md:shadow-[0_0_0_6px_var(--color-Grey-10)] xl:shadow-[0_0_0_8px_var(--color-Grey-10)]" : ""}
         p-7.5 md:p-10 xl:p-12.5 ${className}`}
     >

@@ -1,4 +1,4 @@
-import type { ComponentType, ReactElement } from "react";
+import type { ComponentType, ReactElement, ReactNode } from "react";
 
 export interface PropertiesData {
     heroSection: HeroSection;
@@ -33,7 +33,7 @@ export interface FormField {
     label?: string;
     placeholder: string;
     type: InputType;
-    icon?: string | ReactElement | ComponentType<{ className?: string }>;
+    icon?:ReactNode;
     required?: boolean;
     options?: string[];
     name: string; 

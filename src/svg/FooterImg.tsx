@@ -6,6 +6,8 @@ interface FooterImgProps {
   transitionMs?: number;
   primaryColor?: string;
   hoverColor?: string;
+  neonShadow?:string
+  strokeHoverColor?:string;
 }
 
 const FooterImg: React.FC<FooterImgProps> = ({
@@ -15,15 +17,12 @@ const FooterImg: React.FC<FooterImgProps> = ({
   transitionMs = 300,
   primaryColor = "currentColor",
   hoverColor = "#DBCEFD",
+  neonShadow = `drop-shadow(0 0 ${glowSize / 2}px #A685FA)
+                drop-shadow(0 0 ${glowSize}px #703BF7)
+                drop-shadow(0 0 ${glowSize * 1.5}px #DBCEFD)`,
+  strokeHoverColor = "#FBFAFF"              
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  const neonShadow = `
-    drop-shadow(0 0 ${glowSize / 2}px #A685FA)
-    drop-shadow(0 0 ${glowSize}px #703BF7)
-    drop-shadow(0 0 ${glowSize * 1.5}px #DBCEFD)
-  `;
-
   const paths: {
     d: string;
     fill?: string;
@@ -146,7 +145,7 @@ const FooterImg: React.FC<FooterImgProps> = ({
             key={i}
             d={pathObj.d}
             fill={isHovered ? hoverColor : primaryColor}
-            stroke={isHovered ? "#FBFAFF" : undefined}
+            stroke={isHovered ? strokeHoverColor : undefined}
             strokeWidth={isHovered ? 1 : undefined}
             fillRule={pathObj.fillRule}
             clipRule={pathObj.clipRule}
