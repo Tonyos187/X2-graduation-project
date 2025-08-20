@@ -11,7 +11,7 @@ interface BaseTextareaField {
 
 const TextareaField: React.FC<{ field: BaseTextareaField }> = ({ field }) => (
   <div className="flex flex-col gap-2.5 md:gap-3.5 xl:gap-4 w-full">
-    <FormLabel id={field.id} label={field.label} />
+    <FormLabel id={field.id} label={field.label} required={field.required} />
     <textarea
       id={field.id}
       name={field.name}

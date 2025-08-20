@@ -46,9 +46,9 @@ function EndFooter({ endFooterData }: { endFooterData: EndFooterType }) {
               {icon.name}
             </div>
             <Link
-              to="#"
+              to={icon.link}
               key={index}
-              className={`relative flex items-center justify-center text-White w-15 h-15 p-5 md:w-10 md:h-10 md:p-2.5 xl:w-13.5 xl:h-13.5 xl:p-3.5 bg-Grey-08 rounded-full
+              className={`relative flex items-center justify-center group-hover:text-white text-White w-15 h-15 p-5 md:w-10 md:h-10 md:p-2.5 xl:w-13.5 xl:h-13.5 xl:p-3.5 bg-Grey-08 rounded-full
               group overflow-hidden
               `}
             >

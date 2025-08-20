@@ -45,7 +45,7 @@ const Navbar = (): JSX.Element => {
 
   const navLinkStyles = ({ isActive }: { isActive: boolean }) => {
     const baseStyles =
-      "text-White xl:py-3.5 md:py-3 border transition-all ease-in-out duration-1000";
+      "text-White xl:py-3.5 md:py-3 transition-all ease-in-out duration-1000";
     const activeStyles = "bg-Grey-08 border-Grey-15 md:px-5 xl:px-6 rounded-lg";
     const inactiveStyles = "border-Grey-10";
 

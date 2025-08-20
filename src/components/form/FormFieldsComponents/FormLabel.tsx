@@ -1,4 +1,4 @@
-const FormLabel = ({ id, label }: { id?: string; label?: string }) => {
+const FormLabel = ({ id, label }: { id?: string; label?: string; required?: boolean }) => {
   return (
     <label
       htmlFor={id}
