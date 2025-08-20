@@ -20,7 +20,7 @@ const OurAchievementsSection = ({data}:{data:OurAchievementsSectionType}) => {
                 question: item.title,
                 answer: item.description,
                 readMoreLink: "#",
-                btnText:""
+                btnText: ""
               }}
               withShadow={true}
               showButton={false}

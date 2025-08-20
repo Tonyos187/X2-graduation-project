@@ -86,7 +86,7 @@ const CheckboxField: React.FC<CheckboxFieldProps> = ({
 
   return (
     <div className="flex flex-col gap-2.5 md:gap-3.5 xl:gap-4 md:col-span-2">
-      {label && <FormLabel label={label} />}
+      {label && <FormLabel label={label} required={true} />}
 
       <div className="flex flex-col md:flex-row gap-4">
         {items.map((item) => (

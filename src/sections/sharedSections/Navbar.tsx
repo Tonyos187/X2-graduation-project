@@ -45,7 +45,7 @@ const Navbar = (): JSX.Element => {
 
   const navLinkStyles = ({ isActive }: { isActive: boolean }) => {
     const baseStyles =
-      "text-White xl:py-3.5 md:py-3 border transition-all ease-in-out duration-1000";
+      "text-White xl:py-3.5 md:py-3 transition-all ease-in-out duration-1000";
     const activeStyles = "bg-Grey-08 border-Grey-15 md:px-5 xl:px-6 rounded-lg";
     const inactiveStyles = "border-Grey-10";
 
@@ -97,9 +97,9 @@ const Navbar = (): JSX.Element => {
       )}
 
       <nav
-        className={`fixed ${
+        className={`fixed left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5 bg-Grey-10 shadow transition-all duration-300 ease-[cubic-bezier(0.25, 0.46, 0.45, 0.94)] ${
           showBanner ? "top-[49px] xl:top-[63px]" : "top-0"
-        } left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5  bg-Grey-10 shadow`}
+        }`}
       >
         {/* Logo */}
         <Logo />
@@ -165,9 +165,9 @@ const Navbar = (): JSX.Element => {
 
       {/* Mobile Slide-in Menu */}
       <div
-        className={`fixed ${
-          showBanner ? "top-[49px] xl:top-[63px]" : "top-0"
-        } right-0 h-[calc(100%-49px)] xl:h-[calc(100%-63px)] w-1/2 bg-Grey-10 z-50 transform transition-transform duration-300 md:hidden ${
+        className={`fixed right-0 w-1/2 bg-Grey-10 z-50 transform transition-all duration-700 ease-[cubic-bezier(0.25, 0.46, 0.45, 0.94)] md:hidden ${
+          showBanner ? "top-[49px] xl:top-[63px] h-[calc(100%-49px)] xl:h-[calc(100%-63px)]" : "top-0 h-screen"
+        } ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

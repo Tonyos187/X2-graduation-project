@@ -80,10 +80,16 @@ function PropertyDetailsSlider({data}:{data:PropertyDetailsType}) {
                         </div>
                     </div>
                     {/* Main displayed Images  */}
-                    <div className="flex w-full justify-between">
+                    <div className={`flex w-full ${isMobile ? 'flex-col gap-4' : 'justify-between'} gap-4`}>
                         {currentImages.map((img,index) => {
                             return(
-                                <img className="lg:w-[48.9973%] w-full xl:h-[583px] md:h-[507px] h-[250px] object-cover rounded-[10px]" key={index} src={img.image}/>
+                                <img 
+                                    key={index} 
+                                    src={img.image}
+                                    className={`${isMobile ? 'w-full' : 'w-[48.5%]'} xl:h-[583px] md:h-[507px] h-[250px] object-cover rounded-[10px]`}
+                                    alt={`Property image ${index + 1}`}
+                                    style={{ maxWidth: isMobile ? '100%' : '48.5%' }}
+                                />
                             )
                         })}
                     </div>
@@ -96,19 +102,22 @@ function PropertyDetailsSlider({data}:{data:PropertyDetailsType}) {
                         <Previous/>
                     </button>
                     <div className="flex gap-1">
-                        {Array.from({ length: 6 }).map((_, i) => {
-                            const lastDot = i === 5;
-                            const active = (currentIndex === i * imagesPerSlide) || (lastDot && currentIndex >= 5 * imagesPerSlide)
+                        {Array.from({ length: Math.ceil(images.length / imagesPerSlide) }).map((_, i) => {
+                            const startIndex = i * imagesPerSlide;
+                            const endIndex = startIndex + imagesPerSlide;
+                            const isActive = currentIndex >= startIndex && currentIndex < endIndex;
+                            
                             return(
                                 <span
                                     key={i}
-                                    className={`w-[11.7px] h-[3px] md:w-[20px] md:h-[5px] rounded ${
-                                    active
+                                    className={`w-[11.7px] h-[3px] md:w-[20px] md:h-[5px] rounded transition-colors duration-200 ${
+                                    isActive
                                         ? 'bg-Purple-60'
                                         : 'bg-Grey-30'
                                     }`}
                                 ></span>
-                        )})}
+                            )
+                        })}
                     </div>
                     
                     <button onClick={next} 

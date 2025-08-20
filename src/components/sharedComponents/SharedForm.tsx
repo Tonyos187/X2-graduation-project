@@ -15,7 +15,7 @@ interface BaseField {
   placeholder: string;
   label?: string;
   required?: boolean;
-  icon?: React.ReactNode | React.ComponentType<{ className?: string }>;
+  icon?: React.ReactNode;
   options?: string[];
 }
 
@@ -98,7 +98,7 @@ const SharedForm = ({
           {data.map((item: BaseField) => {
             return item.options ? (
               <div key={item.id} className={`${item.id === "budget" && "md:col-span-2"}`}>
-                <SelectField field={item} />
+                <SelectField field={{ ...item, icon: item.icon || <></> }} />
               </div>
             ) : (
               <div

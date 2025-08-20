@@ -121,6 +121,7 @@ export const contactFormSection: ContactLetsConnectFormDataType = {
     placeholder: "Enter your Message here..",
     type: "textarea",
     name: "message",
+    required: true,
   },
 };
 
