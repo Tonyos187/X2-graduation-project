@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { Suspense, lazy, useEffect } from "react";
 import "./App.css";
 
@@ -16,6 +21,7 @@ const Terms = lazy(() => import("./pages/Terms"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 import Loader from "./components/kit/Loader";
+import ScrollToTopButton from "./components/kit/ScrollToTopButton";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -31,7 +37,8 @@ const routes = [
 function App() {
   return (
     <Router>
-      <ScrollToHash /> 
+      <ScrollToHash />
+      <ScrollToTopButton />
       <Suspense
         fallback={
           <div className="fixed inset-0 z-[1000] grid place-items-center bg-Grey-08/60 backdrop-blur-sm">
