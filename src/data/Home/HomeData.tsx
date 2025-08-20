@@ -34,25 +34,25 @@ export const featuresSectionData: FeaturesType[] = [
     arrow: <TopRightArrow />,
     icon: "/assets/icons/market.svg",
     title: "Find Your Dream Home",
-    link: "/properties"
+    link: "/properties",
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/camera.svg",
     title: "Unlock Property Value",
-    link: "/services#Unlock_Property_Value"
+    link: "/services#Unlock_Property_Value",
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/building.svg",
     title: "Effortless Property Management",
-    link: "/services#Effortless_Property_Management"
+    link: "/services#Effortless_Property_Management",
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/sun.svg",
     title: "Smart Investments, Informed Decisions",
-    link: "/services#Smart_Investments_Informed_Decisions"
+    link: "/services#Smart_Investments_Informed_Decisions",
   },
 ];
 
@@ -103,7 +103,9 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
         text: "View Property Details",
         link: "#",
       },
+      position: [25.276987, 55.296249],
     },
+
     {
       id: "property-2",
       image: "/assets/images/Home/buildingSliderCard2.webp",
@@ -121,6 +123,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
         text: "View Property Details",
         link: "#",
       },
+      position: [40.712776, -74.005974],
     },
     {
       id: "property-3",
@@ -139,6 +142,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
         text: "View Property Details",
         link: "#",
       },
+      position: [46.818188, 8.227512],
     },
     {
       id: "property-1",
@@ -157,6 +161,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
         text: "View Property Details",
         link: "#",
       },
+      position: [46.818177, 8.227512],
     },
     {
       id: "property-2",
@@ -175,6 +180,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
         text: "View Property Details",
         link: "#",
       },
+      position: [46.818188, 6.227512],
     },
     {
       id: "property-3",
@@ -193,6 +199,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
         text: "View Property Details",
         link: "#",
       },
+      position: [27.818188, 8.227512],
     },
   ],
 };

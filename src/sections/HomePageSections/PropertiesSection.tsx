@@ -29,6 +29,7 @@ function PropertiesSection({ data }: { data: FeaturedPropertiesSectionType }) {
             showInfo={true}
             btnLink={property.button.link}
             btnText={property.button.text}
+            position={property.position}
           />
         ))}
       />
