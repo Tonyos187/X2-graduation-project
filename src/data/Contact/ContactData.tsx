@@ -24,25 +24,25 @@ export const contactHeroCard: FeaturesType[] = [
     arrow: <TopRightArrow />,
     icon: "/assets/icons/emailIcon.svg",
     title: "info@estatein.com",
-    link: "/contact"
+    link: "/contact",
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/phoneIcon.svg",
     title: "+1 (123) 456-7890",
-    link: "/contact"
+    link: "/contact",
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/locationIcon.svg",
     title: "Main Headquarters",
-    link: "/contact"
+    link: "/contact",
   },
   {
     arrow: <TopRightArrow />,
     icon: "/assets/icons/roseIcon.svg",
     title: ["Instagram", "LinkedIn", "Facebook"],
-    link: "/contact"
+    link: "/contact",
   },
 ];
 
@@ -104,12 +104,12 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
     },
   ],
   areaText: {
-      id: "message",
-      name: "message",
-      label: "Message",
-      type: "text",
-      placeholder: "Enter your Message here..",
-    },
+    id: "message",
+    name: "message",
+    label: "Message",
+    type: "text",
+    placeholder: "Enter your Message here..",
+  },
 };
 
 // Discover Our Office Locations
@@ -130,10 +130,11 @@ export const contactDiscoverLocationsFilterData: ContactDiscoverLocationsFilterD
         address: "123 Estatein Plaza, City Center, Metropolis",
         description:
           "Our main headquarters serve as the heart of Estatein. Located in the bustling city center, this is where our core team of experts operates, driving the excellence and innovation that define us.",
+        category: "international",
         contactDetailes: [
-          { icon:<Email/> , title: ["info@estatein.com"] },
-          { icon:<Phone/> , title: ["+1 (123) 456-7890"] },
-          { icon:<Location />, title: ["Metropolis"] },
+          { icon: <Email />, title: ["info@estatein.com"] },
+          { icon: <Phone />, title: ["+1 (123) 456-7890"] },
+          { icon: <Location />, title: ["Metropolis"] },
         ],
         button: {
           text: "Get Directions",
@@ -146,6 +147,7 @@ export const contactDiscoverLocationsFilterData: ContactDiscoverLocationsFilterD
         address: "456 Urban Avenue, Downtown District, Metropolis",
         description:
           "Estatein's presence extends to multiple regions, each with its own dynamic real estate landscape. Discover our regional offices, staffed by local experts who understand the nuances of their respective markets.",
+        category: "regional",
         contactDetailes: [
           { icon: <Email />, title: ["info@estatein.com"] },
           { icon: <Phone />, title: ["+1 (123) 456-7890"] },
