@@ -463,10 +463,10 @@
   box-shadow: 0 0 20px rgba(112, 59, 247, 0.3),inset 0 0 10px rgba(0, 0, 0, 0.8);
 }
 /**overlay footer wrapper***/
-@keyframes gradient-move {
+/* @keyframes gradient-move {
   0% { background-position: 0% 50%; }
   100% { background-position: 200% 50%; }
-}
+} */
 /***/
 .futuristic-pattern {
   filter: url(#advanced-texture);
