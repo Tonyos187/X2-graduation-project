@@ -5,14 +5,17 @@ const Button = ({
   className,
   withBorder,
   link = "/",
+  onClick,
 }: {
   content: string;
   className?: string;
   withBorder?: boolean;
   link?: string;
+  onClick?: () => void;
 }) => {
   return (
     <button
+      onClick={onClick}
       className={`text-sm xl:text-lg text-nowrap cursor-pointer
         px-3 py-2.5 xs:px-5 xs:py-3.5 xl:px-6 xl:py-4.5 rounded-lg xl:rounded-[10px]
         flex items-center justify-center font-medium hover:bg-gradient-to-br 

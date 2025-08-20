@@ -248,7 +248,6 @@ export const testimonialsSectionData: TestimonialsSectionType = {
 };
 
 // Frequently Asked Questions Data
-
 export const faqSectionData: FaqSectionType = {
   headline: "Frequently Asked Questions",
   description:
@@ -262,7 +261,9 @@ export const faqSectionData: FaqSectionType = {
       id: "faq-1",
       question: "How do I search for properties on Estatein?",
       answer:
-        "Learn how to use our user-friendly search tools to find properties that match your your criteria.",
+        "Learn how to use our user-friendly search tools to find properties that match your criteria.", // نص قصير للبطاقة
+      fullAnswer:
+        "To search for properties on Estatein, use our search bar at the top of the page. You can filter by location, price range, property type, and other criteria. Once you find a property, click on it to view more details, schedule a viewing, or contact the agent directly.", // نص كامل للـ modal
       btnText: "Read More",
       readMoreLink: "#",
     },
@@ -272,6 +273,8 @@ export const faqSectionData: FaqSectionType = {
         "What documents do I need to sell my property through Estatein?",
       answer:
         "Find out about the necessary documentation for listing your property with us.",
+      fullAnswer:
+        "To sell your property through Estatein, you will need documents such as the property title deed, recent utility bills, a valid ID, and any relevant legal documents regarding the property. Our agents can guide you through the entire process to ensure everything is prepared correctly.",
       btnText: "Read More",
       readMoreLink: "#",
     },
@@ -280,11 +283,14 @@ export const faqSectionData: FaqSectionType = {
       question: "How can I contact an Estatein agent?",
       answer:
         "Discover the different ways you can get in touch with our experienced agents.",
+      fullAnswer:
+        "You can contact an Estatein agent via our online contact form, by phone, or through live chat on our website. Our agents are available Monday through Friday to provide assistance and answer any questions regarding properties and services.",
       btnText: "Read More",
       readMoreLink: "#",
     },
   ],
 };
+
 
 export const ctaSectionData: CtaSectionType = {
   background: "/assets/images/Home/backgroundSection.webp",

@@ -92,6 +92,7 @@ export interface TestimonialsSectionType {
 }
 
 export interface FaqItem {
+  fullAnswer: ReactNode;
   id: string;
   question: string;
   answer: string;
