@@ -47,7 +47,7 @@ const renderButton = (btn: CTAButton) => (
                     type={searchField.type}
                     id={searchField.id}
                     placeholder={searchField.placeholder}
-                    className="pl-3.5 md:pl-5 xl:pl-6 w-full h-full text-base md:text-xl rounded-t-xl  lg:rounded-bl-0 lg:rounded-br-0 border border-Grey-15 
+                    className="pl-3.5 md:pl-5 xl:pl-6 w-full h-full text-base md:text-xl rounded-xl  lg:rounded-b-none border border-Grey-15 
                     shadow-[0px_0px_0px_4px_var(--color-Grey-10)] lg:shadow-[0px_0px_0px_10px_var(--color-Grey-10)] bg-Grey-08 placeholder:text-Grey-60 focus:outline-none "
           />
           <div className="absolute top-1/2 right-[20px] transform -translate-y-1/2 ">
