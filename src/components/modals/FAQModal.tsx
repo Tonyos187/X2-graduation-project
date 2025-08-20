@@ -1,5 +1,5 @@
 import { useState, useEffect, type ReactNode } from "react";
-import X from "../../svg/X"; // استدعاء مكون X من مشروعك
+import X from "../../svg/X";
 
 type ModalProps = {
   isOpen: boolean;
@@ -15,11 +15,11 @@ const Modal = ({ isOpen, onClose, children, withBorder = true }: ModalProps) => 
   useEffect(() => {
     if (isOpen) {
       setShow(true);
-      // تأخير صغير لبدء التحريك
+
       setTimeout(() => setAnimate(true), 10);
     } else {
       setAnimate(false);
-      // بعد انتهاء التحريك نخفّي المودال
+      
       setTimeout(() => setShow(false), 300);
     }
   }, [isOpen]);
@@ -48,7 +48,6 @@ const Modal = ({ isOpen, onClose, children, withBorder = true }: ModalProps) => 
           }`}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* زر الإغلاق */}
         <button
           aria-label="Close modal"
           onClick={onClose}
@@ -57,7 +56,6 @@ const Modal = ({ isOpen, onClose, children, withBorder = true }: ModalProps) => 
           <X className="w-[9px] h-[9px] xl:w-3 xl:h-3 text-inherit" />
         </button>
 
-        {/* الأيقونة المتحركة */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
