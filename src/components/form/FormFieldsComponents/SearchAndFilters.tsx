@@ -16,6 +16,7 @@ const SearchAndFilters: React.FC<Props> = ({ searchData, filterData }) => {
   const { formFields } = filterData;
 
 const renderButton = (btn: CTAButton) => (
+
         <button
         className="flex items-center text-sm lg:text-lg font-medium justify-center gap-2 w-fit lg:w-46 h-[63px] px-5 py-3.5 xl:px-6 xl:py-4.5 rounded-[10px] bg-Purple-60 text-white hover:bg-gradient-to-br 
         hover:from-40% hover:from-Purple-65/65
@@ -25,6 +26,7 @@ const renderButton = (btn: CTAButton) => (
         transition-[background-position] duration-500 ease-in-out
         hover:bg-[position:100%_100%]"
     >    {btn.icon && (
+
         <img
           src={btn.icon.toString()}
           alt="search icon"

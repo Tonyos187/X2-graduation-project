@@ -74,7 +74,7 @@ const LightDarkBtn: React.FC = () => {
             onChange={handleToggle}
           />
           <label
-            className="toggle-track absolute w-full h-full bg-[#001e3c66] rounded-4xl overflow-hidden backdrop-blur-[5px] border border-[#0096ff4d]
+            className="toggle-track absolute w-full h-full bg-[#a685fa80] rounded-4xl overflow-hidden backdrop-blur-[5px] border border-[#a685fa]
           before:content-none before:absolute before:top-0 before:left-0 before:w-full before:h-full before:opacity-[6%]
           after:content-none after:absolute after:top-[2px] after:left-[2px] after:right-[2px] after:h-1 after:opacity-[7%] after:rounded-t-4xl after:rounded-l-4xl 
           "
@@ -83,7 +83,7 @@ const LightDarkBtn: React.FC = () => {
             <div className="track-lines absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2 overflow-hidden">
               <div className="track-line absolute top-0 left-0 w-full h-full" />
             </div>
-            <div className="toggle-thumb absolute w-6 md:w-8 h-6 md:h-8 left-0.5 top-0.5 rounded-full z-20 border border-[#00aaff99] overflow-hidden transform-3d">
+            <div className="toggle-thumb absolute w-6 md:w-8.5 h-6 md:h-8.5 left-[2.5px] top-[2.5px] rounded-full z-20 border border-[#a685fa] overflow-hidden transform-3d">
               <div className="thumb-core absolute w-5 h-5 top-1/2 left-1/2 translate-[-50%,-50%] rounded-full opacity-90" />
               <div className="thumb-inner absolute w-3 h-3 top-1/2 left-1/2 rounded-full opacity-70 translate-[-50%,-50%]" />
               <div className="thumb-scan absolute w-full h-1 top-0 left-0 blur-[1px] opacity-70" />
@@ -91,7 +91,7 @@ const LightDarkBtn: React.FC = () => {
                 {particles.map((p, i) => (
                   <div
                     key={i}
-                    className="absolute w-[3px] h-[3px] rounded-full bg-cyan-300/80 shadow-[0_0_5px_rgba(100,200,255,0.8)] thumb-particle opacity-0"
+                    className="absolute w-[3px] h-[3px] rounded-full bg-[#f2effc80] shadow-[0_0_5px_(#a685fa80)] thumb-particle opacity-0"
                     style={{
                       top: p.top,
                       left: p.left,

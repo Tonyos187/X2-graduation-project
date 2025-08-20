@@ -19,7 +19,6 @@ function PropertiesSection({data}:{data:PropertySliderSection}) {
                         title={property.mainTitle}
                         fullDescription={property.description}
                         price={property.price}
-                        lessDescription={property.description}
                         discoverDescription={property.smallTitle}
                         showInfo={false}
                         btnLink={property.button.link}

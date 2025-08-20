@@ -72,24 +72,21 @@ interface BaseSelectField {
             
             </div>
             {showList && (
-            <ul
-                role="listbox"
-                className="absolute top-full inset-x-0 w-full bg-Grey-08  flex flex-col text-sm xl:text-lg text-White border border-Grey-15 rounded-md xl:rounded-lg z-30 shadow-md">
-                {field.options?.map((option) => (
-                <li
-                    role="option"
-                    aria-selected={selected === option}
+            <div className="absolute top-full left-0 right-0 mt-1 bg-Grey-10 border border-Grey-15 rounded-md xl:rounded-lg shadow-lg z-10 max-h-48 overflow-y-auto">
+                {field.options?.map((option, index) => (
+                <button
                     key={option}
+                    type="button"
                     onClick={() => {
                     setSelected(option);
                     setShowList(false);
                     }}
-                    className="cursor-pointer hover:bg-Grey-40 py-4 px-4 "
+                    className="w-full px-5 py-3 xl:py-4 text-left text-sm/[20px] xl:text-lg/[20px] text-White hover:bg-Grey-15 transition-colors duration-200 first:rounded-t-md xl:first:rounded-t-lg last:rounded-b-md xl:last:rounded-b-lg"
                 >
                     {option}
-                </li>
+                </button>
                 ))}
-            </ul>
+            </div>
             )}
         </div>
         </div>
