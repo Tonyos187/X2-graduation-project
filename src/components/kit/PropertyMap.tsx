@@ -28,8 +28,6 @@ export default function PropertyMap({ position, title, className }: Props) {
         </Marker>
 
         {/*
-        🔁 بديل آمن لو ما ظهر رمز الماركر عندك بسبب الأصول (bundler):
-        استعمل CircleMarker (فيكتور، ما يحتاج صور):
 
         <CircleMarker center={position} radius={10}>
           <Popup>{title}</Popup>
