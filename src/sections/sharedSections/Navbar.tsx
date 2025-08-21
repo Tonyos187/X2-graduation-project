@@ -1,10 +1,13 @@
 import { useEffect, useState, type JSX, type MouseEvent } from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Logo from "../../components/sharedComponents/Logo";
 import X from "../../svg/X";
 import WavyBackdrop from "../../svg/WavyBackdrop";
 import LightDarkBtn from "../../components/kit/LightDarkBtn";
 import { BANNER_PATH } from "../../svg/Paths";
+// import { toggleTheme } from "../../redux/Slices/themeSlice";
+import type { RootState } from "../../redux/store";
 
 type NavItem = {
   name: string;
@@ -22,6 +25,10 @@ const navLinks: NavItem[] = [
 const Navbar = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [showBanner, setShowBanner] = useState<boolean>(true);
+  const [showSlidingDiv, setShowSlidingDiv] = useState<boolean>(false);
+  
+  // const dispatch = useDispatch();
+  const darkMode = useSelector((state: RootState) => state.theme.darkMode);
 
   useEffect(() => {
     const handleResize = () => {
@@ -61,6 +68,10 @@ const Navbar = (): JSX.Element => {
     });
   };
 
+  // const handleThemeToggle = () => {
+  //   dispatch(toggleTheme());
+  // };
+
   return (
     <>
       {/* Dismissible Top Banner */}
@@ -74,7 +85,10 @@ const Navbar = (): JSX.Element => {
               <span className=" text-White xl:pr-2.5 pr-1.5">
                 ✨Discover Your Dream Property with Estatein
               </span>
-              <NavLink to="/properties" className="underline hover:text-Purple-75 transition-colors duration-200 cursor-pointer">
+              <NavLink
+                to="/properties"
+                className="underline hover:text-Purple-75 transition-colors duration-200 cursor-pointer"
+              >
                 Learn More
               </NavLink>
             </div>
@@ -121,7 +135,6 @@ const Navbar = (): JSX.Element => {
 
         {/* Contact Link (Desktop) */}
         <div className="hidden md:flex">
-          {!isMenuOpen && <LightDarkBtn />}
           <NavLink
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
@@ -165,13 +178,184 @@ const Navbar = (): JSX.Element => {
         </div>
       </nav>
 
+      {/* Sliding Div with Arrow */}
+      <div
+        className={`fixed md:right-[11.5px] xl:right-[20.5px] translate-x-0 mr-[4.1025%] md:mr-[5.5555%] xl:mr-[8.4375%] transform z-[999] transition-all duration-500 ease-out ${
+          showBanner
+            ? "md:top-[calc(48px+77px)] xl:top-[calc(62px+99px)]"
+            : "md:top-[calc(77px)] xl:top-[calc(99px)]"
+        }
+        ${showSlidingDiv ? "translate-y-0" : "translate-y-[-58px]"}`}
+      >
+        {/* Theme Switch Container - Slides with arrow */}
+        <div className={`transition-all duration-500 ease-out`}>
+          {/* Content container */}
+          <div className="bg-Grey-10/90 rounded-t-lg p-2 shadow-[0_0_20px_rgba(112,59,247,0.3)] backdrop-blur-sm relative overflow-hidden group">
+            {/* Neon Glow Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-Purple-60/10 via-Purple-75/5 to-transparent rounded-t-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+            {/* Animated Border Glow */}
+            <div className="absolute inset-0 rounded-t-lg bg-gradient-to-r from-Purple-60/50 via-Purple-75/30 to-Purple-60/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+
+            {/* Light/Dark Theme Switch */}
+            <div className="relative z-10">
+              <LightDarkBtn />
+            </div>
+
+            {/* Floating Neon Particles */}
+            <div className="absolute top-1 right-1 w-1 h-1 bg-Purple-60 rounded-full opacity-60 animate-pulse"></div>
+            <div
+              className="absolute bottom-1 left-1 w-1.5 h-1.5 bg-Purple-75 rounded-full opacity-40 animate-pulse"
+              style={{ animationDelay: "0.5s" }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Arrow Button Container with Theme Icons */}
+        <div className="relative w-full items-center flex flex-col">
+          {/* Theme Icons Above Arrow */}
+          <div
+            className={`flex items-center transition-all duration-500 ease-out justify-between gap-2 p-1 rounded-b-lg bg-Grey-10/90 border border-t-0 border-Purple-60/30 shadow-[0_0_15px_rgba(112,59,247,0.2)] backdrop-blur-sm relative overflow-hidden group hover:shadow-[0_0_25px_rgba(112,59,247,0.4)] ${
+              showSlidingDiv ? "w-full border-0" : "w-max"
+            }`}
+          >
+            {/* Neon Background Glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-Purple-60/5 via-transparent to-Purple-75/5 rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            {/* Animated Border Glow */}
+            <div className="absolute inset-0 rounded-b-lg bg-gradient-to-r from-Purple-60/40 via-Purple-75/20 to-Purple-60/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
+
+            {/* Floating Neon Orbs */}
+            <div
+              className="absolute top-0 left-1/4 w-1 h-1 bg-Purple-60 rounded-full opacity-0 group-hover:opacity-60 group-hover:animate-bounce transition-all duration-500"
+              style={{ animationDelay: "0.1s" }}
+            ></div>
+            <div
+              className="absolute bottom-0 right-1/4 w-1.5 h-1.5 bg-Purple-75 rounded-full opacity-0 group-hover:opacity-40 group-hover:animate-bounce transition-all duration-500"
+              style={{ animationDelay: "0.3s" }}
+            ></div>
+
+            {/* Sun Icon */}
+            <div
+              className="p-1 rounded-lg transition-all duration-300"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`transition-all duration-500 ease-out ${
+                  !darkMode
+                    ? "text-Purple-75 drop-shadow-[0_0_25px_rgba(112,59,247,0.8)]"
+                    : "text-Grey-08 group-hover:text-Purple-75 group-hover:drop-shadow-[0_0_8px_rgba(112,59,247,0.6)]"
+                }`}
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+
+            {/* Active State Glow Effect */}
+            {!darkMode && (
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-Purple-60/10 via-transparent to-transparent animate-pulse"></div>
+            )}
+
+                        {/* Moon Icon */}
+            <div
+              className="p-1 rounded-b-lg transition-all duration-300"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`transition-all duration-500 ease-out ${
+                  darkMode
+                    ? "text-Purple-75 drop-shadow-[0_0_16px_rgba(112,59,247,0.8)]"
+                    : "text-Grey-08 group-hover:text-Purple-75 group-hover:drop-shadow-[0_0_8px_rgba(112,59,247,0.6)]"
+                }`}
+              >
+                <path
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+
+            {/* Active State Glow Effect */}
+            {darkMode && (
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-Purple-60/10 via-transparent to-transparent animate-pulse"></div>
+            )}
+          </div>
+
+          
+
+          {/* Arrow Button - Centered */}
+          <div className="flex justify-center">
+            <button
+              onClick={() => {
+                console.log("Arrow clicked! Current state:", showSlidingDiv);
+                setShowSlidingDiv(!showSlidingDiv);
+              }}
+              className={`relative  bg-Grey-10/90 border border-Purple-60/40 rounded-b-lg hover:border-Purple-75 hover:bg-Purple-60/10 transition-all duration-500 ease-out group hover:scale-105 shadow-[0_0_12px_rgba(112,59,247,0.25)] hover:shadow-[0_0_20px_rgba(112,59,247,0.4)] ${
+                showSlidingDiv ? "w-10 h-6" : "w-6 h-4"
+              }`}
+            >
+              {/* Arrow Icon */}
+              <div
+                className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ${
+                  showSlidingDiv ? "rotate-180" : "rotate-0"
+                }`}
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-Purple-75 group-hover:text-Purple-60 transition-colors duration-200"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+
+              {/* Neon Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-b from-Purple-60/10 to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+
       {/* Mobile Slide-in Menu */}
       <div
         className={`fixed right-0 w-1/2 bg-Grey-10 z-50 transform transition-all duration-700 ease-[cubic-bezier(0.25, 0.46, 0.45, 0.94)] md:hidden ${
-          showBanner ? "top-[49px] xl:top-[63px] h-[calc(100%-49px)] xl:h-[calc(100%-63px)]" : "top-0 h-screen"
-        } ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+          showBanner
+            ? "top-[49px] xl:top-[63px] h-[calc(100%-49px)] xl:h-[calc(100%-63px)]"
+            : "top-0 h-screen"
+        } ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="mt-[68.58px] flex flex-col items-start">
           {navLinks.map(({ name, path }) => (
@@ -188,8 +372,10 @@ const Navbar = (): JSX.Element => {
               {name}
             </NavLink>
           ))}
+          <div className="mt-auto w-full p-5 flex justify-center">
+            {isMenuOpen && <LightDarkBtn />}
+          </div>
         </div>
-        {isMenuOpen && <LightDarkBtn />}
       </div>
     </>
   );
