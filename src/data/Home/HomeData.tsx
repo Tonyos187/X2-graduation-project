@@ -67,7 +67,7 @@ export const navigationData: NavItem[] = [
 export const topBannerData: TopBannerType = {
   text: "Discover Your Dream Property with Estatein",
   linkText: "Learn More",
-  link: "#",
+  link: "/properties",
 };
 
 export const siteInfo: SiteInfoType = {
@@ -205,7 +205,7 @@ export const testimonialsSectionData: TestimonialsSectionType = {
     "Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs.",
   button: {
     text: "View All Testimonials",
-    link: "#",
+    link: "/testimonials",
   },
   testimonials: [
     {
@@ -255,7 +255,7 @@ export const faqSectionData: FaqSectionType = {
     "Find answers to common questions about Estatein's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way.",
   button: {
     text: "View All FAQ's",
-    link: "#",
+    link: "/faq",
   },
   faqs: [
     {
