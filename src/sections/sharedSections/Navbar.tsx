@@ -190,12 +190,12 @@ const Navbar = (): JSX.Element => {
         {/* Theme Switch Container - Slides with arrow */}
         <div className={`transition-all duration-500 ease-out`}>
           {/* Content container */}
-          <div className="bg-Grey-10/90 rounded-t-lg p-2 shadow-[0_0_20px_rgba(112,59,247,0.3)] backdrop-blur-sm relative overflow-hidden group">
+          <div className="bg-Grey-10/90 rounded-lg p-2 shadow-[0_0_20px_rgba(112,59,247,0.3)] backdrop-blur-sm relative overflow-hidden group">
             {/* Neon Glow Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-Purple-60/10 via-Purple-75/5 to-transparent rounded-t-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-Purple-60/10 via-Purple-75/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             {/* Animated Border Glow */}
-            <div className="absolute inset-0 rounded-t-lg bg-gradient-to-r from-Purple-60/50 via-Purple-75/30 to-Purple-60/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-Purple-60/50 via-Purple-75/30 to-Purple-60/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
 
             {/* Light/Dark Theme Switch */}
             <div className="relative z-10">
@@ -216,7 +216,7 @@ const Navbar = (): JSX.Element => {
           {/* Theme Icons Above Arrow */}
           <div
             className={`flex items-center transition-all duration-500 ease-out justify-between gap-2 p-1 rounded-b-lg bg-Grey-10/90 border border-t-0 border-Purple-60/30 shadow-[0_0_15px_rgba(112,59,247,0.2)] backdrop-blur-sm relative overflow-hidden group hover:shadow-[0_0_25px_rgba(112,59,247,0.4)] ${
-              showSlidingDiv ? "w-full border-0" : "w-max"
+              showSlidingDiv ? "hidden" : "w-max"
             }`}
           >
             {/* Neon Background Glow */}

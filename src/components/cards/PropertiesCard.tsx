@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 import Button from "../sharedComponents/Button"
 import InfoComponent from "../sharedComponents/InfoComponent"
 // type for detail InfoComponent
-interface Detail {
-    icon:ReactNode,
+export interface Detail {
+    icon?:ReactNode,
     label:string,
 }
 // props type for the propertiesCard 
