@@ -180,7 +180,7 @@ const Navbar = (): JSX.Element => {
 
       {/* Sliding Div with Arrow */}
       <div
-        className={`fixed md:right-[11.5px] xl:right-[20.5px] translate-x-0 mr-[4.1025%] md:mr-[5.5555%] xl:mr-[8.4375%] transform z-[999] transition-all duration-500 ease-out ${
+        className={`fixed md:right-[11.5px] max-md:hidden xl:right-[20.5px] translate-x-0 mr-[4.1025%] md:mr-[5.5555%] xl:mr-[8.4375%] transform z-[999] transition-all duration-500 ease-out ${
           showBanner
             ? "md:top-[calc(48px+77px)] xl:top-[calc(62px+99px)]"
             : "md:top-[calc(77px)] xl:top-[calc(99px)]"
