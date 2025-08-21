@@ -155,7 +155,7 @@ const Terms = () => {
               <div className="text-center pt-8 border-t border-Grey-15 text-white">
                 <Link 
                   to="/" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-Purple-60 to-Purple-65 text-White rounded-xl hover:from-Purple-65 hover:to-Purple-70 transition-all duration-300 font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-Purple-60 to-Purple-65 rounded-xl hover:from-Purple-65 hover:to-Purple-70 transition-all duration-300 font-semibold text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="white" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
