@@ -1,6 +1,6 @@
-const StyledWrapper = () => {
+const StyledWrapper = ({gradient="bg-[radial-gradient(ellipse_at_50%_50%,#d5c3ff,#d5c3ff,#a685fa,#703bf7)]"}:{gradient?:string}) => {
   return (
-    <div className="futuristic-pattern bg-[radial-gradient(ellipse_at_50%_50%,#d5c3ff,#d5c3ff,#a685fa,#703bf7)] w-full h-full relative">
+    <div className={`${gradient} futuristic-pattern w-full h-full relative`}>
       <span className="ripple-overlay absolute inset-0" />
       <svg className="texture-filter hidden">
         <filter id="advanced-texture">

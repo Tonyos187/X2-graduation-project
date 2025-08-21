@@ -100,7 +100,7 @@
         transition: box-shadow 0.3s ease;
     }
     .text-animate {
-        animation: color-shift 6s linear infinite;
+        animation: color-shift 10s linear infinite;
         color: white;
     }
     .custom-border {
