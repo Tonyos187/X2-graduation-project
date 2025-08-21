@@ -8,7 +8,7 @@ function OurValueSection({ data }: { data: OurValueSectionType }) {
   return (
     <Container className="lg:flex-row lg:items-center ">
       
-      <Header title={data.headline} description={data.description} withIcon 
+      <Header hash="story" title={data.headline} description={data.description} withIcon 
       className="lg:w-[32%] xl:w-[32.39%]"/>
       
       <div className="flex flex-col gap-5 p-6 md:grid md:grid-cols-2 

@@ -8,6 +8,7 @@ function OurClients({data}:{data:OurValuedClientsSectionType}) {
     return (
         <Container>
             <Header
+                hash="clients"
                 title={data.headline}
                 description={data.description}
                 withIcon

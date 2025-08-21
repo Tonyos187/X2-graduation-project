@@ -1,8 +1,6 @@
 import { useState } from "react";
 import LocationCard from "../../components/cards/LocationCard";
-import Slider from "../../components/sharedComponents/Slider";
 import { type CategoriesCardType, type ContactDiscoverLocationsFilterDataType } from "../../types/Contact/ContactType";
-
 function OurOfficeFilters({data}:{data:ContactDiscoverLocationsFilterDataType}) {
     const [activeTab, setActiveTab] = useState<string>("All");
     const filteredCards =
@@ -11,12 +9,9 @@ function OurOfficeFilters({data}:{data:ContactDiscoverLocationsFilterDataType}) 
         : data.categoriesCard.filter(
             (item) => item.id.toLowerCase() === activeTab.toLowerCase()
             );
-    
-    const shouldUseSlider = filteredCards.length > 2;
-
     return (
         <div className="flex flex-col gap-7.5 md:gap-10 xl:gap-12.5">
-            <div className="tabs flex gap-2.5 bg-Grey-10 rounded-lg xl:rounded-xl p-2.5 w-fit ">
+            <div className="tabs flex gap-2.5  bg-Grey-10 rounded-lg xl:rounded-xl p-2.5 w-fit ">
                 {data.FilterOptions.map((option) => (
                     <button
                         key={option}
@@ -33,48 +28,21 @@ function OurOfficeFilters({data}:{data:ContactDiscoverLocationsFilterDataType}) 
                     </button>
                     ))}
             </div>
-            
-            <div className="w-full">
-                {shouldUseSlider ? (
-                    <Slider 
-                        cards={filteredCards.map((item: CategoriesCardType, index) => (
-                            <div key={index} className="w-full">
-                                <LocationCard
-                                    title={item.title}
-                                    address={item.address}
-                                    description={item.description}
-                                    contactDetails={item.contactDetailes}
-                                    btnLink={item.button.link}
-                                    btnText={item.button.text}
-                                />
-                            </div>
-                        ))}
-                        num_Of_Cards_in_sm_screen={1}
-                        num_Of_Cards_in_md_screen={1}
-                        num_Of_Cards_in_xl_screen={2}
-                        gap_cards="gap-5"
+            <div className="w-full flex flex-col lg:flex-row justify-between gap-5">
+                {filteredCards.map((item: CategoriesCardType, index) => (
+                    <LocationCard
+                        key={index}
+                        title={item.title}
+                        address={item.address}
+                        description={item.description}
+                        contactDetails={item.contactDetailes}
+                        btnLink={item.button.link}
+                        btnText={item.button.text}
                     />
-                ) : (
-                    <div className={`flex flex-col lg:flex-row ${filteredCards.length === 2 ? 'justify-between' : ''} gap-5 ${
-                        filteredCards.length === 1 ? 'lg:justify-start' : ''
-                    }`}>
-                        {filteredCards.map((item: CategoriesCardType, index) => (
-                            <div key={index} className={filteredCards.length === 2 ? 'lg:w-[calc(50%-10px)]' : 'w-full'}>
-                                <LocationCard
-                                    title={item.title}
-                                    address={item.address}
-                                    description={item.description}
-                                    contactDetails={item.contactDetailes}
-                                    btnLink={item.button.link}
-                                    btnText={item.button.text}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                )}
+                ))}
             </div>
         </div>
     )
 }
 
-export default OurOfficeFilters;
+export default OurOfficeFilters

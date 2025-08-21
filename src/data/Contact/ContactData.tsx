@@ -160,6 +160,38 @@ export const contactDiscoverLocationsFilterData: ContactDiscoverLocationsFilterD
           link: "#",
         },
       },
+      {
+        id: "international",
+        title: "Main Headquarters",
+        address: "123 Estatein Plaza, City Center, Metropolis",
+        description:
+          "Our main headquarters serve as the heart of Estatein. Located in the bustling city center, this is where our core team of experts operates, driving the excellence and innovation that define us.",
+        contactDetailes: [
+          { icon:<Email/> , title: ["info@estatein.com"] },
+          { icon:<Phone/> , title: ["+1 (123) 456-7890"] },
+          { icon:<Location />, title: ["Metropolis"] },
+        ],
+        button: {
+          text: "Get Directions",
+          link: "#",
+        },
+      },
+      {
+        id: "regional",
+        title: "Regional Offices",
+        address: "456 Urban Avenue, Downtown District, Metropolis",
+        description:
+          "Estatein's presence extends to multiple regions, each with its own dynamic real estate landscape. Discover our regional offices, staffed by local experts who understand the nuances of their respective markets.",
+        contactDetailes: [
+          { icon: <Email />, title: ["info@estatein.com"] },
+          { icon: <Phone />, title: ["+1 (123) 456-7890"] },
+          { icon: <Location />, title: ["Metropolis"] },
+        ],
+        button: {
+          text: "Get Direction",
+          link: "#",
+        },
+      },
     ],
   };
 

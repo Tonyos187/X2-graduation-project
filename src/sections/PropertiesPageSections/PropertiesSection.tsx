@@ -8,6 +8,7 @@ function PropertiesSection({data}:{data:PropertySliderSection}) {
     return (
         <Container>
             <Header
+                hash="properties-portfolio"
                 title={data.sectionTitle}
                 description={data.sectionDescription}
                 withIcon

@@ -17,7 +17,7 @@ interface LocationCardData {
 }
 function LocationCard({title,address,description,contactDetails,btnLink,btnText}:LocationCardData) {
     return (
-        <div className="min-h-full w-full bg-Grey-08 border border-Grey-15 p-6 lg:p-10 xl:p-12.5 rounded-xl flex justify-between flex-col xl:gap-10 md:gap-7.5 gap-6">
+        <div className="lg:w-[49.0607%] w-full bg-Grey-08 border border-Grey-15 p-6 lg:p-10 xl:p-12.5 rounded-xl flex justify-between flex-col xl:gap-10 md:gap-7.5 gap-6">
             <div>
                 <span className="urbanist text-sm xl:text-lg font-medium text-White">{title}</span>
                 <h3 className="xl:text-3xl md:text-2xl text-xl font-semibold mt-1 mb-2 md:mt-1.5 md:mb-2.5 xl:mt-2.5 xl:mb-3.5 text-White">{address}</h3>
