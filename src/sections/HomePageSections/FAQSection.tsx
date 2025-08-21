@@ -8,6 +8,7 @@ const FAQSection = ({data}:{data:FaqSectionType}) => {
   return (
       <Container >
           <Header
+            hash='faqs'
             title={data.headline}
             description={data.description}
             withIcon

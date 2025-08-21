@@ -62,6 +62,7 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       label: "First Name",
       type: "text",
       placeholder: "Enter First Name",
+      required: true,
     },
     {
       id: "lastName",
@@ -69,6 +70,7 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       label: "Last Name",
       type: "text",
       placeholder: "Enter Last Name",
+      required: true,
     },
     {
       id: "email",
@@ -76,6 +78,7 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       label: "Email",
       type: "email",
       placeholder: "Enter your Email",
+      required: true,
     },
     {
       id: "phone",
@@ -109,6 +112,7 @@ export const contactLetsConnectFormData: ContactLetsConnectFormDataType = {
       label: "Message",
       type: "text",
       placeholder: "Enter your Message here..",
+      required: true,
     },
 };
 
@@ -124,6 +128,38 @@ export const contactDiscoverLocationsFilterData: ContactDiscoverLocationsFilterD
   {
     FilterOptions: ["All", "Regional", "International"],
     categoriesCard: [
+      {
+        id: "international",
+        title: "Main Headquarters",
+        address: "123 Estatein Plaza, City Center, Metropolis",
+        description:
+          "Our main headquarters serve as the heart of Estatein. Located in the bustling city center, this is where our core team of experts operates, driving the excellence and innovation that define us.",
+        contactDetailes: [
+          { icon:<Email/> , title: ["info@estatein.com"] },
+          { icon:<Phone/> , title: ["+1 (123) 456-7890"] },
+          { icon:<Location />, title: ["Metropolis"] },
+        ],
+        button: {
+          text: "Get Directions",
+          link: "#",
+        },
+      },
+      {
+        id: "regional",
+        title: "Regional Offices",
+        address: "456 Urban Avenue, Downtown District, Metropolis",
+        description:
+          "Estatein's presence extends to multiple regions, each with its own dynamic real estate landscape. Discover our regional offices, staffed by local experts who understand the nuances of their respective markets.",
+        contactDetailes: [
+          { icon: <Email />, title: ["info@estatein.com"] },
+          { icon: <Phone />, title: ["+1 (123) 456-7890"] },
+          { icon: <Location />, title: ["Metropolis"] },
+        ],
+        button: {
+          text: "Get Direction",
+          link: "#",
+        },
+      },
       {
         id: "international",
         title: "Main Headquarters",

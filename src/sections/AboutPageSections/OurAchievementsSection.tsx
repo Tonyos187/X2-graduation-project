@@ -7,6 +7,7 @@ const OurAchievementsSection = ({data}:{data:OurAchievementsSectionType}) => {
   return (
       <Container >
         <Header
+          hash="works"
           title={data.headline}
           description={data.description}
           withIcon
@@ -20,7 +21,7 @@ const OurAchievementsSection = ({data}:{data:OurAchievementsSectionType}) => {
                 question: item.title,
                 answer: item.description,
                 readMoreLink: "#",
-                btnText:""
+                btnText: ""
               }}
               withShadow={true}
               showButton={false}

@@ -16,15 +16,15 @@ function BackToTop() {
         return () => window.removeEventListener("scroll", buttonShow);
     })
 
-        const scrollTop = () => {
-            window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
+    const scrollTop = () => {
+        window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
     };
     return (
         <div onClick={() => scrollTop()} className= {`flex flex-col justify-center items-center w-fit group gap-2 
-            transition-all ease-in-out duration-500 transform fixed bottom-6 right-6 z-[99999] ${
+            transition-all ease-in-out duration-500 transform fixed bottom-6 right-6 z-50 ${
         show ? "translate-x-0 opacity-100" : "translate-x-24 opacity-0"
         }`} >
             <button  className="BackToTop 

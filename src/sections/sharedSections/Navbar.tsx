@@ -35,7 +35,7 @@ const Navbar = (): JSX.Element => {
   }, []);
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev);
-    scrollTop()
+    scrollTop();
   };
 
   const handleOverlayClick = (e: MouseEvent<HTMLDivElement>): void => {
@@ -45,7 +45,7 @@ const Navbar = (): JSX.Element => {
 
   const navLinkStyles = ({ isActive }: { isActive: boolean }) => {
     const baseStyles =
-      "text-White xl:py-3.5 md:py-3 border transition-all ease-in-out duration-1000";
+      "text-White xl:py-3.5 md:py-3 transition-all ease-in-out duration-1000";
     const activeStyles = "bg-Grey-08 border-Grey-15 md:px-5 xl:px-6 rounded-lg";
     const inactiveStyles = "border-Grey-10";
 
@@ -67,9 +67,8 @@ const Navbar = (): JSX.Element => {
       {showBanner && (
         <div className="fixed top-0 left-0 w-full px-4 lg:px-8 bg-Grey-10 border-b border-Grey-15 z-[1100] h-[49px] xl:h-[63px] flex items-center overflow-hidden">
           <div className="relative w-full h-full text-center flex">
-           
             <div className="absolute inset-0 w-[300%] -left-[100%] md:w-[110%] h-[1150%] -top-[410%] md:-left-[5%] object-cover">
-              <WavyBackdrop  paths={BANNER_PATH}/>
+              <WavyBackdrop paths={BANNER_PATH} />
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full xl:text-lg md:text-sm xs:text-[12px] pr-6.5 text-[10px]">
               <span className=" text-White xl:pr-2.5 pr-1.5">
@@ -97,9 +96,9 @@ const Navbar = (): JSX.Element => {
       )}
 
       <nav
-        className={`fixed ${
+        className={`fixed left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5 bg-Grey-10 shadow transition-all duration-300 ease-[cubic-bezier(0.25, 0.46, 0.45, 0.94)] ${
           showBanner ? "top-[49px] xl:top-[63px]" : "top-0"
-        } left-0 w-full xl:h-[99px] md:h-[77px] z-[1000] flex justify-between items-center px-4 md:px-[5.5555%] xl:px-[8.4375%] xl:py-0 md:py-0 py-5  bg-Grey-10 shadow`}
+        }`}
       >
         {/* Logo */}
         <Logo />
@@ -125,10 +124,11 @@ const Navbar = (): JSX.Element => {
             to="/contact"
             className={({ isActive }: { isActive: boolean }) =>
               `${
-                isActive
-                  ? "text-white bg-Purple-60"
-                  : "xl:text-lg text-White"
-              } xl:py-4 xl:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15 hover:bg-gradient-to-br hover:from-40% hover:from-Purple-65/65 hover:via-50% hover:via-Purple-75 hover:to-70% hover:to-Purple-65/65 bg-[length:200%_200%] bg-[position:0%_0%] transition-[background-position] duration-500 ease-in-out hover:bg-[position:100%_100%]`
+                isActive ? "text-white bg-Purple-60" : "xl:text-lg text-White"
+              } xl:py-4 xl:px-6 md:py-3.5 md:px-5 rounded-lg border border-Grey-15 hover:bg-gradient-to-br hover:from-40%
+              hover:from-Purple-75 hover:via-50% hover:via-Purple-90 hover:to-70% hover:to-Purple-75
+              dark:hover:from-Purple-65/65 dark:hover:via-Purple-75 dark:hover:to-Purple-65/65 
+                bg-[length:200%_200%] bg-[position:0%_0%] transition-[background-position] duration-500 ease-in-out hover:bg-[position:100%_100%]`
             }
             onClick={scrollTop}
           >
@@ -165,9 +165,9 @@ const Navbar = (): JSX.Element => {
 
       {/* Mobile Slide-in Menu */}
       <div
-        className={`fixed ${
-          showBanner ? "top-[49px] xl:top-[63px]" : "top-0"
-        } right-0 h-[calc(100%-49px)] xl:h-[calc(100%-63px)] w-1/2 bg-Grey-10 z-50 transform transition-transform duration-300 md:hidden ${
+        className={`fixed right-0 w-1/2 bg-Grey-10 z-50 transform transition-all duration-700 ease-[cubic-bezier(0.25, 0.46, 0.45, 0.94)] md:hidden ${
+          showBanner ? "top-[49px] xl:top-[63px] h-[calc(100%-49px)] xl:h-[calc(100%-63px)]" : "top-0 h-screen"
+        } ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -194,4 +194,3 @@ const Navbar = (): JSX.Element => {
 };
 
 export default Navbar;
-

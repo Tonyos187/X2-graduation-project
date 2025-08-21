@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./css/styles.css";
+
 /* Default theme: Dark Mode */
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -49,7 +50,8 @@
 
 .light {
     /* Absolute Colors */
-    --color-White: #000000;
+    --color-White: #322a49;
+    /* #1f192f */
     /* Purple Shades — keep unchanged */
     /* no override needed */
     /* Grey Shades → flipped to light greys */
@@ -96,7 +98,7 @@
         transition: box-shadow 0.3s ease;
     }
     .text-animate {
-        animation: color-shift 6s linear infinite;
+        animation: color-shift 10s linear infinite;
         color: white;
     }
     .custom-border {

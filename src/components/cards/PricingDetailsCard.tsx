@@ -16,7 +16,11 @@ function PricingDetailsCard({PricingItem,title}:PricingDetailsCardPopps) {
         <div className="p-5 md:p-10 xl:p-12.5 border border-Grey-15 rounded-xl ">
             <div className="flex justify-between items-center border-b border-Grey-15 pb-5">
                 <h3 className="text-lg md:text-xl xl:text-2xl font-semibold urbanist">{title}</h3>
+<<<<<<< HEAD
                 <Button content={"Learn More"}  withBorder/>
+=======
+                <Button content={"Learn More"} withBorder/>
+>>>>>>> d7c7515d07d121f5997b59cff87cb3e7884c7d49
             </div>
             <div className="flex flex-wrap ">
                 {PricingItem.map((data, index) => {
