@@ -74,7 +74,9 @@ const Navbar = (): JSX.Element => {
               <span className=" text-White xl:pr-2.5 pr-1.5">
                 ✨Discover Your Dream Property with Estatein
               </span>
-              <span className="underline">Learn More</span>
+              <NavLink to="/properties" className="underline hover:text-Purple-75 transition-colors duration-200 cursor-pointer">
+                Learn More
+              </NavLink>
             </div>
             <button
               aria-label="Close banner"

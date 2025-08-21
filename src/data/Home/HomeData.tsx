@@ -67,7 +67,7 @@ export const navigationData: NavItem[] = [
 export const topBannerData: TopBannerType = {
   text: "Discover Your Dream Property with Estatein",
   linkText: "Learn More",
-  link: "#",
+  link: "/properties",
 };
 
 export const siteInfo: SiteInfoType = {
