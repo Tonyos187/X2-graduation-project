@@ -8,6 +8,7 @@ function PropertiesSection({ data }: { data: FeaturedPropertiesSectionType }) {
   return (
     <Container>
       <Header
+        hash="properties"
         title={data.headline}
         description={data.description}
         withIcon

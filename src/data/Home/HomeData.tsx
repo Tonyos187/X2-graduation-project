@@ -83,7 +83,7 @@ export const featuredPropertiesSectionData: FeaturedPropertiesSectionType = {
     "Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein. Click 'View Details' for more information.",
   button: {
     text: "View All Properties",
-    link: "#",
+    link: "/properties",
   },
   properties: [
     {
@@ -305,25 +305,25 @@ export const footerLayout: {
     {
       title: "Home",
       links: [
-        { name: "Hero Section", link: "#hero" },
-        { name: "Features", link: "#features" },
-        { name: "Properties", link: "#properties" },
-        { name: "Testimonials", link: "#testimonials" },
-        { name: "FAQs", link: "#faqs" },
+        { name: "Hero Section", link: "/#hero" },
+        { name: "Features", link: "/#features" },
+        { name: "Properties", link: "/#properties" },
+        { name: "Testimonials", link: "/#testimonials" },
+        { name: "FAQs", link: "/#faqs" },
       ],
     },
     {
       title: "Properties",
       links: [
-        { name: "Portfolio", link: "#properties-portfolio" },
-        { name: "Categories", link: "#properties-categories" },
+        { name: "Portfolio", link: "/properties#properties-portfolio" },
+        { name: "Categories", link: "/properties#properties-categories" },
       ],
     },
     {
       title: "Contact Us",
       links: [
-        { name: "Contact Form", link: "#contact-form" },
-        { name: "Our Offices", link: "#contact-offices" },
+        { name: "Contact Form", link: "/contact#contact-form" },
+        { name: "Our Offices", link: "/contact#contact-offices" },
       ],
     },
   ],
@@ -331,21 +331,21 @@ export const footerLayout: {
     {
       title: "About Us",
       links: [
-        { name: "Our Story", link: "#about-story" },
-        { name: "Our Works", link: "#about-works" },
-        { name: "How It Works", link: "#about-how-it-works" },
-        { name: "Our Team", link: "#about-team" },
-        { name: "Our Clients", link: "#about-clients" },
+        { name: "Our Story", link: "/about#story" },
+        { name: "Our Works", link: "/about#works" },
+        { name: "How It Works", link: "/about#how-it-works" },
+        { name: "Our Team", link: "/about#team" },
+        { name: "Our Clients", link: "/about#clients" },
       ],
     },
     {
       title: "Services",
       links: [
-        { name: "Valuation Mastery", link: "#services-valuation" },
-        { name: "Strategic Marketing", link: "#services-marketing" },
-        { name: "Negotiation Wizardry", link: "#services-negotiation" },
-        { name: "Closing Success", link: "#services-closing" },
-        { name: "Property Management", link: "#services-management" },
+        { name: "Valuation Mastery", link: "/services#valuation_mastery" },
+        { name: "Strategic Marketing", link: "/services#strategic_marketing" },
+        { name: "Negotiation Wizardry", link: "/services#negotiation_wizardry" },
+        { name: "Closing Success", link: "/services#closing_success" },
+        { name: "Property Management", link: "/services#effortless_property_management" },
       ],
     },
   ],

@@ -36,7 +36,7 @@ const ContactForm = ({
             : "lg:w-[81.21478%]"
         }`}
       >
-        <Header title={title} description={description} withIcon />
+        <Header hash="contact-form" title={title} description={description} withIcon />
       </div>
 
       <div className="flex-1">

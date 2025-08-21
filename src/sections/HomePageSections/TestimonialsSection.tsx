@@ -7,7 +7,9 @@ import type { Testimonial, TestimonialsSectionType } from "../../types/Home/Home
 const TestimonialsSection = ({data} : {data:TestimonialsSectionType}) => {
   return (
     <Container>
-        <Header title={data.headline}
+        <Header
+        hash="testimonials"
+        title={data.headline}
         description={data.description}
         withBtn
         withIcon
