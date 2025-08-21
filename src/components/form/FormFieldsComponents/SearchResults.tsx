@@ -2,6 +2,7 @@ import React from "react";
 import { useSearch } from "../../../SearchContext";
 import Container from "../../../layouts/Container";
 import PropertiesCard from "../../cards/PropertiesCard";
+import Slider from "../../sharedComponents/Slider";
 
 const SearchResults: React.FC = () => {
   const { searchResults, hasSearched, clearFilters } = useSearch();
@@ -10,8 +11,24 @@ const SearchResults: React.FC = () => {
     return null;
   }
 
+  const resultCards = searchResults.map(property => (
+    <div key={property.id} className="h-full">
+      <PropertiesCard
+        showInfo={true}
+        details={property.details}
+        fullDescription={property.fullDescription}
+        image={property.image}
+        discoverDescription={property.discoverDescription}
+        price={property.price}
+        title={property.title}
+        btnText={property.btnText}
+        btnLink={property.btnLink}
+      />
+    </div>
+  ));
+
   return (
-    <Container className="my-10">
+    <Container className="my-20">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-semibold text-white">
           Search Result {searchResults.length > 0 ? `(${searchResults.length})` : ''}
@@ -35,22 +52,19 @@ const SearchResults: React.FC = () => {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {searchResults.map(property => (
-            <PropertiesCard
-              key={property.id}
-              showInfo={true}
-              details={property.details}
-              fullDescription={property.fullDescription}
-              image={property.image}
-              discoverDescription={property.discoverDescription}
-              price={property.price}
-              title={property.title}
-              btnText={property.btnText}
-              btnLink={property.btnLink}
-            />
-          ))}
-        </div>
+        searchResults.length > 1 ? (
+          <Slider
+            cards={resultCards}
+            num_Of_Cards_in_sm_screen={1}
+            num_Of_Cards_in_md_screen={2}
+            num_Of_Cards_in_xl_screen={3}
+            gap_cards="gap-6"
+          />
+        ) : (
+          <div className="grid grid-cols-1 gap-6">
+            {resultCards}
+          </div>
+        )
       )}
     </Container>
   );

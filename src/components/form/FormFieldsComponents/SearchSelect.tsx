@@ -95,7 +95,7 @@
 // };
 
 // export default SearchSelect;
-
+// SearchSelect.tsx
 import React, { useEffect, useRef, useState, type ReactNode } from "react";
 import DownArrow from "../../../svg/DownArrow";
 
@@ -108,6 +108,7 @@ interface BaseSelectField {
     required?: boolean;
     options?: string[];
     icon?: ReactNode;
+    value?: string; 
 }
 
 interface SearchSelectProps {
@@ -116,9 +117,13 @@ interface SearchSelectProps {
 }
 
 const SearchSelect: React.FC<SearchSelectProps> = ({ field, onChange }) => {
-    const [selected, setSelected] = useState<string>("");
+    const [selected, setSelected] = useState<string>(field.value || "");
     const [showList, setShowList] = useState<boolean>(false);
     const selectRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        setSelected(field.value || "");
+    }, [field.value]);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
