@@ -248,7 +248,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onClose }) => {
                   key={index}
                   onClick={() => handleSuggestionClick(question)}
                   className="w-full text-sm bg-white text-[#703bf7] border border-[#dbcefd] rounded-xl p-2 hover:bg-[#ede7fe] transition-colors"
-                >
+                > 
                   {question}
                 </button>
               ))}
