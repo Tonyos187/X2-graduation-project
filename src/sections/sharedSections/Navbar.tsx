@@ -120,7 +120,7 @@ const Navbar = (): JSX.Element => {
         <Logo />
 
         {/* Center Links (Desktop) */}
-        <div className="hidden md:flex gap-6 xl:text-lg items-center absolute left-1/2 transform -translate-x-1/2">
+        <div className="hidden md:flex gap-6 xl:text-lg items-center absolute left-1/2 transform -translate-x-1/2" data-aos="fade-up">
           {navLinks.slice(0, 4).map((link) => (
             <NavLink
               key={link.path}
@@ -137,6 +137,7 @@ const Navbar = (): JSX.Element => {
         <div className="hidden md:flex">
           <NavLink
             to="/contact"
+            data-aos="zoom-in"
             className={({ isActive }: { isActive: boolean }) =>
               `${
                 isActive ? "text-white bg-Purple-60" : "xl:text-lg text-White"

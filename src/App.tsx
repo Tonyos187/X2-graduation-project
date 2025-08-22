@@ -19,6 +19,8 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 import Loader from "./components/kit/Loader";
 // import BackToTop from "./components/kit/BackToTop";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -34,6 +36,9 @@ const routes = [
 ];
 
 function App() {
+  useEffect(() => {
+    AOS.init({duration :1000 ,easing:"ease"});
+  },[])
   return (
     <Router>
       <ScrollToHash /> 
