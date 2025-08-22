@@ -68,8 +68,8 @@
 // };
 
 // export default SearchAndFilters;
-
-import React from "react";
+// SearchAndFilters.tsx
+import React, { useState, useEffect } from "react";
 import type {
   CTAButton,
   SearchFilterSection,
@@ -86,15 +86,32 @@ interface Props {
 const SearchAndFilters: React.FC<Props> = ({ searchData, filterData }) => {
   const { searchField, searchButton } = searchData;
   const { formFields } = filterData;
-  const { setSearchQuery, setFilter, performSearch } = useSearch();
+  const { setSearchQuery, setFilter, performSearch,  searchQuery, filters } = useSearch();
+  
+  const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
+  const [localFilters, setLocalFilters] = useState<Record<string, string>>(filters);
+
+  useEffect(() => {
+    setLocalSearchQuery(searchQuery);
+    setLocalFilters(filters);
+  }, [searchQuery, filters]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
+    setLocalSearchQuery(e.target.value);
   };
 
   const handleSearchClick = () => {
+    setSearchQuery(localSearchQuery);
     performSearch();
   };
+
+  const handleFilterChange = (key: string, value: string) => {
+    const newFilters = { ...localFilters, [key]: value };
+    setLocalFilters(newFilters);
+    setFilter(key, value);
+  };
+
+ 
 
   const renderButton = (btn: CTAButton) => (
     <button
@@ -128,6 +145,7 @@ const SearchAndFilters: React.FC<Props> = ({ searchData, filterData }) => {
             type={searchField.type}
             id={searchField.id}
             placeholder={searchField.placeholder}
+            value={localSearchQuery}
             onChange={handleSearchChange}
             className="pl-3.5 md:pl-5 xl:pl-6 w-full h-full text-base md:text-xl rounded-xl  lg:rounded-b-none border border-Grey-15 
             shadow-[0px_0px_0px_4px_var(--color-Grey-10)] lg:shadow-[0px_0px_0px_10px_var(--color-Grey-10)] bg-Grey-08 placeholder:text-Grey-60 focus:outline-none "
@@ -143,8 +161,11 @@ const SearchAndFilters: React.FC<Props> = ({ searchData, filterData }) => {
             field.type === "select" && (
               <SearchSelect 
                 key={field.id} 
-                field={field} 
-                onChange={(value) => setFilter(field.id, value)}
+                field={{
+                  ...field,
+                  value: localFilters[field.id] || ""
+                }}
+                onChange={(value) => handleFilterChange(field.id, value)}
               />
             )
         )}
