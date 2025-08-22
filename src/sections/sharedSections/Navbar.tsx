@@ -137,7 +137,6 @@ const Navbar = (): JSX.Element => {
         <div className="hidden md:flex">
           <NavLink
             to="/contact"
-            data-aos="zoom-in"
             className={({ isActive }: { isActive: boolean }) =>
               `${
                 isActive ? "text-white bg-Purple-60" : "xl:text-lg text-White"
