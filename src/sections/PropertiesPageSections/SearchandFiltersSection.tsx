@@ -53,13 +53,13 @@ const allProperties = propertiesData.propertySliderSection.cards.map(prop => ({
 function SearchAndFiltersSection() {
   return (
     <SearchProvider allProperties={allProperties}>
-      <Container className="mt-[-40px] lg:mt-[-120px] xl:mt-[-150px] lg:translate-y-[-26.1538%]">
+      <Container className="mt-[-40px] lg:mt-[-120px] xl:mt-[-150px] lg:translate-y-[-26.1538%] relative z-30">
         <SearchAndFilters
           searchData={propertiesData.searchSection}
           filterData={propertiesData.searchFilterSection}
         />
       </Container>
-      <div className="translate-y-[-5%] md:translate-y-[-10%] lg:translate-y-[-15%] mb-0">
+      <div className="translate-y-[-5%] md:translate-y-[-10%] lg:translate-y-[-15%] mb-0 relative z-30">
 
         <SearchResults />
       </div>
