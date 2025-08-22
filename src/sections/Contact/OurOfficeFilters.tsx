@@ -28,7 +28,7 @@ function OurOfficeFilters({ data }: { data: ContactDiscoverLocationsFilterDataTy
 
     return (
         <div className="flex flex-col gap-7.5 md:gap-10 xl:gap-12.5">
-            <div className="tabs flex gap-2.5 bg-Grey-10 rounded-lg xl:rounded-xl p-2.5 w-fit" data-aos="fade-right">
+            <div className="tabs flex gap-2.5 bg-Grey-10 rounded-lg xl:rounded-xl p-2.5 w-fit" data-aos="fade-up">
                 {data.FilterOptions.map((option) => (
                     <button
                         key={option}
@@ -54,7 +54,7 @@ function OurOfficeFilters({ data }: { data: ContactDiscoverLocationsFilterDataTy
                         gap_cards="gap-6"
                     />
                 ) : (
-                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {locationCards}
                     </div>
                 )}

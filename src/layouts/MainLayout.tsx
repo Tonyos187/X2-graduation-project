@@ -4,6 +4,7 @@ import Footer from "../sections/sharedSections/Footer";
 import ChatButton from "../ChatBot/ChatButton";
 import ChatBot from "../ChatBot/ChatBot";
 import { useState } from "react";
+import BackToTop from "../components/kit/BackToTop";
 const MainLayout = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
 
@@ -19,6 +20,7 @@ const MainLayout = () => {
   return (
     <div className="cursor-custom-default">
       <Navbar />
+      <BackToTop/>
       <main className="">
         <Outlet />
       </main>
