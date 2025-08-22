@@ -18,7 +18,6 @@ const Testimonials = lazy(() => import("./pages/Testimonials"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 import Loader from "./components/kit/Loader";
-// import BackToTop from "./components/kit/BackToTop";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -49,7 +48,7 @@ function App() {
           </div>
         }
       >
-        {/* <BackToTop/> */}
+
         <Routes>
           {/* Main layout wrapper */}
           <Route element={<MainLayout />}>
